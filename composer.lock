@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "aspose/words-sdk-php",
-            "version": "18.5",
+            "version": "18.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aspose-words-cloud/aspose-words-cloud-php.git",
-                "reference": "583880496cb6f86026b6c0cac82fb9efe6d861a7"
+                "reference": "b4e66d904450e70845ff1ccac385166cda67943b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aspose-words-cloud/aspose-words-cloud-php/zipball/583880496cb6f86026b6c0cac82fb9efe6d861a7",
-                "reference": "583880496cb6f86026b6c0cac82fb9efe6d861a7",
+                "url": "https://api.github.com/repos/aspose-words-cloud/aspose-words-cloud-php/zipball/b4e66d904450e70845ff1ccac385166cda67943b",
+                "reference": "b4e66d904450e70845ff1ccac385166cda67943b",
                 "shasum": ""
             },
             "require": {
@@ -62,7 +62,7 @@
                 "aspose cloud",
                 "php"
             ],
-            "time": "2018-05-15T15:18:19+00:00"
+            "time": "2018-06-27T09:02:25+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
