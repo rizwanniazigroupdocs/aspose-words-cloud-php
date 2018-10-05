@@ -28,6 +28,7 @@
 require_once $_SERVER['DOCUMENT_ROOT'] . "tests/Aspose/Words/BaseTestContext.php";
 use Aspose\Words\Model\Requests;
 use Aspose\Words\Model\ParagraphInsert;
+use Aspose\Words\Model\ParagraphFormat;
 use Aspose\Words\Model\Font;
 use PHPUnit\Framework\Assert;
 
@@ -256,5 +257,57 @@ class ParagraphTests extends \BaseTest\BaseTestContext
 
         $result = $this->words->renderParagraph($request);
         Assert::assertNotNull($result, "Error occurred while paragraph rendering");
+    }
+
+    /**
+     * Test case for getParagraphFormat
+     *
+     * Get format of paragraph.
+     *
+     */
+    public function testGetDocumentParagraphFormat()
+    {
+        $localName = "test_multi_pages.docx";
+        $remoteName = "testGetDocumentParagraphFormat.docx";
+        $subfolder = "DocumentElements/Paragraph";
+        $fullName = self::$baseTestPath . $subfolder . "/" . $remoteName;
+        $index = 0;
+
+        $file = realpath(__DIR__ . '/../../../..') . '/TestData/Common/' . $localName;
+        $putRequest = new Aspose\Storage\Model\Requests\PutCreateRequest($fullName, $file);
+        $this->storage->PutCreate($putRequest);
+
+        $request = new Requests\GetDocumentParagraphFormatRequest($remoteName, $index, self::$baseTestPath . $subfolder,
+                NULL, NULL, NULL, "");
+
+        $result = $this->words->getDocumentParagraphFormat($request);
+        Assert::assertEquals(200, json_decode($result, true)["Code"]);
+    }
+
+    /**
+     * Test case for updateParagraphFormat
+     *
+     * Update format of paragraph.
+     *
+     */
+    public function testPostDocumentParagraphFormat()
+    {
+        $localName = "test_multi_pages.docx";
+        $remoteName = "testPostDocumentParagraphFormat.docx";
+        $subfolder = "DocumentElements/Paragraph";
+        $fullName = self::$baseTestPath . $subfolder . "/" . $remoteName;
+        $index = 0;
+        $body = new ParagraphFormat(array(
+            "alignment" => "Right",           
+        ));
+
+        $file = realpath(__DIR__ . '/../../../..') . '/TestData/Common/' . $localName;
+        $putRequest = new Aspose\Storage\Model\Requests\PutCreateRequest($fullName, $file);
+        $this->storage->PutCreate($putRequest);
+
+        $request = new Requests\PostDocumentParagraphFormatRequest($remoteName, $body, "", $index, $folder=self::$baseTestPath . $subfolder);
+
+        $result = $this->words->postDocumentParagraphFormat($request);
+        Assert::assertEquals(200, json_decode($result, true)["Code"]);
     }
 }
