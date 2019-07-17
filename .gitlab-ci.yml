@@ -3,7 +3,7 @@ stages:
 
 test:
   stage: tests
-  before-script:
+  before_script:
     - docker run -v %cd%/:/opt/project -w="/opt/project" composer composer install --no-interaction
   script:
     - mkdir -p Settings
