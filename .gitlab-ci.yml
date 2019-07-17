@@ -4,11 +4,11 @@ stages:
 test:
   stage: tests
   before_script:
-    - docker run -v %cd%/:/opt/project -w="/opt/project" composer composer install --no-interaction
+    - docker run -v $PWD/:/opt/project -w="/opt/project" composer composer install --no-interaction
   script:
     - mkdir -p Settings
     - echo "{\"AppSid\":\"$WordsAppSid\",\"AppKey\":\"$WordsAppKey\",\"BaseUrl\":\"$WordsBaseUrl\" }" > Settings/servercreds.json
-    - docker run -v $PWD:/PHP -v %cd%/Settings/servercreds.json:/servercreds.json -v $PWD/TestData:/TestData -w="/PHP" --rm php:7.2.2 vendor/bin/phpunit -c phpunit.xml 
+    - docker run -v $PWD:/PHP -v $PWD/Settings/servercreds.json:/servercreds.json -v $PWD/TestData:/TestData -w="/PHP" --rm php:7.2.2 vendor/bin/phpunit -c phpunit.xml 
   artifacts:
     paths:
       - 'testReports/logfile.xml'
