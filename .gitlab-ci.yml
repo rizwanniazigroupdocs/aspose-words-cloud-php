@@ -75,7 +75,7 @@ retest:
     - testPackage
 
 add version tag:
-  stage: version_tag
+  stage: tag_version
   only:
     - testPackage
   before_script:
