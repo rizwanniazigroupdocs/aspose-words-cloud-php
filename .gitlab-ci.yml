@@ -53,8 +53,8 @@ publish_package:
   script:
     - docker run -v $PWD/:/app -w="/app" asposewordsphp:latest php composer.phar install && php composer.phar update aspose/words-sdk-php --no-interaction
     - git diff --name-status
-		-	git ls-files --others --exclude-standard
-		-	git add -A
+    - git ls-files --others --exclude-standard
+    - git add -A
     - git commit -am "new version of package referenced for tests"
     - git push $env:ORIGIN testPackage
 
