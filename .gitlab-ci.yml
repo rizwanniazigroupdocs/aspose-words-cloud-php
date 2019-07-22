@@ -21,11 +21,9 @@ tests:
     - mkdir -p Settings
     - echo "{\"AppSid\":\"$WordsAppSid\",\"AppKey\":\"$WordsAppKey\",\"BaseUrl\":\"$WordsBaseUrl\" }" > Settings/servercreds.json
     - 'docker run -v $PWD:/PHP -v $PWD/Settings/servercreds.json:/servercreds.json -v $PWD/TestData:/TestData -w="/PHP" --rm php:7.2.2 /bin/bash -c "vendor/bin/phpunit -c phpunit.xml; chmod 777 -R vendor/ testReports/"'
-    - docker run -v $PWD/:/app -w="/app" --rm php -dmemory_limit=1G ./vendor/bin/phpcs -s --report-file=testReports/codeStyleErrors ./src ./features/bootstrap
   artifacts:
     paths:
       - 'testReports/logfile.xml'
-      - 'testReports/codeStyleErrors.xml'
   tags:
     - awcloud-linux
 
@@ -36,13 +34,13 @@ merge-to-testPackage:
   script: 
     - git checkout master
     - 'git remote set-url origin $env:ORIGIN'
-    - git checkout testPackage
-    - git reset --hard origin/testPackage
+    - git checkout testPackage1
+    - git reset --hard origin/testPackage1
     - git merge --no-ff --allow-unrelated-histories origin/master
     - git diff --name-status
     - git push
   only: 
-    - master
+    - WORDSCLOUD-793
   tags: 
     - awcloud
   when: manual
@@ -50,7 +48,7 @@ merge-to-testPackage:
 publish_package:
   stage: publishing
   only: 
-    - testPackage
+    - testPackage1
   before_script:
     - $env:ORIGIN += 'https://{0}:{1}@git.auckland.dynabic.com/words-cloud/words-cloud-php.git' -f $env:GIT_CI_USER, $env:GIT_CI_PASS
     - docker build -f ./docker/latest/Dockerfile -t asposewordsphp:latest
@@ -60,7 +58,7 @@ publish_package:
     - git ls-files --others --exclude-standard
     - git add -A
     - git commit -am "new version of package referenced for tests"
-    - git push $env:ORIGIN testPackage
+    - git push $env:ORIGIN testPackage1
 
 retest:
   stage: retest
@@ -76,12 +74,12 @@ retest:
   tags:
     - awcloud-linux
   only:
-    - testPackage
+    - testPackage1
 
 add version tag:
   stage: tag_version
   only:
-    - testPackage
+    - testPackage1
   before_script:
     - $env:ORIGIN += 'https://{0}:{1}@git.auckland.dynabic.com/words-cloud/words-cloud-php.git' -f $env:GIT_CI_USER, $env:GIT_CI_PASS
     - $env:SDK_VERSION += ((Get-Date).AddMonths(1)).tostring("yy.M")
