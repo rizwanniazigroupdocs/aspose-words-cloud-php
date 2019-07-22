@@ -8,7 +8,7 @@ stages:
 build: 
   stage: build
   script: 
-    - 'docker run -v $PWD/:/opt/project -w="/opt/project" composer composer install --no-interaction; chmod 777 -R vendor/'
+    - 'docker run -v $PWD/:/opt/project -w="/opt/project" /bin/bash -c "composer composer install --no-interaction; chmod 777 -R vendor/"'
   tags:
   - awcloud-linux
 
