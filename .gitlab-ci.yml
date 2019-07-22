@@ -8,7 +8,7 @@ stages:
 build: 
   stage: build
   script: 
-    - docker run -v $PWD/:/opt/project -w="/opt/project" composer composer install --no-interaction; chmod 777 -R vendor/
+    - 'docker run -v $PWD/:/opt/project -w="/opt/project" composer composer install --no-interaction; chmod 777 -R vendor/'
   tags:
   - awcloud-linux
 
@@ -18,7 +18,7 @@ tests:
   script:
     - mkdir -p Settings
     - echo "{\"AppSid\":\"$WordsAppSid\",\"AppKey\":\"$WordsAppKey\",\"BaseUrl\":\"$WordsBaseUrl\" }" > Settings/servercreds.json
-    - docker run -v $PWD:/PHP -v $PWD/Settings/servercreds.json:/servercreds.json -v $PWD/TestData:/TestData -w="/PHP" --rm php:7.2.2 vendor/bin/phpunit -c phpunit.xml; chmod 777 -R vendor/ testReports/
+    - 'docker run -v $PWD:/PHP -v $PWD/Settings/servercreds.json:/servercreds.json -v $PWD/TestData:/TestData -w="/PHP" --rm php:7.2.2 vendor/bin/phpunit -c phpunit.xml; chmod 777 -R vendor/ testReports/'
     - docker run -v $PWD/:/app -w="/app" --rm php -dmemory_limit=1G ./vendor/bin/phpcs -s --report-file=testReports/codeStyleErrors ./src ./features/bootstrap
   artifacts:
     paths:
