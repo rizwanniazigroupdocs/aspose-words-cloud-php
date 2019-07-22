@@ -13,7 +13,7 @@ build:
   - awcloud-linux
 
 
-tests:
+unit-tests:
   stage: tests
   before_script:
     - 'docker run -v $PWD/:/opt/project -w="/opt/project" composer /bin/bash -c "composer install --no-interaction; chmod 777 -R vendor/"'
@@ -27,10 +27,24 @@ tests:
   tags:
     - awcloud-linux
 
+bdd-tests:
+  stage: tests
+  before_script:
+    - 'docker run -v $PWD/:/opt/project -w="/opt/project" composer /bin/bash -c "composer install --no-interaction; chmod 777 -R vendor/"'
+  script:
+    - mkdir -p Settings
+    - echo "{\"AppSid\":\"$WordsAppSid\",\"AppKey\":\"$WordsAppKey\",\"BaseUrl\":\"$WordsBaseUrl\" }" > Settings/servercreds.json
+    - 'docker run -v %cd%:/PHP -v %cd%/Settings/servercreds.json:/servercreds.json -v %cd%/TestData:/TestData -w="/PHP" --rm php:latest vendor/bin/behat --config=behat.yml --format=junit --out=testReports/bdd; chmod 777 -R vendor/ testReports/"'
+  artifacts:
+    paths:
+      - 'testReports/bdd/*.xml'
+  tags:
+    - awcloud-linux
+
 merge-to-testPackage:
   stage: publishing
   before_script:
-    - $env:ORIGIN += 'https://{0}:{1}@git.auckland.dynabic.com/words-cloud/words-cloud-python.git' -f $env:GIT_CI_USER, $env:GIT_CI_PASS
+    - $env:ORIGIN += 'https://{0}:{1}@git.auckland.dynabic.com/words-cloud/words-cloud-php.git' -f $env:GIT_CI_USER, $env:GIT_CI_PASS
   script: 
     - git checkout master
     - 'git remote set-url origin $env:ORIGIN'
