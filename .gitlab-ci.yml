@@ -48,11 +48,11 @@ merge-to-testPackage:
   before_script:
     - $env:ORIGIN += 'https://{0}:{1}@git.auckland.dynabic.com/words-cloud/words-cloud-php.git' -f $env:GIT_CI_USER, $env:GIT_CI_PASS
   script: 
-    - git checkout master
+    - git checkout WORDSCLOUD-793
     - 'git remote set-url origin $env:ORIGIN'
     - git checkout testPackage1
     - git reset --hard origin/testPackage1
-    - git merge --no-ff --allow-unrelated-histories origin/master
+    - git merge --no-ff --allow-unrelated-histories origin/WORDSCLOUD-793
     - git diff --name-status
     - git push
   only: 
