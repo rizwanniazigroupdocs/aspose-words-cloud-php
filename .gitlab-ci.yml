@@ -75,6 +75,9 @@ publish_package:
     - git add -A
     - git commit -am "new version of package referenced for tests"
     - git push $env:ORIGIN testPackage1
+  tags:
+    - awcloud
+
 
 retest:
   stage: retest
@@ -102,6 +105,8 @@ add version tag:
   script: 
     - git tag -a $env:SDK_VERSION -m 'version $env:SDK_VERSION' | exit 0
     - git push $env:ORIGIN $env:SDK_VERSION 
+  tags:
+    - awcloud
 
 
 
