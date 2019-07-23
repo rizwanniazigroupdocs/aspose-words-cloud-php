@@ -69,7 +69,7 @@ publish_package:
     - ORIGIN='https://'$GIT_CI_USER':'$GIT_CI_PASS'@git.auckland.dynabic.com/words-cloud/words-cloud-php.git'
   script:
     - docker build -f ./docker/latest/Dockerfile -t asposewordsphp:latest .
-    - docker run -v $PWD/:/app -w="/app" asposewordsphp:latest /bin/bash -c "php composer.phar install && php composer.phar update aspose/words-sdk-php --no-interaction"
+    - docker run -v $PWD/:/app -w="/app" asposewordsphp:latest /bin/bash -c "php composer.phar install && php composer.phar update aspose/words-sdk-php --no-interaction; chmod 777 -R vendor/"
     - git pull $ORIGIN testPackage1
     - git checkout testPackage1
     - git diff --name-status
@@ -86,7 +86,7 @@ retest:
   script:
     - mkdir -p Settings
     - echo "{\"AppSid\":\"$WordsAppSid\",\"AppKey\":\"$WordsAppKey\",\"BaseUrl\":\"$WordsBaseUrl\" }" > Settings/servercreds.json
-    - docker run -v $PWD:/PHP -v $PWD/Settings/servercreds.json:/servercreds.json -v $PWD/TestData:/TestData -w="/PHP" --rm php:7.2.2 vendor/bin/phpunit -c phpunit.xml && chmod 777 -R vendor/ testReports/
+    - docker run -v $PWD:/PHP -v $PWD/Settings/servercreds.json:/servercreds.json -v $PWD/TestData:/TestData -w="/PHP" --rm php:7.2.2 /bin/bash -c "vendor/bin/phpunit -c phpunit.xml; chmod 777 -R vendor/ testReports/"
     - docker run -v $PWD/:/app -w="/app" --rm php -dmemory_limit=1G ./vendor/bin/phpcs -s --report-file=testReports/codeStyleErrors ./src ./features/bootstrap
   artifacts:
     paths:
