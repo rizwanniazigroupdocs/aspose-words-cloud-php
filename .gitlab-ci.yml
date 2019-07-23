@@ -66,17 +66,17 @@ publish_package:
   only: 
     - testPackage1
   before_script:
-    - $env:ORIGIN += 'https://{0}:{1}@git.auckland.dynabic.com/words-cloud/words-cloud-php.git' -f $env:GIT_CI_USER, $env:GIT_CI_PASS
+    - export ORIGIN='https://'$GIT_CI_USER':'$GIT_CI_PASS'@git.auckland.dynabic.com/words-cloud/words-cloud-php.git'
     - docker build -f ./docker/latest/Dockerfile -t asposewordsphp:latest
   script:
-    - docker run -v $PWD/:/app -w="/app" asposewordsphp:latest php composer.phar install && php composer.phar update aspose/words-sdk-php --no-interaction
+    - docker run -v $PWD/:/app -w="/app" asposewordsphp:latest /bin/bash -c "php composer.phar install && php composer.phar update aspose/words-sdk-php --no-interaction"
     - git diff --name-status
     - git ls-files --others --exclude-standard
     - git add -A
     - git commit -am "new version of package referenced for tests"
-    - git push $env:ORIGIN testPackage1
+    - git push $ORIGIN testPackage1
   tags:
-    - awcloud
+    - awcloud_linux
 
 
 retest:
