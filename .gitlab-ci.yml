@@ -70,8 +70,8 @@ publish_package:
   script:
     - docker build -f ./docker/latest/Dockerfile -t asposewordsphp:latest .
     - docker run -v $PWD/:/app -w="/app" asposewordsphp:latest /bin/bash -c "php composer.phar install && php composer.phar update aspose/words-sdk-php --no-interaction; chmod 777 -R vendor/"
-    - git pull $ORIGIN testPackage1
     - git checkout testPackage1
+    - git pull
     - git diff --name-status
     - git ls-files --others --exclude-standard
     - git add -A
