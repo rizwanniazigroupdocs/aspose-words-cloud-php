@@ -76,7 +76,7 @@ publish_package:
     - git commit -am "new version of package referenced for tests"
     - git push $ORIGIN testPackage1
   tags:
-    - awcloud_linux
+    - awcloud-linux
 
 
 retest:
