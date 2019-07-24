@@ -1,8 +1,8 @@
 stages:
   - build
   - tests
-  - merge-to-testPackage
   - tag_version
+  - merge-to-testPackage
   - publishing
   - retest
 
@@ -80,7 +80,6 @@ publish_package:
     - git push $ORIGIN testPackage1
   tags:
     - awcloud-linux
-  when: manual
 
 
 unit-retest:
