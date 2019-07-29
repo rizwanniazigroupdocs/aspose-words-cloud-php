@@ -5,7 +5,8 @@ stages:
   - tag_version
   - merge-to-testPackage
   - publishing
-  - retest
+  - retest-5.6
+  - retest-latest
 
 build: 
   stage: build
@@ -113,14 +114,14 @@ publish_package:
     - awcloud-linux
 
 
-unit-retest:
-  stage: retest
+unit-retest-5.6:
+  stage: retest-5.6
   before_script:
     - 'docker run -v $PWD/:/opt/project -w="/opt/project" composer /bin/bash -c "composer install --no-interaction; chmod 777 -R vendor/"'
   script:
     - mkdir -p Settings
     - echo "{\"AppSid\":\"$WordsAppSid\",\"AppKey\":\"$WordsAppKey\",\"BaseUrl\":\"$WordsBaseUrl\" }" > Settings/servercreds.json
-    - docker run -v $PWD:/PHP -v $PWD/Settings/servercreds.json:/servercreds.json -v $PWD/TestData:/TestData -w="/PHP" --rm php:7.2.2 /bin/bash -c "vendor/bin/phpunit -c phpunit.xml; chmod 777 -R vendor/ testReports/"
+    - docker run -v $PWD:/PHP -v $PWD/Settings/servercreds.json:/servercreds.json -v $PWD/TestData:/TestData -w="/PHP" --rm php:5.6 /bin/bash -c "vendor/bin/phpunit -c phpunit.xml; chmod 777 -R vendor/ testReports/"
   artifacts:
     paths:
       - 'testReports/logfile.xml'
@@ -130,15 +131,50 @@ unit-retest:
     - testPackage
   when: manual
 
-bdd-retest:
-  stage: retest
+bdd-retest-5.6:
+  stage: retest-5.6
   before_script:
     - 'docker run -v $PWD/:/opt/project -w="/opt/project" composer /bin/bash -c "composer install --no-interaction; chmod 777 -R vendor/"'
   script:
     - mkdir -p Settings
     - echo "{\"AppSid\":\"$WordsAppSid\",\"AppKey\":\"$WordsAppKey\",\"BaseUrl\":\"$WordsBaseUrl\" }" > Settings/servercreds.json
-    - docker run -v $PWD:/PHP -v $PWD/Settings/servercreds.json:/servercreds.json -v $PWD/TestData:/TestData -w="/PHP" --rm php:7.2.2 /bin/bash -c "vendor/bin/phpunit -c phpunit.xml; chmod 777 -R vendor/ testReports/"
-     mkdir -p testReports/bdd
+    - mkdir -p testReports/bdd
+    - chmod 777 -R testReports/
+    - 'docker run -v $PWD:/PHP -v $PWD/Settings/servercreds.json:/servercreds.json -v $PWD/TestData:/TestData -w="/PHP" --rm php:5.6 /bin/bash -c "vendor/bin/behat --config=behat.yml --format=junit --out=testReports/bdd; chmod 777 -R vendor/ testReports/"'
+  artifacts:
+    paths:
+      - 'testReports/bdd/*.xml'
+  tags:
+    - awcloud-linux
+  only:
+    - testPackage
+  when: manual
+
+  unit-retest-latest:
+  stage: retest-latest
+  before_script:
+    - 'docker run -v $PWD/:/opt/project -w="/opt/project" composer /bin/bash -c "composer install --no-interaction; chmod 777 -R vendor/"'
+  script:
+    - mkdir -p Settings
+    - echo "{\"AppSid\":\"$WordsAppSid\",\"AppKey\":\"$WordsAppKey\",\"BaseUrl\":\"$WordsBaseUrl\" }" > Settings/servercreds.json
+    - docker run -v $PWD:/PHP -v $PWD/Settings/servercreds.json:/servercreds.json -v $PWD/TestData:/TestData -w="/PHP" --rm php:latest /bin/bash -c "vendor/bin/phpunit -c phpunit.xml; chmod 777 -R vendor/ testReports/"
+  artifacts:
+    paths:
+      - 'testReports/logfile.xml'
+  tags:
+    - awcloud-linux
+  only:
+    - testPackage
+  when: manual
+
+bdd-retest-latest:
+  stage: retest-latest
+  before_script:
+    - 'docker run -v $PWD/:/opt/project -w="/opt/project" composer /bin/bash -c "composer install --no-interaction; chmod 777 -R vendor/"'
+  script:
+    - mkdir -p Settings
+    - echo "{\"AppSid\":\"$WordsAppSid\",\"AppKey\":\"$WordsAppKey\",\"BaseUrl\":\"$WordsBaseUrl\" }" > Settings/servercreds.json
+    - mkdir -p testReports/bdd
     - chmod 777 -R testReports/
     - 'docker run -v $PWD:/PHP -v $PWD/Settings/servercreds.json:/servercreds.json -v $PWD/TestData:/TestData -w="/PHP" --rm php:latest /bin/bash -c "vendor/bin/behat --config=behat.yml --format=junit --out=testReports/bdd; chmod 777 -R vendor/ testReports/"'
   artifacts:
