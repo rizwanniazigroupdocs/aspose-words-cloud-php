@@ -80,15 +80,15 @@ merge-to-testPackage:
   before_script:
     - $env:ORIGIN += 'https://{0}:{1}@git.auckland.dynabic.com/words-cloud/words-cloud-php.git' -f $env:GIT_CI_USER, $env:GIT_CI_PASS
   script: 
-    - git checkout WORDSCLOUD-793
+    - git checkout master
     - 'git remote set-url origin $env:ORIGIN'
-    - git checkout testPackage1
-    - git reset --hard origin/testPackage1
-    - git merge --no-ff --allow-unrelated-histories origin/WORDSCLOUD-793 -m "Merged test for publishing"
+    - git checkout testPackage
+    - git reset --hard origin/testPackage
+    - git merge --no-ff --allow-unrelated-histories origin/master -m "Merged test for publishing"
     - git diff --name-status
     - git push
   only: 
-    - WORDSCLOUD-793
+    - master
   tags: 
     - awcloud
   when: manual
@@ -96,19 +96,19 @@ merge-to-testPackage:
 publish_package:
   stage: publishing
   only: 
-    - testPackage1
+    - testPackage
   before_script:
     - ORIGIN='https://'$GIT_CI_USER':'$GIT_CI_PASS'@git.auckland.dynabic.com/words-cloud/words-cloud-php.git'
   script:
     - docker build -f ./docker/latest/Dockerfile -t asposewordsphp:latest .
     - docker run -v $PWD/:/app -w="/app" asposewordsphp:latest /bin/bash -c "php composer.phar install && php composer.phar update aspose/words-sdk-php --no-interaction; chmod 777 -R vendor/"
-    - git checkout testPackage1
+    - git checkout testPackage
     - git pull
     - git diff --name-status
     - git ls-files --others --exclude-standard
     - git add -A
     - git commit -am "new version of package referenced for tests [ci skip]"
-    - git push $ORIGIN testPackage1
+    - git push $ORIGIN testPackage
   tags:
     - awcloud-linux
 
@@ -127,7 +127,7 @@ unit-retest:
   tags:
     - awcloud-linux
   only:
-    - testPackage1
+    - testPackage
   when: manual
 
 bdd-retest:
@@ -147,13 +147,13 @@ bdd-retest:
   tags:
     - awcloud-linux
   only:
-    - testPackage1
+    - testPackage
   when: manual
 
 add version tag:
   stage: tag_version
   only:
-    - WORDSCLOUD-793
+    - master
   before_script:
     - $env:ORIGIN += 'https://{0}:{1}@git.auckland.dynabic.com/words-cloud/words-cloud-php.git' -f $env:GIT_CI_USER, $env:GIT_CI_PASS
     - $env:SDK_VERSION += ((Get-Date).AddMonths(1)).tostring("yy.M")
