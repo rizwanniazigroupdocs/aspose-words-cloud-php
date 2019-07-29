@@ -150,7 +150,7 @@ bdd-retest-5.6:
     - testPackage
   when: manual
 
-  unit-retest-latest:
+unit-retest-latest:
   stage: retest-latest
   before_script:
     - 'docker run -v $PWD/:/opt/project -w="/opt/project" composer /bin/bash -c "composer install --no-interaction; chmod 777 -R vendor/"'
