@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "950b88ddfafa6fbf97286efdfceddc43",
+    "content-hash": "dade2a012e5c63f77ee22c3bf5426ef9",
     "packages": [
         {
             "name": "aspose/words-sdk-php",
-            "version": "18.8",
+            "version": "18.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aspose-words-cloud/aspose-words-cloud-php.git",
-                "reference": "24c2f51f4fbad0f1185e17cfec52b5a08ea7db69"
+                "reference": "79852f1827fdc863066a4e407d89c119114e8d35"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aspose-words-cloud/aspose-words-cloud-php/zipball/24c2f51f4fbad0f1185e17cfec52b5a08ea7db69",
-                "reference": "24c2f51f4fbad0f1185e17cfec52b5a08ea7db69",
+                "url": "https://api.github.com/repos/aspose-words-cloud/aspose-words-cloud-php/zipball/79852f1827fdc863066a4e407d89c119114e8d35",
+                "reference": "79852f1827fdc863066a4e407d89c119114e8d35",
                 "shasum": ""
             },
             "require": {
@@ -62,7 +62,7 @@
                 "aspose cloud",
                 "php"
             ],
-            "time": "2018-09-13T03:39:36+00:00"
+            "time": "2018-10-05T07:02:40+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
