@@ -29,7 +29,6 @@
         "aspose/words-sdk-php": "^18.5"
     },
     "require-dev": {
-	    "aspose/storage-sdk-php": "18.*",
         "squizlabs/php_codesniffer": "3.*",
         "phpunit/phpunit": "^4.8",
 		"behat/behat": "3.4.*",
