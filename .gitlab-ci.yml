@@ -194,7 +194,7 @@ add version tag:
     - $env:ORIGIN += 'https://{0}:{1}@git.auckland.dynabic.com/words-cloud/words-cloud-php.git' -f $env:GIT_CI_USER, $env:GIT_CI_PASS
     - $env:SDK_VERSION += ((Get-Date).AddMonths(1)).tostring("yy.M")
   script: 
-    - git tag -a $env:SDK_VERSION -m 'version $env:SDK_VERSION' | exit 0
+    - git tag -a $env:SDK_VERSION -m 'version $env:SDK_VERSION'
     - git push $env:ORIGIN $env:SDK_VERSION 
   tags:
     - awcloud
