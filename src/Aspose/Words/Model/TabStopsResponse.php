@@ -1,8 +1,8 @@
 <?php
-/**
- * --------------------------------------------------------------------------------------------------------------------
- * <copyright company="Aspose" file="Styles.php">
- *   Copyright (c) 2019 Aspose.Words for Cloud
+/*
+ * --------------------------------------------------------------------------------
+ * <copyright company="Aspose" file="TabStopsResponse.php">
+ *   Copyright (c) 2020 Aspose.Words for Cloud
  * </copyright>
  * <summary>
  *   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -23,21 +23,18 @@
  *  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  *  SOFTWARE.
  * </summary>
- * --------------------------------------------------------------------------------------------------------------------
- */
-/*
- * Styles
+ * --------------------------------------------------------------------------------
  */
 
 namespace Aspose\Words\Model;
 use \Aspose\Words\ObjectSerializer;
 
 /*
- * Styles
+ * TabStopsResponse
  *
- * @description Represents an array of styles list.
+ * @description This response should be returned by the service when handling: GET https://api.aspose.cloud/v4.0/words/Test.doc/paragraphs/{0}/tabstops.
  */
-class Styles extends LinkElement 
+class TabStopsResponse extends WordsResponse
 {
     const DISCRIMINATOR = null;
 
@@ -46,7 +43,7 @@ class Styles extends LinkElement
      *
      * @var string
      */
-    protected static $swaggerModelName = "Styles";
+    protected static $swaggerModelName = "TabStopsResponse";
 
     /*
      * Array of property to type mappings. Used for (de)serialization
@@ -54,7 +51,7 @@ class Styles extends LinkElement
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'style' => '\Aspose\Words\Model\Style[]'
+        'tab_stops' => '\Aspose\Words\Model\TabStop[]'
     ];
 
     /*
@@ -63,7 +60,7 @@ class Styles extends LinkElement
      * @var string[]
      */
     protected static $swaggerFormats = [
-        'style' => null
+        'tab_stops' => 'null'
     ];
 
     /*
@@ -93,7 +90,7 @@ class Styles extends LinkElement
      * @var string[]
      */
     protected static $attributeMap = [
-        'style' => 'Style'
+        'tab_stops' => 'TabStops'
     ];
 
     /*
@@ -102,7 +99,7 @@ class Styles extends LinkElement
      * @var string[]
      */
     protected static $setters = [
-        'style' => 'setStyle'
+        'tab_stops' => 'setTabStops'
     ];
 
     /*
@@ -111,7 +108,7 @@ class Styles extends LinkElement
      * @var string[]
      */
     protected static $getters = [
-        'style' => 'getStyle'
+        'tab_stops' => 'getTabStops'
     ];
 
     /*
@@ -157,7 +154,6 @@ class Styles extends LinkElement
 
 
 
-
     /*
      * Constructor
      *
@@ -167,8 +163,7 @@ class Styles extends LinkElement
     public function __construct(array $data = null)
     {
         parent::__construct($data);
-
-        $this->container['style'] = isset($data['style']) ? $data['style'] : null;
+        $this->container['tab_stops'] = isset($data['tab_stops']) ? $data['tab_stops'] : null;
     }
 
     /*
@@ -179,7 +174,6 @@ class Styles extends LinkElement
     public function listInvalidProperties()
     {
         $invalidProperties = parent::listInvalidProperties();
-
         return $invalidProperties;
     }
 
@@ -198,30 +192,29 @@ class Styles extends LinkElement
         return true;
     }
 
-
     /*
-     * Gets style
+     * Gets tab_stops
      *
-     * @return \Aspose\Words\Model\Style[]
+     * @return \Aspose\Words\Model\TabStop[]
      */
-    public function getStyle()
+    public function getTabStops()
     {
-        return $this->container['style'];
+        return $this->container['tab_stops'];
     }
 
     /*
-     * Sets style
+     * Sets tab_stops
      *
-     * @param \Aspose\Words\Model\Style[] $style Gets or sets array of document styles.
+     * @param \Aspose\Words\Model\TabStop[] $tab_stops Gets or sets represents a tab stop.
      *
      * @return $this
      */
-    public function setStyle($style)
+    public function setTabStops($tab_stops)
     {
-        $this->container['style'] = $style;
-
+        $this->container['tab_stops'] = $tab_stops;
         return $this;
     }
+
     /*
      * Returns true if offset exists. False otherwise.
      *
@@ -292,3 +285,4 @@ class Styles extends LinkElement
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
+
