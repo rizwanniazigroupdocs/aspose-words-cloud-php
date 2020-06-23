@@ -1,7 +1,7 @@
 <?php
 /*
  * --------------------------------------------------------------------------------
- * <copyright company="Aspose" file="UpdateParagraphFormatRequest.php">
+ * <copyright company="Aspose" file="UpdateParagraphFormatWithoutNodePathRequest.php">
  *   Copyright (c) 2020 Aspose.Words for Cloud
  * </copyright>
  * <summary>
@@ -29,9 +29,9 @@
 namespace Aspose\Words\Model\Requests;
 
 /*
- * Request model for updateParagraphFormat operation.
+ * Request model for updateParagraphFormatWithoutNodePath operation.
  */
-class UpdateParagraphFormatRequest
+class UpdateParagraphFormatWithoutNodePathRequest
 {
     /*
      * The document name.
@@ -42,11 +42,6 @@ class UpdateParagraphFormatRequest
      * Paragraph format object.
      */
     public $dto;
-
-    /*
-     * Path to the node which contains paragraphs.
-     */
-    public $node_path;
 
     /*
      * Object index.
@@ -89,11 +84,10 @@ class UpdateParagraphFormatRequest
     public $revision_date_time;
 
     /*
-     * Initializes a new instance of the UpdateParagraphFormatRequest class.
+     * Initializes a new instance of the UpdateParagraphFormatWithoutNodePathRequest class.
      *
      * @param string $name The document name.
      * @param \Aspose\Words\Model\ParagraphFormat $dto Paragraph format object.
-     * @param string $node_path Path to the node which contains paragraphs.
      * @param int $index Object index.
      * @param string $folder Original document folder.
      * @param string $storage Original document storage.
@@ -103,11 +97,10 @@ class UpdateParagraphFormatRequest
      * @param string $revision_author Initials of the author to use for revisions.If you set this parameter and then make some changes to the document programmatically, save the document and later open the document in MS Word you will see these changes as revisions.
      * @param string $revision_date_time The date and time to use for revisions.
      */
-    public function __construct($name, $dto, $node_path, $index, $folder = null, $storage = null, $load_encoding = null, $password = null, $dest_file_name = null, $revision_author = null, $revision_date_time = null)
+    public function __construct($name, $dto, $index, $folder = null, $storage = null, $load_encoding = null, $password = null, $dest_file_name = null, $revision_author = null, $revision_date_time = null)
     {
         $this->name = $name;
         $this->dto = $dto;
-        $this->node_path = $node_path;
         $this->index = $index;
         $this->folder = $folder;
         $this->storage = $storage;
@@ -149,23 +142,6 @@ class UpdateParagraphFormatRequest
     public function set_dto($value)
     {
         $this->dto = $value;
-        return $this;
-    }
-
-    /*
-     * Path to the node which contains paragraphs.
-     */
-    public function get_node_path()
-    {
-        return $this->node_path;
-    }
-
-    /*
-     * Path to the node which contains paragraphs.
-     */
-    public function set_node_path($value)
-    {
-        $this->node_path = $value;
         return $this;
     }
 
