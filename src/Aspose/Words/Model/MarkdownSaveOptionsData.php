@@ -1,7 +1,7 @@
 <?php
 /*
  * --------------------------------------------------------------------------------
- * <copyright company="Aspose" file="ParagraphFormat.php">
+ * <copyright company="Aspose" file="MarkdownSaveOptionsData.php">
  *   Copyright (c) 2020 Aspose.Words for Cloud
  * </copyright>
  * <summary>
@@ -30,11 +30,11 @@ namespace Aspose\Words\Model;
 use \Aspose\Words\ObjectSerializer;
 
 /*
- * ParagraphFormat
+ * MarkdownSaveOptionsData
  *
- * @description Paragraph format element.
+ * @description Container class for markdown save options.
  */
-class ParagraphFormat extends ParagraphFormatBase
+class MarkdownSaveOptionsData extends TxtSaveOptionsBaseData
 {
     const DISCRIMINATOR = null;
 
@@ -43,7 +43,7 @@ class ParagraphFormat extends ParagraphFormatBase
      *
      * @var string
      */
-    protected static $swaggerModelName = "ParagraphFormat";
+    protected static $swaggerModelName = "MarkdownSaveOptionsData";
 
     /*
      * Array of property to type mappings. Used for (de)serialization
@@ -51,8 +51,7 @@ class ParagraphFormat extends ParagraphFormatBase
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'is_heading' => 'bool',
-        'is_list_item' => 'bool'
+        'table_content_alignment' => 'string'
     ];
 
     /*
@@ -61,8 +60,7 @@ class ParagraphFormat extends ParagraphFormatBase
      * @var string[]
      */
     protected static $swaggerFormats = [
-        'is_heading' => 'null',
-        'is_list_item' => 'null'
+        'table_content_alignment' => 'null'
     ];
 
     /*
@@ -92,8 +90,7 @@ class ParagraphFormat extends ParagraphFormatBase
      * @var string[]
      */
     protected static $attributeMap = [
-        'is_heading' => 'IsHeading',
-        'is_list_item' => 'IsListItem'
+        'table_content_alignment' => 'TableContentAlignment'
     ];
 
     /*
@@ -102,8 +99,7 @@ class ParagraphFormat extends ParagraphFormatBase
      * @var string[]
      */
     protected static $setters = [
-        'is_heading' => 'setIsHeading',
-        'is_list_item' => 'setIsListItem'
+        'table_content_alignment' => 'setTableContentAlignment'
     ];
 
     /*
@@ -112,8 +108,7 @@ class ParagraphFormat extends ParagraphFormatBase
      * @var string[]
      */
     protected static $getters = [
-        'is_heading' => 'getIsHeading',
-        'is_list_item' => 'getIsListItem'
+        'table_content_alignment' => 'getTableContentAlignment'
     ];
 
     /*
@@ -157,7 +152,25 @@ class ParagraphFormat extends ParagraphFormatBase
         return self::$swaggerModelName;
     }
 
+    const TABLE_CONTENT_ALIGNMENT_AUTO = 'Auto';
+    const TABLE_CONTENT_ALIGNMENT_LEFT = 'Left';
+    const TABLE_CONTENT_ALIGNMENT_CENTER = 'Center';
+    const TABLE_CONTENT_ALIGNMENT_RIGHT = 'Right';
 
+    /*
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getTableContentAlignmentAllowableValues()
+    {
+        return [
+            self::TABLE_CONTENT_ALIGNMENT_AUTO,
+            self::TABLE_CONTENT_ALIGNMENT_LEFT,
+            self::TABLE_CONTENT_ALIGNMENT_CENTER,
+            self::TABLE_CONTENT_ALIGNMENT_RIGHT
+        ];
+    }
 
     /*
      * Constructor
@@ -168,8 +181,7 @@ class ParagraphFormat extends ParagraphFormatBase
     public function __construct(array $data = null)
     {
         parent::__construct($data);
-        $this->container['is_heading'] = isset($data['is_heading']) ? $data['is_heading'] : null;
-        $this->container['is_list_item'] = isset($data['is_list_item']) ? $data['is_list_item'] : null;
+        $this->container['table_content_alignment'] = isset($data['table_content_alignment']) ? $data['table_content_alignment'] : null;
     }
 
     /*
@@ -180,6 +192,15 @@ class ParagraphFormat extends ParagraphFormatBase
     public function listInvalidProperties()
     {
         $invalidProperties = parent::listInvalidProperties();
+        $allowedValues = $this->getTableContentAlignmentAllowableValues();
+        if (!in_array($this->container['table_content_alignment'], $allowedValues)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'table_content_alignment', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
+
+
         return $invalidProperties;
     }
 
@@ -195,52 +216,39 @@ class ParagraphFormat extends ParagraphFormatBase
             return false;
         }
 
+        $allowedValues = $this->getTableContentAlignmentAllowableValues();
+        if (!in_array($this->container['table_content_alignment'], $allowedValues)) {
+            return false;
+        }
+
+
         return true;
     }
 
     /*
-     * Gets is_heading
+     * Gets table_content_alignment
      *
-     * @return bool
+     * @return string
      */
-    public function getIsHeading()
+    public function getTableContentAlignment()
     {
-        return $this->container['is_heading'];
+        return $this->container['table_content_alignment'];
     }
 
     /*
-     * Sets is_heading
+     * Sets table_content_alignment
      *
-     * @param bool $is_heading Gets or sets True when the paragraph style is one of the built-in Heading styles.
+     * @param string $table_content_alignment Gets or sets a value that specifies how to align contents in tables when exporting into the Markdown format. The default value is Auto.
      *
      * @return $this
      */
-    public function setIsHeading($is_heading)
+    public function setTableContentAlignment($table_content_alignment)
     {
-        $this->container['is_heading'] = $is_heading;
-        return $this;
-    }
-
-    /*
-     * Gets is_list_item
-     *
-     * @return bool
-     */
-    public function getIsListItem()
-    {
-        return $this->container['is_list_item'];
-    }
-
-    /*
-     * Sets is_list_item
-     *
-     * @param bool $is_list_item Gets or sets True when the paragraph is an item in a bulleted or numbered list.
-     *
-     * @return $this
-     */
-    public function setIsListItem($is_list_item)
-    {
-        $this->container['is_list_item'] = $is_list_item;
+        $allowedValues = $this->getTableContentAlignmentAllowableValues();
+        if ((!is_numeric($table_content_alignment) && !in_array($table_content_alignment, $allowedValues)) || (is_numeric($table_content_alignment) && !in_array($allowedValues[$table_content_alignment], $allowedValues))) {
+            throw new \InvalidArgumentException(sprintf("Invalid value for 'table_content_alignment', must be one of '%s'", implode("', '", $allowedValues)));
+        }
+        $this->container['table_content_alignment'] = $table_content_alignment;
         return $this;
     }
 

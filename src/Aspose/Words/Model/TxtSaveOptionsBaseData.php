@@ -1,7 +1,7 @@
 <?php
 /*
  * --------------------------------------------------------------------------------
- * <copyright company="Aspose" file="ParagraphFormat.php">
+ * <copyright company="Aspose" file="TxtSaveOptionsBaseData.php">
  *   Copyright (c) 2020 Aspose.Words for Cloud
  * </copyright>
  * <summary>
@@ -30,11 +30,11 @@ namespace Aspose\Words\Model;
 use \Aspose\Words\ObjectSerializer;
 
 /*
- * ParagraphFormat
+ * TxtSaveOptionsBaseData
  *
- * @description Paragraph format element.
+ * @description Base class for save options of text formats.
  */
-class ParagraphFormat extends ParagraphFormatBase
+class TxtSaveOptionsBaseData extends SaveOptionsData
 {
     const DISCRIMINATOR = null;
 
@@ -43,7 +43,7 @@ class ParagraphFormat extends ParagraphFormatBase
      *
      * @var string
      */
-    protected static $swaggerModelName = "ParagraphFormat";
+    protected static $swaggerModelName = "TxtSaveOptionsBaseData";
 
     /*
      * Array of property to type mappings. Used for (de)serialization
@@ -51,8 +51,10 @@ class ParagraphFormat extends ParagraphFormatBase
      * @var string[]
      */
     protected static $swaggerTypes = [
-        'is_heading' => 'bool',
-        'is_list_item' => 'bool'
+        'encoding' => 'string',
+        'export_headers_footers_mode' => 'string',
+        'force_page_breaks' => 'bool',
+        'paragraph_break' => 'string'
     ];
 
     /*
@@ -61,8 +63,10 @@ class ParagraphFormat extends ParagraphFormatBase
      * @var string[]
      */
     protected static $swaggerFormats = [
-        'is_heading' => 'null',
-        'is_list_item' => 'null'
+        'encoding' => 'null',
+        'export_headers_footers_mode' => 'null',
+        'force_page_breaks' => 'null',
+        'paragraph_break' => 'null'
     ];
 
     /*
@@ -92,8 +96,10 @@ class ParagraphFormat extends ParagraphFormatBase
      * @var string[]
      */
     protected static $attributeMap = [
-        'is_heading' => 'IsHeading',
-        'is_list_item' => 'IsListItem'
+        'encoding' => 'Encoding',
+        'export_headers_footers_mode' => 'ExportHeadersFootersMode',
+        'force_page_breaks' => 'ForcePageBreaks',
+        'paragraph_break' => 'ParagraphBreak'
     ];
 
     /*
@@ -102,8 +108,10 @@ class ParagraphFormat extends ParagraphFormatBase
      * @var string[]
      */
     protected static $setters = [
-        'is_heading' => 'setIsHeading',
-        'is_list_item' => 'setIsListItem'
+        'encoding' => 'setEncoding',
+        'export_headers_footers_mode' => 'setExportHeadersFootersMode',
+        'force_page_breaks' => 'setForcePageBreaks',
+        'paragraph_break' => 'setParagraphBreak'
     ];
 
     /*
@@ -112,8 +120,10 @@ class ParagraphFormat extends ParagraphFormatBase
      * @var string[]
      */
     protected static $getters = [
-        'is_heading' => 'getIsHeading',
-        'is_list_item' => 'getIsListItem'
+        'encoding' => 'getEncoding',
+        'export_headers_footers_mode' => 'getExportHeadersFootersMode',
+        'force_page_breaks' => 'getForcePageBreaks',
+        'paragraph_break' => 'getParagraphBreak'
     ];
 
     /*
@@ -157,7 +167,23 @@ class ParagraphFormat extends ParagraphFormatBase
         return self::$swaggerModelName;
     }
 
+    const EXPORT_HEADERS_FOOTERS_MODE_NONE = 'None';
+    const EXPORT_HEADERS_FOOTERS_MODE_PRIMARY_ONLY = 'PrimaryOnly';
+    const EXPORT_HEADERS_FOOTERS_MODE_ALL_AT_END = 'AllAtEnd';
 
+    /*
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getExportHeadersFootersModeAllowableValues()
+    {
+        return [
+            self::EXPORT_HEADERS_FOOTERS_MODE_NONE,
+            self::EXPORT_HEADERS_FOOTERS_MODE_PRIMARY_ONLY,
+            self::EXPORT_HEADERS_FOOTERS_MODE_ALL_AT_END
+        ];
+    }
 
     /*
      * Constructor
@@ -168,8 +194,10 @@ class ParagraphFormat extends ParagraphFormatBase
     public function __construct(array $data = null)
     {
         parent::__construct($data);
-        $this->container['is_heading'] = isset($data['is_heading']) ? $data['is_heading'] : null;
-        $this->container['is_list_item'] = isset($data['is_list_item']) ? $data['is_list_item'] : null;
+        $this->container['encoding'] = isset($data['encoding']) ? $data['encoding'] : null;
+        $this->container['export_headers_footers_mode'] = isset($data['export_headers_footers_mode']) ? $data['export_headers_footers_mode'] : null;
+        $this->container['force_page_breaks'] = isset($data['force_page_breaks']) ? $data['force_page_breaks'] : null;
+        $this->container['paragraph_break'] = isset($data['paragraph_break']) ? $data['paragraph_break'] : null;
     }
 
     /*
@@ -180,6 +208,15 @@ class ParagraphFormat extends ParagraphFormatBase
     public function listInvalidProperties()
     {
         $invalidProperties = parent::listInvalidProperties();
+        $allowedValues = $this->getExportHeadersFootersModeAllowableValues();
+        if (!in_array($this->container['export_headers_footers_mode'], $allowedValues)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'export_headers_footers_mode', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
+
+
         return $invalidProperties;
     }
 
@@ -195,52 +232,108 @@ class ParagraphFormat extends ParagraphFormatBase
             return false;
         }
 
+        $allowedValues = $this->getExportHeadersFootersModeAllowableValues();
+        if (!in_array($this->container['export_headers_footers_mode'], $allowedValues)) {
+            return false;
+        }
+
+
         return true;
     }
 
     /*
-     * Gets is_heading
+     * Gets encoding
      *
-     * @return bool
+     * @return string
      */
-    public function getIsHeading()
+    public function getEncoding()
     {
-        return $this->container['is_heading'];
+        return $this->container['encoding'];
     }
 
     /*
-     * Sets is_heading
+     * Sets encoding
      *
-     * @param bool $is_heading Gets or sets True when the paragraph style is one of the built-in Heading styles.
+     * @param string $encoding Gets or sets specifies the encoding to use when exporting in plain text format.
      *
      * @return $this
      */
-    public function setIsHeading($is_heading)
+    public function setEncoding($encoding)
     {
-        $this->container['is_heading'] = $is_heading;
+        $this->container['encoding'] = $encoding;
         return $this;
     }
 
     /*
-     * Gets is_list_item
+     * Gets export_headers_footers_mode
      *
-     * @return bool
+     * @return string
      */
-    public function getIsListItem()
+    public function getExportHeadersFootersMode()
     {
-        return $this->container['is_list_item'];
+        return $this->container['export_headers_footers_mode'];
     }
 
     /*
-     * Sets is_list_item
+     * Sets export_headers_footers_mode
      *
-     * @param bool $is_list_item Gets or sets True when the paragraph is an item in a bulleted or numbered list.
+     * @param string $export_headers_footers_mode Gets or sets specifies whether to output headers and footers when exporting in plain text format. default value is TxtExportHeadersFootersMode.PrimaryOnly.
      *
      * @return $this
      */
-    public function setIsListItem($is_list_item)
+    public function setExportHeadersFootersMode($export_headers_footers_mode)
     {
-        $this->container['is_list_item'] = $is_list_item;
+        $allowedValues = $this->getExportHeadersFootersModeAllowableValues();
+        if ((!is_numeric($export_headers_footers_mode) && !in_array($export_headers_footers_mode, $allowedValues)) || (is_numeric($export_headers_footers_mode) && !in_array($allowedValues[$export_headers_footers_mode], $allowedValues))) {
+            throw new \InvalidArgumentException(sprintf("Invalid value for 'export_headers_footers_mode', must be one of '%s'", implode("', '", $allowedValues)));
+        }
+        $this->container['export_headers_footers_mode'] = $export_headers_footers_mode;
+        return $this;
+    }
+
+    /*
+     * Gets force_page_breaks
+     *
+     * @return bool
+     */
+    public function getForcePageBreaks()
+    {
+        return $this->container['force_page_breaks'];
+    }
+
+    /*
+     * Sets force_page_breaks
+     *
+     * @param bool $force_page_breaks Gets or sets allows to specify whether the page breaks should be preserved during export. The default value is false.
+     *
+     * @return $this
+     */
+    public function setForcePageBreaks($force_page_breaks)
+    {
+        $this->container['force_page_breaks'] = $force_page_breaks;
+        return $this;
+    }
+
+    /*
+     * Gets paragraph_break
+     *
+     * @return string
+     */
+    public function getParagraphBreak()
+    {
+        return $this->container['paragraph_break'];
+    }
+
+    /*
+     * Sets paragraph_break
+     *
+     * @param string $paragraph_break Gets or sets specifies the string to use as a paragraph break when exporting in plain text format.
+     *
+     * @return $this
+     */
+    public function setParagraphBreak($paragraph_break)
+    {
+        $this->container['paragraph_break'] = $paragraph_break;
         return $this;
     }
 
