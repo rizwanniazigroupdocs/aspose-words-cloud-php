@@ -759,6 +759,287 @@ class WordsApi
     }
 
     /*
+     * Operation appendDocumentOnline
+     *
+     * Appends documents to original document.
+     *
+     * @param Requests\appendDocumentOnlineRequest $request is a request object for operation
+     *
+     * @throws \Aspose\Words\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \SplFileObject
+     */
+    public function appendDocumentOnline(Requests\appendDocumentOnlineRequest $request)
+    {
+        try {
+            list($response) = $this->appendDocumentOnlineWithHttpInfo($request);
+            return $response;
+        }
+        catch(RepeatRequestException $e) {
+            list($response) = $this->appendDocumentOnlineWithHttpInfo($request);
+            return $response;
+        } 
+    }
+
+    /*
+     * Operation appendDocumentOnlineWithHttpInfo
+     *
+     * Appends documents to original document.
+     *
+     * @param Requests\appendDocumentOnlineRequest $request is a request object for operation
+     *
+     * @throws \Aspose\Words\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function appendDocumentOnlineWithHttpInfo(Requests\appendDocumentOnlineRequest $request)
+    {
+        $returnType = '\SplFileObject';
+        $request = $this->appendDocumentOnlineRequest($request);
+
+        try {
+            $options = $this->_createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                if ($e->getCode() == 401) {
+                    $this->_requestToken();
+                    throw new RepeatRequestException("Request must be retried", 401, null, null);
+                }
+                else if ($e->getCode() < 200 || $e->getCode() > 299) {
+                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
+                }
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            if ($this->config->getDebug()) {
+                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            case 200:
+                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\SplFileObject', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                break;
+            }
+            throw $e;
+        }
+    }
+
+    /*
+     * Operation appendDocumentOnlineAsync
+     *
+     * Appends documents to original document.
+     *
+     * @param Requests\appendDocumentOnlineRequest $request is a request object for operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function appendDocumentOnlineAsync(Requests\appendDocumentOnlineRequest $request) 
+    {
+        return $this->appendDocumentOnlineAsyncWithHttpInfo($request)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /*
+     * Operation appendDocumentOnlineAsyncWithHttpInfo
+     *
+     * Appends documents to original document.
+     *
+     * @param Requests\appendDocumentOnlineRequest $request is a request object for operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function appendDocumentOnlineAsyncWithHttpInfo(Requests\appendDocumentOnlineRequest $request) 
+    {
+        $returnType = '\SplFileObject';
+        $request = $this->appendDocumentOnlineRequest($request);
+
+        return $this->client
+            ->sendAsync($request, $this->_createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    if ($this->config->getDebug()) {
+                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {        
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+
+                    if ($exception instanceof RepeatRequestException) {
+                        $this->_refreshToken();
+                        throw new RepeatRequestException("Request must be retried", 401, null, null);
+                    }
+
+                    throw new ApiException(
+                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /*
+     * Create request for operation 'appendDocumentOnline'
+     *
+     * @param Requests\appendDocumentOnlineRequest $request is a request object for operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function appendDocumentOnlineRequest(Requests\appendDocumentOnlineRequest $request)
+    {
+        if ($request->document === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $document when calling appendDocumentOnline');
+        }
+        if ($request->document_list === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $document_list when calling appendDocumentOnline');
+        }
+
+        $resourcePath = '/words/online/appendDocument';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = "";
+        $multipart = false;
+        $filename = null;
+
+        // remove empty path parameters
+        $resourcePath = str_replace("//", "/", $resourcePath);
+
+        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
+        // form params
+        if ($request->document !== null) {
+            $multipart = true; 
+            $filename = ObjectSerializer::toFormValue($request->document);
+            $handle = fopen($filename, "rb");
+            $fsize = filesize($filename);
+            $contents = fread($handle, $fsize);
+            $formParams['document'] = $contents;
+        }
+        // form params
+        if ($request->document_list !== null) {
+            $multipart = true; 
+            $formParams['document_list'] = ObjectSerializer::toFormValue($request->document_list);
+        }
+
+        // body params
+        $_tempBody = null;
+        if ($multipart) {
+            $headers= $this->headerSelector->selectHeadersForMultipart(
+                ['application/xml', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/xml', 'application/json'],
+                ['multipart/form-data']
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            // \stdClass has no __toString(), so we should encode it manually
+            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue,
+                        'filename' => isset($filename) ? basename($filename) : null
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = $formParams["data"];
+            }
+        }
+
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
+        }
+
+        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $req = new Request(
+            'PUT',
+            $resourcePath,
+            $headers,
+            $httpBody
+        );
+        if ($this->config->getDebug()) {
+            $this->_writeRequestLog('PUT', $resourcePath, $headers, $httpBody);
+        }
+
+        return $req;
+    }
+
+    /*
      * Operation applyStyleToDocumentElement
      *
      * Apply a style to the document node.
@@ -2893,16 +3174,6 @@ class WordsApi
             }
         }
         // query params
-        if ($request->storage !== null) {
-            $localName = lcfirst('Storage');
-            $localValue = is_bool($request->storage) ? ($request->storage ? 'true' : 'false') : $request->storage;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
         if ($request->out_path !== null) {
             $localName = lcfirst('OutPath');
             $localValue = is_bool($request->out_path) ? ($request->out_path ? 'true' : 'false') : $request->out_path;
@@ -2916,6 +3187,16 @@ class WordsApi
         if ($request->file_name_field_value !== null) {
             $localName = lcfirst('FileNameFieldValue');
             $localValue = is_bool($request->file_name_field_value) ? ($request->file_name_field_value ? 'true' : 'false') : $request->file_name_field_value;
+            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
+                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
+            } else {
+                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
+            }
+        }
+        // query params
+        if ($request->storage !== null) {
+            $localName = lcfirst('Storage');
+            $localValue = is_bool($request->storage) ? ($request->storage ? 'true' : 'false') : $request->storage;
             if (strpos($resourcePath, '{' . $localName . '}') !== false) {
                 $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
             } else {
@@ -4089,16 +4370,6 @@ class WordsApi
         // remove empty path parameters
         $resourcePath = str_replace("//", "/", $resourcePath);
         // query params
-        if ($request->storage !== null) {
-            $localName = lcfirst('Storage');
-            $localValue = is_bool($request->storage) ? ($request->storage ? 'true' : 'false') : $request->storage;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
         if ($request->file_name !== null) {
             $localName = lcfirst('FileName');
             $localValue = is_bool($request->file_name) ? ($request->file_name ? 'true' : 'false') : $request->file_name;
@@ -4112,6 +4383,16 @@ class WordsApi
         if ($request->folder !== null) {
             $localName = lcfirst('Folder');
             $localValue = is_bool($request->folder) ? ($request->folder ? 'true' : 'false') : $request->folder;
+            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
+                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
+            } else {
+                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
+            }
+        }
+        // query params
+        if ($request->storage !== null) {
+            $localName = lcfirst('Storage');
+            $localValue = is_bool($request->storage) ? ($request->storage ? 'true' : 'false') : $request->storage;
             if (strpos($resourcePath, '{' . $localName . '}') !== false) {
                 $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
             } else {
@@ -12805,6 +13086,345 @@ class WordsApi
             $headers = $this->headerSelector->selectHeaders(
                 ['application/xml', 'application/json'],
                 ['application/xml', 'application/json']
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            // \stdClass has no __toString(), so we should encode it manually
+            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue,
+                        'filename' => isset($filename) ? basename($filename) : null
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = $formParams["data"];
+            }
+        }
+
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
+        }
+
+        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $req = new Request(
+            'DELETE',
+            $resourcePath,
+            $headers,
+            $httpBody
+        );
+        if ($this->config->getDebug()) {
+            $this->_writeRequestLog('DELETE', $resourcePath, $headers, $httpBody);
+        }
+
+        return $req;
+    }
+
+    /*
+     * Operation deleteParagraphOnline
+     *
+     * Removes paragraph from section.
+     *
+     * @param Requests\deleteParagraphOnlineRequest $request is a request object for operation
+     *
+     * @throws \Aspose\Words\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \SplFileObject
+     */
+    public function deleteParagraphOnline(Requests\deleteParagraphOnlineRequest $request)
+    {
+        try {
+            list($response) = $this->deleteParagraphOnlineWithHttpInfo($request);
+            return $response;
+        }
+        catch(RepeatRequestException $e) {
+            list($response) = $this->deleteParagraphOnlineWithHttpInfo($request);
+            return $response;
+        } 
+    }
+
+    /*
+     * Operation deleteParagraphOnlineWithHttpInfo
+     *
+     * Removes paragraph from section.
+     *
+     * @param Requests\deleteParagraphOnlineRequest $request is a request object for operation
+     *
+     * @throws \Aspose\Words\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function deleteParagraphOnlineWithHttpInfo(Requests\deleteParagraphOnlineRequest $request)
+    {
+        $returnType = '\SplFileObject';
+        $request = $this->deleteParagraphOnlineRequest($request);
+
+        try {
+            $options = $this->_createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                if ($e->getCode() == 401) {
+                    $this->_requestToken();
+                    throw new RepeatRequestException("Request must be retried", 401, null, null);
+                }
+                else if ($e->getCode() < 200 || $e->getCode() > 299) {
+                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
+                }
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            if ($this->config->getDebug()) {
+                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            case 200:
+                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\SplFileObject', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                break;
+            }
+            throw $e;
+        }
+    }
+
+    /*
+     * Operation deleteParagraphOnlineAsync
+     *
+     * Removes paragraph from section.
+     *
+     * @param Requests\deleteParagraphOnlineRequest $request is a request object for operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function deleteParagraphOnlineAsync(Requests\deleteParagraphOnlineRequest $request) 
+    {
+        return $this->deleteParagraphOnlineAsyncWithHttpInfo($request)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /*
+     * Operation deleteParagraphOnlineAsyncWithHttpInfo
+     *
+     * Removes paragraph from section.
+     *
+     * @param Requests\deleteParagraphOnlineRequest $request is a request object for operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function deleteParagraphOnlineAsyncWithHttpInfo(Requests\deleteParagraphOnlineRequest $request) 
+    {
+        $returnType = '\SplFileObject';
+        $request = $this->deleteParagraphOnlineRequest($request);
+
+        return $this->client
+            ->sendAsync($request, $this->_createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    if ($this->config->getDebug()) {
+                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {        
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+
+                    if ($exception instanceof RepeatRequestException) {
+                        $this->_refreshToken();
+                        throw new RepeatRequestException("Request must be retried", 401, null, null);
+                    }
+
+                    throw new ApiException(
+                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /*
+     * Create request for operation 'deleteParagraphOnline'
+     *
+     * @param Requests\deleteParagraphOnlineRequest $request is a request object for operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function deleteParagraphOnlineRequest(Requests\deleteParagraphOnlineRequest $request)
+    {
+        if ($request->node_path === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling deleteParagraphOnline');
+        }
+        if ($request->document === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $document when calling deleteParagraphOnline');
+        }
+        if ($request->index === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $index when calling deleteParagraphOnline');
+        }
+
+        $resourcePath = '/words/online/{nodePath}/paragraphs/{index}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = "";
+        $multipart = false;
+        $filename = null;
+        // path params
+        if ($request->node_path !== null) {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        // path params
+        if ($request->index !== null) {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+
+        // remove empty path parameters
+        $resourcePath = str_replace("//", "/", $resourcePath);
+        // query params
+        if ($request->load_encoding !== null) {
+            $localName = lcfirst('LoadEncoding');
+            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
+            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
+                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
+            } else {
+                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
+            }
+        }
+        // query params
+        if ($request->password !== null) {
+            $localName = lcfirst('Password');
+            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
+            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
+                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
+            } else {
+                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
+            }
+        }
+        // query params
+        if ($request->dest_file_name !== null) {
+            $localName = lcfirst('DestFileName');
+            $localValue = is_bool($request->dest_file_name) ? ($request->dest_file_name ? 'true' : 'false') : $request->dest_file_name;
+            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
+                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
+            } else {
+                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
+            }
+        }
+        // query params
+        if ($request->revision_author !== null) {
+            $localName = lcfirst('RevisionAuthor');
+            $localValue = is_bool($request->revision_author) ? ($request->revision_author ? 'true' : 'false') : $request->revision_author;
+            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
+                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
+            } else {
+                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
+            }
+        }
+        // query params
+        if ($request->revision_date_time !== null) {
+            $localName = lcfirst('RevisionDateTime');
+            $localValue = is_bool($request->revision_date_time) ? ($request->revision_date_time ? 'true' : 'false') : $request->revision_date_time;
+            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
+                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
+            } else {
+                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
+            }
+        }
+
+        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
+        // form params
+        if ($request->document !== null) {
+            $multipart = true; 
+            $filename = ObjectSerializer::toFormValue($request->document);
+            $handle = fopen($filename, "rb");
+            $fsize = filesize($filename);
+            $contents = fread($handle, $fsize);
+            $formParams['document'] = $contents;
+        }
+
+        // body params
+        $_tempBody = null;
+        if ($multipart) {
+            $headers= $this->headerSelector->selectHeadersForMultipart(
+                ['application/xml', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/xml', 'application/json'],
+                ['multipart/form-data']
             );
         }
 
@@ -22377,7 +22997,7 @@ class WordsApi
      *
      * @throws \Aspose\Words\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Aspose\Words\Model\FieldNamesResponse
+     * @return \SplFileObject
      */
     public function getDocumentFieldNamesOnline(Requests\getDocumentFieldNamesOnlineRequest $request)
     {
@@ -22400,11 +23020,11 @@ class WordsApi
      *
      * @throws \Aspose\Words\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Aspose\Words\Model\FieldNamesResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function getDocumentFieldNamesOnlineWithHttpInfo(Requests\getDocumentFieldNamesOnlineRequest $request)
     {
-        $returnType = '\Aspose\Words\Model\FieldNamesResponse';
+        $returnType = '\SplFileObject';
         $request = $this->getDocumentFieldNamesOnlineRequest($request);
 
         try {
@@ -22449,7 +23069,7 @@ class WordsApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
             case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\Aspose\Words\Model\FieldNamesResponse', $e->getResponseHeaders());
+                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\SplFileObject', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                 break;
             }
@@ -22489,7 +23109,7 @@ class WordsApi
      */
     public function getDocumentFieldNamesOnlineAsyncWithHttpInfo(Requests\getDocumentFieldNamesOnlineRequest $request) 
     {
-        $returnType = '\Aspose\Words\Model\FieldNamesResponse';
+        $returnType = '\SplFileObject';
         $request = $this->getDocumentFieldNamesOnlineRequest($request);
 
         return $this->client
@@ -22542,11 +23162,11 @@ class WordsApi
      */
     protected function getDocumentFieldNamesOnlineRequest(Requests\getDocumentFieldNamesOnlineRequest $request)
     {
-        if ($request->template === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $template when calling getDocumentFieldNamesOnline');
+        if ($request->document === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $document when calling getDocumentFieldNamesOnline');
         }
 
-        $resourcePath = '/words/mailMerge/FieldNames';
+        $resourcePath = '/words/online/mailMerge/FieldNames';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -22569,13 +23189,13 @@ class WordsApi
 
         $resourcePath = $this->_parseURL($resourcePath, $queryParams);
         // form params
-        if ($request->template !== null) {
+        if ($request->document !== null) {
             $multipart = true; 
-            $filename = ObjectSerializer::toFormValue($request->template);
+            $filename = ObjectSerializer::toFormValue($request->document);
             $handle = fopen($filename, "rb");
             $fsize = filesize($filename);
             $contents = fread($handle, $fsize);
-            $formParams['template'] = $contents;
+            $formParams['document'] = $contents;
         }
 
         // body params
@@ -22639,13 +23259,13 @@ class WordsApi
         );
 
         $req = new Request(
-            'PUT',
+            'GET',
             $resourcePath,
             $headers,
             $httpBody
         );
         if ($this->config->getDebug()) {
-            $this->_writeRequestLog('PUT', $resourcePath, $headers, $httpBody);
+            $this->_writeRequestLog('GET', $resourcePath, $headers, $httpBody);
         }
 
         return $req;
@@ -24488,6 +25108,309 @@ class WordsApi
             $headers = $this->headerSelector->selectHeaders(
                 ['application/xml', 'application/json'],
                 ['application/xml', 'application/json']
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            // \stdClass has no __toString(), so we should encode it manually
+            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue,
+                        'filename' => isset($filename) ? basename($filename) : null
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = $formParams["data"];
+            }
+        }
+
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
+        }
+
+        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $req = new Request(
+            'GET',
+            $resourcePath,
+            $headers,
+            $httpBody
+        );
+        if ($this->config->getDebug()) {
+            $this->_writeRequestLog('GET', $resourcePath, $headers, $httpBody);
+        }
+
+        return $req;
+    }
+
+    /*
+     * Operation getDocumentStatisticsOnline
+     *
+     * Reads document statistics.
+     *
+     * @param Requests\getDocumentStatisticsOnlineRequest $request is a request object for operation
+     *
+     * @throws \Aspose\Words\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \SplFileObject
+     */
+    public function getDocumentStatisticsOnline(Requests\getDocumentStatisticsOnlineRequest $request)
+    {
+        try {
+            list($response) = $this->getDocumentStatisticsOnlineWithHttpInfo($request);
+            return $response;
+        }
+        catch(RepeatRequestException $e) {
+            list($response) = $this->getDocumentStatisticsOnlineWithHttpInfo($request);
+            return $response;
+        } 
+    }
+
+    /*
+     * Operation getDocumentStatisticsOnlineWithHttpInfo
+     *
+     * Reads document statistics.
+     *
+     * @param Requests\getDocumentStatisticsOnlineRequest $request is a request object for operation
+     *
+     * @throws \Aspose\Words\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getDocumentStatisticsOnlineWithHttpInfo(Requests\getDocumentStatisticsOnlineRequest $request)
+    {
+        $returnType = '\SplFileObject';
+        $request = $this->getDocumentStatisticsOnlineRequest($request);
+
+        try {
+            $options = $this->_createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                if ($e->getCode() == 401) {
+                    $this->_requestToken();
+                    throw new RepeatRequestException("Request must be retried", 401, null, null);
+                }
+                else if ($e->getCode() < 200 || $e->getCode() > 299) {
+                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
+                }
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            if ($this->config->getDebug()) {
+                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            case 200:
+                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\SplFileObject', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                break;
+            }
+            throw $e;
+        }
+    }
+
+    /*
+     * Operation getDocumentStatisticsOnlineAsync
+     *
+     * Reads document statistics.
+     *
+     * @param Requests\getDocumentStatisticsOnlineRequest $request is a request object for operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getDocumentStatisticsOnlineAsync(Requests\getDocumentStatisticsOnlineRequest $request) 
+    {
+        return $this->getDocumentStatisticsOnlineAsyncWithHttpInfo($request)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /*
+     * Operation getDocumentStatisticsOnlineAsyncWithHttpInfo
+     *
+     * Reads document statistics.
+     *
+     * @param Requests\getDocumentStatisticsOnlineRequest $request is a request object for operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getDocumentStatisticsOnlineAsyncWithHttpInfo(Requests\getDocumentStatisticsOnlineRequest $request) 
+    {
+        $returnType = '\SplFileObject';
+        $request = $this->getDocumentStatisticsOnlineRequest($request);
+
+        return $this->client
+            ->sendAsync($request, $this->_createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    if ($this->config->getDebug()) {
+                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {        
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+
+                    if ($exception instanceof RepeatRequestException) {
+                        $this->_refreshToken();
+                        throw new RepeatRequestException("Request must be retried", 401, null, null);
+                    }
+
+                    throw new ApiException(
+                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /*
+     * Create request for operation 'getDocumentStatisticsOnline'
+     *
+     * @param Requests\getDocumentStatisticsOnlineRequest $request is a request object for operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function getDocumentStatisticsOnlineRequest(Requests\getDocumentStatisticsOnlineRequest $request)
+    {
+        if ($request->document === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $document when calling getDocumentStatisticsOnline');
+        }
+
+        $resourcePath = '/words/online/statistics';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = "";
+        $multipart = false;
+        $filename = null;
+
+        // remove empty path parameters
+        $resourcePath = str_replace("//", "/", $resourcePath);
+        // query params
+        if ($request->include_comments !== null) {
+            $localName = lcfirst('IncludeComments');
+            $localValue = is_bool($request->include_comments) ? ($request->include_comments ? 'true' : 'false') : $request->include_comments;
+            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
+                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
+            } else {
+                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
+            }
+        }
+        // query params
+        if ($request->include_footnotes !== null) {
+            $localName = lcfirst('IncludeFootnotes');
+            $localValue = is_bool($request->include_footnotes) ? ($request->include_footnotes ? 'true' : 'false') : $request->include_footnotes;
+            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
+                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
+            } else {
+                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
+            }
+        }
+        // query params
+        if ($request->include_text_in_shapes !== null) {
+            $localName = lcfirst('IncludeTextInShapes');
+            $localValue = is_bool($request->include_text_in_shapes) ? ($request->include_text_in_shapes ? 'true' : 'false') : $request->include_text_in_shapes;
+            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
+                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
+            } else {
+                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
+            }
+        }
+
+        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
+        // form params
+        if ($request->document !== null) {
+            $multipart = true; 
+            $filename = ObjectSerializer::toFormValue($request->document);
+            $handle = fopen($filename, "rb");
+            $fsize = filesize($filename);
+            $contents = fread($handle, $fsize);
+            $formParams['document'] = $contents;
+        }
+
+        // body params
+        $_tempBody = null;
+        if ($multipart) {
+            $headers= $this->headerSelector->selectHeadersForMultipart(
+                ['application/xml', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/xml', 'application/json'],
+                ['multipart/form-data']
             );
         }
 
@@ -31868,7 +32791,7 @@ class WordsApi
      *
      * @throws \Aspose\Words\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Aspose\Words\Model\ParagraphResponse
+     * @return \SplFileObject
      */
     public function getParagraph(Requests\getParagraphRequest $request)
     {
@@ -31891,11 +32814,11 @@ class WordsApi
      *
      * @throws \Aspose\Words\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Aspose\Words\Model\ParagraphResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function getParagraphWithHttpInfo(Requests\getParagraphRequest $request)
     {
-        $returnType = '\Aspose\Words\Model\ParagraphResponse';
+        $returnType = '\SplFileObject';
         $request = $this->getParagraphRequest($request);
 
         try {
@@ -31940,7 +32863,7 @@ class WordsApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
             case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\Aspose\Words\Model\ParagraphResponse', $e->getResponseHeaders());
+                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\SplFileObject', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                 break;
             }
@@ -31980,7 +32903,7 @@ class WordsApi
      */
     public function getParagraphAsyncWithHttpInfo(Requests\getParagraphRequest $request) 
     {
-        $returnType = '\Aspose\Words\Model\ParagraphResponse';
+        $returnType = '\SplFileObject';
         $request = $this->getParagraphRequest($request);
 
         return $this->client
@@ -33469,6 +34392,315 @@ class WordsApi
     }
 
     /*
+     * Operation getParagraphOnline
+     *
+     * This resource represents one of the paragraphs contained in the document.
+     *
+     * @param Requests\getParagraphOnlineRequest $request is a request object for operation
+     *
+     * @throws \Aspose\Words\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \SplFileObject
+     */
+    public function getParagraphOnline(Requests\getParagraphOnlineRequest $request)
+    {
+        try {
+            list($response) = $this->getParagraphOnlineWithHttpInfo($request);
+            return $response;
+        }
+        catch(RepeatRequestException $e) {
+            list($response) = $this->getParagraphOnlineWithHttpInfo($request);
+            return $response;
+        } 
+    }
+
+    /*
+     * Operation getParagraphOnlineWithHttpInfo
+     *
+     * This resource represents one of the paragraphs contained in the document.
+     *
+     * @param Requests\getParagraphOnlineRequest $request is a request object for operation
+     *
+     * @throws \Aspose\Words\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getParagraphOnlineWithHttpInfo(Requests\getParagraphOnlineRequest $request)
+    {
+        $returnType = '\SplFileObject';
+        $request = $this->getParagraphOnlineRequest($request);
+
+        try {
+            $options = $this->_createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                if ($e->getCode() == 401) {
+                    $this->_requestToken();
+                    throw new RepeatRequestException("Request must be retried", 401, null, null);
+                }
+                else if ($e->getCode() < 200 || $e->getCode() > 299) {
+                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
+                }
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            if ($this->config->getDebug()) {
+                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            case 200:
+                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\SplFileObject', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                break;
+            }
+            throw $e;
+        }
+    }
+
+    /*
+     * Operation getParagraphOnlineAsync
+     *
+     * This resource represents one of the paragraphs contained in the document.
+     *
+     * @param Requests\getParagraphOnlineRequest $request is a request object for operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getParagraphOnlineAsync(Requests\getParagraphOnlineRequest $request) 
+    {
+        return $this->getParagraphOnlineAsyncWithHttpInfo($request)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /*
+     * Operation getParagraphOnlineAsyncWithHttpInfo
+     *
+     * This resource represents one of the paragraphs contained in the document.
+     *
+     * @param Requests\getParagraphOnlineRequest $request is a request object for operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getParagraphOnlineAsyncWithHttpInfo(Requests\getParagraphOnlineRequest $request) 
+    {
+        $returnType = '\SplFileObject';
+        $request = $this->getParagraphOnlineRequest($request);
+
+        return $this->client
+            ->sendAsync($request, $this->_createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    if ($this->config->getDebug()) {
+                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {        
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+
+                    if ($exception instanceof RepeatRequestException) {
+                        $this->_refreshToken();
+                        throw new RepeatRequestException("Request must be retried", 401, null, null);
+                    }
+
+                    throw new ApiException(
+                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /*
+     * Create request for operation 'getParagraphOnline'
+     *
+     * @param Requests\getParagraphOnlineRequest $request is a request object for operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function getParagraphOnlineRequest(Requests\getParagraphOnlineRequest $request)
+    {
+        if ($request->node_path === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling getParagraphOnline');
+        }
+        if ($request->document === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $document when calling getParagraphOnline');
+        }
+        if ($request->index === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $index when calling getParagraphOnline');
+        }
+
+        $resourcePath = '/words/online/{nodePath}/paragraphs/{index}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = "";
+        $multipart = false;
+        $filename = null;
+        // path params
+        if ($request->node_path !== null) {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        // path params
+        if ($request->index !== null) {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+
+        // remove empty path parameters
+        $resourcePath = str_replace("//", "/", $resourcePath);
+        // query params
+        if ($request->load_encoding !== null) {
+            $localName = lcfirst('LoadEncoding');
+            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
+            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
+                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
+            } else {
+                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
+            }
+        }
+        // query params
+        if ($request->password !== null) {
+            $localName = lcfirst('Password');
+            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
+            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
+                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
+            } else {
+                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
+            }
+        }
+
+        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
+        // form params
+        if ($request->document !== null) {
+            $multipart = true; 
+            $filename = ObjectSerializer::toFormValue($request->document);
+            $handle = fopen($filename, "rb");
+            $fsize = filesize($filename);
+            $contents = fread($handle, $fsize);
+            $formParams['document'] = $contents;
+        }
+
+        // body params
+        $_tempBody = null;
+        if ($multipart) {
+            $headers= $this->headerSelector->selectHeadersForMultipart(
+                ['application/xml', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/xml', 'application/json'],
+                ['multipart/form-data']
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            // \stdClass has no __toString(), so we should encode it manually
+            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue,
+                        'filename' => isset($filename) ? basename($filename) : null
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = $formParams["data"];
+            }
+        }
+
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
+        }
+
+        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $req = new Request(
+            'GET',
+            $resourcePath,
+            $headers,
+            $httpBody
+        );
+        if ($this->config->getDebug()) {
+            $this->_writeRequestLog('GET', $resourcePath, $headers, $httpBody);
+        }
+
+        return $req;
+    }
+
+    /*
      * Operation getParagraphs
      *
      * Returns a list of paragraphs that are contained in the document.
@@ -33477,7 +34709,7 @@ class WordsApi
      *
      * @throws \Aspose\Words\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Aspose\Words\Model\ParagraphLinkCollectionResponse
+     * @return \SplFileObject
      */
     public function getParagraphs(Requests\getParagraphsRequest $request)
     {
@@ -33500,11 +34732,11 @@ class WordsApi
      *
      * @throws \Aspose\Words\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Aspose\Words\Model\ParagraphLinkCollectionResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function getParagraphsWithHttpInfo(Requests\getParagraphsRequest $request)
     {
-        $returnType = '\Aspose\Words\Model\ParagraphLinkCollectionResponse';
+        $returnType = '\SplFileObject';
         $request = $this->getParagraphsRequest($request);
 
         try {
@@ -33549,7 +34781,7 @@ class WordsApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
             case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\Aspose\Words\Model\ParagraphLinkCollectionResponse', $e->getResponseHeaders());
+                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\SplFileObject', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                 break;
             }
@@ -33589,7 +34821,7 @@ class WordsApi
      */
     public function getParagraphsAsyncWithHttpInfo(Requests\getParagraphsRequest $request) 
     {
-        $returnType = '\Aspose\Words\Model\ParagraphLinkCollectionResponse';
+        $returnType = '\SplFileObject';
         $request = $this->getParagraphsRequest($request);
 
         return $this->client
@@ -33786,6 +35018,307 @@ class WordsApi
     }
 
     /*
+     * Operation getParagraphsOnline
+     *
+     * Returns a list of paragraphs that are contained in the document.
+     *
+     * @param Requests\getParagraphsOnlineRequest $request is a request object for operation
+     *
+     * @throws \Aspose\Words\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \SplFileObject
+     */
+    public function getParagraphsOnline(Requests\getParagraphsOnlineRequest $request)
+    {
+        try {
+            list($response) = $this->getParagraphsOnlineWithHttpInfo($request);
+            return $response;
+        }
+        catch(RepeatRequestException $e) {
+            list($response) = $this->getParagraphsOnlineWithHttpInfo($request);
+            return $response;
+        } 
+    }
+
+    /*
+     * Operation getParagraphsOnlineWithHttpInfo
+     *
+     * Returns a list of paragraphs that are contained in the document.
+     *
+     * @param Requests\getParagraphsOnlineRequest $request is a request object for operation
+     *
+     * @throws \Aspose\Words\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getParagraphsOnlineWithHttpInfo(Requests\getParagraphsOnlineRequest $request)
+    {
+        $returnType = '\SplFileObject';
+        $request = $this->getParagraphsOnlineRequest($request);
+
+        try {
+            $options = $this->_createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                if ($e->getCode() == 401) {
+                    $this->_requestToken();
+                    throw new RepeatRequestException("Request must be retried", 401, null, null);
+                }
+                else if ($e->getCode() < 200 || $e->getCode() > 299) {
+                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
+                }
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            if ($this->config->getDebug()) {
+                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            case 200:
+                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\SplFileObject', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                break;
+            }
+            throw $e;
+        }
+    }
+
+    /*
+     * Operation getParagraphsOnlineAsync
+     *
+     * Returns a list of paragraphs that are contained in the document.
+     *
+     * @param Requests\getParagraphsOnlineRequest $request is a request object for operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getParagraphsOnlineAsync(Requests\getParagraphsOnlineRequest $request) 
+    {
+        return $this->getParagraphsOnlineAsyncWithHttpInfo($request)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /*
+     * Operation getParagraphsOnlineAsyncWithHttpInfo
+     *
+     * Returns a list of paragraphs that are contained in the document.
+     *
+     * @param Requests\getParagraphsOnlineRequest $request is a request object for operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getParagraphsOnlineAsyncWithHttpInfo(Requests\getParagraphsOnlineRequest $request) 
+    {
+        $returnType = '\SplFileObject';
+        $request = $this->getParagraphsOnlineRequest($request);
+
+        return $this->client
+            ->sendAsync($request, $this->_createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    if ($this->config->getDebug()) {
+                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {        
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+
+                    if ($exception instanceof RepeatRequestException) {
+                        $this->_refreshToken();
+                        throw new RepeatRequestException("Request must be retried", 401, null, null);
+                    }
+
+                    throw new ApiException(
+                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /*
+     * Create request for operation 'getParagraphsOnline'
+     *
+     * @param Requests\getParagraphsOnlineRequest $request is a request object for operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function getParagraphsOnlineRequest(Requests\getParagraphsOnlineRequest $request)
+    {
+        if ($request->node_path === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling getParagraphsOnline');
+        }
+        if ($request->document === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $document when calling getParagraphsOnline');
+        }
+
+        $resourcePath = '/words/online/{nodePath}/paragraphs';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = "";
+        $multipart = false;
+        $filename = null;
+        // path params
+        if ($request->node_path !== null) {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+
+        // remove empty path parameters
+        $resourcePath = str_replace("//", "/", $resourcePath);
+        // query params
+        if ($request->load_encoding !== null) {
+            $localName = lcfirst('LoadEncoding');
+            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
+            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
+                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
+            } else {
+                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
+            }
+        }
+        // query params
+        if ($request->password !== null) {
+            $localName = lcfirst('Password');
+            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
+            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
+                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
+            } else {
+                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
+            }
+        }
+
+        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
+        // form params
+        if ($request->document !== null) {
+            $multipart = true; 
+            $filename = ObjectSerializer::toFormValue($request->document);
+            $handle = fopen($filename, "rb");
+            $fsize = filesize($filename);
+            $contents = fread($handle, $fsize);
+            $formParams['document'] = $contents;
+        }
+
+        // body params
+        $_tempBody = null;
+        if ($multipart) {
+            $headers= $this->headerSelector->selectHeadersForMultipart(
+                ['application/xml', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/xml', 'application/json'],
+                ['multipart/form-data']
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            // \stdClass has no __toString(), so we should encode it manually
+            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue,
+                        'filename' => isset($filename) ? basename($filename) : null
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = $formParams["data"];
+            }
+        }
+
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
+        }
+
+        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $req = new Request(
+            'GET',
+            $resourcePath,
+            $headers,
+            $httpBody
+        );
+        if ($this->config->getDebug()) {
+            $this->_writeRequestLog('GET', $resourcePath, $headers, $httpBody);
+        }
+
+        return $req;
+    }
+
+    /*
      * Operation getParagraphsWithoutNodePath
      *
      * Returns a list of paragraphs that are contained in the document.
@@ -33794,7 +35327,7 @@ class WordsApi
      *
      * @throws \Aspose\Words\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Aspose\Words\Model\ParagraphLinkCollectionResponse
+     * @return \SplFileObject
      */
     public function getParagraphsWithoutNodePath(Requests\getParagraphsWithoutNodePathRequest $request)
     {
@@ -33817,11 +35350,11 @@ class WordsApi
      *
      * @throws \Aspose\Words\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Aspose\Words\Model\ParagraphLinkCollectionResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function getParagraphsWithoutNodePathWithHttpInfo(Requests\getParagraphsWithoutNodePathRequest $request)
     {
-        $returnType = '\Aspose\Words\Model\ParagraphLinkCollectionResponse';
+        $returnType = '\SplFileObject';
         $request = $this->getParagraphsWithoutNodePathRequest($request);
 
         try {
@@ -33866,7 +35399,7 @@ class WordsApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
             case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\Aspose\Words\Model\ParagraphLinkCollectionResponse', $e->getResponseHeaders());
+                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\SplFileObject', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                 break;
             }
@@ -33906,7 +35439,7 @@ class WordsApi
      */
     public function getParagraphsWithoutNodePathAsyncWithHttpInfo(Requests\getParagraphsWithoutNodePathRequest $request) 
     {
-        $returnType = '\Aspose\Words\Model\ParagraphLinkCollectionResponse';
+        $returnType = '\SplFileObject';
         $request = $this->getParagraphsWithoutNodePathRequest($request);
 
         return $this->client
@@ -34745,7 +36278,7 @@ class WordsApi
      *
      * @throws \Aspose\Words\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Aspose\Words\Model\ParagraphResponse
+     * @return \SplFileObject
      */
     public function getParagraphWithoutNodePath(Requests\getParagraphWithoutNodePathRequest $request)
     {
@@ -34768,11 +36301,11 @@ class WordsApi
      *
      * @throws \Aspose\Words\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Aspose\Words\Model\ParagraphResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function getParagraphWithoutNodePathWithHttpInfo(Requests\getParagraphWithoutNodePathRequest $request)
     {
-        $returnType = '\Aspose\Words\Model\ParagraphResponse';
+        $returnType = '\SplFileObject';
         $request = $this->getParagraphWithoutNodePathRequest($request);
 
         try {
@@ -34817,7 +36350,7 @@ class WordsApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
             case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\Aspose\Words\Model\ParagraphResponse', $e->getResponseHeaders());
+                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\SplFileObject', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                 break;
             }
@@ -34857,7 +36390,7 @@ class WordsApi
      */
     public function getParagraphWithoutNodePathAsyncWithHttpInfo(Requests\getParagraphWithoutNodePathRequest $request) 
     {
-        $returnType = '\Aspose\Words\Model\ParagraphResponse';
+        $returnType = '\SplFileObject';
         $request = $this->getParagraphWithoutNodePathRequest($request);
 
         return $this->client
@@ -46429,7 +47962,7 @@ class WordsApi
      *
      * @throws \Aspose\Words\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Aspose\Words\Model\ParagraphResponse
+     * @return \SplFileObject
      */
     public function insertParagraph(Requests\insertParagraphRequest $request)
     {
@@ -46452,11 +47985,11 @@ class WordsApi
      *
      * @throws \Aspose\Words\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Aspose\Words\Model\ParagraphResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function insertParagraphWithHttpInfo(Requests\insertParagraphRequest $request)
     {
-        $returnType = '\Aspose\Words\Model\ParagraphResponse';
+        $returnType = '\SplFileObject';
         $request = $this->insertParagraphRequest($request);
 
         try {
@@ -46501,7 +48034,7 @@ class WordsApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
             case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\Aspose\Words\Model\ParagraphResponse', $e->getResponseHeaders());
+                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\SplFileObject', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                 break;
             }
@@ -46541,7 +48074,7 @@ class WordsApi
      */
     public function insertParagraphAsyncWithHttpInfo(Requests\insertParagraphRequest $request) 
     {
-        $returnType = '\Aspose\Words\Model\ParagraphResponse';
+        $returnType = '\SplFileObject';
         $request = $this->insertParagraphRequest($request);
 
         return $this->client
@@ -46597,11 +48130,11 @@ class WordsApi
         if ($request->name === null) {
             throw new \InvalidArgumentException('Missing the required parameter $name when calling insertParagraph');
         }
-        if ($request->paragraph === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $paragraph when calling insertParagraph');
-        }
         if ($request->node_path === null) {
             throw new \InvalidArgumentException('Missing the required parameter $node_path when calling insertParagraph');
+        }
+        if ($request->paragraph === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $paragraph when calling insertParagraph');
         }
 
         $resourcePath = '/words/{name}/{nodePath}/paragraphs';
@@ -46789,6 +48322,355 @@ class WordsApi
     }
 
     /*
+     * Operation insertParagraphOnline
+     *
+     * Adds paragraph to document, returns added paragraph's data.
+     *
+     * @param Requests\insertParagraphOnlineRequest $request is a request object for operation
+     *
+     * @throws \Aspose\Words\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \SplFileObject
+     */
+    public function insertParagraphOnline(Requests\insertParagraphOnlineRequest $request)
+    {
+        try {
+            list($response) = $this->insertParagraphOnlineWithHttpInfo($request);
+            return $response;
+        }
+        catch(RepeatRequestException $e) {
+            list($response) = $this->insertParagraphOnlineWithHttpInfo($request);
+            return $response;
+        } 
+    }
+
+    /*
+     * Operation insertParagraphOnlineWithHttpInfo
+     *
+     * Adds paragraph to document, returns added paragraph's data.
+     *
+     * @param Requests\insertParagraphOnlineRequest $request is a request object for operation
+     *
+     * @throws \Aspose\Words\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function insertParagraphOnlineWithHttpInfo(Requests\insertParagraphOnlineRequest $request)
+    {
+        $returnType = '\SplFileObject';
+        $request = $this->insertParagraphOnlineRequest($request);
+
+        try {
+            $options = $this->_createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                if ($e->getCode() == 401) {
+                    $this->_requestToken();
+                    throw new RepeatRequestException("Request must be retried", 401, null, null);
+                }
+                else if ($e->getCode() < 200 || $e->getCode() > 299) {
+                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
+                }
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            if ($this->config->getDebug()) {
+                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            case 200:
+                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\SplFileObject', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                break;
+            }
+            throw $e;
+        }
+    }
+
+    /*
+     * Operation insertParagraphOnlineAsync
+     *
+     * Adds paragraph to document, returns added paragraph's data.
+     *
+     * @param Requests\insertParagraphOnlineRequest $request is a request object for operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function insertParagraphOnlineAsync(Requests\insertParagraphOnlineRequest $request) 
+    {
+        return $this->insertParagraphOnlineAsyncWithHttpInfo($request)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /*
+     * Operation insertParagraphOnlineAsyncWithHttpInfo
+     *
+     * Adds paragraph to document, returns added paragraph's data.
+     *
+     * @param Requests\insertParagraphOnlineRequest $request is a request object for operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function insertParagraphOnlineAsyncWithHttpInfo(Requests\insertParagraphOnlineRequest $request) 
+    {
+        $returnType = '\SplFileObject';
+        $request = $this->insertParagraphOnlineRequest($request);
+
+        return $this->client
+            ->sendAsync($request, $this->_createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    if ($this->config->getDebug()) {
+                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {        
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+
+                    if ($exception instanceof RepeatRequestException) {
+                        $this->_refreshToken();
+                        throw new RepeatRequestException("Request must be retried", 401, null, null);
+                    }
+
+                    throw new ApiException(
+                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /*
+     * Create request for operation 'insertParagraphOnline'
+     *
+     * @param Requests\insertParagraphOnlineRequest $request is a request object for operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function insertParagraphOnlineRequest(Requests\insertParagraphOnlineRequest $request)
+    {
+        if ($request->node_path === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling insertParagraphOnline');
+        }
+        if ($request->document === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $document when calling insertParagraphOnline');
+        }
+        if ($request->paragraph === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $paragraph when calling insertParagraphOnline');
+        }
+
+        $resourcePath = '/words/online/{nodePath}/paragraphs';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = "";
+        $multipart = false;
+        $filename = null;
+        // path params
+        if ($request->node_path !== null) {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+
+        // remove empty path parameters
+        $resourcePath = str_replace("//", "/", $resourcePath);
+        // query params
+        if ($request->load_encoding !== null) {
+            $localName = lcfirst('LoadEncoding');
+            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
+            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
+                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
+            } else {
+                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
+            }
+        }
+        // query params
+        if ($request->password !== null) {
+            $localName = lcfirst('Password');
+            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
+            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
+                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
+            } else {
+                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
+            }
+        }
+        // query params
+        if ($request->dest_file_name !== null) {
+            $localName = lcfirst('DestFileName');
+            $localValue = is_bool($request->dest_file_name) ? ($request->dest_file_name ? 'true' : 'false') : $request->dest_file_name;
+            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
+                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
+            } else {
+                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
+            }
+        }
+        // query params
+        if ($request->revision_author !== null) {
+            $localName = lcfirst('RevisionAuthor');
+            $localValue = is_bool($request->revision_author) ? ($request->revision_author ? 'true' : 'false') : $request->revision_author;
+            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
+                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
+            } else {
+                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
+            }
+        }
+        // query params
+        if ($request->revision_date_time !== null) {
+            $localName = lcfirst('RevisionDateTime');
+            $localValue = is_bool($request->revision_date_time) ? ($request->revision_date_time ? 'true' : 'false') : $request->revision_date_time;
+            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
+                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
+            } else {
+                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
+            }
+        }
+        // query params
+        if ($request->insert_before_node !== null) {
+            $localName = lcfirst('InsertBeforeNode');
+            $localValue = is_bool($request->insert_before_node) ? ($request->insert_before_node ? 'true' : 'false') : $request->insert_before_node;
+            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
+                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
+            } else {
+                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
+            }
+        }
+
+        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
+        // form params
+        if ($request->document !== null) {
+            $multipart = true; 
+            $filename = ObjectSerializer::toFormValue($request->document);
+            $handle = fopen($filename, "rb");
+            $fsize = filesize($filename);
+            $contents = fread($handle, $fsize);
+            $formParams['document'] = $contents;
+        }
+        // form params
+        if ($request->paragraph !== null) {
+            $multipart = true; 
+            $formParams['paragraph'] = ObjectSerializer::toFormValue($request->paragraph);
+        }
+
+        // body params
+        $_tempBody = null;
+        if ($multipart) {
+            $headers= $this->headerSelector->selectHeadersForMultipart(
+                ['application/xml', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/xml', 'application/json'],
+                ['multipart/form-data']
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            // \stdClass has no __toString(), so we should encode it manually
+            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue,
+                        'filename' => isset($filename) ? basename($filename) : null
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = $formParams["data"];
+            }
+        }
+
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
+        }
+
+        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $req = new Request(
+            'POST',
+            $resourcePath,
+            $headers,
+            $httpBody
+        );
+        if ($this->config->getDebug()) {
+            $this->_writeRequestLog('POST', $resourcePath, $headers, $httpBody);
+        }
+
+        return $req;
+    }
+
+    /*
      * Operation insertParagraphWithoutNodePath
      *
      * Adds paragraph to document, returns added paragraph's data.
@@ -46797,7 +48679,7 @@ class WordsApi
      *
      * @throws \Aspose\Words\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Aspose\Words\Model\ParagraphResponse
+     * @return \SplFileObject
      */
     public function insertParagraphWithoutNodePath(Requests\insertParagraphWithoutNodePathRequest $request)
     {
@@ -46820,11 +48702,11 @@ class WordsApi
      *
      * @throws \Aspose\Words\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Aspose\Words\Model\ParagraphResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function insertParagraphWithoutNodePathWithHttpInfo(Requests\insertParagraphWithoutNodePathRequest $request)
     {
-        $returnType = '\Aspose\Words\Model\ParagraphResponse';
+        $returnType = '\SplFileObject';
         $request = $this->insertParagraphWithoutNodePathRequest($request);
 
         try {
@@ -46869,7 +48751,7 @@ class WordsApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
             case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\Aspose\Words\Model\ParagraphResponse', $e->getResponseHeaders());
+                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\SplFileObject', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                 break;
             }
@@ -46909,7 +48791,7 @@ class WordsApi
      */
     public function insertParagraphWithoutNodePathAsyncWithHttpInfo(Requests\insertParagraphWithoutNodePathRequest $request) 
     {
-        $returnType = '\Aspose\Words\Model\ParagraphResponse';
+        $returnType = '\SplFileObject';
         $request = $this->insertParagraphWithoutNodePathRequest($request);
 
         return $this->client
@@ -56376,6 +58258,297 @@ class WordsApi
             $headers = $this->headerSelector->selectHeaders(
                 ['application/xml', 'application/json'],
                 ['application/xml', 'application/json']
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            // \stdClass has no __toString(), so we should encode it manually
+            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue,
+                        'filename' => isset($filename) ? basename($filename) : null
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = $formParams["data"];
+            }
+        }
+
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
+        }
+
+        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $req = new Request(
+            'PUT',
+            $resourcePath,
+            $headers,
+            $httpBody
+        );
+        if ($this->config->getDebug()) {
+            $this->_writeRequestLog('PUT', $resourcePath, $headers, $httpBody);
+        }
+
+        return $req;
+    }
+
+    /*
+     * Operation saveAsOnline
+     *
+     * Converts document to destination format with detailed settings and saves result to storage.
+     *
+     * @param Requests\saveAsOnlineRequest $request is a request object for operation
+     *
+     * @throws \Aspose\Words\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \SplFileObject
+     */
+    public function saveAsOnline(Requests\saveAsOnlineRequest $request)
+    {
+        try {
+            list($response) = $this->saveAsOnlineWithHttpInfo($request);
+            return $response;
+        }
+        catch(RepeatRequestException $e) {
+            list($response) = $this->saveAsOnlineWithHttpInfo($request);
+            return $response;
+        } 
+    }
+
+    /*
+     * Operation saveAsOnlineWithHttpInfo
+     *
+     * Converts document to destination format with detailed settings and saves result to storage.
+     *
+     * @param Requests\saveAsOnlineRequest $request is a request object for operation
+     *
+     * @throws \Aspose\Words\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function saveAsOnlineWithHttpInfo(Requests\saveAsOnlineRequest $request)
+    {
+        $returnType = '\SplFileObject';
+        $request = $this->saveAsOnlineRequest($request);
+
+        try {
+            $options = $this->_createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                if ($e->getCode() == 401) {
+                    $this->_requestToken();
+                    throw new RepeatRequestException("Request must be retried", 401, null, null);
+                }
+                else if ($e->getCode() < 200 || $e->getCode() > 299) {
+                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
+                }
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            if ($this->config->getDebug()) {
+                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            case 200:
+                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\SplFileObject', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                break;
+            }
+            throw $e;
+        }
+    }
+
+    /*
+     * Operation saveAsOnlineAsync
+     *
+     * Converts document to destination format with detailed settings and saves result to storage.
+     *
+     * @param Requests\saveAsOnlineRequest $request is a request object for operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function saveAsOnlineAsync(Requests\saveAsOnlineRequest $request) 
+    {
+        return $this->saveAsOnlineAsyncWithHttpInfo($request)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /*
+     * Operation saveAsOnlineAsyncWithHttpInfo
+     *
+     * Converts document to destination format with detailed settings and saves result to storage.
+     *
+     * @param Requests\saveAsOnlineRequest $request is a request object for operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function saveAsOnlineAsyncWithHttpInfo(Requests\saveAsOnlineRequest $request) 
+    {
+        $returnType = '\SplFileObject';
+        $request = $this->saveAsOnlineRequest($request);
+
+        return $this->client
+            ->sendAsync($request, $this->_createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    if ($this->config->getDebug()) {
+                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {        
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+
+                    if ($exception instanceof RepeatRequestException) {
+                        $this->_refreshToken();
+                        throw new RepeatRequestException("Request must be retried", 401, null, null);
+                    }
+
+                    throw new ApiException(
+                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /*
+     * Create request for operation 'saveAsOnline'
+     *
+     * @param Requests\saveAsOnlineRequest $request is a request object for operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function saveAsOnlineRequest(Requests\saveAsOnlineRequest $request)
+    {
+        if ($request->document === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $document when calling saveAsOnline');
+        }
+        if ($request->save_options_data === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $save_options_data when calling saveAsOnline');
+        }
+
+        $resourcePath = '/words/online/saveAs';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = "";
+        $multipart = false;
+        $filename = null;
+
+        // remove empty path parameters
+        $resourcePath = str_replace("//", "/", $resourcePath);
+        // query params
+        if ($request->fonts_location !== null) {
+            $localName = lcfirst('FontsLocation');
+            $localValue = is_bool($request->fonts_location) ? ($request->fonts_location ? 'true' : 'false') : $request->fonts_location;
+            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
+                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
+            } else {
+                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
+            }
+        }
+
+        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
+        // form params
+        if ($request->document !== null) {
+            $multipart = true; 
+            $filename = ObjectSerializer::toFormValue($request->document);
+            $handle = fopen($filename, "rb");
+            $fsize = filesize($filename);
+            $contents = fread($handle, $fsize);
+            $formParams['document'] = $contents;
+        }
+        // form params
+        if ($request->save_options_data !== null) {
+            $multipart = true; 
+            $formParams['save_options_data'] = ObjectSerializer::toFormValue($request->save_options_data);
+        }
+
+        // body params
+        $_tempBody = null;
+        if ($multipart) {
+            $headers= $this->headerSelector->selectHeadersForMultipart(
+                ['application/xml', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/xml', 'application/json'],
+                ['multipart/form-data']
             );
         }
 

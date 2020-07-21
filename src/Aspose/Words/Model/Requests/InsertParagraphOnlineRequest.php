@@ -1,7 +1,7 @@
 <?php
 /*
  * --------------------------------------------------------------------------------
- * <copyright company="Aspose" file="AppendDocumentRequest.php">
+ * <copyright company="Aspose" file="InsertParagraphOnlineRequest.php">
  *   Copyright (c) 2020 Aspose.Words for Cloud
  * </copyright>
  * <summary>
@@ -29,29 +29,24 @@
 namespace Aspose\Words\Model\Requests;
 
 /*
- * Request model for appendDocument operation.
+ * Request model for insertParagraphOnline operation.
  */
-class AppendDocumentRequest
+class InsertParagraphOnlineRequest
 {
     /*
-     * Original document name.
+     * Path to the node which contains paragraphs.
      */
-    public $name;
+    public $node_path;
 
     /*
-     * <see cref="DocumentEntryList"/> with a list of documents to append.
+     * The document.
      */
-    public $document_list;
+    public $document;
 
     /*
-     * Original document folder.
+     * Paragraph data.
      */
-    public $folder;
-
-    /*
-     * Original document storage.
-     */
-    public $storage;
+    public $paragraph;
 
     /*
      * Encoding that will be used to load an HTML (or TXT) document if the encoding is not specified in HTML.
@@ -79,96 +74,84 @@ class AppendDocumentRequest
     public $revision_date_time;
 
     /*
-     * Initializes a new instance of the AppendDocumentRequest class.
+     * Paragraph will be inserted before node with index.
+     */
+    public $insert_before_node;
+
+    /*
+     * Initializes a new instance of the InsertParagraphOnlineRequest class.
      *
-     * @param string $name Original document name.
-     * @param \Aspose\Words\Model\DocumentEntryList $document_list <see cref="DocumentEntryList"/> with a list of documents to append.
-     * @param string $folder Original document folder.
-     * @param string $storage Original document storage.
+     * @param string $node_path Path to the node which contains paragraphs.
+     * @param \SplFileObject $document The document.
+     * @param \Aspose\Words\Model\ParagraphInsert $paragraph Paragraph data.
      * @param string $load_encoding Encoding that will be used to load an HTML (or TXT) document if the encoding is not specified in HTML.
      * @param string $password Password for opening an encrypted document.
      * @param string $dest_file_name Result path of the document after the operation. If this parameter is omitted then result of the operation will be saved as the source document.
      * @param string $revision_author Initials of the author to use for revisions.If you set this parameter and then make some changes to the document programmatically, save the document and later open the document in MS Word you will see these changes as revisions.
      * @param string $revision_date_time The date and time to use for revisions.
+     * @param string $insert_before_node Paragraph will be inserted before node with index.
      */
-    public function __construct($name, $document_list, $folder = null, $storage = null, $load_encoding = null, $password = null, $dest_file_name = null, $revision_author = null, $revision_date_time = null)
+    public function __construct($node_path, $document, $paragraph, $load_encoding = null, $password = null, $dest_file_name = null, $revision_author = null, $revision_date_time = null, $insert_before_node = null)
     {
-        $this->name = $name;
-        $this->document_list = $document_list;
-        $this->folder = $folder;
-        $this->storage = $storage;
+        $this->node_path = $node_path;
+        $this->document = $document;
+        $this->paragraph = $paragraph;
         $this->load_encoding = $load_encoding;
         $this->password = $password;
         $this->dest_file_name = $dest_file_name;
         $this->revision_author = $revision_author;
         $this->revision_date_time = $revision_date_time;
+        $this->insert_before_node = $insert_before_node;
     }
 
     /*
-     * Original document name.
+     * Path to the node which contains paragraphs.
      */
-    public function get_name()
+    public function get_node_path()
     {
-        return $this->name;
+        return $this->node_path;
     }
 
     /*
-     * Original document name.
+     * Path to the node which contains paragraphs.
      */
-    public function set_name($value)
+    public function set_node_path($value)
     {
-        $this->name = $value;
+        $this->node_path = $value;
         return $this;
     }
 
     /*
-     * <see cref="DocumentEntryList"/> with a list of documents to append.
+     * The document.
      */
-    public function get_document_list()
+    public function get_document()
     {
-        return $this->document_list;
+        return $this->document;
     }
 
     /*
-     * <see cref="DocumentEntryList"/> with a list of documents to append.
+     * The document.
      */
-    public function set_document_list($value)
+    public function set_document($value)
     {
-        $this->document_list = $value;
+        $this->document = $value;
         return $this;
     }
 
     /*
-     * Original document folder.
+     * Paragraph data.
      */
-    public function get_folder()
+    public function get_paragraph()
     {
-        return $this->folder;
+        return $this->paragraph;
     }
 
     /*
-     * Original document folder.
+     * Paragraph data.
      */
-    public function set_folder($value)
+    public function set_paragraph($value)
     {
-        $this->folder = $value;
-        return $this;
-    }
-
-    /*
-     * Original document storage.
-     */
-    public function get_storage()
-    {
-        return $this->storage;
-    }
-
-    /*
-     * Original document storage.
-     */
-    public function set_storage($value)
-    {
-        $this->storage = $value;
+        $this->paragraph = $value;
         return $this;
     }
 
@@ -254,6 +237,23 @@ class AppendDocumentRequest
     public function set_revision_date_time($value)
     {
         $this->revision_date_time = $value;
+        return $this;
+    }
+
+    /*
+     * Paragraph will be inserted before node with index.
+     */
+    public function get_insert_before_node()
+    {
+        return $this->insert_before_node;
+    }
+
+    /*
+     * Paragraph will be inserted before node with index.
+     */
+    public function set_insert_before_node($value)
+    {
+        $this->insert_before_node = $value;
         return $this;
     }
 }

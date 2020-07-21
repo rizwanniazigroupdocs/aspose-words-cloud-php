@@ -34,46 +34,46 @@ namespace Aspose\Words\Model\Requests;
 class GetDocumentFieldNamesOnlineRequest
 {
     /*
-     * File with template.
+     * The document.
      */
-    public $template;
+    public $document;
 
     /*
-     * Use non merge fields or not.
+     * If true, result includes "mustache" field names.
      */
     public $use_non_merge_fields;
 
     /*
      * Initializes a new instance of the GetDocumentFieldNamesOnlineRequest class.
      *
-     * @param \SplFileObject $template File with template.
-     * @param bool $use_non_merge_fields Use non merge fields or not.
+     * @param \SplFileObject $document The document.
+     * @param bool $use_non_merge_fields If true, result includes "mustache" field names.
      */
-    public function __construct($template, $use_non_merge_fields = null)
+    public function __construct($document, $use_non_merge_fields = null)
     {
-        $this->template = $template;
+        $this->document = $document;
         $this->use_non_merge_fields = $use_non_merge_fields;
     }
 
     /*
-     * File with template.
+     * The document.
      */
-    public function get_template()
+    public function get_document()
     {
-        return $this->template;
+        return $this->document;
     }
 
     /*
-     * File with template.
+     * The document.
      */
-    public function set_template($value)
+    public function set_document($value)
     {
-        $this->template = $value;
+        $this->document = $value;
         return $this;
     }
 
     /*
-     * Use non merge fields or not.
+     * If true, result includes "mustache" field names.
      */
     public function get_use_non_merge_fields()
     {
@@ -81,7 +81,7 @@ class GetDocumentFieldNamesOnlineRequest
     }
 
     /*
-     * Use non merge fields or not.
+     * If true, result includes "mustache" field names.
      */
     public function set_use_non_merge_fields($value)
     {

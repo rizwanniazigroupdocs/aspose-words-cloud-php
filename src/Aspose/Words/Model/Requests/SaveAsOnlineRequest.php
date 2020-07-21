@@ -1,7 +1,7 @@
 <?php
 /*
  * --------------------------------------------------------------------------------
- * <copyright company="Aspose" file="CreateDocumentRequest.php">
+ * <copyright company="Aspose" file="SaveAsOnlineRequest.php">
  *   Copyright (c) 2020 Aspose.Words for Cloud
  * </copyright>
  * <summary>
@@ -29,87 +29,87 @@
 namespace Aspose\Words\Model\Requests;
 
 /*
- * Request model for createDocument operation.
+ * Request model for saveAsOnline operation.
  */
-class CreateDocumentRequest
+class SaveAsOnlineRequest
 {
     /*
-     * The document name.
+     * The document.
      */
-    public $file_name;
+    public $document;
 
     /*
-     * The document folder.
+     * Save options.
      */
-    public $folder;
+    public $save_options_data;
 
     /*
-     * Original document storage.
+     * Folder in filestorage with custom fonts.
      */
-    public $storage;
+    public $fonts_location;
 
     /*
-     * Initializes a new instance of the CreateDocumentRequest class.
+     * Initializes a new instance of the SaveAsOnlineRequest class.
      *
-     * @param string $file_name The document name.
-     * @param string $folder The document folder.
-     * @param string $storage Original document storage.
+     * @param \SplFileObject $document The document.
+     * @param \Aspose\Words\Model\SaveOptionsData $save_options_data Save options.
+     * @param string $fonts_location Folder in filestorage with custom fonts.
      */
-    public function __construct($file_name = null, $folder = null, $storage = null)
+    public function __construct($document, $save_options_data, $fonts_location = null)
     {
-        $this->file_name = $file_name;
-        $this->folder = $folder;
-        $this->storage = $storage;
+        $this->document = $document;
+        $this->save_options_data = $save_options_data;
+        $this->fonts_location = $fonts_location;
     }
 
     /*
-     * The document name.
+     * The document.
      */
-    public function get_file_name()
+    public function get_document()
     {
-        return $this->file_name;
+        return $this->document;
     }
 
     /*
-     * The document name.
+     * The document.
      */
-    public function set_file_name($value)
+    public function set_document($value)
     {
-        $this->file_name = $value;
+        $this->document = $value;
         return $this;
     }
 
     /*
-     * The document folder.
+     * Save options.
      */
-    public function get_folder()
+    public function get_save_options_data()
     {
-        return $this->folder;
+        return $this->save_options_data;
     }
 
     /*
-     * The document folder.
+     * Save options.
      */
-    public function set_folder($value)
+    public function set_save_options_data($value)
     {
-        $this->folder = $value;
+        $this->save_options_data = $value;
         return $this;
     }
 
     /*
-     * Original document storage.
+     * Folder in filestorage with custom fonts.
      */
-    public function get_storage()
+    public function get_fonts_location()
     {
-        return $this->storage;
+        return $this->fonts_location;
     }
 
     /*
-     * Original document storage.
+     * Folder in filestorage with custom fonts.
      */
-    public function set_storage($value)
+    public function set_fonts_location($value)
     {
-        $this->storage = $value;
+        $this->fonts_location = $value;
         return $this;
     }
 }

@@ -65,4 +65,22 @@ class DocumentStatisticsTests extends BaseTestContext
         $result = $this->words->getDocumentStatistics($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
     }
+
+    /*
+     * Test for document classification online.
+     */
+    public function testGetDocumentStatisticsOnline()
+    {
+        $localFile = "Common/test_multi_pages.docx";
+
+        $request = new Requests\GetDocumentStatisticsOnlineRequest(
+            realpath(__DIR__ . '/../../../../..') . "/TestData/" . $localFile,
+            NULL,
+            NULL,
+            NULL
+        );
+
+        $result = $this->words->getDocumentStatisticsOnline($request);
+        Assert::assertNotNull($result, "Error occurred");
+    }
 }

@@ -62,7 +62,26 @@ class ParagraphTests extends BaseTestContext
         );
 
         $result = $this->words->getParagraph($request);
-        Assert::isTrue(json_decode($result, true) !== NULL);
+        Assert::assertNotNull($result, "Error occurred");
+    }
+
+    /*
+     * Test for getting paragraph online.
+     */
+    public function testGetDocumentParagraphOnline()
+    {
+        $localFile = "Common/test_multi_pages.docx";
+
+        $request = new Requests\GetParagraphOnlineRequest(
+            "sections/0",
+            realpath(__DIR__ . '/../../../../..') . "/TestData/" . $localFile,
+            0,
+            NULL,
+            NULL
+        );
+
+        $result = $this->words->getParagraphOnline($request);
+        Assert::assertNotNull($result, "Error occurred");
     }
 
     /*
@@ -89,7 +108,7 @@ class ParagraphTests extends BaseTestContext
         );
 
         $result = $this->words->getParagraphWithoutNodePath($request);
-        Assert::isTrue(json_decode($result, true) !== NULL);
+        Assert::assertNotNull($result, "Error occurred");
     }
 
     /*
@@ -116,7 +135,25 @@ class ParagraphTests extends BaseTestContext
         );
 
         $result = $this->words->getParagraphs($request);
-        Assert::isTrue(json_decode($result, true) !== NULL);
+        Assert::assertNotNull($result, "Error occurred");
+    }
+
+    /*
+     * Test for getting all paragraphs online.
+     */
+    public function testGetDocumentParagraphsOnline()
+    {
+        $localFile = "Common/test_multi_pages.docx";
+
+        $request = new Requests\GetParagraphsOnlineRequest(
+            "sections/0",
+            realpath(__DIR__ . '/../../../../..') . "/TestData/" . $localFile,
+            NULL,
+            NULL
+        );
+
+        $result = $this->words->getParagraphsOnline($request);
+        Assert::assertNotNull($result, "Error occurred");
     }
 
     /*
@@ -142,7 +179,7 @@ class ParagraphTests extends BaseTestContext
         );
 
         $result = $this->words->getParagraphsWithoutNodePath($request);
-        Assert::isTrue(json_decode($result, true) !== NULL);
+        Assert::assertNotNull($result, "Error occurred");
     }
 
     /*
@@ -282,8 +319,8 @@ class ParagraphTests extends BaseTestContext
         ));
         $request = new Requests\InsertParagraphRequest(
             $remoteFileName,
-            $requestParagraph,
             "sections/0",
+            $requestParagraph,
             $remoteDataFolder,
             NULL,
             NULL,
@@ -295,7 +332,33 @@ class ParagraphTests extends BaseTestContext
         );
 
         $result = $this->words->insertParagraph($request);
-        Assert::isTrue(json_decode($result, true) !== NULL);
+        Assert::assertNotNull($result, "Error occurred");
+    }
+
+    /*
+     * Test for adding paragraph online.
+     */
+    public function testInsertParagraphOnline()
+    {
+        $localFile = "Common/test_multi_pages.docx";
+
+        $requestParagraph = new \Aspose\Words\Model\ParagraphInsert(array(
+            "text" => "This is a new paragraph for your document",
+        ));
+        $request = new Requests\InsertParagraphOnlineRequest(
+            "sections/0",
+            realpath(__DIR__ . '/../../../../..') . "/TestData/" . $localFile,
+            $requestParagraph,
+            NULL,
+            NULL,
+            NULL,
+            NULL,
+            NULL,
+            NULL
+        );
+
+        $result = $this->words->insertParagraphOnline($request);
+        Assert::assertNotNull($result, "Error occurred");
     }
 
     /*
@@ -329,7 +392,7 @@ class ParagraphTests extends BaseTestContext
         );
 
         $result = $this->words->insertParagraphWithoutNodePath($request);
-        Assert::isTrue(json_decode($result, true) !== NULL);
+        Assert::assertNotNull($result, "Error occurred");
     }
 
     /*
@@ -509,6 +572,28 @@ class ParagraphTests extends BaseTestContext
         );
 
     $this->words->deleteParagraph($request);
+    }
+
+    /*
+     * Test for deleting  a paragraph online.
+     */
+    public function testDeleteParagraphOnline()
+    {
+        $localFile = "Common/test_multi_pages.docx";
+
+        $request = new Requests\DeleteParagraphOnlineRequest(
+            "",
+            realpath(__DIR__ . '/../../../../..') . "/TestData/" . $localFile,
+            0,
+            NULL,
+            NULL,
+            NULL,
+            NULL,
+            NULL
+        );
+
+        $result = $this->words->deleteParagraphOnline($request);
+        Assert::assertNotNull($result, "Error occurred");
     }
 
     /*

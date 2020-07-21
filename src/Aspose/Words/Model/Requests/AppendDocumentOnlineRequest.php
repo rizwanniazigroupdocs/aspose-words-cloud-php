@@ -1,7 +1,7 @@
 <?php
 /*
  * --------------------------------------------------------------------------------
- * <copyright company="Aspose" file="CreateDocumentRequest.php">
+ * <copyright company="Aspose" file="AppendDocumentOnlineRequest.php">
  *   Copyright (c) 2020 Aspose.Words for Cloud
  * </copyright>
  * <summary>
@@ -29,87 +29,63 @@
 namespace Aspose\Words\Model\Requests;
 
 /*
- * Request model for createDocument operation.
+ * Request model for appendDocumentOnline operation.
  */
-class CreateDocumentRequest
+class AppendDocumentOnlineRequest
 {
     /*
-     * The document name.
+     * The document.
      */
-    public $file_name;
+    public $document;
 
     /*
-     * The document folder.
+     * <see cref="DocumentEntryList"/> with a list of documents to append.
      */
-    public $folder;
+    public $document_list;
 
     /*
-     * Original document storage.
-     */
-    public $storage;
-
-    /*
-     * Initializes a new instance of the CreateDocumentRequest class.
+     * Initializes a new instance of the AppendDocumentOnlineRequest class.
      *
-     * @param string $file_name The document name.
-     * @param string $folder The document folder.
-     * @param string $storage Original document storage.
+     * @param \SplFileObject $document The document.
+     * @param \Aspose\Words\Model\DocumentEntryList $document_list <see cref="DocumentEntryList"/> with a list of documents to append.
      */
-    public function __construct($file_name = null, $folder = null, $storage = null)
+    public function __construct($document, $document_list)
     {
-        $this->file_name = $file_name;
-        $this->folder = $folder;
-        $this->storage = $storage;
+        $this->document = $document;
+        $this->document_list = $document_list;
     }
 
     /*
-     * The document name.
+     * The document.
      */
-    public function get_file_name()
+    public function get_document()
     {
-        return $this->file_name;
+        return $this->document;
     }
 
     /*
-     * The document name.
+     * The document.
      */
-    public function set_file_name($value)
+    public function set_document($value)
     {
-        $this->file_name = $value;
+        $this->document = $value;
         return $this;
     }
 
     /*
-     * The document folder.
+     * <see cref="DocumentEntryList"/> with a list of documents to append.
      */
-    public function get_folder()
+    public function get_document_list()
     {
-        return $this->folder;
+        return $this->document_list;
     }
 
     /*
-     * The document folder.
+     * <see cref="DocumentEntryList"/> with a list of documents to append.
      */
-    public function set_folder($value)
+    public function set_document_list($value)
     {
-        $this->folder = $value;
-        return $this;
-    }
-
-    /*
-     * Original document storage.
-     */
-    public function get_storage()
-    {
-        return $this->storage;
-    }
-
-    /*
-     * Original document storage.
-     */
-    public function set_storage($value)
-    {
-        $this->storage = $value;
+        $this->document_list = $value;
         return $this;
     }
 }
