@@ -84,6 +84,12 @@ class AppendDocumentTests extends BaseTestContext
     {
         $remoteDataFolder = self::$baseRemoteFolderPath . "/DocumentActions/AppendDocument";
         $localFile = "Common/test_multi_pages.docx";
+        $remoteFileName = "TestAppendDocument.docx";
+
+        $this->uploadFile(
+            realpath(__DIR__ . '/../../../../..') . "/TestData/" . $localFile,
+            $remoteDataFolder . "/" . $remoteFileName
+        );
 
         $requestDocumentListDocumentEntries0 = new \Aspose\Words\Model\DocumentEntry(array(
             "href" => $remoteDataFolder . "/" . $remoteFileName,
