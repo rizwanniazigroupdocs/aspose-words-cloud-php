@@ -279,6 +279,10 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
 
         // remove empty path parameters
         $resourcePath = str_replace("//", "/", $resourcePath);
@@ -600,6 +604,10 @@ class WordsApi
         if ($request->name !== null) {
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -954,10 +962,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->styled_node_path !== null) {
             $localName = lcfirst('StyledNodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->styled_node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('StyledNodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -1311,6 +1327,10 @@ class WordsApi
         if ($request->name !== null) {
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -2222,6 +2242,10 @@ class WordsApi
             $localName = lcfirst('DocumentName');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->document_name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('DocumentName');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
 
         // remove empty path parameters
         $resourcePath = str_replace("//", "/", $resourcePath);
@@ -2553,6 +2577,10 @@ class WordsApi
         if ($request->name !== null) {
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -3167,6 +3195,10 @@ class WordsApi
             $localName = lcfirst('SrcPath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->src_path), $resourcePath);
         }
+        else {
+            $localName = lcfirst('SrcPath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
 
         // remove empty path parameters
         $resourcePath = str_replace("//", "/", $resourcePath);
@@ -3435,6 +3467,10 @@ class WordsApi
         if ($request->src_path !== null) {
             $localName = lcfirst('SrcPath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->src_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('SrcPath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -3737,6 +3773,10 @@ class WordsApi
         if ($request->name !== null) {
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -4341,6 +4381,10 @@ class WordsApi
             $localName = lcfirst('Path');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->path), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Path');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
 
         // remove empty path parameters
         $resourcePath = str_replace("//", "/", $resourcePath);
@@ -4626,10 +4670,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->property_name !== null) {
             $localName = lcfirst('PropertyName');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->property_name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('PropertyName');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -4981,15 +5033,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -5313,15 +5377,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->border_type !== null) {
             $localName = lcfirst('BorderType');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->border_type), $resourcePath);
         }
+        else {
+            $localName = lcfirst('BorderType');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -5662,10 +5738,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -5966,10 +6050,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->comment_index !== null) {
             $localName = lcfirst('CommentIndex');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->comment_index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('CommentIndex');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -6270,10 +6362,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->property_name !== null) {
             $localName = lcfirst('PropertyName');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->property_name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('PropertyName');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -6574,15 +6674,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -6883,15 +6995,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -7189,10 +7313,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -7490,6 +7622,10 @@ class WordsApi
             $localName = lcfirst('Path');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->path), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Path');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
 
         // remove empty path parameters
         $resourcePath = str_replace("//", "/", $resourcePath);
@@ -7735,6 +7871,10 @@ class WordsApi
         if ($request->path !== null) {
             $localName = lcfirst('Path');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Path');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -7985,15 +8125,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -8294,15 +8446,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -8606,15 +8770,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->section_path !== null) {
             $localName = lcfirst('SectionPath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->section_path), $resourcePath);
         }
+        else {
+            $localName = lcfirst('SectionPath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -8915,10 +9091,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->section_path !== null) {
             $localName = lcfirst('SectionPath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->section_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('SectionPath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -9226,6 +9410,10 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
 
         // remove empty path parameters
         $resourcePath = str_replace("//", "/", $resourcePath);
@@ -9525,15 +9713,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -9834,15 +10034,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -10186,15 +10398,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -10541,15 +10765,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -10843,15 +11079,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->paragraph_path !== null) {
             $localName = lcfirst('ParagraphPath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->paragraph_path), $resourcePath);
         }
+        else {
+            $localName = lcfirst('ParagraphPath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -11152,10 +11400,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->section_index !== null) {
             $localName = lcfirst('SectionIndex');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->section_index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('SectionIndex');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -11456,15 +11712,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -11768,15 +12036,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->table_row_path !== null) {
             $localName = lcfirst('TableRowPath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->table_row_path), $resourcePath);
         }
+        else {
+            $localName = lcfirst('TableRowPath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -12080,15 +12360,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->table_path !== null) {
             $localName = lcfirst('TablePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->table_path), $resourcePath);
         }
+        else {
+            $localName = lcfirst('TablePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -12429,6 +12721,10 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
 
         // remove empty path parameters
         $resourcePath = str_replace("//", "/", $resourcePath);
@@ -12768,6 +13064,10 @@ class WordsApi
             $localName = lcfirst('Path');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->path), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Path');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
 
         // remove empty path parameters
         $resourcePath = str_replace("//", "/", $resourcePath);
@@ -13056,6 +13356,10 @@ class WordsApi
         if ($request->name !== null) {
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -14010,10 +14314,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->bookmark_name !== null) {
             $localName = lcfirst('BookmarkName');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->bookmark_name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('BookmarkName');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -14323,6 +14635,10 @@ class WordsApi
         if ($request->name !== null) {
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -14636,15 +14952,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->border_type !== null) {
             $localName = lcfirst('BorderType');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->border_type), $resourcePath);
         }
+        else {
+            $localName = lcfirst('BorderType');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -14955,10 +15283,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -15272,10 +15608,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->comment_index !== null) {
             $localName = lcfirst('CommentIndex');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->comment_index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('CommentIndex');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -15586,6 +15930,10 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
 
         // remove empty path parameters
         $resourcePath = str_replace("//", "/", $resourcePath);
@@ -15894,6 +16242,10 @@ class WordsApi
         if ($request->document_name !== null) {
             $localName = lcfirst('DocumentName');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->document_name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('DocumentName');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -16207,15 +16559,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -16529,15 +16893,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -16851,15 +17227,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -17170,10 +17558,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -17483,6 +17879,10 @@ class WordsApi
         if ($request->name !== null) {
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -18089,10 +18489,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->hyperlink_index !== null) {
             $localName = lcfirst('HyperlinkIndex');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->hyperlink_index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('HyperlinkIndex');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -18403,6 +18811,10 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
 
         // remove empty path parameters
         $resourcePath = str_replace("//", "/", $resourcePath);
@@ -18711,6 +19123,10 @@ class WordsApi
         if ($request->name !== null) {
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -19024,10 +19440,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->property_name !== null) {
             $localName = lcfirst('PropertyName');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->property_name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('PropertyName');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -19338,6 +19762,10 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
 
         // remove empty path parameters
         $resourcePath = str_replace("//", "/", $resourcePath);
@@ -19646,6 +20074,10 @@ class WordsApi
         if ($request->name !== null) {
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -19989,6 +20421,10 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
 
         // remove empty path parameters
         $resourcePath = str_replace("//", "/", $resourcePath);
@@ -20331,15 +20767,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -20650,10 +21098,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -20964,6 +21420,10 @@ class WordsApi
             $localName = lcfirst('Path');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->path), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Path');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
 
         // remove empty path parameters
         $resourcePath = str_replace("//", "/", $resourcePath);
@@ -21246,15 +21706,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -21565,10 +22037,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -21882,15 +22362,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -22201,10 +22693,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -22518,10 +23018,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->header_footer_index !== null) {
             $localName = lcfirst('HeaderFooterIndex');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->header_footer_index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('HeaderFooterIndex');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -22848,15 +23356,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->header_footer_index !== null) {
             $localName = lcfirst('HeaderFooterIndex');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->header_footer_index), $resourcePath);
         }
+        else {
+            $localName = lcfirst('HeaderFooterIndex');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->section_index !== null) {
             $localName = lcfirst('SectionIndex');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->section_index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('SectionIndex');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -23180,10 +23700,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->section_path !== null) {
             $localName = lcfirst('SectionPath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->section_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('SectionPath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -23507,10 +24035,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->list_id !== null) {
             $localName = lcfirst('ListId');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->list_id), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('ListId');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -23820,6 +24356,10 @@ class WordsApi
         if ($request->name !== null) {
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -24133,15 +24673,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -24452,10 +25004,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -24769,15 +25329,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -25091,15 +25663,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -25413,15 +25997,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -25732,10 +26328,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -26049,15 +26653,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -26371,15 +26987,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->range_start_identifier !== null) {
             $localName = lcfirst('RangeStartIdentifier');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->range_start_identifier), $resourcePath);
         }
+        else {
+            $localName = lcfirst('RangeStartIdentifier');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->range_end_identifier !== null) {
             $localName = lcfirst('RangeEndIdentifier');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->range_end_identifier), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('RangeEndIdentifier');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -26696,15 +27324,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->paragraph_path !== null) {
             $localName = lcfirst('ParagraphPath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->paragraph_path), $resourcePath);
         }
+        else {
+            $localName = lcfirst('ParagraphPath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -27021,15 +27661,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->paragraph_path !== null) {
             $localName = lcfirst('ParagraphPath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->paragraph_path), $resourcePath);
         }
+        else {
+            $localName = lcfirst('ParagraphPath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -27343,10 +27995,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->paragraph_path !== null) {
             $localName = lcfirst('ParagraphPath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->paragraph_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('ParagraphPath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -27660,10 +28320,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->section_index !== null) {
             $localName = lcfirst('SectionIndex');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->section_index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('SectionIndex');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -27977,10 +28645,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->section_index !== null) {
             $localName = lcfirst('SectionIndex');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->section_index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('SectionIndex');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -28290,6 +28966,10 @@ class WordsApi
         if ($request->name !== null) {
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -28603,10 +29283,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->style_name !== null) {
             $localName = lcfirst('StyleName');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->style_name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('StyleName');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -28920,10 +29608,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->styled_node_path !== null) {
             $localName = lcfirst('StyledNodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->styled_node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('StyledNodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -29233,6 +29929,10 @@ class WordsApi
         if ($request->name !== null) {
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -29546,15 +30246,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -29871,15 +30583,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->table_row_path !== null) {
             $localName = lcfirst('TableRowPath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->table_row_path), $resourcePath);
         }
+        else {
+            $localName = lcfirst('TableRowPath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -30196,15 +30920,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->table_row_path !== null) {
             $localName = lcfirst('TableRowPath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->table_row_path), $resourcePath);
         }
+        else {
+            $localName = lcfirst('TableRowPath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -30518,15 +31254,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -30843,15 +31591,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->table_path !== null) {
             $localName = lcfirst('TablePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->table_path), $resourcePath);
         }
+        else {
+            $localName = lcfirst('TablePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -31168,15 +31928,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->table_path !== null) {
             $localName = lcfirst('TablePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->table_path), $resourcePath);
         }
+        else {
+            $localName = lcfirst('TablePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -31487,10 +32259,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -31803,6 +32583,10 @@ class WordsApi
         if ($request->name !== null) {
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -32157,10 +32941,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -32518,10 +33310,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -32883,10 +33683,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -33238,10 +34046,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -33606,10 +34422,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->section_path !== null) {
             $localName = lcfirst('SectionPath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->section_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('SectionPath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -33960,6 +34784,10 @@ class WordsApi
         if ($request->name !== null) {
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -34314,15 +35142,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -34653,6 +35493,10 @@ class WordsApi
         if ($request->name !== null) {
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -35004,10 +35848,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -35372,10 +36224,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->paragraph_path !== null) {
             $localName = lcfirst('ParagraphPath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->paragraph_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('ParagraphPath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -35737,6 +36597,10 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
 
         // remove empty path parameters
         $resourcePath = str_replace("//", "/", $resourcePath);
@@ -36087,10 +36951,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -36445,10 +37317,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->table_row_path !== null) {
             $localName = lcfirst('TableRowPath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->table_row_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('TableRowPath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -36803,10 +37683,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->table_path !== null) {
             $localName = lcfirst('TablePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->table_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('TablePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -37154,6 +38042,10 @@ class WordsApi
         if ($request->name !== null) {
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -37525,6 +38417,10 @@ class WordsApi
         if ($request->name !== null) {
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -38115,6 +39011,10 @@ class WordsApi
             $localName = lcfirst('SrcPath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->src_path), $resourcePath);
         }
+        else {
+            $localName = lcfirst('SrcPath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
 
         // remove empty path parameters
         $resourcePath = str_replace("//", "/", $resourcePath);
@@ -38384,6 +39284,10 @@ class WordsApi
             $localName = lcfirst('SrcPath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->src_path), $resourcePath);
         }
+        else {
+            $localName = lcfirst('SrcPath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
 
         // remove empty path parameters
         $resourcePath = str_replace("//", "/", $resourcePath);
@@ -38642,6 +39546,10 @@ class WordsApi
         if ($request->name !== null) {
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -38993,6 +39901,10 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
 
         // remove empty path parameters
         $resourcePath = str_replace("//", "/", $resourcePath);
@@ -39320,6 +40232,10 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
 
         // remove empty path parameters
         $resourcePath = str_replace("//", "/", $resourcePath);
@@ -39642,15 +40558,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->range_start_identifier !== null) {
             $localName = lcfirst('RangeStartIdentifier');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->range_start_identifier), $resourcePath);
         }
+        else {
+            $localName = lcfirst('RangeStartIdentifier');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->range_end_identifier !== null) {
             $localName = lcfirst('RangeEndIdentifier');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->range_end_identifier), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('RangeEndIdentifier');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -39977,15 +40905,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -40322,15 +41262,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -40667,10 +41619,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->page_index !== null) {
             $localName = lcfirst('PageIndex');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->page_index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('PageIndex');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -41007,15 +41967,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -41352,15 +42324,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -41693,6 +42677,10 @@ class WordsApi
         if ($request->name !== null) {
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -42047,15 +43035,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->range_start_identifier !== null) {
             $localName = lcfirst('RangeStartIdentifier');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->range_start_identifier), $resourcePath);
         }
+        else {
+            $localName = lcfirst('RangeStartIdentifier');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->range_end_identifier !== null) {
             $localName = lcfirst('RangeEndIdentifier');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->range_end_identifier), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('RangeEndIdentifier');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -42605,6 +43605,10 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
 
         // remove empty path parameters
         $resourcePath = str_replace("//", "/", $resourcePath);
@@ -42938,15 +43942,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->range_start_identifier !== null) {
             $localName = lcfirst('RangeStartIdentifier');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->range_start_identifier), $resourcePath);
         }
+        else {
+            $localName = lcfirst('RangeStartIdentifier');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->range_end_identifier !== null) {
             $localName = lcfirst('RangeEndIdentifier');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->range_end_identifier), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('RangeEndIdentifier');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -43267,6 +44283,10 @@ class WordsApi
         if ($request->name !== null) {
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -43768,6 +44788,10 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
 
         // remove empty path parameters
         $resourcePath = str_replace("//", "/", $resourcePath);
@@ -44089,6 +45113,10 @@ class WordsApi
         if ($request->name !== null) {
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -44462,6 +45490,10 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
 
         // remove empty path parameters
         $resourcePath = str_replace("//", "/", $resourcePath);
@@ -44795,10 +45827,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->bookmark_name !== null) {
             $localName = lcfirst('BookmarkName');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->bookmark_name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('BookmarkName');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -45153,15 +46193,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->border_type !== null) {
             $localName = lcfirst('BorderType');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->border_type), $resourcePath);
         }
+        else {
+            $localName = lcfirst('BorderType');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -45516,10 +46568,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->comment_index !== null) {
             $localName = lcfirst('CommentIndex');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->comment_index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('CommentIndex');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -45877,15 +46937,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -46246,15 +47318,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -46603,6 +47687,10 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
 
         // remove empty path parameters
         $resourcePath = str_replace("//", "/", $resourcePath);
@@ -46928,15 +48016,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -47291,15 +48391,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -47654,10 +48766,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->list_id !== null) {
             $localName = lcfirst('ListId');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->list_id), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('ListId');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -48015,15 +49135,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->list_id !== null) {
             $localName = lcfirst('ListId');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->list_id), $resourcePath);
         }
+        else {
+            $localName = lcfirst('ListId');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->list_level !== null) {
             $localName = lcfirst('ListLevel');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->list_level), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('ListLevel');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -48378,15 +49510,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -48741,15 +49885,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -49107,15 +50263,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->paragraph_path !== null) {
             $localName = lcfirst('ParagraphPath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->paragraph_path), $resourcePath);
         }
+        else {
+            $localName = lcfirst('ParagraphPath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -49473,15 +50641,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->paragraph_path !== null) {
             $localName = lcfirst('ParagraphPath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->paragraph_path), $resourcePath);
         }
+        else {
+            $localName = lcfirst('ParagraphPath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -49836,10 +51016,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->section_index !== null) {
             $localName = lcfirst('SectionIndex');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->section_index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('SectionIndex');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -50194,10 +51382,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->style_name !== null) {
             $localName = lcfirst('StyleName');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->style_name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('StyleName');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -50555,15 +51751,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->table_row_path !== null) {
             $localName = lcfirst('TableRowPath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->table_row_path), $resourcePath);
         }
+        else {
+            $localName = lcfirst('TableRowPath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -50918,15 +52126,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -51284,15 +52504,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->table_path !== null) {
             $localName = lcfirst('TablePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->table_path), $resourcePath);
         }
+        else {
+            $localName = lcfirst('TablePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -51643,6 +52875,10 @@ class WordsApi
         if ($request->path !== null) {
             $localName = lcfirst('Path');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Path');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
