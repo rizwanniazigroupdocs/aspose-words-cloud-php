@@ -51,7 +51,7 @@ class MailMergeFiledsTests extends BaseTestContext
         );
 
         $result = $this->words->getDocumentFieldNamesOnline($request);
-        Assert::isTrue(json_decode($result, true) !== NULL);
+        Assert::assertNotNull($result, "Error occurred");
     }
 
     /*

@@ -279,6 +279,10 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
 
         // remove empty path parameters
         $resourcePath = str_replace("//", "/", $resourcePath);
@@ -600,6 +604,10 @@ class WordsApi
         if ($request->name !== null) {
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -1235,10 +1243,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->styled_node_path !== null) {
             $localName = lcfirst('StyledNodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->styled_node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('StyledNodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -1592,6 +1608,10 @@ class WordsApi
         if ($request->name !== null) {
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -2503,6 +2523,10 @@ class WordsApi
             $localName = lcfirst('DocumentName');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->document_name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('DocumentName');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
 
         // remove empty path parameters
         $resourcePath = str_replace("//", "/", $resourcePath);
@@ -2834,6 +2858,10 @@ class WordsApi
         if ($request->name !== null) {
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -3448,6 +3476,10 @@ class WordsApi
             $localName = lcfirst('SrcPath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->src_path), $resourcePath);
         }
+        else {
+            $localName = lcfirst('SrcPath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
 
         // remove empty path parameters
         $resourcePath = str_replace("//", "/", $resourcePath);
@@ -3716,6 +3748,10 @@ class WordsApi
         if ($request->src_path !== null) {
             $localName = lcfirst('SrcPath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->src_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('SrcPath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -4018,6 +4054,10 @@ class WordsApi
         if ($request->name !== null) {
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -4622,6 +4662,10 @@ class WordsApi
             $localName = lcfirst('Path');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->path), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Path');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
 
         // remove empty path parameters
         $resourcePath = str_replace("//", "/", $resourcePath);
@@ -4907,10 +4951,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->property_name !== null) {
             $localName = lcfirst('PropertyName');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->property_name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('PropertyName');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -5246,9 +5298,6 @@ class WordsApi
         if ($request->name === null) {
             throw new \InvalidArgumentException('Missing the required parameter $name when calling deleteAllParagraphTabStops');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling deleteAllParagraphTabStops');
-        }
         if ($request->index === null) {
             throw new \InvalidArgumentException('Missing the required parameter $index when calling deleteAllParagraphTabStops');
         }
@@ -5265,342 +5314,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
+        // path params
+        if ($request->index !== null) {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
         }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
-        }
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->folder !== null) {
-            $localName = lcfirst('Folder');
-            $localValue = is_bool($request->folder) ? ($request->folder ? 'true' : 'false') : $request->folder;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->storage !== null) {
-            $localName = lcfirst('Storage');
-            $localValue = is_bool($request->storage) ? ($request->storage ? 'true' : 'false') : $request->storage;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->dest_file_name !== null) {
-            $localName = lcfirst('DestFileName');
-            $localValue = is_bool($request->dest_file_name) ? ($request->dest_file_name ? 'true' : 'false') : $request->dest_file_name;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-
-        // body params
-        $_tempBody = null;
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['application/xml', 'application/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'DELETE',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('DELETE', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation deleteAllParagraphTabStopsWithoutNodePath
-     *
-     * Remove all tab stops.
-     *
-     * @param Requests\deleteAllParagraphTabStopsWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Aspose\Words\Model\TabStopsResponse
-     */
-    public function deleteAllParagraphTabStopsWithoutNodePath(Requests\deleteAllParagraphTabStopsWithoutNodePathRequest $request)
-    {
-        try {
-            list($response) = $this->deleteAllParagraphTabStopsWithoutNodePathWithHttpInfo($request);
-            return $response;
-        }
-        catch(RepeatRequestException $e) {
-            list($response) = $this->deleteAllParagraphTabStopsWithoutNodePathWithHttpInfo($request);
-            return $response;
-        } 
-    }
-
-    /*
-     * Operation deleteAllParagraphTabStopsWithoutNodePathWithHttpInfo
-     *
-     * Remove all tab stops.
-     *
-     * @param Requests\deleteAllParagraphTabStopsWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \Aspose\Words\Model\TabStopsResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function deleteAllParagraphTabStopsWithoutNodePathWithHttpInfo(Requests\deleteAllParagraphTabStopsWithoutNodePathRequest $request)
-    {
-        $returnType = '\Aspose\Words\Model\TabStopsResponse';
-        $request = $this->deleteAllParagraphTabStopsWithoutNodePathRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            if ($this->config->getDebug()) {
-                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\Aspose\Words\Model\TabStopsResponse', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                break;
-            }
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation deleteAllParagraphTabStopsWithoutNodePathAsync
-     *
-     * Remove all tab stops.
-     *
-     * @param Requests\deleteAllParagraphTabStopsWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function deleteAllParagraphTabStopsWithoutNodePathAsync(Requests\deleteAllParagraphTabStopsWithoutNodePathRequest $request) 
-    {
-        return $this->deleteAllParagraphTabStopsWithoutNodePathAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation deleteAllParagraphTabStopsWithoutNodePathAsyncWithHttpInfo
-     *
-     * Remove all tab stops.
-     *
-     * @param Requests\deleteAllParagraphTabStopsWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function deleteAllParagraphTabStopsWithoutNodePathAsyncWithHttpInfo(Requests\deleteAllParagraphTabStopsWithoutNodePathRequest $request) 
-    {
-        $returnType = '\Aspose\Words\Model\TabStopsResponse';
-        $request = $this->deleteAllParagraphTabStopsWithoutNodePathRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    if ($this->config->getDebug()) {
-                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'deleteAllParagraphTabStopsWithoutNodePath'
-     *
-     * @param Requests\deleteAllParagraphTabStopsWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function deleteAllParagraphTabStopsWithoutNodePathRequest(Requests\deleteAllParagraphTabStopsWithoutNodePathRequest $request)
-    {
-        if ($request->name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $name when calling deleteAllParagraphTabStopsWithoutNodePath');
-        }
-        if ($request->index === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $index when calling deleteAllParagraphTabStopsWithoutNodePath');
-        }
-
-        $resourcePath = '/words/{name}/paragraphs/{index}/tabstops';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-        // path params
-        if ($request->name !== null) {
-            $localName = lcfirst('Name');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
-        }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -5908,9 +5642,6 @@ class WordsApi
         if ($request->name === null) {
             throw new \InvalidArgumentException('Missing the required parameter $name when calling deleteBorder');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling deleteBorder');
-        }
         if ($request->border_type === null) {
             throw new \InvalidArgumentException('Missing the required parameter $border_type when calling deleteBorder');
         }
@@ -5927,15 +5658,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
-        // path params
-        if ($request->node_path !== null) {
-            $localName = lcfirst('NodePath');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
         // path params
         if ($request->border_type !== null) {
             $localName = lcfirst('BorderType');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->border_type), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('BorderType');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
+        // path params
+        if ($request->node_path !== null) {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -6263,9 +6006,6 @@ class WordsApi
         if ($request->name === null) {
             throw new \InvalidArgumentException('Missing the required parameter $name when calling deleteBorders');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling deleteBorders');
-        }
 
         $resourcePath = '/words/{name}/{nodePath}/borders';
         $formParams = [];
@@ -6279,10 +6019,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -6583,10 +6331,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->comment_index !== null) {
             $localName = lcfirst('CommentIndex');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->comment_index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('CommentIndex');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -6887,10 +6643,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->property_name !== null) {
             $localName = lcfirst('PropertyName');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->property_name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('PropertyName');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -7175,9 +6939,6 @@ class WordsApi
         if ($request->name === null) {
             throw new \InvalidArgumentException('Missing the required parameter $name when calling deleteDrawingObject');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling deleteDrawingObject');
-        }
         if ($request->index === null) {
             throw new \InvalidArgumentException('Missing the required parameter $index when calling deleteDrawingObject');
         }
@@ -7194,319 +6955,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
+        // path params
+        if ($request->index !== null) {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
         }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
-        }
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->folder !== null) {
-            $localName = lcfirst('Folder');
-            $localValue = is_bool($request->folder) ? ($request->folder ? 'true' : 'false') : $request->folder;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->storage !== null) {
-            $localName = lcfirst('Storage');
-            $localValue = is_bool($request->storage) ? ($request->storage ? 'true' : 'false') : $request->storage;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->dest_file_name !== null) {
-            $localName = lcfirst('DestFileName');
-            $localValue = is_bool($request->dest_file_name) ? ($request->dest_file_name ? 'true' : 'false') : $request->dest_file_name;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->revision_author !== null) {
-            $localName = lcfirst('RevisionAuthor');
-            $localValue = is_bool($request->revision_author) ? ($request->revision_author ? 'true' : 'false') : $request->revision_author;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->revision_date_time !== null) {
-            $localName = lcfirst('RevisionDateTime');
-            $localValue = is_bool($request->revision_date_time) ? ($request->revision_date_time ? 'true' : 'false') : $request->revision_date_time;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-
-        // body params
-        $_tempBody = null;
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['application/xml', 'application/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'DELETE',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('DELETE', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation deleteDrawingObjectWithoutNodePath
-     *
-     * Removes drawing object from document.
-     *
-     * @param Requests\deleteDrawingObjectWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return void
-     */
-    public function deleteDrawingObjectWithoutNodePath(Requests\deleteDrawingObjectWithoutNodePathRequest $request)
-    {
-        try {
-    $this->deleteDrawingObjectWithoutNodePathWithHttpInfo($request);
-        }
-        catch(RepeatRequestException $e) {
-    $this->deleteDrawingObjectWithoutNodePathWithHttpInfo($request);
-        } 
-    }
-
-    /*
-     * Operation deleteDrawingObjectWithoutNodePathWithHttpInfo
-     *
-     * Removes drawing object from document.
-     *
-     * @param Requests\deleteDrawingObjectWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function deleteDrawingObjectWithoutNodePathWithHttpInfo(Requests\deleteDrawingObjectWithoutNodePathRequest $request)
-    {
-        $returnType = 'null';
-        $request = $this->deleteDrawingObjectWithoutNodePathRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            return [null, $statusCode, $response->getHeaders()];
-
-        } catch (ApiException $e) {
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation deleteDrawingObjectWithoutNodePathAsync
-     *
-     * Removes drawing object from document.
-     *
-     * @param Requests\deleteDrawingObjectWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function deleteDrawingObjectWithoutNodePathAsync(Requests\deleteDrawingObjectWithoutNodePathRequest $request) 
-    {
-        return $this->deleteDrawingObjectWithoutNodePathAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation deleteDrawingObjectWithoutNodePathAsyncWithHttpInfo
-     *
-     * Removes drawing object from document.
-     *
-     * @param Requests\deleteDrawingObjectWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function deleteDrawingObjectWithoutNodePathAsyncWithHttpInfo(Requests\deleteDrawingObjectWithoutNodePathRequest $request) 
-    {
-        $returnType = 'null';
-        $request = $this->deleteDrawingObjectWithoutNodePathRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'deleteDrawingObjectWithoutNodePath'
-     *
-     * @param Requests\deleteDrawingObjectWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function deleteDrawingObjectWithoutNodePathRequest(Requests\deleteDrawingObjectWithoutNodePathRequest $request)
-    {
-        if ($request->name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $name when calling deleteDrawingObjectWithoutNodePath');
-        }
-        if ($request->index === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $index when calling deleteDrawingObjectWithoutNodePath');
-        }
-
-        $resourcePath = '/words/{name}/drawingObjects/{index}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-        // path params
-        if ($request->name !== null) {
-            $localName = lcfirst('Name');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
-        }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -7791,9 +7260,6 @@ class WordsApi
         if ($request->name === null) {
             throw new \InvalidArgumentException('Missing the required parameter $name when calling deleteField');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling deleteField');
-        }
         if ($request->index === null) {
             throw new \InvalidArgumentException('Missing the required parameter $index when calling deleteField');
         }
@@ -7810,15 +7276,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
-        // path params
-        if ($request->node_path !== null) {
-            $localName = lcfirst('NodePath');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
+        // path params
+        if ($request->node_path !== null) {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -8103,9 +7581,6 @@ class WordsApi
         if ($request->name === null) {
             throw new \InvalidArgumentException('Missing the required parameter $name when calling deleteFields');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling deleteFields');
-        }
 
         $resourcePath = '/words/{name}/{nodePath}/fields';
         $formParams = [];
@@ -8119,610 +7594,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
         }
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->folder !== null) {
-            $localName = lcfirst('Folder');
-            $localValue = is_bool($request->folder) ? ($request->folder ? 'true' : 'false') : $request->folder;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->storage !== null) {
-            $localName = lcfirst('Storage');
-            $localValue = is_bool($request->storage) ? ($request->storage ? 'true' : 'false') : $request->storage;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->dest_file_name !== null) {
-            $localName = lcfirst('DestFileName');
-            $localValue = is_bool($request->dest_file_name) ? ($request->dest_file_name ? 'true' : 'false') : $request->dest_file_name;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->revision_author !== null) {
-            $localName = lcfirst('RevisionAuthor');
-            $localValue = is_bool($request->revision_author) ? ($request->revision_author ? 'true' : 'false') : $request->revision_author;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->revision_date_time !== null) {
-            $localName = lcfirst('RevisionDateTime');
-            $localValue = is_bool($request->revision_date_time) ? ($request->revision_date_time ? 'true' : 'false') : $request->revision_date_time;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-
-        // body params
-        $_tempBody = null;
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['application/xml', 'application/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'DELETE',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('DELETE', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation deleteFieldsWithoutNodePath
-     *
-     * Removes fields from section paragraph.
-     *
-     * @param Requests\deleteFieldsWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return void
-     */
-    public function deleteFieldsWithoutNodePath(Requests\deleteFieldsWithoutNodePathRequest $request)
-    {
-        try {
-    $this->deleteFieldsWithoutNodePathWithHttpInfo($request);
-        }
-        catch(RepeatRequestException $e) {
-    $this->deleteFieldsWithoutNodePathWithHttpInfo($request);
-        } 
-    }
-
-    /*
-     * Operation deleteFieldsWithoutNodePathWithHttpInfo
-     *
-     * Removes fields from section paragraph.
-     *
-     * @param Requests\deleteFieldsWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function deleteFieldsWithoutNodePathWithHttpInfo(Requests\deleteFieldsWithoutNodePathRequest $request)
-    {
-        $returnType = 'null';
-        $request = $this->deleteFieldsWithoutNodePathRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            return [null, $statusCode, $response->getHeaders()];
-
-        } catch (ApiException $e) {
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation deleteFieldsWithoutNodePathAsync
-     *
-     * Removes fields from section paragraph.
-     *
-     * @param Requests\deleteFieldsWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function deleteFieldsWithoutNodePathAsync(Requests\deleteFieldsWithoutNodePathRequest $request) 
-    {
-        return $this->deleteFieldsWithoutNodePathAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation deleteFieldsWithoutNodePathAsyncWithHttpInfo
-     *
-     * Removes fields from section paragraph.
-     *
-     * @param Requests\deleteFieldsWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function deleteFieldsWithoutNodePathAsyncWithHttpInfo(Requests\deleteFieldsWithoutNodePathRequest $request) 
-    {
-        $returnType = 'null';
-        $request = $this->deleteFieldsWithoutNodePathRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'deleteFieldsWithoutNodePath'
-     *
-     * @param Requests\deleteFieldsWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function deleteFieldsWithoutNodePathRequest(Requests\deleteFieldsWithoutNodePathRequest $request)
-    {
-        if ($request->name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $name when calling deleteFieldsWithoutNodePath');
-        }
-
-        $resourcePath = '/words/{name}/fields';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-        // path params
-        if ($request->name !== null) {
-            $localName = lcfirst('Name');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
-        }
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->folder !== null) {
-            $localName = lcfirst('Folder');
-            $localValue = is_bool($request->folder) ? ($request->folder ? 'true' : 'false') : $request->folder;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->storage !== null) {
-            $localName = lcfirst('Storage');
-            $localValue = is_bool($request->storage) ? ($request->storage ? 'true' : 'false') : $request->storage;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->dest_file_name !== null) {
-            $localName = lcfirst('DestFileName');
-            $localValue = is_bool($request->dest_file_name) ? ($request->dest_file_name ? 'true' : 'false') : $request->dest_file_name;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->revision_author !== null) {
-            $localName = lcfirst('RevisionAuthor');
-            $localValue = is_bool($request->revision_author) ? ($request->revision_author ? 'true' : 'false') : $request->revision_author;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->revision_date_time !== null) {
-            $localName = lcfirst('RevisionDateTime');
-            $localValue = is_bool($request->revision_date_time) ? ($request->revision_date_time ? 'true' : 'false') : $request->revision_date_time;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-
-        // body params
-        $_tempBody = null;
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['application/xml', 'application/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'DELETE',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('DELETE', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation deleteFieldWithoutNodePath
-     *
-     * Deletes field from document.
-     *
-     * @param Requests\deleteFieldWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return void
-     */
-    public function deleteFieldWithoutNodePath(Requests\deleteFieldWithoutNodePathRequest $request)
-    {
-        try {
-    $this->deleteFieldWithoutNodePathWithHttpInfo($request);
-        }
-        catch(RepeatRequestException $e) {
-    $this->deleteFieldWithoutNodePathWithHttpInfo($request);
-        } 
-    }
-
-    /*
-     * Operation deleteFieldWithoutNodePathWithHttpInfo
-     *
-     * Deletes field from document.
-     *
-     * @param Requests\deleteFieldWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function deleteFieldWithoutNodePathWithHttpInfo(Requests\deleteFieldWithoutNodePathRequest $request)
-    {
-        $returnType = 'null';
-        $request = $this->deleteFieldWithoutNodePathRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            return [null, $statusCode, $response->getHeaders()];
-
-        } catch (ApiException $e) {
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation deleteFieldWithoutNodePathAsync
-     *
-     * Deletes field from document.
-     *
-     * @param Requests\deleteFieldWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function deleteFieldWithoutNodePathAsync(Requests\deleteFieldWithoutNodePathRequest $request) 
-    {
-        return $this->deleteFieldWithoutNodePathAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation deleteFieldWithoutNodePathAsyncWithHttpInfo
-     *
-     * Deletes field from document.
-     *
-     * @param Requests\deleteFieldWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function deleteFieldWithoutNodePathAsyncWithHttpInfo(Requests\deleteFieldWithoutNodePathRequest $request) 
-    {
-        $returnType = 'null';
-        $request = $this->deleteFieldWithoutNodePathRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'deleteFieldWithoutNodePath'
-     *
-     * @param Requests\deleteFieldWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function deleteFieldWithoutNodePathRequest(Requests\deleteFieldWithoutNodePathRequest $request)
-    {
-        if ($request->name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $name when calling deleteFieldWithoutNodePath');
-        }
-        if ($request->index === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $index when calling deleteFieldWithoutNodePath');
-        }
-
-        $resourcePath = '/words/{name}/fields/{index}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-        // path params
-        if ($request->name !== null) {
-            $localName = lcfirst('Name');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
-        }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -9020,6 +7903,10 @@ class WordsApi
             $localName = lcfirst('Path');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->path), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Path');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
 
         // remove empty path parameters
         $resourcePath = str_replace("//", "/", $resourcePath);
@@ -9266,6 +8153,10 @@ class WordsApi
             $localName = lcfirst('Path');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->path), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Path');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
 
         // remove empty path parameters
         $resourcePath = str_replace("//", "/", $resourcePath);
@@ -9499,9 +8390,6 @@ class WordsApi
         if ($request->name === null) {
             throw new \InvalidArgumentException('Missing the required parameter $name when calling deleteFootnote');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling deleteFootnote');
-        }
         if ($request->index === null) {
             throw new \InvalidArgumentException('Missing the required parameter $index when calling deleteFootnote');
         }
@@ -9518,319 +8406,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
+        // path params
+        if ($request->index !== null) {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
         }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
-        }
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->folder !== null) {
-            $localName = lcfirst('Folder');
-            $localValue = is_bool($request->folder) ? ($request->folder ? 'true' : 'false') : $request->folder;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->storage !== null) {
-            $localName = lcfirst('Storage');
-            $localValue = is_bool($request->storage) ? ($request->storage ? 'true' : 'false') : $request->storage;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->dest_file_name !== null) {
-            $localName = lcfirst('DestFileName');
-            $localValue = is_bool($request->dest_file_name) ? ($request->dest_file_name ? 'true' : 'false') : $request->dest_file_name;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->revision_author !== null) {
-            $localName = lcfirst('RevisionAuthor');
-            $localValue = is_bool($request->revision_author) ? ($request->revision_author ? 'true' : 'false') : $request->revision_author;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->revision_date_time !== null) {
-            $localName = lcfirst('RevisionDateTime');
-            $localValue = is_bool($request->revision_date_time) ? ($request->revision_date_time ? 'true' : 'false') : $request->revision_date_time;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-
-        // body params
-        $_tempBody = null;
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['application/xml', 'application/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'DELETE',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('DELETE', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation deleteFootnoteWithoutNodePath
-     *
-     * Removes footnote from document.
-     *
-     * @param Requests\deleteFootnoteWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return void
-     */
-    public function deleteFootnoteWithoutNodePath(Requests\deleteFootnoteWithoutNodePathRequest $request)
-    {
-        try {
-    $this->deleteFootnoteWithoutNodePathWithHttpInfo($request);
-        }
-        catch(RepeatRequestException $e) {
-    $this->deleteFootnoteWithoutNodePathWithHttpInfo($request);
-        } 
-    }
-
-    /*
-     * Operation deleteFootnoteWithoutNodePathWithHttpInfo
-     *
-     * Removes footnote from document.
-     *
-     * @param Requests\deleteFootnoteWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function deleteFootnoteWithoutNodePathWithHttpInfo(Requests\deleteFootnoteWithoutNodePathRequest $request)
-    {
-        $returnType = 'null';
-        $request = $this->deleteFootnoteWithoutNodePathRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            return [null, $statusCode, $response->getHeaders()];
-
-        } catch (ApiException $e) {
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation deleteFootnoteWithoutNodePathAsync
-     *
-     * Removes footnote from document.
-     *
-     * @param Requests\deleteFootnoteWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function deleteFootnoteWithoutNodePathAsync(Requests\deleteFootnoteWithoutNodePathRequest $request) 
-    {
-        return $this->deleteFootnoteWithoutNodePathAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation deleteFootnoteWithoutNodePathAsyncWithHttpInfo
-     *
-     * Removes footnote from document.
-     *
-     * @param Requests\deleteFootnoteWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function deleteFootnoteWithoutNodePathAsyncWithHttpInfo(Requests\deleteFootnoteWithoutNodePathRequest $request) 
-    {
-        $returnType = 'null';
-        $request = $this->deleteFootnoteWithoutNodePathRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'deleteFootnoteWithoutNodePath'
-     *
-     * @param Requests\deleteFootnoteWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function deleteFootnoteWithoutNodePathRequest(Requests\deleteFootnoteWithoutNodePathRequest $request)
-    {
-        if ($request->name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $name when calling deleteFootnoteWithoutNodePath');
-        }
-        if ($request->index === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $index when calling deleteFootnoteWithoutNodePath');
-        }
-
-        $resourcePath = '/words/{name}/footnotes/{index}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-        // path params
-        if ($request->name !== null) {
-            $localName = lcfirst('Name');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
-        }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -10115,9 +8711,6 @@ class WordsApi
         if ($request->name === null) {
             throw new \InvalidArgumentException('Missing the required parameter $name when calling deleteFormField');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling deleteFormField');
-        }
         if ($request->index === null) {
             throw new \InvalidArgumentException('Missing the required parameter $index when calling deleteFormField');
         }
@@ -10134,319 +8727,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
+        // path params
+        if ($request->index !== null) {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
         }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
-        }
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->folder !== null) {
-            $localName = lcfirst('Folder');
-            $localValue = is_bool($request->folder) ? ($request->folder ? 'true' : 'false') : $request->folder;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->storage !== null) {
-            $localName = lcfirst('Storage');
-            $localValue = is_bool($request->storage) ? ($request->storage ? 'true' : 'false') : $request->storage;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->dest_file_name !== null) {
-            $localName = lcfirst('DestFileName');
-            $localValue = is_bool($request->dest_file_name) ? ($request->dest_file_name ? 'true' : 'false') : $request->dest_file_name;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->revision_author !== null) {
-            $localName = lcfirst('RevisionAuthor');
-            $localValue = is_bool($request->revision_author) ? ($request->revision_author ? 'true' : 'false') : $request->revision_author;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->revision_date_time !== null) {
-            $localName = lcfirst('RevisionDateTime');
-            $localValue = is_bool($request->revision_date_time) ? ($request->revision_date_time ? 'true' : 'false') : $request->revision_date_time;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-
-        // body params
-        $_tempBody = null;
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['application/xml', 'application/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'DELETE',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('DELETE', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation deleteFormFieldWithoutNodePath
-     *
-     * Removes form field from document.
-     *
-     * @param Requests\deleteFormFieldWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return void
-     */
-    public function deleteFormFieldWithoutNodePath(Requests\deleteFormFieldWithoutNodePathRequest $request)
-    {
-        try {
-    $this->deleteFormFieldWithoutNodePathWithHttpInfo($request);
-        }
-        catch(RepeatRequestException $e) {
-    $this->deleteFormFieldWithoutNodePathWithHttpInfo($request);
-        } 
-    }
-
-    /*
-     * Operation deleteFormFieldWithoutNodePathWithHttpInfo
-     *
-     * Removes form field from document.
-     *
-     * @param Requests\deleteFormFieldWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function deleteFormFieldWithoutNodePathWithHttpInfo(Requests\deleteFormFieldWithoutNodePathRequest $request)
-    {
-        $returnType = 'null';
-        $request = $this->deleteFormFieldWithoutNodePathRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            return [null, $statusCode, $response->getHeaders()];
-
-        } catch (ApiException $e) {
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation deleteFormFieldWithoutNodePathAsync
-     *
-     * Removes form field from document.
-     *
-     * @param Requests\deleteFormFieldWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function deleteFormFieldWithoutNodePathAsync(Requests\deleteFormFieldWithoutNodePathRequest $request) 
-    {
-        return $this->deleteFormFieldWithoutNodePathAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation deleteFormFieldWithoutNodePathAsyncWithHttpInfo
-     *
-     * Removes form field from document.
-     *
-     * @param Requests\deleteFormFieldWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function deleteFormFieldWithoutNodePathAsyncWithHttpInfo(Requests\deleteFormFieldWithoutNodePathRequest $request) 
-    {
-        $returnType = 'null';
-        $request = $this->deleteFormFieldWithoutNodePathRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'deleteFormFieldWithoutNodePath'
-     *
-     * @param Requests\deleteFormFieldWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function deleteFormFieldWithoutNodePathRequest(Requests\deleteFormFieldWithoutNodePathRequest $request)
-    {
-        if ($request->name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $name when calling deleteFormFieldWithoutNodePath');
-        }
-        if ($request->index === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $index when calling deleteFormFieldWithoutNodePath');
-        }
-
-        $resourcePath = '/words/{name}/formfields/{index}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-        // path params
-        if ($request->name !== null) {
-            $localName = lcfirst('Name');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
-        }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -10750,15 +9051,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->section_path !== null) {
             $localName = lcfirst('SectionPath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->section_path), $resourcePath);
         }
+        else {
+            $localName = lcfirst('SectionPath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -11059,10 +9372,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->section_path !== null) {
             $localName = lcfirst('SectionPath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->section_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('SectionPath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -11370,6 +9691,10 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
 
         // remove empty path parameters
         $resourcePath = str_replace("//", "/", $resourcePath);
@@ -11653,9 +9978,6 @@ class WordsApi
         if ($request->name === null) {
             throw new \InvalidArgumentException('Missing the required parameter $name when calling deleteOfficeMathObject');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling deleteOfficeMathObject');
-        }
         if ($request->index === null) {
             throw new \InvalidArgumentException('Missing the required parameter $index when calling deleteOfficeMathObject');
         }
@@ -11672,319 +9994,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
+        // path params
+        if ($request->index !== null) {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
         }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
-        }
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->folder !== null) {
-            $localName = lcfirst('Folder');
-            $localValue = is_bool($request->folder) ? ($request->folder ? 'true' : 'false') : $request->folder;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->storage !== null) {
-            $localName = lcfirst('Storage');
-            $localValue = is_bool($request->storage) ? ($request->storage ? 'true' : 'false') : $request->storage;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->dest_file_name !== null) {
-            $localName = lcfirst('DestFileName');
-            $localValue = is_bool($request->dest_file_name) ? ($request->dest_file_name ? 'true' : 'false') : $request->dest_file_name;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->revision_author !== null) {
-            $localName = lcfirst('RevisionAuthor');
-            $localValue = is_bool($request->revision_author) ? ($request->revision_author ? 'true' : 'false') : $request->revision_author;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->revision_date_time !== null) {
-            $localName = lcfirst('RevisionDateTime');
-            $localValue = is_bool($request->revision_date_time) ? ($request->revision_date_time ? 'true' : 'false') : $request->revision_date_time;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-
-        // body params
-        $_tempBody = null;
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['application/xml', 'application/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'DELETE',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('DELETE', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation deleteOfficeMathObjectWithoutNodePath
-     *
-     * Removes OfficeMath object from document.
-     *
-     * @param Requests\deleteOfficeMathObjectWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return void
-     */
-    public function deleteOfficeMathObjectWithoutNodePath(Requests\deleteOfficeMathObjectWithoutNodePathRequest $request)
-    {
-        try {
-    $this->deleteOfficeMathObjectWithoutNodePathWithHttpInfo($request);
-        }
-        catch(RepeatRequestException $e) {
-    $this->deleteOfficeMathObjectWithoutNodePathWithHttpInfo($request);
-        } 
-    }
-
-    /*
-     * Operation deleteOfficeMathObjectWithoutNodePathWithHttpInfo
-     *
-     * Removes OfficeMath object from document.
-     *
-     * @param Requests\deleteOfficeMathObjectWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function deleteOfficeMathObjectWithoutNodePathWithHttpInfo(Requests\deleteOfficeMathObjectWithoutNodePathRequest $request)
-    {
-        $returnType = 'null';
-        $request = $this->deleteOfficeMathObjectWithoutNodePathRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            return [null, $statusCode, $response->getHeaders()];
-
-        } catch (ApiException $e) {
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation deleteOfficeMathObjectWithoutNodePathAsync
-     *
-     * Removes OfficeMath object from document.
-     *
-     * @param Requests\deleteOfficeMathObjectWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function deleteOfficeMathObjectWithoutNodePathAsync(Requests\deleteOfficeMathObjectWithoutNodePathRequest $request) 
-    {
-        return $this->deleteOfficeMathObjectWithoutNodePathAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation deleteOfficeMathObjectWithoutNodePathAsyncWithHttpInfo
-     *
-     * Removes OfficeMath object from document.
-     *
-     * @param Requests\deleteOfficeMathObjectWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function deleteOfficeMathObjectWithoutNodePathAsyncWithHttpInfo(Requests\deleteOfficeMathObjectWithoutNodePathRequest $request) 
-    {
-        $returnType = 'null';
-        $request = $this->deleteOfficeMathObjectWithoutNodePathRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'deleteOfficeMathObjectWithoutNodePath'
-     *
-     * @param Requests\deleteOfficeMathObjectWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function deleteOfficeMathObjectWithoutNodePathRequest(Requests\deleteOfficeMathObjectWithoutNodePathRequest $request)
-    {
-        if ($request->name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $name when calling deleteOfficeMathObjectWithoutNodePath');
-        }
-        if ($request->index === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $index when calling deleteOfficeMathObjectWithoutNodePath');
-        }
-
-        $resourcePath = '/words/{name}/OfficeMathObjects/{index}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-        // path params
-        if ($request->name !== null) {
-            $localName = lcfirst('Name');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
-        }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -12269,9 +10299,6 @@ class WordsApi
         if ($request->name === null) {
             throw new \InvalidArgumentException('Missing the required parameter $name when calling deleteParagraph');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling deleteParagraph');
-        }
         if ($request->index === null) {
             throw new \InvalidArgumentException('Missing the required parameter $index when calling deleteParagraph');
         }
@@ -12288,15 +10315,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
-        // path params
-        if ($request->node_path !== null) {
-            $localName = lcfirst('NodePath');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
+        // path params
+        if ($request->node_path !== null) {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -12624,9 +10663,6 @@ class WordsApi
         if ($request->name === null) {
             throw new \InvalidArgumentException('Missing the required parameter $name when calling deleteParagraphListFormat');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling deleteParagraphListFormat');
-        }
         if ($request->index === null) {
             throw new \InvalidArgumentException('Missing the required parameter $index when calling deleteParagraphListFormat');
         }
@@ -12643,362 +10679,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
-        // path params
-        if ($request->node_path !== null) {
-            $localName = lcfirst('NodePath');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
-        }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
-        }
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->folder !== null) {
-            $localName = lcfirst('Folder');
-            $localValue = is_bool($request->folder) ? ($request->folder ? 'true' : 'false') : $request->folder;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->storage !== null) {
-            $localName = lcfirst('Storage');
-            $localValue = is_bool($request->storage) ? ($request->storage ? 'true' : 'false') : $request->storage;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->dest_file_name !== null) {
-            $localName = lcfirst('DestFileName');
-            $localValue = is_bool($request->dest_file_name) ? ($request->dest_file_name ? 'true' : 'false') : $request->dest_file_name;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->revision_author !== null) {
-            $localName = lcfirst('RevisionAuthor');
-            $localValue = is_bool($request->revision_author) ? ($request->revision_author ? 'true' : 'false') : $request->revision_author;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->revision_date_time !== null) {
-            $localName = lcfirst('RevisionDateTime');
-            $localValue = is_bool($request->revision_date_time) ? ($request->revision_date_time ? 'true' : 'false') : $request->revision_date_time;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-
-        // body params
-        $_tempBody = null;
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['application/xml', 'application/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'DELETE',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('DELETE', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation deleteParagraphListFormatWithoutNodePath
-     *
-     * Delete paragraph list format, returns updated list format properties.
-     *
-     * @param Requests\deleteParagraphListFormatWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Aspose\Words\Model\ParagraphListFormatResponse
-     */
-    public function deleteParagraphListFormatWithoutNodePath(Requests\deleteParagraphListFormatWithoutNodePathRequest $request)
-    {
-        try {
-            list($response) = $this->deleteParagraphListFormatWithoutNodePathWithHttpInfo($request);
-            return $response;
-        }
-        catch(RepeatRequestException $e) {
-            list($response) = $this->deleteParagraphListFormatWithoutNodePathWithHttpInfo($request);
-            return $response;
-        } 
-    }
-
-    /*
-     * Operation deleteParagraphListFormatWithoutNodePathWithHttpInfo
-     *
-     * Delete paragraph list format, returns updated list format properties.
-     *
-     * @param Requests\deleteParagraphListFormatWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \Aspose\Words\Model\ParagraphListFormatResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function deleteParagraphListFormatWithoutNodePathWithHttpInfo(Requests\deleteParagraphListFormatWithoutNodePathRequest $request)
-    {
-        $returnType = '\Aspose\Words\Model\ParagraphListFormatResponse';
-        $request = $this->deleteParagraphListFormatWithoutNodePathRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            if ($this->config->getDebug()) {
-                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\Aspose\Words\Model\ParagraphListFormatResponse', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                break;
-            }
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation deleteParagraphListFormatWithoutNodePathAsync
-     *
-     * Delete paragraph list format, returns updated list format properties.
-     *
-     * @param Requests\deleteParagraphListFormatWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function deleteParagraphListFormatWithoutNodePathAsync(Requests\deleteParagraphListFormatWithoutNodePathRequest $request) 
-    {
-        return $this->deleteParagraphListFormatWithoutNodePathAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation deleteParagraphListFormatWithoutNodePathAsyncWithHttpInfo
-     *
-     * Delete paragraph list format, returns updated list format properties.
-     *
-     * @param Requests\deleteParagraphListFormatWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function deleteParagraphListFormatWithoutNodePathAsyncWithHttpInfo(Requests\deleteParagraphListFormatWithoutNodePathRequest $request) 
-    {
-        $returnType = '\Aspose\Words\Model\ParagraphListFormatResponse';
-        $request = $this->deleteParagraphListFormatWithoutNodePathRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    if ($this->config->getDebug()) {
-                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'deleteParagraphListFormatWithoutNodePath'
-     *
-     * @param Requests\deleteParagraphListFormatWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function deleteParagraphListFormatWithoutNodePathRequest(Requests\deleteParagraphListFormatWithoutNodePathRequest $request)
-    {
-        if ($request->name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $name when calling deleteParagraphListFormatWithoutNodePath');
-        }
-        if ($request->index === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $index when calling deleteParagraphListFormatWithoutNodePath');
-        }
-
-        $resourcePath = '/words/{name}/paragraphs/{index}/listFormat';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-        // path params
-        if ($request->name !== null) {
+        else {
             $localName = lcfirst('Name');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
+        // path params
+        if ($request->node_path !== null) {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -13086,345 +10787,6 @@ class WordsApi
             $headers = $this->headerSelector->selectHeaders(
                 ['application/xml', 'application/json'],
                 ['application/xml', 'application/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'DELETE',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('DELETE', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation deleteParagraphOnline
-     *
-     * Removes paragraph from section.
-     *
-     * @param Requests\deleteParagraphOnlineRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \SplFileObject
-     */
-    public function deleteParagraphOnline(Requests\deleteParagraphOnlineRequest $request)
-    {
-        try {
-            list($response) = $this->deleteParagraphOnlineWithHttpInfo($request);
-            return $response;
-        }
-        catch(RepeatRequestException $e) {
-            list($response) = $this->deleteParagraphOnlineWithHttpInfo($request);
-            return $response;
-        } 
-    }
-
-    /*
-     * Operation deleteParagraphOnlineWithHttpInfo
-     *
-     * Removes paragraph from section.
-     *
-     * @param Requests\deleteParagraphOnlineRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function deleteParagraphOnlineWithHttpInfo(Requests\deleteParagraphOnlineRequest $request)
-    {
-        $returnType = '\SplFileObject';
-        $request = $this->deleteParagraphOnlineRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            if ($this->config->getDebug()) {
-                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\SplFileObject', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                break;
-            }
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation deleteParagraphOnlineAsync
-     *
-     * Removes paragraph from section.
-     *
-     * @param Requests\deleteParagraphOnlineRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function deleteParagraphOnlineAsync(Requests\deleteParagraphOnlineRequest $request) 
-    {
-        return $this->deleteParagraphOnlineAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation deleteParagraphOnlineAsyncWithHttpInfo
-     *
-     * Removes paragraph from section.
-     *
-     * @param Requests\deleteParagraphOnlineRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function deleteParagraphOnlineAsyncWithHttpInfo(Requests\deleteParagraphOnlineRequest $request) 
-    {
-        $returnType = '\SplFileObject';
-        $request = $this->deleteParagraphOnlineRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    if ($this->config->getDebug()) {
-                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'deleteParagraphOnline'
-     *
-     * @param Requests\deleteParagraphOnlineRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function deleteParagraphOnlineRequest(Requests\deleteParagraphOnlineRequest $request)
-    {
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling deleteParagraphOnline');
-        }
-        if ($request->document === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $document when calling deleteParagraphOnline');
-        }
-        if ($request->index === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $index when calling deleteParagraphOnline');
-        }
-
-        $resourcePath = '/words/online/{nodePath}/paragraphs/{index}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-        // path params
-        if ($request->node_path !== null) {
-            $localName = lcfirst('NodePath');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
-        }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
-        }
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->dest_file_name !== null) {
-            $localName = lcfirst('DestFileName');
-            $localValue = is_bool($request->dest_file_name) ? ($request->dest_file_name ? 'true' : 'false') : $request->dest_file_name;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->revision_author !== null) {
-            $localName = lcfirst('RevisionAuthor');
-            $localValue = is_bool($request->revision_author) ? ($request->revision_author ? 'true' : 'false') : $request->revision_author;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->revision_date_time !== null) {
-            $localName = lcfirst('RevisionDateTime');
-            $localValue = is_bool($request->revision_date_time) ? ($request->revision_date_time ? 'true' : 'false') : $request->revision_date_time;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-        // form params
-        if ($request->document !== null) {
-            $multipart = true; 
-            $filename = ObjectSerializer::toFormValue($request->document);
-            $handle = fopen($filename, "rb");
-            $fsize = filesize($filename);
-            $contents = fread($handle, $fsize);
-            $formParams['document'] = $contents;
-        }
-
-        // body params
-        $_tempBody = null;
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['multipart/form-data']
             );
         }
 
@@ -13668,9 +11030,6 @@ class WordsApi
         if ($request->position === null) {
             throw new \InvalidArgumentException('Missing the required parameter $position when calling deleteParagraphTabStop');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling deleteParagraphTabStop');
-        }
         if ($request->index === null) {
             throw new \InvalidArgumentException('Missing the required parameter $index when calling deleteParagraphTabStop');
         }
@@ -13687,15 +11046,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
+        // path params
+        if ($request->index !== null) {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
         }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -13773,981 +11144,6 @@ class WordsApi
             $headers = $this->headerSelector->selectHeaders(
                 ['application/xml', 'application/json'],
                 ['application/xml', 'application/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'DELETE',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('DELETE', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation deleteParagraphTabStopWithoutNodePath
-     *
-     * Remove the i-th tab stop.
-     *
-     * @param Requests\deleteParagraphTabStopWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Aspose\Words\Model\TabStopsResponse
-     */
-    public function deleteParagraphTabStopWithoutNodePath(Requests\deleteParagraphTabStopWithoutNodePathRequest $request)
-    {
-        try {
-            list($response) = $this->deleteParagraphTabStopWithoutNodePathWithHttpInfo($request);
-            return $response;
-        }
-        catch(RepeatRequestException $e) {
-            list($response) = $this->deleteParagraphTabStopWithoutNodePathWithHttpInfo($request);
-            return $response;
-        } 
-    }
-
-    /*
-     * Operation deleteParagraphTabStopWithoutNodePathWithHttpInfo
-     *
-     * Remove the i-th tab stop.
-     *
-     * @param Requests\deleteParagraphTabStopWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \Aspose\Words\Model\TabStopsResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function deleteParagraphTabStopWithoutNodePathWithHttpInfo(Requests\deleteParagraphTabStopWithoutNodePathRequest $request)
-    {
-        $returnType = '\Aspose\Words\Model\TabStopsResponse';
-        $request = $this->deleteParagraphTabStopWithoutNodePathRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            if ($this->config->getDebug()) {
-                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\Aspose\Words\Model\TabStopsResponse', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                break;
-            }
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation deleteParagraphTabStopWithoutNodePathAsync
-     *
-     * Remove the i-th tab stop.
-     *
-     * @param Requests\deleteParagraphTabStopWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function deleteParagraphTabStopWithoutNodePathAsync(Requests\deleteParagraphTabStopWithoutNodePathRequest $request) 
-    {
-        return $this->deleteParagraphTabStopWithoutNodePathAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation deleteParagraphTabStopWithoutNodePathAsyncWithHttpInfo
-     *
-     * Remove the i-th tab stop.
-     *
-     * @param Requests\deleteParagraphTabStopWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function deleteParagraphTabStopWithoutNodePathAsyncWithHttpInfo(Requests\deleteParagraphTabStopWithoutNodePathRequest $request) 
-    {
-        $returnType = '\Aspose\Words\Model\TabStopsResponse';
-        $request = $this->deleteParagraphTabStopWithoutNodePathRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    if ($this->config->getDebug()) {
-                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'deleteParagraphTabStopWithoutNodePath'
-     *
-     * @param Requests\deleteParagraphTabStopWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function deleteParagraphTabStopWithoutNodePathRequest(Requests\deleteParagraphTabStopWithoutNodePathRequest $request)
-    {
-        if ($request->name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $name when calling deleteParagraphTabStopWithoutNodePath');
-        }
-        if ($request->position === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $position when calling deleteParagraphTabStopWithoutNodePath');
-        }
-        if ($request->index === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $index when calling deleteParagraphTabStopWithoutNodePath');
-        }
-
-        $resourcePath = '/words/{name}/paragraphs/{index}/tabstop';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-        // path params
-        if ($request->name !== null) {
-            $localName = lcfirst('Name');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
-        }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
-        }
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->position !== null) {
-            $localName = lcfirst('Position');
-            $localValue = is_bool($request->position) ? ($request->position ? 'true' : 'false') : $request->position;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->folder !== null) {
-            $localName = lcfirst('Folder');
-            $localValue = is_bool($request->folder) ? ($request->folder ? 'true' : 'false') : $request->folder;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->storage !== null) {
-            $localName = lcfirst('Storage');
-            $localValue = is_bool($request->storage) ? ($request->storage ? 'true' : 'false') : $request->storage;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->dest_file_name !== null) {
-            $localName = lcfirst('DestFileName');
-            $localValue = is_bool($request->dest_file_name) ? ($request->dest_file_name ? 'true' : 'false') : $request->dest_file_name;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-
-        // body params
-        $_tempBody = null;
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['application/xml', 'application/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'DELETE',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('DELETE', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation deleteParagraphWithoutNodePath
-     *
-     * Removes paragraph from section.
-     *
-     * @param Requests\deleteParagraphWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return void
-     */
-    public function deleteParagraphWithoutNodePath(Requests\deleteParagraphWithoutNodePathRequest $request)
-    {
-        try {
-    $this->deleteParagraphWithoutNodePathWithHttpInfo($request);
-        }
-        catch(RepeatRequestException $e) {
-    $this->deleteParagraphWithoutNodePathWithHttpInfo($request);
-        } 
-    }
-
-    /*
-     * Operation deleteParagraphWithoutNodePathWithHttpInfo
-     *
-     * Removes paragraph from section.
-     *
-     * @param Requests\deleteParagraphWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function deleteParagraphWithoutNodePathWithHttpInfo(Requests\deleteParagraphWithoutNodePathRequest $request)
-    {
-        $returnType = 'null';
-        $request = $this->deleteParagraphWithoutNodePathRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            return [null, $statusCode, $response->getHeaders()];
-
-        } catch (ApiException $e) {
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation deleteParagraphWithoutNodePathAsync
-     *
-     * Removes paragraph from section.
-     *
-     * @param Requests\deleteParagraphWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function deleteParagraphWithoutNodePathAsync(Requests\deleteParagraphWithoutNodePathRequest $request) 
-    {
-        return $this->deleteParagraphWithoutNodePathAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation deleteParagraphWithoutNodePathAsyncWithHttpInfo
-     *
-     * Removes paragraph from section.
-     *
-     * @param Requests\deleteParagraphWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function deleteParagraphWithoutNodePathAsyncWithHttpInfo(Requests\deleteParagraphWithoutNodePathRequest $request) 
-    {
-        $returnType = 'null';
-        $request = $this->deleteParagraphWithoutNodePathRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'deleteParagraphWithoutNodePath'
-     *
-     * @param Requests\deleteParagraphWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function deleteParagraphWithoutNodePathRequest(Requests\deleteParagraphWithoutNodePathRequest $request)
-    {
-        if ($request->name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $name when calling deleteParagraphWithoutNodePath');
-        }
-        if ($request->index === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $index when calling deleteParagraphWithoutNodePath');
-        }
-
-        $resourcePath = '/words/{name}/paragraphs/{index}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-        // path params
-        if ($request->name !== null) {
-            $localName = lcfirst('Name');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
-        }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
-        }
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->folder !== null) {
-            $localName = lcfirst('Folder');
-            $localValue = is_bool($request->folder) ? ($request->folder ? 'true' : 'false') : $request->folder;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->storage !== null) {
-            $localName = lcfirst('Storage');
-            $localValue = is_bool($request->storage) ? ($request->storage ? 'true' : 'false') : $request->storage;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->dest_file_name !== null) {
-            $localName = lcfirst('DestFileName');
-            $localValue = is_bool($request->dest_file_name) ? ($request->dest_file_name ? 'true' : 'false') : $request->dest_file_name;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->revision_author !== null) {
-            $localName = lcfirst('RevisionAuthor');
-            $localValue = is_bool($request->revision_author) ? ($request->revision_author ? 'true' : 'false') : $request->revision_author;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->revision_date_time !== null) {
-            $localName = lcfirst('RevisionDateTime');
-            $localValue = is_bool($request->revision_date_time) ? ($request->revision_date_time ? 'true' : 'false') : $request->revision_date_time;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-
-        // body params
-        $_tempBody = null;
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['application/xml', 'application/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'DELETE',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('DELETE', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation deleteParagraphWithoutNodePathOnline
-     *
-     * Removes paragraph from section.
-     *
-     * @param Requests\deleteParagraphWithoutNodePathOnlineRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \SplFileObject
-     */
-    public function deleteParagraphWithoutNodePathOnline(Requests\deleteParagraphWithoutNodePathOnlineRequest $request)
-    {
-        try {
-            list($response) = $this->deleteParagraphWithoutNodePathOnlineWithHttpInfo($request);
-            return $response;
-        }
-        catch(RepeatRequestException $e) {
-            list($response) = $this->deleteParagraphWithoutNodePathOnlineWithHttpInfo($request);
-            return $response;
-        } 
-    }
-
-    /*
-     * Operation deleteParagraphWithoutNodePathOnlineWithHttpInfo
-     *
-     * Removes paragraph from section.
-     *
-     * @param Requests\deleteParagraphWithoutNodePathOnlineRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function deleteParagraphWithoutNodePathOnlineWithHttpInfo(Requests\deleteParagraphWithoutNodePathOnlineRequest $request)
-    {
-        $returnType = '\SplFileObject';
-        $request = $this->deleteParagraphWithoutNodePathOnlineRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            if ($this->config->getDebug()) {
-                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\SplFileObject', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                break;
-            }
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation deleteParagraphWithoutNodePathOnlineAsync
-     *
-     * Removes paragraph from section.
-     *
-     * @param Requests\deleteParagraphWithoutNodePathOnlineRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function deleteParagraphWithoutNodePathOnlineAsync(Requests\deleteParagraphWithoutNodePathOnlineRequest $request) 
-    {
-        return $this->deleteParagraphWithoutNodePathOnlineAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation deleteParagraphWithoutNodePathOnlineAsyncWithHttpInfo
-     *
-     * Removes paragraph from section.
-     *
-     * @param Requests\deleteParagraphWithoutNodePathOnlineRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function deleteParagraphWithoutNodePathOnlineAsyncWithHttpInfo(Requests\deleteParagraphWithoutNodePathOnlineRequest $request) 
-    {
-        $returnType = '\SplFileObject';
-        $request = $this->deleteParagraphWithoutNodePathOnlineRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    if ($this->config->getDebug()) {
-                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'deleteParagraphWithoutNodePathOnline'
-     *
-     * @param Requests\deleteParagraphWithoutNodePathOnlineRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function deleteParagraphWithoutNodePathOnlineRequest(Requests\deleteParagraphWithoutNodePathOnlineRequest $request)
-    {
-        if ($request->index === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $index when calling deleteParagraphWithoutNodePathOnline');
-        }
-        if ($request->document === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $document when calling deleteParagraphWithoutNodePathOnline');
-        }
-
-        $resourcePath = '/words/online/paragraphs/{index}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
-        }
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->dest_file_name !== null) {
-            $localName = lcfirst('DestFileName');
-            $localValue = is_bool($request->dest_file_name) ? ($request->dest_file_name ? 'true' : 'false') : $request->dest_file_name;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->revision_author !== null) {
-            $localName = lcfirst('RevisionAuthor');
-            $localValue = is_bool($request->revision_author) ? ($request->revision_author ? 'true' : 'false') : $request->revision_author;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->revision_date_time !== null) {
-            $localName = lcfirst('RevisionDateTime');
-            $localValue = is_bool($request->revision_date_time) ? ($request->revision_date_time ? 'true' : 'false') : $request->revision_date_time;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-        // form params
-        if ($request->document !== null) {
-            $multipart = true; 
-            $filename = ObjectSerializer::toFormValue($request->document);
-            $handle = fopen($filename, "rb");
-            $fsize = filesize($filename);
-            $contents = fread($handle, $fsize);
-            $formParams['document'] = $contents;
-        }
-
-        // body params
-        $_tempBody = null;
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['multipart/form-data']
             );
         }
 
@@ -14964,15 +11360,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->paragraph_path !== null) {
             $localName = lcfirst('ParagraphPath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->paragraph_path), $resourcePath);
         }
+        else {
+            $localName = lcfirst('ParagraphPath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -15273,10 +11681,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->section_index !== null) {
             $localName = lcfirst('SectionIndex');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->section_index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('SectionIndex');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -15561,9 +11977,6 @@ class WordsApi
         if ($request->name === null) {
             throw new \InvalidArgumentException('Missing the required parameter $name when calling deleteTable');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling deleteTable');
-        }
         if ($request->index === null) {
             throw new \InvalidArgumentException('Missing the required parameter $index when calling deleteTable');
         }
@@ -15580,15 +11993,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
-        // path params
-        if ($request->node_path !== null) {
-            $localName = lcfirst('NodePath');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
+        // path params
+        if ($request->node_path !== null) {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -15892,15 +12317,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->table_row_path !== null) {
             $localName = lcfirst('TableRowPath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->table_row_path), $resourcePath);
         }
+        else {
+            $localName = lcfirst('TableRowPath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -16204,319 +12641,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->table_path !== null) {
             $localName = lcfirst('TablePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->table_path), $resourcePath);
         }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
-        }
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->folder !== null) {
-            $localName = lcfirst('Folder');
-            $localValue = is_bool($request->folder) ? ($request->folder ? 'true' : 'false') : $request->folder;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->storage !== null) {
-            $localName = lcfirst('Storage');
-            $localValue = is_bool($request->storage) ? ($request->storage ? 'true' : 'false') : $request->storage;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->dest_file_name !== null) {
-            $localName = lcfirst('DestFileName');
-            $localValue = is_bool($request->dest_file_name) ? ($request->dest_file_name ? 'true' : 'false') : $request->dest_file_name;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->revision_author !== null) {
-            $localName = lcfirst('RevisionAuthor');
-            $localValue = is_bool($request->revision_author) ? ($request->revision_author ? 'true' : 'false') : $request->revision_author;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->revision_date_time !== null) {
-            $localName = lcfirst('RevisionDateTime');
-            $localValue = is_bool($request->revision_date_time) ? ($request->revision_date_time ? 'true' : 'false') : $request->revision_date_time;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-
-        // body params
-        $_tempBody = null;
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['application/xml', 'application/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'DELETE',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('DELETE', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation deleteTableWithoutNodePath
-     *
-     * Deletes a table.
-     *
-     * @param Requests\deleteTableWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return void
-     */
-    public function deleteTableWithoutNodePath(Requests\deleteTableWithoutNodePathRequest $request)
-    {
-        try {
-    $this->deleteTableWithoutNodePathWithHttpInfo($request);
-        }
-        catch(RepeatRequestException $e) {
-    $this->deleteTableWithoutNodePathWithHttpInfo($request);
-        } 
-    }
-
-    /*
-     * Operation deleteTableWithoutNodePathWithHttpInfo
-     *
-     * Deletes a table.
-     *
-     * @param Requests\deleteTableWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function deleteTableWithoutNodePathWithHttpInfo(Requests\deleteTableWithoutNodePathRequest $request)
-    {
-        $returnType = 'null';
-        $request = $this->deleteTableWithoutNodePathRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            return [null, $statusCode, $response->getHeaders()];
-
-        } catch (ApiException $e) {
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation deleteTableWithoutNodePathAsync
-     *
-     * Deletes a table.
-     *
-     * @param Requests\deleteTableWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function deleteTableWithoutNodePathAsync(Requests\deleteTableWithoutNodePathRequest $request) 
-    {
-        return $this->deleteTableWithoutNodePathAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation deleteTableWithoutNodePathAsyncWithHttpInfo
-     *
-     * Deletes a table.
-     *
-     * @param Requests\deleteTableWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function deleteTableWithoutNodePathAsyncWithHttpInfo(Requests\deleteTableWithoutNodePathRequest $request) 
-    {
-        $returnType = 'null';
-        $request = $this->deleteTableWithoutNodePathRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'deleteTableWithoutNodePath'
-     *
-     * @param Requests\deleteTableWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function deleteTableWithoutNodePathRequest(Requests\deleteTableWithoutNodePathRequest $request)
-    {
-        if ($request->name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $name when calling deleteTableWithoutNodePath');
-        }
-        if ($request->index === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $index when calling deleteTableWithoutNodePath');
-        }
-
-        $resourcePath = '/words/{name}/tables/{index}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-        // path params
-        if ($request->name !== null) {
-            $localName = lcfirst('Name');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
+        else {
+            $localName = lcfirst('TablePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -16857,6 +13002,10 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
 
         // remove empty path parameters
         $resourcePath = str_replace("//", "/", $resourcePath);
@@ -17196,6 +13345,10 @@ class WordsApi
             $localName = lcfirst('Path');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->path), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Path');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
 
         // remove empty path parameters
         $resourcePath = str_replace("//", "/", $resourcePath);
@@ -17484,6 +13637,10 @@ class WordsApi
         if ($request->name !== null) {
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -18438,10 +14595,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->bookmark_name !== null) {
             $localName = lcfirst('BookmarkName');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->bookmark_name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('BookmarkName');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -18752,6 +14917,10 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
 
         // remove empty path parameters
         $resourcePath = str_replace("//", "/", $resourcePath);
@@ -19048,9 +15217,6 @@ class WordsApi
         if ($request->name === null) {
             throw new \InvalidArgumentException('Missing the required parameter $name when calling getBorder');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling getBorder');
-        }
         if ($request->border_type === null) {
             throw new \InvalidArgumentException('Missing the required parameter $border_type when calling getBorder');
         }
@@ -19067,15 +15233,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
-        // path params
-        if ($request->node_path !== null) {
-            $localName = lcfirst('NodePath');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
         // path params
         if ($request->border_type !== null) {
             $localName = lcfirst('BorderType');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->border_type), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('BorderType');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
+        // path params
+        if ($request->node_path !== null) {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -19373,9 +15551,6 @@ class WordsApi
         if ($request->name === null) {
             throw new \InvalidArgumentException('Missing the required parameter $name when calling getBorders');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling getBorders');
-        }
 
         $resourcePath = '/words/{name}/{nodePath}/borders';
         $formParams = [];
@@ -19389,10 +15564,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -19706,10 +15889,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->comment_index !== null) {
             $localName = lcfirst('CommentIndex');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->comment_index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('CommentIndex');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -20020,6 +16211,10 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
 
         // remove empty path parameters
         $resourcePath = str_replace("//", "/", $resourcePath);
@@ -20329,6 +16524,10 @@ class WordsApi
             $localName = lcfirst('DocumentName');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->document_name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('DocumentName');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
 
         // remove empty path parameters
         $resourcePath = str_replace("//", "/", $resourcePath);
@@ -20625,9 +16824,6 @@ class WordsApi
         if ($request->name === null) {
             throw new \InvalidArgumentException('Missing the required parameter $name when calling getDocumentDrawingObjectByIndex');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling getDocumentDrawingObjectByIndex');
-        }
         if ($request->index === null) {
             throw new \InvalidArgumentException('Missing the required parameter $index when calling getDocumentDrawingObjectByIndex');
         }
@@ -20644,332 +16840,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
+        // path params
+        if ($request->index !== null) {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
         }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
-        }
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->folder !== null) {
-            $localName = lcfirst('Folder');
-            $localValue = is_bool($request->folder) ? ($request->folder ? 'true' : 'false') : $request->folder;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->storage !== null) {
-            $localName = lcfirst('Storage');
-            $localValue = is_bool($request->storage) ? ($request->storage ? 'true' : 'false') : $request->storage;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-
-        // body params
-        $_tempBody = null;
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['application/xml', 'application/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'GET',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('GET', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation getDocumentDrawingObjectByIndexWithoutNodePath
-     *
-     * Reads document drawing object common info by its index or convert to format specified.
-     *
-     * @param Requests\getDocumentDrawingObjectByIndexWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Aspose\Words\Model\DrawingObjectResponse
-     */
-    public function getDocumentDrawingObjectByIndexWithoutNodePath(Requests\getDocumentDrawingObjectByIndexWithoutNodePathRequest $request)
-    {
-        try {
-            list($response) = $this->getDocumentDrawingObjectByIndexWithoutNodePathWithHttpInfo($request);
-            return $response;
-        }
-        catch(RepeatRequestException $e) {
-            list($response) = $this->getDocumentDrawingObjectByIndexWithoutNodePathWithHttpInfo($request);
-            return $response;
-        } 
-    }
-
-    /*
-     * Operation getDocumentDrawingObjectByIndexWithoutNodePathWithHttpInfo
-     *
-     * Reads document drawing object common info by its index or convert to format specified.
-     *
-     * @param Requests\getDocumentDrawingObjectByIndexWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \Aspose\Words\Model\DrawingObjectResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function getDocumentDrawingObjectByIndexWithoutNodePathWithHttpInfo(Requests\getDocumentDrawingObjectByIndexWithoutNodePathRequest $request)
-    {
-        $returnType = '\Aspose\Words\Model\DrawingObjectResponse';
-        $request = $this->getDocumentDrawingObjectByIndexWithoutNodePathRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            if ($this->config->getDebug()) {
-                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\Aspose\Words\Model\DrawingObjectResponse', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                break;
-            }
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation getDocumentDrawingObjectByIndexWithoutNodePathAsync
-     *
-     * Reads document drawing object common info by its index or convert to format specified.
-     *
-     * @param Requests\getDocumentDrawingObjectByIndexWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getDocumentDrawingObjectByIndexWithoutNodePathAsync(Requests\getDocumentDrawingObjectByIndexWithoutNodePathRequest $request) 
-    {
-        return $this->getDocumentDrawingObjectByIndexWithoutNodePathAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation getDocumentDrawingObjectByIndexWithoutNodePathAsyncWithHttpInfo
-     *
-     * Reads document drawing object common info by its index or convert to format specified.
-     *
-     * @param Requests\getDocumentDrawingObjectByIndexWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getDocumentDrawingObjectByIndexWithoutNodePathAsyncWithHttpInfo(Requests\getDocumentDrawingObjectByIndexWithoutNodePathRequest $request) 
-    {
-        $returnType = '\Aspose\Words\Model\DrawingObjectResponse';
-        $request = $this->getDocumentDrawingObjectByIndexWithoutNodePathRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    if ($this->config->getDebug()) {
-                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'getDocumentDrawingObjectByIndexWithoutNodePath'
-     *
-     * @param Requests\getDocumentDrawingObjectByIndexWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function getDocumentDrawingObjectByIndexWithoutNodePathRequest(Requests\getDocumentDrawingObjectByIndexWithoutNodePathRequest $request)
-    {
-        if ($request->name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $name when calling getDocumentDrawingObjectByIndexWithoutNodePath');
-        }
-        if ($request->index === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $index when calling getDocumentDrawingObjectByIndexWithoutNodePath');
-        }
-
-        $resourcePath = '/words/{name}/drawingObjects/{index}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-        // path params
-        if ($request->name !== null) {
-            $localName = lcfirst('Name');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
-        }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -21267,9 +17158,6 @@ class WordsApi
         if ($request->name === null) {
             throw new \InvalidArgumentException('Missing the required parameter $name when calling getDocumentDrawingObjectImageData');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling getDocumentDrawingObjectImageData');
-        }
         if ($request->index === null) {
             throw new \InvalidArgumentException('Missing the required parameter $index when calling getDocumentDrawingObjectImageData');
         }
@@ -21286,332 +17174,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
+        // path params
+        if ($request->index !== null) {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
         }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
-        }
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->folder !== null) {
-            $localName = lcfirst('Folder');
-            $localValue = is_bool($request->folder) ? ($request->folder ? 'true' : 'false') : $request->folder;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->storage !== null) {
-            $localName = lcfirst('Storage');
-            $localValue = is_bool($request->storage) ? ($request->storage ? 'true' : 'false') : $request->storage;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-
-        // body params
-        $_tempBody = null;
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['application/xml', 'application/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'GET',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('GET', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation getDocumentDrawingObjectImageDataWithoutNodePath
-     *
-     * Reads drawing object image data.
-     *
-     * @param Requests\getDocumentDrawingObjectImageDataWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \SplFileObject
-     */
-    public function getDocumentDrawingObjectImageDataWithoutNodePath(Requests\getDocumentDrawingObjectImageDataWithoutNodePathRequest $request)
-    {
-        try {
-            list($response) = $this->getDocumentDrawingObjectImageDataWithoutNodePathWithHttpInfo($request);
-            return $response;
-        }
-        catch(RepeatRequestException $e) {
-            list($response) = $this->getDocumentDrawingObjectImageDataWithoutNodePathWithHttpInfo($request);
-            return $response;
-        } 
-    }
-
-    /*
-     * Operation getDocumentDrawingObjectImageDataWithoutNodePathWithHttpInfo
-     *
-     * Reads drawing object image data.
-     *
-     * @param Requests\getDocumentDrawingObjectImageDataWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function getDocumentDrawingObjectImageDataWithoutNodePathWithHttpInfo(Requests\getDocumentDrawingObjectImageDataWithoutNodePathRequest $request)
-    {
-        $returnType = '\SplFileObject';
-        $request = $this->getDocumentDrawingObjectImageDataWithoutNodePathRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            if ($this->config->getDebug()) {
-                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\SplFileObject', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                break;
-            }
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation getDocumentDrawingObjectImageDataWithoutNodePathAsync
-     *
-     * Reads drawing object image data.
-     *
-     * @param Requests\getDocumentDrawingObjectImageDataWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getDocumentDrawingObjectImageDataWithoutNodePathAsync(Requests\getDocumentDrawingObjectImageDataWithoutNodePathRequest $request) 
-    {
-        return $this->getDocumentDrawingObjectImageDataWithoutNodePathAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation getDocumentDrawingObjectImageDataWithoutNodePathAsyncWithHttpInfo
-     *
-     * Reads drawing object image data.
-     *
-     * @param Requests\getDocumentDrawingObjectImageDataWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getDocumentDrawingObjectImageDataWithoutNodePathAsyncWithHttpInfo(Requests\getDocumentDrawingObjectImageDataWithoutNodePathRequest $request) 
-    {
-        $returnType = '\SplFileObject';
-        $request = $this->getDocumentDrawingObjectImageDataWithoutNodePathRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    if ($this->config->getDebug()) {
-                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'getDocumentDrawingObjectImageDataWithoutNodePath'
-     *
-     * @param Requests\getDocumentDrawingObjectImageDataWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function getDocumentDrawingObjectImageDataWithoutNodePathRequest(Requests\getDocumentDrawingObjectImageDataWithoutNodePathRequest $request)
-    {
-        if ($request->name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $name when calling getDocumentDrawingObjectImageDataWithoutNodePath');
-        }
-        if ($request->index === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $index when calling getDocumentDrawingObjectImageDataWithoutNodePath');
-        }
-
-        $resourcePath = '/words/{name}/drawingObjects/{index}/imageData';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-        // path params
-        if ($request->name !== null) {
-            $localName = lcfirst('Name');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
-        }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -21909,9 +17492,6 @@ class WordsApi
         if ($request->name === null) {
             throw new \InvalidArgumentException('Missing the required parameter $name when calling getDocumentDrawingObjectOleData');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling getDocumentDrawingObjectOleData');
-        }
         if ($request->index === null) {
             throw new \InvalidArgumentException('Missing the required parameter $index when calling getDocumentDrawingObjectOleData');
         }
@@ -21928,332 +17508,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
+        // path params
+        if ($request->index !== null) {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
         }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
-        }
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->folder !== null) {
-            $localName = lcfirst('Folder');
-            $localValue = is_bool($request->folder) ? ($request->folder ? 'true' : 'false') : $request->folder;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->storage !== null) {
-            $localName = lcfirst('Storage');
-            $localValue = is_bool($request->storage) ? ($request->storage ? 'true' : 'false') : $request->storage;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-
-        // body params
-        $_tempBody = null;
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['application/xml', 'application/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'GET',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('GET', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation getDocumentDrawingObjectOleDataWithoutNodePath
-     *
-     * Gets drawing object OLE data.
-     *
-     * @param Requests\getDocumentDrawingObjectOleDataWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \SplFileObject
-     */
-    public function getDocumentDrawingObjectOleDataWithoutNodePath(Requests\getDocumentDrawingObjectOleDataWithoutNodePathRequest $request)
-    {
-        try {
-            list($response) = $this->getDocumentDrawingObjectOleDataWithoutNodePathWithHttpInfo($request);
-            return $response;
-        }
-        catch(RepeatRequestException $e) {
-            list($response) = $this->getDocumentDrawingObjectOleDataWithoutNodePathWithHttpInfo($request);
-            return $response;
-        } 
-    }
-
-    /*
-     * Operation getDocumentDrawingObjectOleDataWithoutNodePathWithHttpInfo
-     *
-     * Gets drawing object OLE data.
-     *
-     * @param Requests\getDocumentDrawingObjectOleDataWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function getDocumentDrawingObjectOleDataWithoutNodePathWithHttpInfo(Requests\getDocumentDrawingObjectOleDataWithoutNodePathRequest $request)
-    {
-        $returnType = '\SplFileObject';
-        $request = $this->getDocumentDrawingObjectOleDataWithoutNodePathRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            if ($this->config->getDebug()) {
-                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\SplFileObject', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                break;
-            }
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation getDocumentDrawingObjectOleDataWithoutNodePathAsync
-     *
-     * Gets drawing object OLE data.
-     *
-     * @param Requests\getDocumentDrawingObjectOleDataWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getDocumentDrawingObjectOleDataWithoutNodePathAsync(Requests\getDocumentDrawingObjectOleDataWithoutNodePathRequest $request) 
-    {
-        return $this->getDocumentDrawingObjectOleDataWithoutNodePathAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation getDocumentDrawingObjectOleDataWithoutNodePathAsyncWithHttpInfo
-     *
-     * Gets drawing object OLE data.
-     *
-     * @param Requests\getDocumentDrawingObjectOleDataWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getDocumentDrawingObjectOleDataWithoutNodePathAsyncWithHttpInfo(Requests\getDocumentDrawingObjectOleDataWithoutNodePathRequest $request) 
-    {
-        $returnType = '\SplFileObject';
-        $request = $this->getDocumentDrawingObjectOleDataWithoutNodePathRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    if ($this->config->getDebug()) {
-                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'getDocumentDrawingObjectOleDataWithoutNodePath'
-     *
-     * @param Requests\getDocumentDrawingObjectOleDataWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function getDocumentDrawingObjectOleDataWithoutNodePathRequest(Requests\getDocumentDrawingObjectOleDataWithoutNodePathRequest $request)
-    {
-        if ($request->name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $name when calling getDocumentDrawingObjectOleDataWithoutNodePath');
-        }
-        if ($request->index === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $index when calling getDocumentDrawingObjectOleDataWithoutNodePath');
-        }
-
-        $resourcePath = '/words/{name}/drawingObjects/{index}/oleData';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-        // path params
-        if ($request->name !== null) {
-            $localName = lcfirst('Name');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
-        }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -22551,9 +17826,6 @@ class WordsApi
         if ($request->name === null) {
             throw new \InvalidArgumentException('Missing the required parameter $name when calling getDocumentDrawingObjects');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling getDocumentDrawingObjects');
-        }
 
         $resourcePath = '/words/{name}/{nodePath}/drawingObjects';
         $formParams = [];
@@ -22567,319 +17839,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
         }
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->folder !== null) {
-            $localName = lcfirst('Folder');
-            $localValue = is_bool($request->folder) ? ($request->folder ? 'true' : 'false') : $request->folder;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->storage !== null) {
-            $localName = lcfirst('Storage');
-            $localValue = is_bool($request->storage) ? ($request->storage ? 'true' : 'false') : $request->storage;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-
-        // body params
-        $_tempBody = null;
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['application/xml', 'application/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'GET',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('GET', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation getDocumentDrawingObjectsWithoutNodePath
-     *
-     * Reads document drawing objects common info.
-     *
-     * @param Requests\getDocumentDrawingObjectsWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Aspose\Words\Model\DrawingObjectsResponse
-     */
-    public function getDocumentDrawingObjectsWithoutNodePath(Requests\getDocumentDrawingObjectsWithoutNodePathRequest $request)
-    {
-        try {
-            list($response) = $this->getDocumentDrawingObjectsWithoutNodePathWithHttpInfo($request);
-            return $response;
-        }
-        catch(RepeatRequestException $e) {
-            list($response) = $this->getDocumentDrawingObjectsWithoutNodePathWithHttpInfo($request);
-            return $response;
-        } 
-    }
-
-    /*
-     * Operation getDocumentDrawingObjectsWithoutNodePathWithHttpInfo
-     *
-     * Reads document drawing objects common info.
-     *
-     * @param Requests\getDocumentDrawingObjectsWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \Aspose\Words\Model\DrawingObjectsResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function getDocumentDrawingObjectsWithoutNodePathWithHttpInfo(Requests\getDocumentDrawingObjectsWithoutNodePathRequest $request)
-    {
-        $returnType = '\Aspose\Words\Model\DrawingObjectsResponse';
-        $request = $this->getDocumentDrawingObjectsWithoutNodePathRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            if ($this->config->getDebug()) {
-                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\Aspose\Words\Model\DrawingObjectsResponse', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                break;
-            }
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation getDocumentDrawingObjectsWithoutNodePathAsync
-     *
-     * Reads document drawing objects common info.
-     *
-     * @param Requests\getDocumentDrawingObjectsWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getDocumentDrawingObjectsWithoutNodePathAsync(Requests\getDocumentDrawingObjectsWithoutNodePathRequest $request) 
-    {
-        return $this->getDocumentDrawingObjectsWithoutNodePathAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation getDocumentDrawingObjectsWithoutNodePathAsyncWithHttpInfo
-     *
-     * Reads document drawing objects common info.
-     *
-     * @param Requests\getDocumentDrawingObjectsWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getDocumentDrawingObjectsWithoutNodePathAsyncWithHttpInfo(Requests\getDocumentDrawingObjectsWithoutNodePathRequest $request) 
-    {
-        $returnType = '\Aspose\Words\Model\DrawingObjectsResponse';
-        $request = $this->getDocumentDrawingObjectsWithoutNodePathRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    if ($this->config->getDebug()) {
-                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'getDocumentDrawingObjectsWithoutNodePath'
-     *
-     * @param Requests\getDocumentDrawingObjectsWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function getDocumentDrawingObjectsWithoutNodePathRequest(Requests\getDocumentDrawingObjectsWithoutNodePathRequest $request)
-    {
-        if ($request->name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $name when calling getDocumentDrawingObjectsWithoutNodePath');
-        }
-
-        $resourcePath = '/words/{name}/drawingObjects';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-        // path params
-        if ($request->name !== null) {
-            $localName = lcfirst('Name');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -23189,6 +18160,10 @@ class WordsApi
         if ($request->name !== null) {
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -23795,10 +18770,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->hyperlink_index !== null) {
             $localName = lcfirst('HyperlinkIndex');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->hyperlink_index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('HyperlinkIndex');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -24109,6 +19092,10 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
 
         // remove empty path parameters
         $resourcePath = str_replace("//", "/", $resourcePath);
@@ -24417,6 +19404,10 @@ class WordsApi
         if ($request->name !== null) {
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -24730,10 +19721,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->property_name !== null) {
             $localName = lcfirst('PropertyName');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->property_name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('PropertyName');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -25044,6 +20043,10 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
 
         // remove empty path parameters
         $resourcePath = str_replace("//", "/", $resourcePath);
@@ -25352,6 +20355,10 @@ class WordsApi
         if ($request->name !== null) {
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -25998,6 +21005,10 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
 
         // remove empty path parameters
         $resourcePath = str_replace("//", "/", $resourcePath);
@@ -26324,9 +21335,6 @@ class WordsApi
         if ($request->name === null) {
             throw new \InvalidArgumentException('Missing the required parameter $name when calling getField');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling getField');
-        }
         if ($request->index === null) {
             throw new \InvalidArgumentException('Missing the required parameter $index when calling getField');
         }
@@ -26343,15 +21351,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
-        // path params
-        if ($request->node_path !== null) {
-            $localName = lcfirst('NodePath');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
+        // path params
+        if ($request->node_path !== null) {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -26649,9 +21669,6 @@ class WordsApi
         if ($request->name === null) {
             throw new \InvalidArgumentException('Missing the required parameter $name when calling getFields');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling getFields');
-        }
 
         $resourcePath = '/words/{name}/{nodePath}/fields';
         $formParams = [];
@@ -26665,636 +21682,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
         }
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->folder !== null) {
-            $localName = lcfirst('Folder');
-            $localValue = is_bool($request->folder) ? ($request->folder ? 'true' : 'false') : $request->folder;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->storage !== null) {
-            $localName = lcfirst('Storage');
-            $localValue = is_bool($request->storage) ? ($request->storage ? 'true' : 'false') : $request->storage;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-
-        // body params
-        $_tempBody = null;
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['application/xml', 'application/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'GET',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('GET', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation getFieldsWithoutNodePath
-     *
-     * Get fields from document.
-     *
-     * @param Requests\getFieldsWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Aspose\Words\Model\FieldsResponse
-     */
-    public function getFieldsWithoutNodePath(Requests\getFieldsWithoutNodePathRequest $request)
-    {
-        try {
-            list($response) = $this->getFieldsWithoutNodePathWithHttpInfo($request);
-            return $response;
-        }
-        catch(RepeatRequestException $e) {
-            list($response) = $this->getFieldsWithoutNodePathWithHttpInfo($request);
-            return $response;
-        } 
-    }
-
-    /*
-     * Operation getFieldsWithoutNodePathWithHttpInfo
-     *
-     * Get fields from document.
-     *
-     * @param Requests\getFieldsWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \Aspose\Words\Model\FieldsResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function getFieldsWithoutNodePathWithHttpInfo(Requests\getFieldsWithoutNodePathRequest $request)
-    {
-        $returnType = '\Aspose\Words\Model\FieldsResponse';
-        $request = $this->getFieldsWithoutNodePathRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            if ($this->config->getDebug()) {
-                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\Aspose\Words\Model\FieldsResponse', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                break;
-            }
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation getFieldsWithoutNodePathAsync
-     *
-     * Get fields from document.
-     *
-     * @param Requests\getFieldsWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getFieldsWithoutNodePathAsync(Requests\getFieldsWithoutNodePathRequest $request) 
-    {
-        return $this->getFieldsWithoutNodePathAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation getFieldsWithoutNodePathAsyncWithHttpInfo
-     *
-     * Get fields from document.
-     *
-     * @param Requests\getFieldsWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getFieldsWithoutNodePathAsyncWithHttpInfo(Requests\getFieldsWithoutNodePathRequest $request) 
-    {
-        $returnType = '\Aspose\Words\Model\FieldsResponse';
-        $request = $this->getFieldsWithoutNodePathRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    if ($this->config->getDebug()) {
-                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'getFieldsWithoutNodePath'
-     *
-     * @param Requests\getFieldsWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function getFieldsWithoutNodePathRequest(Requests\getFieldsWithoutNodePathRequest $request)
-    {
-        if ($request->name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $name when calling getFieldsWithoutNodePath');
-        }
-
-        $resourcePath = '/words/{name}/fields';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-        // path params
-        if ($request->name !== null) {
-            $localName = lcfirst('Name');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
-        }
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->folder !== null) {
-            $localName = lcfirst('Folder');
-            $localValue = is_bool($request->folder) ? ($request->folder ? 'true' : 'false') : $request->folder;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->storage !== null) {
-            $localName = lcfirst('Storage');
-            $localValue = is_bool($request->storage) ? ($request->storage ? 'true' : 'false') : $request->storage;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-
-        // body params
-        $_tempBody = null;
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['application/xml', 'application/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'GET',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('GET', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation getFieldWithoutNodePath
-     *
-     * Gets field from document.
-     *
-     * @param Requests\getFieldWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Aspose\Words\Model\FieldResponse
-     */
-    public function getFieldWithoutNodePath(Requests\getFieldWithoutNodePathRequest $request)
-    {
-        try {
-            list($response) = $this->getFieldWithoutNodePathWithHttpInfo($request);
-            return $response;
-        }
-        catch(RepeatRequestException $e) {
-            list($response) = $this->getFieldWithoutNodePathWithHttpInfo($request);
-            return $response;
-        } 
-    }
-
-    /*
-     * Operation getFieldWithoutNodePathWithHttpInfo
-     *
-     * Gets field from document.
-     *
-     * @param Requests\getFieldWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \Aspose\Words\Model\FieldResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function getFieldWithoutNodePathWithHttpInfo(Requests\getFieldWithoutNodePathRequest $request)
-    {
-        $returnType = '\Aspose\Words\Model\FieldResponse';
-        $request = $this->getFieldWithoutNodePathRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            if ($this->config->getDebug()) {
-                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\Aspose\Words\Model\FieldResponse', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                break;
-            }
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation getFieldWithoutNodePathAsync
-     *
-     * Gets field from document.
-     *
-     * @param Requests\getFieldWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getFieldWithoutNodePathAsync(Requests\getFieldWithoutNodePathRequest $request) 
-    {
-        return $this->getFieldWithoutNodePathAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation getFieldWithoutNodePathAsyncWithHttpInfo
-     *
-     * Gets field from document.
-     *
-     * @param Requests\getFieldWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getFieldWithoutNodePathAsyncWithHttpInfo(Requests\getFieldWithoutNodePathRequest $request) 
-    {
-        $returnType = '\Aspose\Words\Model\FieldResponse';
-        $request = $this->getFieldWithoutNodePathRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    if ($this->config->getDebug()) {
-                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'getFieldWithoutNodePath'
-     *
-     * @param Requests\getFieldWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function getFieldWithoutNodePathRequest(Requests\getFieldWithoutNodePathRequest $request)
-    {
-        if ($request->name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $name when calling getFieldWithoutNodePath');
-        }
-        if ($request->index === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $index when calling getFieldWithoutNodePath');
-        }
-
-        $resourcePath = '/words/{name}/fields/{index}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-        // path params
-        if ($request->name !== null) {
-            $localName = lcfirst('Name');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
-        }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -27605,6 +22004,10 @@ class WordsApi
             $localName = lcfirst('Path');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->path), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Path');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
 
         // remove empty path parameters
         $resourcePath = str_replace("//", "/", $resourcePath);
@@ -27871,9 +22274,6 @@ class WordsApi
         if ($request->name === null) {
             throw new \InvalidArgumentException('Missing the required parameter $name when calling getFootnote');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling getFootnote');
-        }
         if ($request->index === null) {
             throw new \InvalidArgumentException('Missing the required parameter $index when calling getFootnote');
         }
@@ -27890,15 +22290,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
-        // path params
-        if ($request->node_path !== null) {
-            $localName = lcfirst('NodePath');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
+        // path params
+        if ($request->node_path !== null) {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -28196,9 +22608,6 @@ class WordsApi
         if ($request->name === null) {
             throw new \InvalidArgumentException('Missing the required parameter $name when calling getFootnotes');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling getFootnotes');
-        }
 
         $resourcePath = '/words/{name}/{nodePath}/footnotes';
         $formParams = [];
@@ -28212,636 +22621,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
         }
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->folder !== null) {
-            $localName = lcfirst('Folder');
-            $localValue = is_bool($request->folder) ? ($request->folder ? 'true' : 'false') : $request->folder;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->storage !== null) {
-            $localName = lcfirst('Storage');
-            $localValue = is_bool($request->storage) ? ($request->storage ? 'true' : 'false') : $request->storage;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-
-        // body params
-        $_tempBody = null;
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['application/xml', 'application/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'GET',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('GET', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation getFootnotesWithoutNodePath
-     *
-     * Gets footnotes from document.
-     *
-     * @param Requests\getFootnotesWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Aspose\Words\Model\FootnotesResponse
-     */
-    public function getFootnotesWithoutNodePath(Requests\getFootnotesWithoutNodePathRequest $request)
-    {
-        try {
-            list($response) = $this->getFootnotesWithoutNodePathWithHttpInfo($request);
-            return $response;
-        }
-        catch(RepeatRequestException $e) {
-            list($response) = $this->getFootnotesWithoutNodePathWithHttpInfo($request);
-            return $response;
-        } 
-    }
-
-    /*
-     * Operation getFootnotesWithoutNodePathWithHttpInfo
-     *
-     * Gets footnotes from document.
-     *
-     * @param Requests\getFootnotesWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \Aspose\Words\Model\FootnotesResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function getFootnotesWithoutNodePathWithHttpInfo(Requests\getFootnotesWithoutNodePathRequest $request)
-    {
-        $returnType = '\Aspose\Words\Model\FootnotesResponse';
-        $request = $this->getFootnotesWithoutNodePathRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            if ($this->config->getDebug()) {
-                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\Aspose\Words\Model\FootnotesResponse', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                break;
-            }
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation getFootnotesWithoutNodePathAsync
-     *
-     * Gets footnotes from document.
-     *
-     * @param Requests\getFootnotesWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getFootnotesWithoutNodePathAsync(Requests\getFootnotesWithoutNodePathRequest $request) 
-    {
-        return $this->getFootnotesWithoutNodePathAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation getFootnotesWithoutNodePathAsyncWithHttpInfo
-     *
-     * Gets footnotes from document.
-     *
-     * @param Requests\getFootnotesWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getFootnotesWithoutNodePathAsyncWithHttpInfo(Requests\getFootnotesWithoutNodePathRequest $request) 
-    {
-        $returnType = '\Aspose\Words\Model\FootnotesResponse';
-        $request = $this->getFootnotesWithoutNodePathRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    if ($this->config->getDebug()) {
-                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'getFootnotesWithoutNodePath'
-     *
-     * @param Requests\getFootnotesWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function getFootnotesWithoutNodePathRequest(Requests\getFootnotesWithoutNodePathRequest $request)
-    {
-        if ($request->name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $name when calling getFootnotesWithoutNodePath');
-        }
-
-        $resourcePath = '/words/{name}/footnotes';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-        // path params
-        if ($request->name !== null) {
-            $localName = lcfirst('Name');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
-        }
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->folder !== null) {
-            $localName = lcfirst('Folder');
-            $localValue = is_bool($request->folder) ? ($request->folder ? 'true' : 'false') : $request->folder;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->storage !== null) {
-            $localName = lcfirst('Storage');
-            $localValue = is_bool($request->storage) ? ($request->storage ? 'true' : 'false') : $request->storage;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-
-        // body params
-        $_tempBody = null;
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['application/xml', 'application/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'GET',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('GET', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation getFootnoteWithoutNodePath
-     *
-     * Reads footnote by index.
-     *
-     * @param Requests\getFootnoteWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Aspose\Words\Model\FootnoteResponse
-     */
-    public function getFootnoteWithoutNodePath(Requests\getFootnoteWithoutNodePathRequest $request)
-    {
-        try {
-            list($response) = $this->getFootnoteWithoutNodePathWithHttpInfo($request);
-            return $response;
-        }
-        catch(RepeatRequestException $e) {
-            list($response) = $this->getFootnoteWithoutNodePathWithHttpInfo($request);
-            return $response;
-        } 
-    }
-
-    /*
-     * Operation getFootnoteWithoutNodePathWithHttpInfo
-     *
-     * Reads footnote by index.
-     *
-     * @param Requests\getFootnoteWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \Aspose\Words\Model\FootnoteResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function getFootnoteWithoutNodePathWithHttpInfo(Requests\getFootnoteWithoutNodePathRequest $request)
-    {
-        $returnType = '\Aspose\Words\Model\FootnoteResponse';
-        $request = $this->getFootnoteWithoutNodePathRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            if ($this->config->getDebug()) {
-                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\Aspose\Words\Model\FootnoteResponse', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                break;
-            }
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation getFootnoteWithoutNodePathAsync
-     *
-     * Reads footnote by index.
-     *
-     * @param Requests\getFootnoteWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getFootnoteWithoutNodePathAsync(Requests\getFootnoteWithoutNodePathRequest $request) 
-    {
-        return $this->getFootnoteWithoutNodePathAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation getFootnoteWithoutNodePathAsyncWithHttpInfo
-     *
-     * Reads footnote by index.
-     *
-     * @param Requests\getFootnoteWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getFootnoteWithoutNodePathAsyncWithHttpInfo(Requests\getFootnoteWithoutNodePathRequest $request) 
-    {
-        $returnType = '\Aspose\Words\Model\FootnoteResponse';
-        $request = $this->getFootnoteWithoutNodePathRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    if ($this->config->getDebug()) {
-                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'getFootnoteWithoutNodePath'
-     *
-     * @param Requests\getFootnoteWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function getFootnoteWithoutNodePathRequest(Requests\getFootnoteWithoutNodePathRequest $request)
-    {
-        if ($request->name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $name when calling getFootnoteWithoutNodePath');
-        }
-        if ($request->index === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $index when calling getFootnoteWithoutNodePath');
-        }
-
-        $resourcePath = '/words/{name}/footnotes/{index}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-        // path params
-        if ($request->name !== null) {
-            $localName = lcfirst('Name');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
-        }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -29139,9 +22930,6 @@ class WordsApi
         if ($request->name === null) {
             throw new \InvalidArgumentException('Missing the required parameter $name when calling getFormField');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling getFormField');
-        }
         if ($request->index === null) {
             throw new \InvalidArgumentException('Missing the required parameter $index when calling getFormField');
         }
@@ -29158,15 +22946,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
-        // path params
-        if ($request->node_path !== null) {
-            $localName = lcfirst('NodePath');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
+        // path params
+        if ($request->node_path !== null) {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -29464,9 +23264,6 @@ class WordsApi
         if ($request->name === null) {
             throw new \InvalidArgumentException('Missing the required parameter $name when calling getFormFields');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling getFormFields');
-        }
 
         $resourcePath = '/words/{name}/{nodePath}/formfields';
         $formParams = [];
@@ -29480,636 +23277,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
         }
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->folder !== null) {
-            $localName = lcfirst('Folder');
-            $localValue = is_bool($request->folder) ? ($request->folder ? 'true' : 'false') : $request->folder;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->storage !== null) {
-            $localName = lcfirst('Storage');
-            $localValue = is_bool($request->storage) ? ($request->storage ? 'true' : 'false') : $request->storage;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-
-        // body params
-        $_tempBody = null;
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['application/xml', 'application/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'GET',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('GET', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation getFormFieldsWithoutNodePath
-     *
-     * Gets form fields from document.
-     *
-     * @param Requests\getFormFieldsWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Aspose\Words\Model\FormFieldsResponse
-     */
-    public function getFormFieldsWithoutNodePath(Requests\getFormFieldsWithoutNodePathRequest $request)
-    {
-        try {
-            list($response) = $this->getFormFieldsWithoutNodePathWithHttpInfo($request);
-            return $response;
-        }
-        catch(RepeatRequestException $e) {
-            list($response) = $this->getFormFieldsWithoutNodePathWithHttpInfo($request);
-            return $response;
-        } 
-    }
-
-    /*
-     * Operation getFormFieldsWithoutNodePathWithHttpInfo
-     *
-     * Gets form fields from document.
-     *
-     * @param Requests\getFormFieldsWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \Aspose\Words\Model\FormFieldsResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function getFormFieldsWithoutNodePathWithHttpInfo(Requests\getFormFieldsWithoutNodePathRequest $request)
-    {
-        $returnType = '\Aspose\Words\Model\FormFieldsResponse';
-        $request = $this->getFormFieldsWithoutNodePathRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            if ($this->config->getDebug()) {
-                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\Aspose\Words\Model\FormFieldsResponse', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                break;
-            }
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation getFormFieldsWithoutNodePathAsync
-     *
-     * Gets form fields from document.
-     *
-     * @param Requests\getFormFieldsWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getFormFieldsWithoutNodePathAsync(Requests\getFormFieldsWithoutNodePathRequest $request) 
-    {
-        return $this->getFormFieldsWithoutNodePathAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation getFormFieldsWithoutNodePathAsyncWithHttpInfo
-     *
-     * Gets form fields from document.
-     *
-     * @param Requests\getFormFieldsWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getFormFieldsWithoutNodePathAsyncWithHttpInfo(Requests\getFormFieldsWithoutNodePathRequest $request) 
-    {
-        $returnType = '\Aspose\Words\Model\FormFieldsResponse';
-        $request = $this->getFormFieldsWithoutNodePathRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    if ($this->config->getDebug()) {
-                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'getFormFieldsWithoutNodePath'
-     *
-     * @param Requests\getFormFieldsWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function getFormFieldsWithoutNodePathRequest(Requests\getFormFieldsWithoutNodePathRequest $request)
-    {
-        if ($request->name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $name when calling getFormFieldsWithoutNodePath');
-        }
-
-        $resourcePath = '/words/{name}/formfields';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-        // path params
-        if ($request->name !== null) {
-            $localName = lcfirst('Name');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
-        }
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->folder !== null) {
-            $localName = lcfirst('Folder');
-            $localValue = is_bool($request->folder) ? ($request->folder ? 'true' : 'false') : $request->folder;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->storage !== null) {
-            $localName = lcfirst('Storage');
-            $localValue = is_bool($request->storage) ? ($request->storage ? 'true' : 'false') : $request->storage;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-
-        // body params
-        $_tempBody = null;
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['application/xml', 'application/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'GET',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('GET', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation getFormFieldWithoutNodePath
-     *
-     * Returns representation of an one of the form field.
-     *
-     * @param Requests\getFormFieldWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Aspose\Words\Model\FormFieldResponse
-     */
-    public function getFormFieldWithoutNodePath(Requests\getFormFieldWithoutNodePathRequest $request)
-    {
-        try {
-            list($response) = $this->getFormFieldWithoutNodePathWithHttpInfo($request);
-            return $response;
-        }
-        catch(RepeatRequestException $e) {
-            list($response) = $this->getFormFieldWithoutNodePathWithHttpInfo($request);
-            return $response;
-        } 
-    }
-
-    /*
-     * Operation getFormFieldWithoutNodePathWithHttpInfo
-     *
-     * Returns representation of an one of the form field.
-     *
-     * @param Requests\getFormFieldWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \Aspose\Words\Model\FormFieldResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function getFormFieldWithoutNodePathWithHttpInfo(Requests\getFormFieldWithoutNodePathRequest $request)
-    {
-        $returnType = '\Aspose\Words\Model\FormFieldResponse';
-        $request = $this->getFormFieldWithoutNodePathRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            if ($this->config->getDebug()) {
-                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\Aspose\Words\Model\FormFieldResponse', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                break;
-            }
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation getFormFieldWithoutNodePathAsync
-     *
-     * Returns representation of an one of the form field.
-     *
-     * @param Requests\getFormFieldWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getFormFieldWithoutNodePathAsync(Requests\getFormFieldWithoutNodePathRequest $request) 
-    {
-        return $this->getFormFieldWithoutNodePathAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation getFormFieldWithoutNodePathAsyncWithHttpInfo
-     *
-     * Returns representation of an one of the form field.
-     *
-     * @param Requests\getFormFieldWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getFormFieldWithoutNodePathAsyncWithHttpInfo(Requests\getFormFieldWithoutNodePathRequest $request) 
-    {
-        $returnType = '\Aspose\Words\Model\FormFieldResponse';
-        $request = $this->getFormFieldWithoutNodePathRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    if ($this->config->getDebug()) {
-                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'getFormFieldWithoutNodePath'
-     *
-     * @param Requests\getFormFieldWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function getFormFieldWithoutNodePathRequest(Requests\getFormFieldWithoutNodePathRequest $request)
-    {
-        if ($request->name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $name when calling getFormFieldWithoutNodePath');
-        }
-        if ($request->index === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $index when calling getFormFieldWithoutNodePath');
-        }
-
-        $resourcePath = '/words/{name}/formfields/{index}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-        // path params
-        if ($request->name !== null) {
-            $localName = lcfirst('Name');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
-        }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -30423,10 +23602,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->header_footer_index !== null) {
             $localName = lcfirst('HeaderFooterIndex');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->header_footer_index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('HeaderFooterIndex');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -30753,15 +23940,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->header_footer_index !== null) {
             $localName = lcfirst('HeaderFooterIndex');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->header_footer_index), $resourcePath);
         }
+        else {
+            $localName = lcfirst('HeaderFooterIndex');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->section_index !== null) {
             $localName = lcfirst('SectionIndex');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->section_index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('SectionIndex');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -31085,10 +24284,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->section_path !== null) {
             $localName = lcfirst('SectionPath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->section_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('SectionPath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -31412,10 +24619,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->list_id !== null) {
             $localName = lcfirst('ListId');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->list_id), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('ListId');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -31726,6 +24941,10 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
 
         // remove empty path parameters
         $resourcePath = str_replace("//", "/", $resourcePath);
@@ -32022,9 +25241,6 @@ class WordsApi
         if ($request->name === null) {
             throw new \InvalidArgumentException('Missing the required parameter $name when calling getOfficeMathObject');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling getOfficeMathObject');
-        }
         if ($request->index === null) {
             throw new \InvalidArgumentException('Missing the required parameter $index when calling getOfficeMathObject');
         }
@@ -32041,15 +25257,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
-        // path params
-        if ($request->node_path !== null) {
-            $localName = lcfirst('NodePath');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
+        // path params
+        if ($request->node_path !== null) {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -32347,9 +25575,6 @@ class WordsApi
         if ($request->name === null) {
             throw new \InvalidArgumentException('Missing the required parameter $name when calling getOfficeMathObjects');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling getOfficeMathObjects');
-        }
 
         $resourcePath = '/words/{name}/{nodePath}/OfficeMathObjects';
         $formParams = [];
@@ -32363,636 +25588,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
         }
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->folder !== null) {
-            $localName = lcfirst('Folder');
-            $localValue = is_bool($request->folder) ? ($request->folder ? 'true' : 'false') : $request->folder;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->storage !== null) {
-            $localName = lcfirst('Storage');
-            $localValue = is_bool($request->storage) ? ($request->storage ? 'true' : 'false') : $request->storage;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-
-        // body params
-        $_tempBody = null;
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['application/xml', 'application/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'GET',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('GET', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation getOfficeMathObjectsWithoutNodePath
-     *
-     * Gets OfficeMath objects from document.
-     *
-     * @param Requests\getOfficeMathObjectsWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Aspose\Words\Model\OfficeMathObjectsResponse
-     */
-    public function getOfficeMathObjectsWithoutNodePath(Requests\getOfficeMathObjectsWithoutNodePathRequest $request)
-    {
-        try {
-            list($response) = $this->getOfficeMathObjectsWithoutNodePathWithHttpInfo($request);
-            return $response;
-        }
-        catch(RepeatRequestException $e) {
-            list($response) = $this->getOfficeMathObjectsWithoutNodePathWithHttpInfo($request);
-            return $response;
-        } 
-    }
-
-    /*
-     * Operation getOfficeMathObjectsWithoutNodePathWithHttpInfo
-     *
-     * Gets OfficeMath objects from document.
-     *
-     * @param Requests\getOfficeMathObjectsWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \Aspose\Words\Model\OfficeMathObjectsResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function getOfficeMathObjectsWithoutNodePathWithHttpInfo(Requests\getOfficeMathObjectsWithoutNodePathRequest $request)
-    {
-        $returnType = '\Aspose\Words\Model\OfficeMathObjectsResponse';
-        $request = $this->getOfficeMathObjectsWithoutNodePathRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            if ($this->config->getDebug()) {
-                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\Aspose\Words\Model\OfficeMathObjectsResponse', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                break;
-            }
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation getOfficeMathObjectsWithoutNodePathAsync
-     *
-     * Gets OfficeMath objects from document.
-     *
-     * @param Requests\getOfficeMathObjectsWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getOfficeMathObjectsWithoutNodePathAsync(Requests\getOfficeMathObjectsWithoutNodePathRequest $request) 
-    {
-        return $this->getOfficeMathObjectsWithoutNodePathAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation getOfficeMathObjectsWithoutNodePathAsyncWithHttpInfo
-     *
-     * Gets OfficeMath objects from document.
-     *
-     * @param Requests\getOfficeMathObjectsWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getOfficeMathObjectsWithoutNodePathAsyncWithHttpInfo(Requests\getOfficeMathObjectsWithoutNodePathRequest $request) 
-    {
-        $returnType = '\Aspose\Words\Model\OfficeMathObjectsResponse';
-        $request = $this->getOfficeMathObjectsWithoutNodePathRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    if ($this->config->getDebug()) {
-                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'getOfficeMathObjectsWithoutNodePath'
-     *
-     * @param Requests\getOfficeMathObjectsWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function getOfficeMathObjectsWithoutNodePathRequest(Requests\getOfficeMathObjectsWithoutNodePathRequest $request)
-    {
-        if ($request->name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $name when calling getOfficeMathObjectsWithoutNodePath');
-        }
-
-        $resourcePath = '/words/{name}/OfficeMathObjects';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-        // path params
-        if ($request->name !== null) {
-            $localName = lcfirst('Name');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
-        }
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->folder !== null) {
-            $localName = lcfirst('Folder');
-            $localValue = is_bool($request->folder) ? ($request->folder ? 'true' : 'false') : $request->folder;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->storage !== null) {
-            $localName = lcfirst('Storage');
-            $localValue = is_bool($request->storage) ? ($request->storage ? 'true' : 'false') : $request->storage;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-
-        // body params
-        $_tempBody = null;
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['application/xml', 'application/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'GET',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('GET', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation getOfficeMathObjectWithoutNodePath
-     *
-     * Reads OfficeMath object by index.
-     *
-     * @param Requests\getOfficeMathObjectWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Aspose\Words\Model\OfficeMathObjectResponse
-     */
-    public function getOfficeMathObjectWithoutNodePath(Requests\getOfficeMathObjectWithoutNodePathRequest $request)
-    {
-        try {
-            list($response) = $this->getOfficeMathObjectWithoutNodePathWithHttpInfo($request);
-            return $response;
-        }
-        catch(RepeatRequestException $e) {
-            list($response) = $this->getOfficeMathObjectWithoutNodePathWithHttpInfo($request);
-            return $response;
-        } 
-    }
-
-    /*
-     * Operation getOfficeMathObjectWithoutNodePathWithHttpInfo
-     *
-     * Reads OfficeMath object by index.
-     *
-     * @param Requests\getOfficeMathObjectWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \Aspose\Words\Model\OfficeMathObjectResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function getOfficeMathObjectWithoutNodePathWithHttpInfo(Requests\getOfficeMathObjectWithoutNodePathRequest $request)
-    {
-        $returnType = '\Aspose\Words\Model\OfficeMathObjectResponse';
-        $request = $this->getOfficeMathObjectWithoutNodePathRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            if ($this->config->getDebug()) {
-                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\Aspose\Words\Model\OfficeMathObjectResponse', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                break;
-            }
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation getOfficeMathObjectWithoutNodePathAsync
-     *
-     * Reads OfficeMath object by index.
-     *
-     * @param Requests\getOfficeMathObjectWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getOfficeMathObjectWithoutNodePathAsync(Requests\getOfficeMathObjectWithoutNodePathRequest $request) 
-    {
-        return $this->getOfficeMathObjectWithoutNodePathAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation getOfficeMathObjectWithoutNodePathAsyncWithHttpInfo
-     *
-     * Reads OfficeMath object by index.
-     *
-     * @param Requests\getOfficeMathObjectWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getOfficeMathObjectWithoutNodePathAsyncWithHttpInfo(Requests\getOfficeMathObjectWithoutNodePathRequest $request) 
-    {
-        $returnType = '\Aspose\Words\Model\OfficeMathObjectResponse';
-        $request = $this->getOfficeMathObjectWithoutNodePathRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    if ($this->config->getDebug()) {
-                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'getOfficeMathObjectWithoutNodePath'
-     *
-     * @param Requests\getOfficeMathObjectWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function getOfficeMathObjectWithoutNodePathRequest(Requests\getOfficeMathObjectWithoutNodePathRequest $request)
-    {
-        if ($request->name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $name when calling getOfficeMathObjectWithoutNodePath');
-        }
-        if ($request->index === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $index when calling getOfficeMathObjectWithoutNodePath');
-        }
-
-        $resourcePath = '/words/{name}/OfficeMathObjects/{index}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-        // path params
-        if ($request->name !== null) {
-            $localName = lcfirst('Name');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
-        }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -33290,9 +25897,6 @@ class WordsApi
         if ($request->name === null) {
             throw new \InvalidArgumentException('Missing the required parameter $name when calling getParagraph');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling getParagraph');
-        }
         if ($request->index === null) {
             throw new \InvalidArgumentException('Missing the required parameter $index when calling getParagraph');
         }
@@ -33309,15 +25913,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
-        // path params
-        if ($request->node_path !== null) {
-            $localName = lcfirst('NodePath');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
+        // path params
+        if ($request->node_path !== null) {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -33615,9 +26231,6 @@ class WordsApi
         if ($request->name === null) {
             throw new \InvalidArgumentException('Missing the required parameter $name when calling getParagraphFormat');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling getParagraphFormat');
-        }
         if ($request->index === null) {
             throw new \InvalidArgumentException('Missing the required parameter $index when calling getParagraphFormat');
         }
@@ -33634,332 +26247,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
+        // path params
+        if ($request->index !== null) {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
         }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
-        }
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->folder !== null) {
-            $localName = lcfirst('Folder');
-            $localValue = is_bool($request->folder) ? ($request->folder ? 'true' : 'false') : $request->folder;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->storage !== null) {
-            $localName = lcfirst('Storage');
-            $localValue = is_bool($request->storage) ? ($request->storage ? 'true' : 'false') : $request->storage;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-
-        // body params
-        $_tempBody = null;
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['application/xml', 'application/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'GET',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('GET', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation getParagraphFormatWithoutNodePath
-     *
-     * Represents all the formatting for a paragraph.
-     *
-     * @param Requests\getParagraphFormatWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Aspose\Words\Model\ParagraphFormatResponse
-     */
-    public function getParagraphFormatWithoutNodePath(Requests\getParagraphFormatWithoutNodePathRequest $request)
-    {
-        try {
-            list($response) = $this->getParagraphFormatWithoutNodePathWithHttpInfo($request);
-            return $response;
-        }
-        catch(RepeatRequestException $e) {
-            list($response) = $this->getParagraphFormatWithoutNodePathWithHttpInfo($request);
-            return $response;
-        } 
-    }
-
-    /*
-     * Operation getParagraphFormatWithoutNodePathWithHttpInfo
-     *
-     * Represents all the formatting for a paragraph.
-     *
-     * @param Requests\getParagraphFormatWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \Aspose\Words\Model\ParagraphFormatResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function getParagraphFormatWithoutNodePathWithHttpInfo(Requests\getParagraphFormatWithoutNodePathRequest $request)
-    {
-        $returnType = '\Aspose\Words\Model\ParagraphFormatResponse';
-        $request = $this->getParagraphFormatWithoutNodePathRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            if ($this->config->getDebug()) {
-                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\Aspose\Words\Model\ParagraphFormatResponse', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                break;
-            }
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation getParagraphFormatWithoutNodePathAsync
-     *
-     * Represents all the formatting for a paragraph.
-     *
-     * @param Requests\getParagraphFormatWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getParagraphFormatWithoutNodePathAsync(Requests\getParagraphFormatWithoutNodePathRequest $request) 
-    {
-        return $this->getParagraphFormatWithoutNodePathAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation getParagraphFormatWithoutNodePathAsyncWithHttpInfo
-     *
-     * Represents all the formatting for a paragraph.
-     *
-     * @param Requests\getParagraphFormatWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getParagraphFormatWithoutNodePathAsyncWithHttpInfo(Requests\getParagraphFormatWithoutNodePathRequest $request) 
-    {
-        $returnType = '\Aspose\Words\Model\ParagraphFormatResponse';
-        $request = $this->getParagraphFormatWithoutNodePathRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    if ($this->config->getDebug()) {
-                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'getParagraphFormatWithoutNodePath'
-     *
-     * @param Requests\getParagraphFormatWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function getParagraphFormatWithoutNodePathRequest(Requests\getParagraphFormatWithoutNodePathRequest $request)
-    {
-        if ($request->name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $name when calling getParagraphFormatWithoutNodePath');
-        }
-        if ($request->index === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $index when calling getParagraphFormatWithoutNodePath');
-        }
-
-        $resourcePath = '/words/{name}/paragraphs/{index}/format';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-        // path params
-        if ($request->name !== null) {
-            $localName = lcfirst('Name');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
-        }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -34257,9 +26565,6 @@ class WordsApi
         if ($request->name === null) {
             throw new \InvalidArgumentException('Missing the required parameter $name when calling getParagraphListFormat');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling getParagraphListFormat');
-        }
         if ($request->index === null) {
             throw new \InvalidArgumentException('Missing the required parameter $index when calling getParagraphListFormat');
         }
@@ -34276,332 +26581,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
-        // path params
-        if ($request->node_path !== null) {
-            $localName = lcfirst('NodePath');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
-        }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
-        }
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->folder !== null) {
-            $localName = lcfirst('Folder');
-            $localValue = is_bool($request->folder) ? ($request->folder ? 'true' : 'false') : $request->folder;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->storage !== null) {
-            $localName = lcfirst('Storage');
-            $localValue = is_bool($request->storage) ? ($request->storage ? 'true' : 'false') : $request->storage;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-
-        // body params
-        $_tempBody = null;
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['application/xml', 'application/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'GET',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('GET', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation getParagraphListFormatWithoutNodePath
-     *
-     * Represents list format for a paragraph.
-     *
-     * @param Requests\getParagraphListFormatWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Aspose\Words\Model\ParagraphListFormatResponse
-     */
-    public function getParagraphListFormatWithoutNodePath(Requests\getParagraphListFormatWithoutNodePathRequest $request)
-    {
-        try {
-            list($response) = $this->getParagraphListFormatWithoutNodePathWithHttpInfo($request);
-            return $response;
-        }
-        catch(RepeatRequestException $e) {
-            list($response) = $this->getParagraphListFormatWithoutNodePathWithHttpInfo($request);
-            return $response;
-        } 
-    }
-
-    /*
-     * Operation getParagraphListFormatWithoutNodePathWithHttpInfo
-     *
-     * Represents list format for a paragraph.
-     *
-     * @param Requests\getParagraphListFormatWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \Aspose\Words\Model\ParagraphListFormatResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function getParagraphListFormatWithoutNodePathWithHttpInfo(Requests\getParagraphListFormatWithoutNodePathRequest $request)
-    {
-        $returnType = '\Aspose\Words\Model\ParagraphListFormatResponse';
-        $request = $this->getParagraphListFormatWithoutNodePathRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            if ($this->config->getDebug()) {
-                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\Aspose\Words\Model\ParagraphListFormatResponse', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                break;
-            }
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation getParagraphListFormatWithoutNodePathAsync
-     *
-     * Represents list format for a paragraph.
-     *
-     * @param Requests\getParagraphListFormatWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getParagraphListFormatWithoutNodePathAsync(Requests\getParagraphListFormatWithoutNodePathRequest $request) 
-    {
-        return $this->getParagraphListFormatWithoutNodePathAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation getParagraphListFormatWithoutNodePathAsyncWithHttpInfo
-     *
-     * Represents list format for a paragraph.
-     *
-     * @param Requests\getParagraphListFormatWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getParagraphListFormatWithoutNodePathAsyncWithHttpInfo(Requests\getParagraphListFormatWithoutNodePathRequest $request) 
-    {
-        $returnType = '\Aspose\Words\Model\ParagraphListFormatResponse';
-        $request = $this->getParagraphListFormatWithoutNodePathRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    if ($this->config->getDebug()) {
-                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'getParagraphListFormatWithoutNodePath'
-     *
-     * @param Requests\getParagraphListFormatWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function getParagraphListFormatWithoutNodePathRequest(Requests\getParagraphListFormatWithoutNodePathRequest $request)
-    {
-        if ($request->name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $name when calling getParagraphListFormatWithoutNodePath');
-        }
-        if ($request->index === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $index when calling getParagraphListFormatWithoutNodePath');
-        }
-
-        $resourcePath = '/words/{name}/paragraphs/{index}/listFormat';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-        // path params
-        if ($request->name !== null) {
+        else {
             $localName = lcfirst('Name');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
+        // path params
+        if ($request->node_path !== null) {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -34659,315 +26659,6 @@ class WordsApi
             $headers = $this->headerSelector->selectHeaders(
                 ['application/xml', 'application/json'],
                 ['application/xml', 'application/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'GET',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('GET', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation getParagraphOnline
-     *
-     * This resource represents one of the paragraphs contained in the document.
-     *
-     * @param Requests\getParagraphOnlineRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \SplFileObject
-     */
-    public function getParagraphOnline(Requests\getParagraphOnlineRequest $request)
-    {
-        try {
-            list($response) = $this->getParagraphOnlineWithHttpInfo($request);
-            return $response;
-        }
-        catch(RepeatRequestException $e) {
-            list($response) = $this->getParagraphOnlineWithHttpInfo($request);
-            return $response;
-        } 
-    }
-
-    /*
-     * Operation getParagraphOnlineWithHttpInfo
-     *
-     * This resource represents one of the paragraphs contained in the document.
-     *
-     * @param Requests\getParagraphOnlineRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function getParagraphOnlineWithHttpInfo(Requests\getParagraphOnlineRequest $request)
-    {
-        $returnType = '\SplFileObject';
-        $request = $this->getParagraphOnlineRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            if ($this->config->getDebug()) {
-                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\SplFileObject', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                break;
-            }
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation getParagraphOnlineAsync
-     *
-     * This resource represents one of the paragraphs contained in the document.
-     *
-     * @param Requests\getParagraphOnlineRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getParagraphOnlineAsync(Requests\getParagraphOnlineRequest $request) 
-    {
-        return $this->getParagraphOnlineAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation getParagraphOnlineAsyncWithHttpInfo
-     *
-     * This resource represents one of the paragraphs contained in the document.
-     *
-     * @param Requests\getParagraphOnlineRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getParagraphOnlineAsyncWithHttpInfo(Requests\getParagraphOnlineRequest $request) 
-    {
-        $returnType = '\SplFileObject';
-        $request = $this->getParagraphOnlineRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    if ($this->config->getDebug()) {
-                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'getParagraphOnline'
-     *
-     * @param Requests\getParagraphOnlineRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function getParagraphOnlineRequest(Requests\getParagraphOnlineRequest $request)
-    {
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling getParagraphOnline');
-        }
-        if ($request->document === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $document when calling getParagraphOnline');
-        }
-        if ($request->index === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $index when calling getParagraphOnline');
-        }
-
-        $resourcePath = '/words/online/{nodePath}/paragraphs/{index}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-        // path params
-        if ($request->node_path !== null) {
-            $localName = lcfirst('NodePath');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
-        }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
-        }
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-        // form params
-        if ($request->document !== null) {
-            $multipart = true; 
-            $filename = ObjectSerializer::toFormValue($request->document);
-            $handle = fopen($filename, "rb");
-            $fsize = filesize($filename);
-            $contents = fread($handle, $fsize);
-            $formParams['document'] = $contents;
-        }
-
-        // body params
-        $_tempBody = null;
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['multipart/form-data']
             );
         }
 
@@ -35208,9 +26899,6 @@ class WordsApi
         if ($request->name === null) {
             throw new \InvalidArgumentException('Missing the required parameter $name when calling getParagraphs');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling getParagraphs');
-        }
 
         $resourcePath = '/words/{name}/{nodePath}/paragraphs';
         $formParams = [];
@@ -35224,620 +26912,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
-        // path params
-        if ($request->node_path !== null) {
-            $localName = lcfirst('NodePath');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
-        }
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->folder !== null) {
-            $localName = lcfirst('Folder');
-            $localValue = is_bool($request->folder) ? ($request->folder ? 'true' : 'false') : $request->folder;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->storage !== null) {
-            $localName = lcfirst('Storage');
-            $localValue = is_bool($request->storage) ? ($request->storage ? 'true' : 'false') : $request->storage;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-
-        // body params
-        $_tempBody = null;
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['application/xml', 'application/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'GET',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('GET', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation getParagraphsOnline
-     *
-     * Returns a list of paragraphs that are contained in the document.
-     *
-     * @param Requests\getParagraphsOnlineRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \SplFileObject
-     */
-    public function getParagraphsOnline(Requests\getParagraphsOnlineRequest $request)
-    {
-        try {
-            list($response) = $this->getParagraphsOnlineWithHttpInfo($request);
-            return $response;
-        }
-        catch(RepeatRequestException $e) {
-            list($response) = $this->getParagraphsOnlineWithHttpInfo($request);
-            return $response;
-        } 
-    }
-
-    /*
-     * Operation getParagraphsOnlineWithHttpInfo
-     *
-     * Returns a list of paragraphs that are contained in the document.
-     *
-     * @param Requests\getParagraphsOnlineRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function getParagraphsOnlineWithHttpInfo(Requests\getParagraphsOnlineRequest $request)
-    {
-        $returnType = '\SplFileObject';
-        $request = $this->getParagraphsOnlineRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            if ($this->config->getDebug()) {
-                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\SplFileObject', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                break;
-            }
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation getParagraphsOnlineAsync
-     *
-     * Returns a list of paragraphs that are contained in the document.
-     *
-     * @param Requests\getParagraphsOnlineRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getParagraphsOnlineAsync(Requests\getParagraphsOnlineRequest $request) 
-    {
-        return $this->getParagraphsOnlineAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation getParagraphsOnlineAsyncWithHttpInfo
-     *
-     * Returns a list of paragraphs that are contained in the document.
-     *
-     * @param Requests\getParagraphsOnlineRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getParagraphsOnlineAsyncWithHttpInfo(Requests\getParagraphsOnlineRequest $request) 
-    {
-        $returnType = '\SplFileObject';
-        $request = $this->getParagraphsOnlineRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    if ($this->config->getDebug()) {
-                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'getParagraphsOnline'
-     *
-     * @param Requests\getParagraphsOnlineRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function getParagraphsOnlineRequest(Requests\getParagraphsOnlineRequest $request)
-    {
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling getParagraphsOnline');
-        }
-        if ($request->document === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $document when calling getParagraphsOnline');
-        }
-
-        $resourcePath = '/words/online/{nodePath}/paragraphs';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-        // path params
-        if ($request->node_path !== null) {
-            $localName = lcfirst('NodePath');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
-        }
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-        // form params
-        if ($request->document !== null) {
-            $multipart = true; 
-            $filename = ObjectSerializer::toFormValue($request->document);
-            $handle = fopen($filename, "rb");
-            $fsize = filesize($filename);
-            $contents = fread($handle, $fsize);
-            $formParams['document'] = $contents;
-        }
-
-        // body params
-        $_tempBody = null;
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['multipart/form-data']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'GET',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('GET', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation getParagraphsWithoutNodePath
-     *
-     * Returns a list of paragraphs that are contained in the document.
-     *
-     * @param Requests\getParagraphsWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \SplFileObject
-     */
-    public function getParagraphsWithoutNodePath(Requests\getParagraphsWithoutNodePathRequest $request)
-    {
-        try {
-            list($response) = $this->getParagraphsWithoutNodePathWithHttpInfo($request);
-            return $response;
-        }
-        catch(RepeatRequestException $e) {
-            list($response) = $this->getParagraphsWithoutNodePathWithHttpInfo($request);
-            return $response;
-        } 
-    }
-
-    /*
-     * Operation getParagraphsWithoutNodePathWithHttpInfo
-     *
-     * Returns a list of paragraphs that are contained in the document.
-     *
-     * @param Requests\getParagraphsWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function getParagraphsWithoutNodePathWithHttpInfo(Requests\getParagraphsWithoutNodePathRequest $request)
-    {
-        $returnType = '\SplFileObject';
-        $request = $this->getParagraphsWithoutNodePathRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            if ($this->config->getDebug()) {
-                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\SplFileObject', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                break;
-            }
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation getParagraphsWithoutNodePathAsync
-     *
-     * Returns a list of paragraphs that are contained in the document.
-     *
-     * @param Requests\getParagraphsWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getParagraphsWithoutNodePathAsync(Requests\getParagraphsWithoutNodePathRequest $request) 
-    {
-        return $this->getParagraphsWithoutNodePathAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation getParagraphsWithoutNodePathAsyncWithHttpInfo
-     *
-     * Returns a list of paragraphs that are contained in the document.
-     *
-     * @param Requests\getParagraphsWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getParagraphsWithoutNodePathAsyncWithHttpInfo(Requests\getParagraphsWithoutNodePathRequest $request) 
-    {
-        $returnType = '\SplFileObject';
-        $request = $this->getParagraphsWithoutNodePathRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    if ($this->config->getDebug()) {
-                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'getParagraphsWithoutNodePath'
-     *
-     * @param Requests\getParagraphsWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function getParagraphsWithoutNodePathRequest(Requests\getParagraphsWithoutNodePathRequest $request)
-    {
-        if ($request->name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $name when calling getParagraphsWithoutNodePath');
-        }
-
-        $resourcePath = '/words/{name}/paragraphs';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-        // path params
-        if ($request->name !== null) {
+        else {
             $localName = lcfirst('Name');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
+        // path params
+        if ($request->node_path !== null) {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -35895,299 +26981,6 @@ class WordsApi
             $headers = $this->headerSelector->selectHeaders(
                 ['application/xml', 'application/json'],
                 ['application/xml', 'application/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'GET',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('GET', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation getParagraphsWithoutNodePathOnline
-     *
-     * Returns a list of paragraphs that are contained in the document.
-     *
-     * @param Requests\getParagraphsWithoutNodePathOnlineRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \SplFileObject
-     */
-    public function getParagraphsWithoutNodePathOnline(Requests\getParagraphsWithoutNodePathOnlineRequest $request)
-    {
-        try {
-            list($response) = $this->getParagraphsWithoutNodePathOnlineWithHttpInfo($request);
-            return $response;
-        }
-        catch(RepeatRequestException $e) {
-            list($response) = $this->getParagraphsWithoutNodePathOnlineWithHttpInfo($request);
-            return $response;
-        } 
-    }
-
-    /*
-     * Operation getParagraphsWithoutNodePathOnlineWithHttpInfo
-     *
-     * Returns a list of paragraphs that are contained in the document.
-     *
-     * @param Requests\getParagraphsWithoutNodePathOnlineRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function getParagraphsWithoutNodePathOnlineWithHttpInfo(Requests\getParagraphsWithoutNodePathOnlineRequest $request)
-    {
-        $returnType = '\SplFileObject';
-        $request = $this->getParagraphsWithoutNodePathOnlineRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            if ($this->config->getDebug()) {
-                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\SplFileObject', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                break;
-            }
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation getParagraphsWithoutNodePathOnlineAsync
-     *
-     * Returns a list of paragraphs that are contained in the document.
-     *
-     * @param Requests\getParagraphsWithoutNodePathOnlineRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getParagraphsWithoutNodePathOnlineAsync(Requests\getParagraphsWithoutNodePathOnlineRequest $request) 
-    {
-        return $this->getParagraphsWithoutNodePathOnlineAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation getParagraphsWithoutNodePathOnlineAsyncWithHttpInfo
-     *
-     * Returns a list of paragraphs that are contained in the document.
-     *
-     * @param Requests\getParagraphsWithoutNodePathOnlineRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getParagraphsWithoutNodePathOnlineAsyncWithHttpInfo(Requests\getParagraphsWithoutNodePathOnlineRequest $request) 
-    {
-        $returnType = '\SplFileObject';
-        $request = $this->getParagraphsWithoutNodePathOnlineRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    if ($this->config->getDebug()) {
-                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'getParagraphsWithoutNodePathOnline'
-     *
-     * @param Requests\getParagraphsWithoutNodePathOnlineRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function getParagraphsWithoutNodePathOnlineRequest(Requests\getParagraphsWithoutNodePathOnlineRequest $request)
-    {
-        if ($request->document === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $document when calling getParagraphsWithoutNodePathOnline');
-        }
-
-        $resourcePath = '/words/online/paragraphs';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-        // form params
-        if ($request->document !== null) {
-            $multipart = true; 
-            $filename = ObjectSerializer::toFormValue($request->document);
-            $handle = fopen($filename, "rb");
-            $fsize = filesize($filename);
-            $contents = fread($handle, $fsize);
-            $formParams['document'] = $contents;
-        }
-
-        // body params
-        $_tempBody = null;
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['multipart/form-data']
             );
         }
 
@@ -36428,9 +27221,6 @@ class WordsApi
         if ($request->name === null) {
             throw new \InvalidArgumentException('Missing the required parameter $name when calling getParagraphTabStops');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling getParagraphTabStops');
-        }
         if ($request->index === null) {
             throw new \InvalidArgumentException('Missing the required parameter $index when calling getParagraphTabStops');
         }
@@ -36447,15 +27237,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
+        // path params
+        if ($request->index !== null) {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
         }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -36513,941 +27315,6 @@ class WordsApi
             $headers = $this->headerSelector->selectHeaders(
                 ['application/xml', 'application/json'],
                 ['application/xml', 'application/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'GET',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('GET', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation getParagraphTabStopsWithoutNodePath
-     *
-     * Get all tab stops for the paragraph.
-     *
-     * @param Requests\getParagraphTabStopsWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Aspose\Words\Model\TabStopsResponse
-     */
-    public function getParagraphTabStopsWithoutNodePath(Requests\getParagraphTabStopsWithoutNodePathRequest $request)
-    {
-        try {
-            list($response) = $this->getParagraphTabStopsWithoutNodePathWithHttpInfo($request);
-            return $response;
-        }
-        catch(RepeatRequestException $e) {
-            list($response) = $this->getParagraphTabStopsWithoutNodePathWithHttpInfo($request);
-            return $response;
-        } 
-    }
-
-    /*
-     * Operation getParagraphTabStopsWithoutNodePathWithHttpInfo
-     *
-     * Get all tab stops for the paragraph.
-     *
-     * @param Requests\getParagraphTabStopsWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \Aspose\Words\Model\TabStopsResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function getParagraphTabStopsWithoutNodePathWithHttpInfo(Requests\getParagraphTabStopsWithoutNodePathRequest $request)
-    {
-        $returnType = '\Aspose\Words\Model\TabStopsResponse';
-        $request = $this->getParagraphTabStopsWithoutNodePathRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            if ($this->config->getDebug()) {
-                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\Aspose\Words\Model\TabStopsResponse', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                break;
-            }
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation getParagraphTabStopsWithoutNodePathAsync
-     *
-     * Get all tab stops for the paragraph.
-     *
-     * @param Requests\getParagraphTabStopsWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getParagraphTabStopsWithoutNodePathAsync(Requests\getParagraphTabStopsWithoutNodePathRequest $request) 
-    {
-        return $this->getParagraphTabStopsWithoutNodePathAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation getParagraphTabStopsWithoutNodePathAsyncWithHttpInfo
-     *
-     * Get all tab stops for the paragraph.
-     *
-     * @param Requests\getParagraphTabStopsWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getParagraphTabStopsWithoutNodePathAsyncWithHttpInfo(Requests\getParagraphTabStopsWithoutNodePathRequest $request) 
-    {
-        $returnType = '\Aspose\Words\Model\TabStopsResponse';
-        $request = $this->getParagraphTabStopsWithoutNodePathRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    if ($this->config->getDebug()) {
-                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'getParagraphTabStopsWithoutNodePath'
-     *
-     * @param Requests\getParagraphTabStopsWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function getParagraphTabStopsWithoutNodePathRequest(Requests\getParagraphTabStopsWithoutNodePathRequest $request)
-    {
-        if ($request->name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $name when calling getParagraphTabStopsWithoutNodePath');
-        }
-        if ($request->index === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $index when calling getParagraphTabStopsWithoutNodePath');
-        }
-
-        $resourcePath = '/words/{name}/paragraphs/{index}/tabstops';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-        // path params
-        if ($request->name !== null) {
-            $localName = lcfirst('Name');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
-        }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
-        }
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->folder !== null) {
-            $localName = lcfirst('Folder');
-            $localValue = is_bool($request->folder) ? ($request->folder ? 'true' : 'false') : $request->folder;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->storage !== null) {
-            $localName = lcfirst('Storage');
-            $localValue = is_bool($request->storage) ? ($request->storage ? 'true' : 'false') : $request->storage;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-
-        // body params
-        $_tempBody = null;
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['application/xml', 'application/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'GET',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('GET', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation getParagraphWithoutNodePath
-     *
-     * This resource represents one of the paragraphs contained in the document.
-     *
-     * @param Requests\getParagraphWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \SplFileObject
-     */
-    public function getParagraphWithoutNodePath(Requests\getParagraphWithoutNodePathRequest $request)
-    {
-        try {
-            list($response) = $this->getParagraphWithoutNodePathWithHttpInfo($request);
-            return $response;
-        }
-        catch(RepeatRequestException $e) {
-            list($response) = $this->getParagraphWithoutNodePathWithHttpInfo($request);
-            return $response;
-        } 
-    }
-
-    /*
-     * Operation getParagraphWithoutNodePathWithHttpInfo
-     *
-     * This resource represents one of the paragraphs contained in the document.
-     *
-     * @param Requests\getParagraphWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function getParagraphWithoutNodePathWithHttpInfo(Requests\getParagraphWithoutNodePathRequest $request)
-    {
-        $returnType = '\SplFileObject';
-        $request = $this->getParagraphWithoutNodePathRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            if ($this->config->getDebug()) {
-                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\SplFileObject', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                break;
-            }
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation getParagraphWithoutNodePathAsync
-     *
-     * This resource represents one of the paragraphs contained in the document.
-     *
-     * @param Requests\getParagraphWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getParagraphWithoutNodePathAsync(Requests\getParagraphWithoutNodePathRequest $request) 
-    {
-        return $this->getParagraphWithoutNodePathAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation getParagraphWithoutNodePathAsyncWithHttpInfo
-     *
-     * This resource represents one of the paragraphs contained in the document.
-     *
-     * @param Requests\getParagraphWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getParagraphWithoutNodePathAsyncWithHttpInfo(Requests\getParagraphWithoutNodePathRequest $request) 
-    {
-        $returnType = '\SplFileObject';
-        $request = $this->getParagraphWithoutNodePathRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    if ($this->config->getDebug()) {
-                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'getParagraphWithoutNodePath'
-     *
-     * @param Requests\getParagraphWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function getParagraphWithoutNodePathRequest(Requests\getParagraphWithoutNodePathRequest $request)
-    {
-        if ($request->name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $name when calling getParagraphWithoutNodePath');
-        }
-        if ($request->index === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $index when calling getParagraphWithoutNodePath');
-        }
-
-        $resourcePath = '/words/{name}/paragraphs/{index}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-        // path params
-        if ($request->name !== null) {
-            $localName = lcfirst('Name');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
-        }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
-        }
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->folder !== null) {
-            $localName = lcfirst('Folder');
-            $localValue = is_bool($request->folder) ? ($request->folder ? 'true' : 'false') : $request->folder;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->storage !== null) {
-            $localName = lcfirst('Storage');
-            $localValue = is_bool($request->storage) ? ($request->storage ? 'true' : 'false') : $request->storage;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-
-        // body params
-        $_tempBody = null;
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['application/xml', 'application/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'GET',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('GET', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation getParagraphWithoutNodePathOnline
-     *
-     * This resource represents one of the paragraphs contained in the document.
-     *
-     * @param Requests\getParagraphWithoutNodePathOnlineRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \SplFileObject
-     */
-    public function getParagraphWithoutNodePathOnline(Requests\getParagraphWithoutNodePathOnlineRequest $request)
-    {
-        try {
-            list($response) = $this->getParagraphWithoutNodePathOnlineWithHttpInfo($request);
-            return $response;
-        }
-        catch(RepeatRequestException $e) {
-            list($response) = $this->getParagraphWithoutNodePathOnlineWithHttpInfo($request);
-            return $response;
-        } 
-    }
-
-    /*
-     * Operation getParagraphWithoutNodePathOnlineWithHttpInfo
-     *
-     * This resource represents one of the paragraphs contained in the document.
-     *
-     * @param Requests\getParagraphWithoutNodePathOnlineRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function getParagraphWithoutNodePathOnlineWithHttpInfo(Requests\getParagraphWithoutNodePathOnlineRequest $request)
-    {
-        $returnType = '\SplFileObject';
-        $request = $this->getParagraphWithoutNodePathOnlineRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            if ($this->config->getDebug()) {
-                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\SplFileObject', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                break;
-            }
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation getParagraphWithoutNodePathOnlineAsync
-     *
-     * This resource represents one of the paragraphs contained in the document.
-     *
-     * @param Requests\getParagraphWithoutNodePathOnlineRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getParagraphWithoutNodePathOnlineAsync(Requests\getParagraphWithoutNodePathOnlineRequest $request) 
-    {
-        return $this->getParagraphWithoutNodePathOnlineAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation getParagraphWithoutNodePathOnlineAsyncWithHttpInfo
-     *
-     * This resource represents one of the paragraphs contained in the document.
-     *
-     * @param Requests\getParagraphWithoutNodePathOnlineRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getParagraphWithoutNodePathOnlineAsyncWithHttpInfo(Requests\getParagraphWithoutNodePathOnlineRequest $request) 
-    {
-        $returnType = '\SplFileObject';
-        $request = $this->getParagraphWithoutNodePathOnlineRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    if ($this->config->getDebug()) {
-                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'getParagraphWithoutNodePathOnline'
-     *
-     * @param Requests\getParagraphWithoutNodePathOnlineRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function getParagraphWithoutNodePathOnlineRequest(Requests\getParagraphWithoutNodePathOnlineRequest $request)
-    {
-        if ($request->index === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $index when calling getParagraphWithoutNodePathOnline');
-        }
-        if ($request->document === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $document when calling getParagraphWithoutNodePathOnline');
-        }
-
-        $resourcePath = '/words/online/paragraphs/{index}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
-        }
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-        // form params
-        if ($request->document !== null) {
-            $multipart = true; 
-            $filename = ObjectSerializer::toFormValue($request->document);
-            $handle = fopen($filename, "rb");
-            $fsize = filesize($filename);
-            $contents = fread($handle, $fsize);
-            $formParams['document'] = $contents;
-        }
-
-        // body params
-        $_tempBody = null;
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['multipart/form-data']
             );
         }
 
@@ -37704,15 +27571,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->range_start_identifier !== null) {
             $localName = lcfirst('RangeStartIdentifier');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->range_start_identifier), $resourcePath);
         }
+        else {
+            $localName = lcfirst('RangeStartIdentifier');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->range_end_identifier !== null) {
             $localName = lcfirst('RangeEndIdentifier');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->range_end_identifier), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('RangeEndIdentifier');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -38029,15 +27908,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->paragraph_path !== null) {
             $localName = lcfirst('ParagraphPath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->paragraph_path), $resourcePath);
         }
+        else {
+            $localName = lcfirst('ParagraphPath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -38354,15 +28245,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->paragraph_path !== null) {
             $localName = lcfirst('ParagraphPath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->paragraph_path), $resourcePath);
         }
+        else {
+            $localName = lcfirst('ParagraphPath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -38676,10 +28579,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->paragraph_path !== null) {
             $localName = lcfirst('ParagraphPath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->paragraph_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('ParagraphPath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -38993,10 +28904,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->section_index !== null) {
             $localName = lcfirst('SectionIndex');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->section_index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('SectionIndex');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -39310,10 +29229,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->section_index !== null) {
             $localName = lcfirst('SectionIndex');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->section_index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('SectionIndex');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -39623,6 +29550,10 @@ class WordsApi
         if ($request->name !== null) {
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -39936,10 +29867,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->style_name !== null) {
             $localName = lcfirst('StyleName');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->style_name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('StyleName');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -40253,10 +30192,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->styled_node_path !== null) {
             $localName = lcfirst('StyledNodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->styled_node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('StyledNodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -40567,6 +30514,10 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
 
         // remove empty path parameters
         $resourcePath = str_replace("//", "/", $resourcePath);
@@ -40863,9 +30814,6 @@ class WordsApi
         if ($request->name === null) {
             throw new \InvalidArgumentException('Missing the required parameter $name when calling getTable');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling getTable');
-        }
         if ($request->index === null) {
             throw new \InvalidArgumentException('Missing the required parameter $index when calling getTable');
         }
@@ -40882,15 +30830,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
-        // path params
-        if ($request->node_path !== null) {
-            $localName = lcfirst('NodePath');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
+        // path params
+        if ($request->node_path !== null) {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -41207,15 +31167,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->table_row_path !== null) {
             $localName = lcfirst('TableRowPath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->table_row_path), $resourcePath);
         }
+        else {
+            $localName = lcfirst('TableRowPath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -41532,15 +31504,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->table_row_path !== null) {
             $localName = lcfirst('TableRowPath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->table_row_path), $resourcePath);
         }
+        else {
+            $localName = lcfirst('TableRowPath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -41838,9 +31822,6 @@ class WordsApi
         if ($request->name === null) {
             throw new \InvalidArgumentException('Missing the required parameter $name when calling getTableProperties');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling getTableProperties');
-        }
         if ($request->index === null) {
             throw new \InvalidArgumentException('Missing the required parameter $index when calling getTableProperties');
         }
@@ -41857,332 +31838,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
+        // path params
+        if ($request->index !== null) {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
         }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
-        }
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->folder !== null) {
-            $localName = lcfirst('Folder');
-            $localValue = is_bool($request->folder) ? ($request->folder ? 'true' : 'false') : $request->folder;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->storage !== null) {
-            $localName = lcfirst('Storage');
-            $localValue = is_bool($request->storage) ? ($request->storage ? 'true' : 'false') : $request->storage;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-
-        // body params
-        $_tempBody = null;
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['application/xml', 'application/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'GET',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('GET', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation getTablePropertiesWithoutNodePath
-     *
-     * Returns a table properties.
-     *
-     * @param Requests\getTablePropertiesWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Aspose\Words\Model\TablePropertiesResponse
-     */
-    public function getTablePropertiesWithoutNodePath(Requests\getTablePropertiesWithoutNodePathRequest $request)
-    {
-        try {
-            list($response) = $this->getTablePropertiesWithoutNodePathWithHttpInfo($request);
-            return $response;
-        }
-        catch(RepeatRequestException $e) {
-            list($response) = $this->getTablePropertiesWithoutNodePathWithHttpInfo($request);
-            return $response;
-        } 
-    }
-
-    /*
-     * Operation getTablePropertiesWithoutNodePathWithHttpInfo
-     *
-     * Returns a table properties.
-     *
-     * @param Requests\getTablePropertiesWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \Aspose\Words\Model\TablePropertiesResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function getTablePropertiesWithoutNodePathWithHttpInfo(Requests\getTablePropertiesWithoutNodePathRequest $request)
-    {
-        $returnType = '\Aspose\Words\Model\TablePropertiesResponse';
-        $request = $this->getTablePropertiesWithoutNodePathRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            if ($this->config->getDebug()) {
-                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\Aspose\Words\Model\TablePropertiesResponse', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                break;
-            }
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation getTablePropertiesWithoutNodePathAsync
-     *
-     * Returns a table properties.
-     *
-     * @param Requests\getTablePropertiesWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getTablePropertiesWithoutNodePathAsync(Requests\getTablePropertiesWithoutNodePathRequest $request) 
-    {
-        return $this->getTablePropertiesWithoutNodePathAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation getTablePropertiesWithoutNodePathAsyncWithHttpInfo
-     *
-     * Returns a table properties.
-     *
-     * @param Requests\getTablePropertiesWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getTablePropertiesWithoutNodePathAsyncWithHttpInfo(Requests\getTablePropertiesWithoutNodePathRequest $request) 
-    {
-        $returnType = '\Aspose\Words\Model\TablePropertiesResponse';
-        $request = $this->getTablePropertiesWithoutNodePathRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    if ($this->config->getDebug()) {
-                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'getTablePropertiesWithoutNodePath'
-     *
-     * @param Requests\getTablePropertiesWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function getTablePropertiesWithoutNodePathRequest(Requests\getTablePropertiesWithoutNodePathRequest $request)
-    {
-        if ($request->name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $name when calling getTablePropertiesWithoutNodePath');
-        }
-        if ($request->index === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $index when calling getTablePropertiesWithoutNodePath');
-        }
-
-        $resourcePath = '/words/{name}/tables/{index}/properties';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-        // path params
-        if ($request->name !== null) {
-            $localName = lcfirst('Name');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
-        }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -42499,15 +32175,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->table_path !== null) {
             $localName = lcfirst('TablePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->table_path), $resourcePath);
         }
+        else {
+            $localName = lcfirst('TablePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -42824,15 +32512,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->table_path !== null) {
             $localName = lcfirst('TablePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->table_path), $resourcePath);
         }
+        else {
+            $localName = lcfirst('TablePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -43130,9 +32830,6 @@ class WordsApi
         if ($request->name === null) {
             throw new \InvalidArgumentException('Missing the required parameter $name when calling getTables');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling getTables');
-        }
 
         $resourcePath = '/words/{name}/{nodePath}/tables';
         $formParams = [];
@@ -43146,636 +32843,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
         }
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->folder !== null) {
-            $localName = lcfirst('Folder');
-            $localValue = is_bool($request->folder) ? ($request->folder ? 'true' : 'false') : $request->folder;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->storage !== null) {
-            $localName = lcfirst('Storage');
-            $localValue = is_bool($request->storage) ? ($request->storage ? 'true' : 'false') : $request->storage;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-
-        // body params
-        $_tempBody = null;
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['application/xml', 'application/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'GET',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('GET', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation getTablesWithoutNodePath
-     *
-     * Returns a list of tables that are contained in the document.
-     *
-     * @param Requests\getTablesWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Aspose\Words\Model\TableLinkCollectionResponse
-     */
-    public function getTablesWithoutNodePath(Requests\getTablesWithoutNodePathRequest $request)
-    {
-        try {
-            list($response) = $this->getTablesWithoutNodePathWithHttpInfo($request);
-            return $response;
-        }
-        catch(RepeatRequestException $e) {
-            list($response) = $this->getTablesWithoutNodePathWithHttpInfo($request);
-            return $response;
-        } 
-    }
-
-    /*
-     * Operation getTablesWithoutNodePathWithHttpInfo
-     *
-     * Returns a list of tables that are contained in the document.
-     *
-     * @param Requests\getTablesWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \Aspose\Words\Model\TableLinkCollectionResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function getTablesWithoutNodePathWithHttpInfo(Requests\getTablesWithoutNodePathRequest $request)
-    {
-        $returnType = '\Aspose\Words\Model\TableLinkCollectionResponse';
-        $request = $this->getTablesWithoutNodePathRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            if ($this->config->getDebug()) {
-                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\Aspose\Words\Model\TableLinkCollectionResponse', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                break;
-            }
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation getTablesWithoutNodePathAsync
-     *
-     * Returns a list of tables that are contained in the document.
-     *
-     * @param Requests\getTablesWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getTablesWithoutNodePathAsync(Requests\getTablesWithoutNodePathRequest $request) 
-    {
-        return $this->getTablesWithoutNodePathAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation getTablesWithoutNodePathAsyncWithHttpInfo
-     *
-     * Returns a list of tables that are contained in the document.
-     *
-     * @param Requests\getTablesWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getTablesWithoutNodePathAsyncWithHttpInfo(Requests\getTablesWithoutNodePathRequest $request) 
-    {
-        $returnType = '\Aspose\Words\Model\TableLinkCollectionResponse';
-        $request = $this->getTablesWithoutNodePathRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    if ($this->config->getDebug()) {
-                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'getTablesWithoutNodePath'
-     *
-     * @param Requests\getTablesWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function getTablesWithoutNodePathRequest(Requests\getTablesWithoutNodePathRequest $request)
-    {
-        if ($request->name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $name when calling getTablesWithoutNodePath');
-        }
-
-        $resourcePath = '/words/{name}/tables';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-        // path params
-        if ($request->name !== null) {
-            $localName = lcfirst('Name');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
-        }
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->folder !== null) {
-            $localName = lcfirst('Folder');
-            $localValue = is_bool($request->folder) ? ($request->folder ? 'true' : 'false') : $request->folder;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->storage !== null) {
-            $localName = lcfirst('Storage');
-            $localValue = is_bool($request->storage) ? ($request->storage ? 'true' : 'false') : $request->storage;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-
-        // body params
-        $_tempBody = null;
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['application/xml', 'application/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'GET',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('GET', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation getTableWithoutNodePath
-     *
-     * Returns a table.
-     *
-     * @param Requests\getTableWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Aspose\Words\Model\TableResponse
-     */
-    public function getTableWithoutNodePath(Requests\getTableWithoutNodePathRequest $request)
-    {
-        try {
-            list($response) = $this->getTableWithoutNodePathWithHttpInfo($request);
-            return $response;
-        }
-        catch(RepeatRequestException $e) {
-            list($response) = $this->getTableWithoutNodePathWithHttpInfo($request);
-            return $response;
-        } 
-    }
-
-    /*
-     * Operation getTableWithoutNodePathWithHttpInfo
-     *
-     * Returns a table.
-     *
-     * @param Requests\getTableWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \Aspose\Words\Model\TableResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function getTableWithoutNodePathWithHttpInfo(Requests\getTableWithoutNodePathRequest $request)
-    {
-        $returnType = '\Aspose\Words\Model\TableResponse';
-        $request = $this->getTableWithoutNodePathRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            if ($this->config->getDebug()) {
-                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\Aspose\Words\Model\TableResponse', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                break;
-            }
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation getTableWithoutNodePathAsync
-     *
-     * Returns a table.
-     *
-     * @param Requests\getTableWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getTableWithoutNodePathAsync(Requests\getTableWithoutNodePathRequest $request) 
-    {
-        return $this->getTableWithoutNodePathAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation getTableWithoutNodePathAsyncWithHttpInfo
-     *
-     * Returns a table.
-     *
-     * @param Requests\getTableWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getTableWithoutNodePathAsyncWithHttpInfo(Requests\getTableWithoutNodePathRequest $request) 
-    {
-        $returnType = '\Aspose\Words\Model\TableResponse';
-        $request = $this->getTableWithoutNodePathRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    if ($this->config->getDebug()) {
-                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'getTableWithoutNodePath'
-     *
-     * @param Requests\getTableWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function getTableWithoutNodePathRequest(Requests\getTableWithoutNodePathRequest $request)
-    {
-        if ($request->name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $name when calling getTableWithoutNodePath');
-        }
-        if ($request->index === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $index when calling getTableWithoutNodePath');
-        }
-
-        $resourcePath = '/words/{name}/tables/{index}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-        // path params
-        if ($request->name !== null) {
-            $localName = lcfirst('Name');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
-        }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -44088,6 +33167,10 @@ class WordsApi
         if ($request->name !== null) {
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -44429,9 +33512,6 @@ class WordsApi
         if ($request->image_file === null) {
             throw new \InvalidArgumentException('Missing the required parameter $image_file when calling insertDrawingObject');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling insertDrawingObject');
-        }
 
         $resourcePath = '/words/{name}/{nodePath}/drawingObjects';
         $formParams = [];
@@ -44445,369 +33525,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
         }
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->folder !== null) {
-            $localName = lcfirst('Folder');
-            $localValue = is_bool($request->folder) ? ($request->folder ? 'true' : 'false') : $request->folder;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->storage !== null) {
-            $localName = lcfirst('Storage');
-            $localValue = is_bool($request->storage) ? ($request->storage ? 'true' : 'false') : $request->storage;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->dest_file_name !== null) {
-            $localName = lcfirst('DestFileName');
-            $localValue = is_bool($request->dest_file_name) ? ($request->dest_file_name ? 'true' : 'false') : $request->dest_file_name;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->revision_author !== null) {
-            $localName = lcfirst('RevisionAuthor');
-            $localValue = is_bool($request->revision_author) ? ($request->revision_author ? 'true' : 'false') : $request->revision_author;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->revision_date_time !== null) {
-            $localName = lcfirst('RevisionDateTime');
-            $localValue = is_bool($request->revision_date_time) ? ($request->revision_date_time ? 'true' : 'false') : $request->revision_date_time;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-        // form params
-        if ($request->drawing_object !== null) {
-            $multipart = true; 
-            $formParams['drawing_object'] = ObjectSerializer::toFormValue($request->drawing_object);
-        }
-        // form params
-        if ($request->image_file !== null) {
-            $multipart = true; 
-            $filename = ObjectSerializer::toFormValue($request->image_file);
-            $handle = fopen($filename, "rb");
-            $fsize = filesize($filename);
-            $contents = fread($handle, $fsize);
-            $formParams['image_file'] = $contents;
-        }
-
-        // body params
-        $_tempBody = null;
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['multipart/form-data']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'POST',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('POST', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation insertDrawingObjectWithoutNodePath
-     *
-     * Adds drawing object to document, returns added  drawing object's data.
-     *
-     * @param Requests\insertDrawingObjectWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Aspose\Words\Model\DrawingObjectResponse
-     */
-    public function insertDrawingObjectWithoutNodePath(Requests\insertDrawingObjectWithoutNodePathRequest $request)
-    {
-        try {
-            list($response) = $this->insertDrawingObjectWithoutNodePathWithHttpInfo($request);
-            return $response;
-        }
-        catch(RepeatRequestException $e) {
-            list($response) = $this->insertDrawingObjectWithoutNodePathWithHttpInfo($request);
-            return $response;
-        } 
-    }
-
-    /*
-     * Operation insertDrawingObjectWithoutNodePathWithHttpInfo
-     *
-     * Adds drawing object to document, returns added  drawing object's data.
-     *
-     * @param Requests\insertDrawingObjectWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \Aspose\Words\Model\DrawingObjectResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function insertDrawingObjectWithoutNodePathWithHttpInfo(Requests\insertDrawingObjectWithoutNodePathRequest $request)
-    {
-        $returnType = '\Aspose\Words\Model\DrawingObjectResponse';
-        $request = $this->insertDrawingObjectWithoutNodePathRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            if ($this->config->getDebug()) {
-                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\Aspose\Words\Model\DrawingObjectResponse', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                break;
-            }
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation insertDrawingObjectWithoutNodePathAsync
-     *
-     * Adds drawing object to document, returns added  drawing object's data.
-     *
-     * @param Requests\insertDrawingObjectWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function insertDrawingObjectWithoutNodePathAsync(Requests\insertDrawingObjectWithoutNodePathRequest $request) 
-    {
-        return $this->insertDrawingObjectWithoutNodePathAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation insertDrawingObjectWithoutNodePathAsyncWithHttpInfo
-     *
-     * Adds drawing object to document, returns added  drawing object's data.
-     *
-     * @param Requests\insertDrawingObjectWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function insertDrawingObjectWithoutNodePathAsyncWithHttpInfo(Requests\insertDrawingObjectWithoutNodePathRequest $request) 
-    {
-        $returnType = '\Aspose\Words\Model\DrawingObjectResponse';
-        $request = $this->insertDrawingObjectWithoutNodePathRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    if ($this->config->getDebug()) {
-                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'insertDrawingObjectWithoutNodePath'
-     *
-     * @param Requests\insertDrawingObjectWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function insertDrawingObjectWithoutNodePathRequest(Requests\insertDrawingObjectWithoutNodePathRequest $request)
-    {
-        if ($request->name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $name when calling insertDrawingObjectWithoutNodePath');
-        }
-        if ($request->drawing_object === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $drawing_object when calling insertDrawingObjectWithoutNodePath');
-        }
-        if ($request->image_file === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $image_file when calling insertDrawingObjectWithoutNodePath');
-        }
-
-        $resourcePath = '/words/{name}/drawingObjects';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-        // path params
-        if ($request->name !== null) {
-            $localName = lcfirst('Name');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -45152,9 +33881,6 @@ class WordsApi
         if ($request->field === null) {
             throw new \InvalidArgumentException('Missing the required parameter $field when calling insertField');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling insertField');
-        }
 
         $resourcePath = '/words/{name}/{nodePath}/fields';
         $formParams = [];
@@ -45168,370 +33894,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
         }
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->folder !== null) {
-            $localName = lcfirst('Folder');
-            $localValue = is_bool($request->folder) ? ($request->folder ? 'true' : 'false') : $request->folder;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->storage !== null) {
-            $localName = lcfirst('Storage');
-            $localValue = is_bool($request->storage) ? ($request->storage ? 'true' : 'false') : $request->storage;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->dest_file_name !== null) {
-            $localName = lcfirst('DestFileName');
-            $localValue = is_bool($request->dest_file_name) ? ($request->dest_file_name ? 'true' : 'false') : $request->dest_file_name;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->revision_author !== null) {
-            $localName = lcfirst('RevisionAuthor');
-            $localValue = is_bool($request->revision_author) ? ($request->revision_author ? 'true' : 'false') : $request->revision_author;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->revision_date_time !== null) {
-            $localName = lcfirst('RevisionDateTime');
-            $localValue = is_bool($request->revision_date_time) ? ($request->revision_date_time ? 'true' : 'false') : $request->revision_date_time;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->insert_before_node !== null) {
-            $localName = lcfirst('InsertBeforeNode');
-            $localValue = is_bool($request->insert_before_node) ? ($request->insert_before_node ? 'true' : 'false') : $request->insert_before_node;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-
-        // body params
-        $_tempBody = null;
-        if (isset($request->field)) {
-            if (is_string($request->field)) {
-                $_tempBody = "\"" . $request->field . "\"";
-            } else {
-                $_tempBody = $request->field;
-            }
-        }
-
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['application/xml', 'application/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'POST',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('POST', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation insertFieldWithoutNodePath
-     *
-     * Adds field to document, returns inserted field's data.
-     *
-     * @param Requests\insertFieldWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Aspose\Words\Model\FieldResponse
-     */
-    public function insertFieldWithoutNodePath(Requests\insertFieldWithoutNodePathRequest $request)
-    {
-        try {
-            list($response) = $this->insertFieldWithoutNodePathWithHttpInfo($request);
-            return $response;
-        }
-        catch(RepeatRequestException $e) {
-            list($response) = $this->insertFieldWithoutNodePathWithHttpInfo($request);
-            return $response;
-        } 
-    }
-
-    /*
-     * Operation insertFieldWithoutNodePathWithHttpInfo
-     *
-     * Adds field to document, returns inserted field's data.
-     *
-     * @param Requests\insertFieldWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \Aspose\Words\Model\FieldResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function insertFieldWithoutNodePathWithHttpInfo(Requests\insertFieldWithoutNodePathRequest $request)
-    {
-        $returnType = '\Aspose\Words\Model\FieldResponse';
-        $request = $this->insertFieldWithoutNodePathRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            if ($this->config->getDebug()) {
-                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\Aspose\Words\Model\FieldResponse', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                break;
-            }
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation insertFieldWithoutNodePathAsync
-     *
-     * Adds field to document, returns inserted field's data.
-     *
-     * @param Requests\insertFieldWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function insertFieldWithoutNodePathAsync(Requests\insertFieldWithoutNodePathRequest $request) 
-    {
-        return $this->insertFieldWithoutNodePathAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation insertFieldWithoutNodePathAsyncWithHttpInfo
-     *
-     * Adds field to document, returns inserted field's data.
-     *
-     * @param Requests\insertFieldWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function insertFieldWithoutNodePathAsyncWithHttpInfo(Requests\insertFieldWithoutNodePathRequest $request) 
-    {
-        $returnType = '\Aspose\Words\Model\FieldResponse';
-        $request = $this->insertFieldWithoutNodePathRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    if ($this->config->getDebug()) {
-                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'insertFieldWithoutNodePath'
-     *
-     * @param Requests\insertFieldWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function insertFieldWithoutNodePathRequest(Requests\insertFieldWithoutNodePathRequest $request)
-    {
-        if ($request->name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $name when calling insertFieldWithoutNodePath');
-        }
-        if ($request->field === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $field when calling insertFieldWithoutNodePath');
-        }
-
-        $resourcePath = '/words/{name}/fields';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-        // path params
-        if ($request->name !== null) {
-            $localName = lcfirst('Name');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -45880,9 +34254,6 @@ class WordsApi
         if ($request->footnote_dto === null) {
             throw new \InvalidArgumentException('Missing the required parameter $footnote_dto when calling insertFootnote');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling insertFootnote');
-        }
 
         $resourcePath = '/words/{name}/{nodePath}/footnotes';
         $formParams = [];
@@ -45896,360 +34267,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
         }
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->folder !== null) {
-            $localName = lcfirst('Folder');
-            $localValue = is_bool($request->folder) ? ($request->folder ? 'true' : 'false') : $request->folder;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->storage !== null) {
-            $localName = lcfirst('Storage');
-            $localValue = is_bool($request->storage) ? ($request->storage ? 'true' : 'false') : $request->storage;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->dest_file_name !== null) {
-            $localName = lcfirst('DestFileName');
-            $localValue = is_bool($request->dest_file_name) ? ($request->dest_file_name ? 'true' : 'false') : $request->dest_file_name;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->revision_author !== null) {
-            $localName = lcfirst('RevisionAuthor');
-            $localValue = is_bool($request->revision_author) ? ($request->revision_author ? 'true' : 'false') : $request->revision_author;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->revision_date_time !== null) {
-            $localName = lcfirst('RevisionDateTime');
-            $localValue = is_bool($request->revision_date_time) ? ($request->revision_date_time ? 'true' : 'false') : $request->revision_date_time;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-
-        // body params
-        $_tempBody = null;
-        if (isset($request->footnote_dto)) {
-            if (is_string($request->footnote_dto)) {
-                $_tempBody = "\"" . $request->footnote_dto . "\"";
-            } else {
-                $_tempBody = $request->footnote_dto;
-            }
-        }
-
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['application/xml', 'application/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'POST',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('POST', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation insertFootnoteWithoutNodePath
-     *
-     * Adds footnote to document, returns added footnote's data.
-     *
-     * @param Requests\insertFootnoteWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Aspose\Words\Model\FootnoteResponse
-     */
-    public function insertFootnoteWithoutNodePath(Requests\insertFootnoteWithoutNodePathRequest $request)
-    {
-        try {
-            list($response) = $this->insertFootnoteWithoutNodePathWithHttpInfo($request);
-            return $response;
-        }
-        catch(RepeatRequestException $e) {
-            list($response) = $this->insertFootnoteWithoutNodePathWithHttpInfo($request);
-            return $response;
-        } 
-    }
-
-    /*
-     * Operation insertFootnoteWithoutNodePathWithHttpInfo
-     *
-     * Adds footnote to document, returns added footnote's data.
-     *
-     * @param Requests\insertFootnoteWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \Aspose\Words\Model\FootnoteResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function insertFootnoteWithoutNodePathWithHttpInfo(Requests\insertFootnoteWithoutNodePathRequest $request)
-    {
-        $returnType = '\Aspose\Words\Model\FootnoteResponse';
-        $request = $this->insertFootnoteWithoutNodePathRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            if ($this->config->getDebug()) {
-                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\Aspose\Words\Model\FootnoteResponse', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                break;
-            }
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation insertFootnoteWithoutNodePathAsync
-     *
-     * Adds footnote to document, returns added footnote's data.
-     *
-     * @param Requests\insertFootnoteWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function insertFootnoteWithoutNodePathAsync(Requests\insertFootnoteWithoutNodePathRequest $request) 
-    {
-        return $this->insertFootnoteWithoutNodePathAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation insertFootnoteWithoutNodePathAsyncWithHttpInfo
-     *
-     * Adds footnote to document, returns added footnote's data.
-     *
-     * @param Requests\insertFootnoteWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function insertFootnoteWithoutNodePathAsyncWithHttpInfo(Requests\insertFootnoteWithoutNodePathRequest $request) 
-    {
-        $returnType = '\Aspose\Words\Model\FootnoteResponse';
-        $request = $this->insertFootnoteWithoutNodePathRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    if ($this->config->getDebug()) {
-                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'insertFootnoteWithoutNodePath'
-     *
-     * @param Requests\insertFootnoteWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function insertFootnoteWithoutNodePathRequest(Requests\insertFootnoteWithoutNodePathRequest $request)
-    {
-        if ($request->name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $name when calling insertFootnoteWithoutNodePath');
-        }
-        if ($request->footnote_dto === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $footnote_dto when calling insertFootnoteWithoutNodePath');
-        }
-
-        $resourcePath = '/words/{name}/footnotes';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-        // path params
-        if ($request->name !== null) {
-            $localName = lcfirst('Name');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -46588,9 +34617,6 @@ class WordsApi
         if ($request->form_field === null) {
             throw new \InvalidArgumentException('Missing the required parameter $form_field when calling insertFormField');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling insertFormField');
-        }
 
         $resourcePath = '/words/{name}/{nodePath}/formfields';
         $formParams = [];
@@ -46604,370 +34630,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
         }
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->folder !== null) {
-            $localName = lcfirst('Folder');
-            $localValue = is_bool($request->folder) ? ($request->folder ? 'true' : 'false') : $request->folder;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->storage !== null) {
-            $localName = lcfirst('Storage');
-            $localValue = is_bool($request->storage) ? ($request->storage ? 'true' : 'false') : $request->storage;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->dest_file_name !== null) {
-            $localName = lcfirst('DestFileName');
-            $localValue = is_bool($request->dest_file_name) ? ($request->dest_file_name ? 'true' : 'false') : $request->dest_file_name;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->revision_author !== null) {
-            $localName = lcfirst('RevisionAuthor');
-            $localValue = is_bool($request->revision_author) ? ($request->revision_author ? 'true' : 'false') : $request->revision_author;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->revision_date_time !== null) {
-            $localName = lcfirst('RevisionDateTime');
-            $localValue = is_bool($request->revision_date_time) ? ($request->revision_date_time ? 'true' : 'false') : $request->revision_date_time;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->insert_before_node !== null) {
-            $localName = lcfirst('InsertBeforeNode');
-            $localValue = is_bool($request->insert_before_node) ? ($request->insert_before_node ? 'true' : 'false') : $request->insert_before_node;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-
-        // body params
-        $_tempBody = null;
-        if (isset($request->form_field)) {
-            if (is_string($request->form_field)) {
-                $_tempBody = "\"" . $request->form_field . "\"";
-            } else {
-                $_tempBody = $request->form_field;
-            }
-        }
-
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['application/xml', 'application/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'POST',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('POST', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation insertFormFieldWithoutNodePath
-     *
-     * Adds form field to paragraph, returns added form field's data.
-     *
-     * @param Requests\insertFormFieldWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Aspose\Words\Model\FormFieldResponse
-     */
-    public function insertFormFieldWithoutNodePath(Requests\insertFormFieldWithoutNodePathRequest $request)
-    {
-        try {
-            list($response) = $this->insertFormFieldWithoutNodePathWithHttpInfo($request);
-            return $response;
-        }
-        catch(RepeatRequestException $e) {
-            list($response) = $this->insertFormFieldWithoutNodePathWithHttpInfo($request);
-            return $response;
-        } 
-    }
-
-    /*
-     * Operation insertFormFieldWithoutNodePathWithHttpInfo
-     *
-     * Adds form field to paragraph, returns added form field's data.
-     *
-     * @param Requests\insertFormFieldWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \Aspose\Words\Model\FormFieldResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function insertFormFieldWithoutNodePathWithHttpInfo(Requests\insertFormFieldWithoutNodePathRequest $request)
-    {
-        $returnType = '\Aspose\Words\Model\FormFieldResponse';
-        $request = $this->insertFormFieldWithoutNodePathRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            if ($this->config->getDebug()) {
-                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\Aspose\Words\Model\FormFieldResponse', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                break;
-            }
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation insertFormFieldWithoutNodePathAsync
-     *
-     * Adds form field to paragraph, returns added form field's data.
-     *
-     * @param Requests\insertFormFieldWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function insertFormFieldWithoutNodePathAsync(Requests\insertFormFieldWithoutNodePathRequest $request) 
-    {
-        return $this->insertFormFieldWithoutNodePathAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation insertFormFieldWithoutNodePathAsyncWithHttpInfo
-     *
-     * Adds form field to paragraph, returns added form field's data.
-     *
-     * @param Requests\insertFormFieldWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function insertFormFieldWithoutNodePathAsyncWithHttpInfo(Requests\insertFormFieldWithoutNodePathRequest $request) 
-    {
-        $returnType = '\Aspose\Words\Model\FormFieldResponse';
-        $request = $this->insertFormFieldWithoutNodePathRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    if ($this->config->getDebug()) {
-                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'insertFormFieldWithoutNodePath'
-     *
-     * @param Requests\insertFormFieldWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function insertFormFieldWithoutNodePathRequest(Requests\insertFormFieldWithoutNodePathRequest $request)
-    {
-        if ($request->name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $name when calling insertFormFieldWithoutNodePath');
-        }
-        if ($request->form_field === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $form_field when calling insertFormFieldWithoutNodePath');
-        }
-
-        $resourcePath = '/words/{name}/formfields';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-        // path params
-        if ($request->name !== null) {
-            $localName = lcfirst('Name');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -47332,10 +35006,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->section_path !== null) {
             $localName = lcfirst('SectionPath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->section_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('SectionPath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -47687,6 +35369,10 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
 
         // remove empty path parameters
         $resourcePath = str_replace("//", "/", $resourcePath);
@@ -48024,9 +35710,6 @@ class WordsApi
         if ($request->dto === null) {
             throw new \InvalidArgumentException('Missing the required parameter $dto when calling insertOrUpdateParagraphTabStop');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling insertOrUpdateParagraphTabStop');
-        }
         if ($request->index === null) {
             throw new \InvalidArgumentException('Missing the required parameter $index when calling insertOrUpdateParagraphTabStop');
         }
@@ -48043,353 +35726,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
+        // path params
+        if ($request->index !== null) {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
         }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
-        }
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->folder !== null) {
-            $localName = lcfirst('Folder');
-            $localValue = is_bool($request->folder) ? ($request->folder ? 'true' : 'false') : $request->folder;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->storage !== null) {
-            $localName = lcfirst('Storage');
-            $localValue = is_bool($request->storage) ? ($request->storage ? 'true' : 'false') : $request->storage;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->dest_file_name !== null) {
-            $localName = lcfirst('DestFileName');
-            $localValue = is_bool($request->dest_file_name) ? ($request->dest_file_name ? 'true' : 'false') : $request->dest_file_name;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-
-        // body params
-        $_tempBody = null;
-        if (isset($request->dto)) {
-            if (is_string($request->dto)) {
-                $_tempBody = "\"" . $request->dto . "\"";
-            } else {
-                $_tempBody = $request->dto;
-            }
-        }
-
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['application/xml', 'application/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'POST',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('POST', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation insertOrUpdateParagraphTabStopWithoutNodePath
-     *
-     * Insert or resplace tab stop if a tab stop with the position exists.
-     *
-     * @param Requests\insertOrUpdateParagraphTabStopWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Aspose\Words\Model\TabStopsResponse
-     */
-    public function insertOrUpdateParagraphTabStopWithoutNodePath(Requests\insertOrUpdateParagraphTabStopWithoutNodePathRequest $request)
-    {
-        try {
-            list($response) = $this->insertOrUpdateParagraphTabStopWithoutNodePathWithHttpInfo($request);
-            return $response;
-        }
-        catch(RepeatRequestException $e) {
-            list($response) = $this->insertOrUpdateParagraphTabStopWithoutNodePathWithHttpInfo($request);
-            return $response;
-        } 
-    }
-
-    /*
-     * Operation insertOrUpdateParagraphTabStopWithoutNodePathWithHttpInfo
-     *
-     * Insert or resplace tab stop if a tab stop with the position exists.
-     *
-     * @param Requests\insertOrUpdateParagraphTabStopWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \Aspose\Words\Model\TabStopsResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function insertOrUpdateParagraphTabStopWithoutNodePathWithHttpInfo(Requests\insertOrUpdateParagraphTabStopWithoutNodePathRequest $request)
-    {
-        $returnType = '\Aspose\Words\Model\TabStopsResponse';
-        $request = $this->insertOrUpdateParagraphTabStopWithoutNodePathRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            if ($this->config->getDebug()) {
-                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\Aspose\Words\Model\TabStopsResponse', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                break;
-            }
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation insertOrUpdateParagraphTabStopWithoutNodePathAsync
-     *
-     * Insert or resplace tab stop if a tab stop with the position exists.
-     *
-     * @param Requests\insertOrUpdateParagraphTabStopWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function insertOrUpdateParagraphTabStopWithoutNodePathAsync(Requests\insertOrUpdateParagraphTabStopWithoutNodePathRequest $request) 
-    {
-        return $this->insertOrUpdateParagraphTabStopWithoutNodePathAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation insertOrUpdateParagraphTabStopWithoutNodePathAsyncWithHttpInfo
-     *
-     * Insert or resplace tab stop if a tab stop with the position exists.
-     *
-     * @param Requests\insertOrUpdateParagraphTabStopWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function insertOrUpdateParagraphTabStopWithoutNodePathAsyncWithHttpInfo(Requests\insertOrUpdateParagraphTabStopWithoutNodePathRequest $request) 
-    {
-        $returnType = '\Aspose\Words\Model\TabStopsResponse';
-        $request = $this->insertOrUpdateParagraphTabStopWithoutNodePathRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    if ($this->config->getDebug()) {
-                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'insertOrUpdateParagraphTabStopWithoutNodePath'
-     *
-     * @param Requests\insertOrUpdateParagraphTabStopWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function insertOrUpdateParagraphTabStopWithoutNodePathRequest(Requests\insertOrUpdateParagraphTabStopWithoutNodePathRequest $request)
-    {
-        if ($request->name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $name when calling insertOrUpdateParagraphTabStopWithoutNodePath');
-        }
-        if ($request->dto === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $dto when calling insertOrUpdateParagraphTabStopWithoutNodePath');
-        }
-        if ($request->index === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $index when calling insertOrUpdateParagraphTabStopWithoutNodePath');
-        }
-
-        $resourcePath = '/words/{name}/paragraphs/{index}/tabstops';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-        // path params
-        if ($request->name !== null) {
-            $localName = lcfirst('Name');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
-        }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -48720,6 +36077,10 @@ class WordsApi
         if ($request->name !== null) {
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -49055,9 +36416,6 @@ class WordsApi
         if ($request->name === null) {
             throw new \InvalidArgumentException('Missing the required parameter $name when calling insertParagraph');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling insertParagraph');
-        }
         if ($request->paragraph === null) {
             throw new \InvalidArgumentException('Missing the required parameter $paragraph when calling insertParagraph');
         }
@@ -49074,719 +36432,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
-        // path params
-        if ($request->node_path !== null) {
-            $localName = lcfirst('NodePath');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
-        }
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->folder !== null) {
-            $localName = lcfirst('Folder');
-            $localValue = is_bool($request->folder) ? ($request->folder ? 'true' : 'false') : $request->folder;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->storage !== null) {
-            $localName = lcfirst('Storage');
-            $localValue = is_bool($request->storage) ? ($request->storage ? 'true' : 'false') : $request->storage;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->dest_file_name !== null) {
-            $localName = lcfirst('DestFileName');
-            $localValue = is_bool($request->dest_file_name) ? ($request->dest_file_name ? 'true' : 'false') : $request->dest_file_name;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->revision_author !== null) {
-            $localName = lcfirst('RevisionAuthor');
-            $localValue = is_bool($request->revision_author) ? ($request->revision_author ? 'true' : 'false') : $request->revision_author;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->revision_date_time !== null) {
-            $localName = lcfirst('RevisionDateTime');
-            $localValue = is_bool($request->revision_date_time) ? ($request->revision_date_time ? 'true' : 'false') : $request->revision_date_time;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->insert_before_node !== null) {
-            $localName = lcfirst('InsertBeforeNode');
-            $localValue = is_bool($request->insert_before_node) ? ($request->insert_before_node ? 'true' : 'false') : $request->insert_before_node;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-
-        // body params
-        $_tempBody = null;
-        if (isset($request->paragraph)) {
-            if (is_string($request->paragraph)) {
-                $_tempBody = "\"" . $request->paragraph . "\"";
-            } else {
-                $_tempBody = $request->paragraph;
-            }
-        }
-
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['application/xml', 'application/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'POST',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('POST', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation insertParagraphOnline
-     *
-     * Adds paragraph to document, returns added paragraph's data.
-     *
-     * @param Requests\insertParagraphOnlineRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \SplFileObject
-     */
-    public function insertParagraphOnline(Requests\insertParagraphOnlineRequest $request)
-    {
-        try {
-            list($response) = $this->insertParagraphOnlineWithHttpInfo($request);
-            return $response;
-        }
-        catch(RepeatRequestException $e) {
-            list($response) = $this->insertParagraphOnlineWithHttpInfo($request);
-            return $response;
-        } 
-    }
-
-    /*
-     * Operation insertParagraphOnlineWithHttpInfo
-     *
-     * Adds paragraph to document, returns added paragraph's data.
-     *
-     * @param Requests\insertParagraphOnlineRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function insertParagraphOnlineWithHttpInfo(Requests\insertParagraphOnlineRequest $request)
-    {
-        $returnType = '\SplFileObject';
-        $request = $this->insertParagraphOnlineRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            if ($this->config->getDebug()) {
-                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\SplFileObject', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                break;
-            }
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation insertParagraphOnlineAsync
-     *
-     * Adds paragraph to document, returns added paragraph's data.
-     *
-     * @param Requests\insertParagraphOnlineRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function insertParagraphOnlineAsync(Requests\insertParagraphOnlineRequest $request) 
-    {
-        return $this->insertParagraphOnlineAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation insertParagraphOnlineAsyncWithHttpInfo
-     *
-     * Adds paragraph to document, returns added paragraph's data.
-     *
-     * @param Requests\insertParagraphOnlineRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function insertParagraphOnlineAsyncWithHttpInfo(Requests\insertParagraphOnlineRequest $request) 
-    {
-        $returnType = '\SplFileObject';
-        $request = $this->insertParagraphOnlineRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    if ($this->config->getDebug()) {
-                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'insertParagraphOnline'
-     *
-     * @param Requests\insertParagraphOnlineRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function insertParagraphOnlineRequest(Requests\insertParagraphOnlineRequest $request)
-    {
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling insertParagraphOnline');
-        }
-        if ($request->document === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $document when calling insertParagraphOnline');
-        }
-        if ($request->paragraph === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $paragraph when calling insertParagraphOnline');
-        }
-
-        $resourcePath = '/words/online/{nodePath}/paragraphs';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-        // path params
-        if ($request->node_path !== null) {
-            $localName = lcfirst('NodePath');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
-        }
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->dest_file_name !== null) {
-            $localName = lcfirst('DestFileName');
-            $localValue = is_bool($request->dest_file_name) ? ($request->dest_file_name ? 'true' : 'false') : $request->dest_file_name;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->revision_author !== null) {
-            $localName = lcfirst('RevisionAuthor');
-            $localValue = is_bool($request->revision_author) ? ($request->revision_author ? 'true' : 'false') : $request->revision_author;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->revision_date_time !== null) {
-            $localName = lcfirst('RevisionDateTime');
-            $localValue = is_bool($request->revision_date_time) ? ($request->revision_date_time ? 'true' : 'false') : $request->revision_date_time;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->insert_before_node !== null) {
-            $localName = lcfirst('InsertBeforeNode');
-            $localValue = is_bool($request->insert_before_node) ? ($request->insert_before_node ? 'true' : 'false') : $request->insert_before_node;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-        // form params
-        if ($request->document !== null) {
-            $multipart = true; 
-            $filename = ObjectSerializer::toFormValue($request->document);
-            $handle = fopen($filename, "rb");
-            $fsize = filesize($filename);
-            $contents = fread($handle, $fsize);
-            $formParams['document'] = $contents;
-        }
-        // form params
-        if ($request->paragraph !== null) {
-            $multipart = true; 
-            $formParams['paragraph'] = ObjectSerializer::toFormValue($request->paragraph);
-        }
-
-        // body params
-        $_tempBody = null;
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['multipart/form-data']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'POST',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('POST', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation insertParagraphWithoutNodePath
-     *
-     * Adds paragraph to document, returns added paragraph's data.
-     *
-     * @param Requests\insertParagraphWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \SplFileObject
-     */
-    public function insertParagraphWithoutNodePath(Requests\insertParagraphWithoutNodePathRequest $request)
-    {
-        try {
-            list($response) = $this->insertParagraphWithoutNodePathWithHttpInfo($request);
-            return $response;
-        }
-        catch(RepeatRequestException $e) {
-            list($response) = $this->insertParagraphWithoutNodePathWithHttpInfo($request);
-            return $response;
-        } 
-    }
-
-    /*
-     * Operation insertParagraphWithoutNodePathWithHttpInfo
-     *
-     * Adds paragraph to document, returns added paragraph's data.
-     *
-     * @param Requests\insertParagraphWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function insertParagraphWithoutNodePathWithHttpInfo(Requests\insertParagraphWithoutNodePathRequest $request)
-    {
-        $returnType = '\SplFileObject';
-        $request = $this->insertParagraphWithoutNodePathRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            if ($this->config->getDebug()) {
-                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\SplFileObject', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                break;
-            }
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation insertParagraphWithoutNodePathAsync
-     *
-     * Adds paragraph to document, returns added paragraph's data.
-     *
-     * @param Requests\insertParagraphWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function insertParagraphWithoutNodePathAsync(Requests\insertParagraphWithoutNodePathRequest $request) 
-    {
-        return $this->insertParagraphWithoutNodePathAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation insertParagraphWithoutNodePathAsyncWithHttpInfo
-     *
-     * Adds paragraph to document, returns added paragraph's data.
-     *
-     * @param Requests\insertParagraphWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function insertParagraphWithoutNodePathAsyncWithHttpInfo(Requests\insertParagraphWithoutNodePathRequest $request) 
-    {
-        $returnType = '\SplFileObject';
-        $request = $this->insertParagraphWithoutNodePathRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    if ($this->config->getDebug()) {
-                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'insertParagraphWithoutNodePath'
-     *
-     * @param Requests\insertParagraphWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function insertParagraphWithoutNodePathRequest(Requests\insertParagraphWithoutNodePathRequest $request)
-    {
-        if ($request->name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $name when calling insertParagraphWithoutNodePath');
-        }
-        if ($request->paragraph === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $paragraph when calling insertParagraphWithoutNodePath');
-        }
-
-        $resourcePath = '/words/{name}/paragraphs';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-        // path params
-        if ($request->name !== null) {
+        else {
             $localName = lcfirst('Name');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
+        // path params
+        if ($request->node_path !== null) {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -49892,347 +36549,6 @@ class WordsApi
             $headers = $this->headerSelector->selectHeaders(
                 ['application/xml', 'application/json'],
                 ['application/xml', 'application/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'POST',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('POST', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation insertParagraphWithoutNodePathOnline
-     *
-     * Adds paragraph to document, returns added paragraph's data.
-     *
-     * @param Requests\insertParagraphWithoutNodePathOnlineRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \SplFileObject
-     */
-    public function insertParagraphWithoutNodePathOnline(Requests\insertParagraphWithoutNodePathOnlineRequest $request)
-    {
-        try {
-            list($response) = $this->insertParagraphWithoutNodePathOnlineWithHttpInfo($request);
-            return $response;
-        }
-        catch(RepeatRequestException $e) {
-            list($response) = $this->insertParagraphWithoutNodePathOnlineWithHttpInfo($request);
-            return $response;
-        } 
-    }
-
-    /*
-     * Operation insertParagraphWithoutNodePathOnlineWithHttpInfo
-     *
-     * Adds paragraph to document, returns added paragraph's data.
-     *
-     * @param Requests\insertParagraphWithoutNodePathOnlineRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function insertParagraphWithoutNodePathOnlineWithHttpInfo(Requests\insertParagraphWithoutNodePathOnlineRequest $request)
-    {
-        $returnType = '\SplFileObject';
-        $request = $this->insertParagraphWithoutNodePathOnlineRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            if ($this->config->getDebug()) {
-                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\SplFileObject', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                break;
-            }
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation insertParagraphWithoutNodePathOnlineAsync
-     *
-     * Adds paragraph to document, returns added paragraph's data.
-     *
-     * @param Requests\insertParagraphWithoutNodePathOnlineRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function insertParagraphWithoutNodePathOnlineAsync(Requests\insertParagraphWithoutNodePathOnlineRequest $request) 
-    {
-        return $this->insertParagraphWithoutNodePathOnlineAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation insertParagraphWithoutNodePathOnlineAsyncWithHttpInfo
-     *
-     * Adds paragraph to document, returns added paragraph's data.
-     *
-     * @param Requests\insertParagraphWithoutNodePathOnlineRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function insertParagraphWithoutNodePathOnlineAsyncWithHttpInfo(Requests\insertParagraphWithoutNodePathOnlineRequest $request) 
-    {
-        $returnType = '\SplFileObject';
-        $request = $this->insertParagraphWithoutNodePathOnlineRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    if ($this->config->getDebug()) {
-                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'insertParagraphWithoutNodePathOnline'
-     *
-     * @param Requests\insertParagraphWithoutNodePathOnlineRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function insertParagraphWithoutNodePathOnlineRequest(Requests\insertParagraphWithoutNodePathOnlineRequest $request)
-    {
-        if ($request->document === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $document when calling insertParagraphWithoutNodePathOnline');
-        }
-        if ($request->paragraph === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $paragraph when calling insertParagraphWithoutNodePathOnline');
-        }
-
-        $resourcePath = '/words/online/paragraphs';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->dest_file_name !== null) {
-            $localName = lcfirst('DestFileName');
-            $localValue = is_bool($request->dest_file_name) ? ($request->dest_file_name ? 'true' : 'false') : $request->dest_file_name;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->revision_author !== null) {
-            $localName = lcfirst('RevisionAuthor');
-            $localValue = is_bool($request->revision_author) ? ($request->revision_author ? 'true' : 'false') : $request->revision_author;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->revision_date_time !== null) {
-            $localName = lcfirst('RevisionDateTime');
-            $localValue = is_bool($request->revision_date_time) ? ($request->revision_date_time ? 'true' : 'false') : $request->revision_date_time;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->insert_before_node !== null) {
-            $localName = lcfirst('InsertBeforeNode');
-            $localValue = is_bool($request->insert_before_node) ? ($request->insert_before_node ? 'true' : 'false') : $request->insert_before_node;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-        // form params
-        if ($request->document !== null) {
-            $multipart = true; 
-            $filename = ObjectSerializer::toFormValue($request->document);
-            $handle = fopen($filename, "rb");
-            $fsize = filesize($filename);
-            $contents = fread($handle, $fsize);
-            $formParams['document'] = $contents;
-        }
-        // form params
-        if ($request->paragraph !== null) {
-            $multipart = true; 
-            $formParams['paragraph'] = ObjectSerializer::toFormValue($request->paragraph);
-        }
-
-        // body params
-        $_tempBody = null;
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['multipart/form-data']
             );
         }
 
@@ -50492,10 +36808,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->paragraph_path !== null) {
             $localName = lcfirst('ParagraphPath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->paragraph_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('ParagraphPath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -50857,6 +37181,10 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
 
         // remove empty path parameters
         $resourcePath = str_replace("//", "/", $resourcePath);
@@ -51194,9 +37522,6 @@ class WordsApi
         if ($request->table === null) {
             throw new \InvalidArgumentException('Missing the required parameter $table when calling insertTable');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling insertTable');
-        }
 
         $resourcePath = '/words/{name}/{nodePath}/tables';
         $formParams = [];
@@ -51210,10 +37535,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -51568,10 +37901,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->table_row_path !== null) {
             $localName = lcfirst('TableRowPath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->table_row_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('TableRowPath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -51926,10 +38267,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->table_path !== null) {
             $localName = lcfirst('TablePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->table_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('TablePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -52014,356 +38363,6 @@ class WordsApi
                 $_tempBody = "\"" . $request->row . "\"";
             } else {
                 $_tempBody = $request->row;
-            }
-        }
-
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['application/xml', 'application/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'POST',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('POST', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation insertTableWithoutNodePath
-     *
-     * Adds table to document, returns added table's data.
-     *
-     * @param Requests\insertTableWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Aspose\Words\Model\TableResponse
-     */
-    public function insertTableWithoutNodePath(Requests\insertTableWithoutNodePathRequest $request)
-    {
-        try {
-            list($response) = $this->insertTableWithoutNodePathWithHttpInfo($request);
-            return $response;
-        }
-        catch(RepeatRequestException $e) {
-            list($response) = $this->insertTableWithoutNodePathWithHttpInfo($request);
-            return $response;
-        } 
-    }
-
-    /*
-     * Operation insertTableWithoutNodePathWithHttpInfo
-     *
-     * Adds table to document, returns added table's data.
-     *
-     * @param Requests\insertTableWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \Aspose\Words\Model\TableResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function insertTableWithoutNodePathWithHttpInfo(Requests\insertTableWithoutNodePathRequest $request)
-    {
-        $returnType = '\Aspose\Words\Model\TableResponse';
-        $request = $this->insertTableWithoutNodePathRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            if ($this->config->getDebug()) {
-                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\Aspose\Words\Model\TableResponse', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                break;
-            }
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation insertTableWithoutNodePathAsync
-     *
-     * Adds table to document, returns added table's data.
-     *
-     * @param Requests\insertTableWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function insertTableWithoutNodePathAsync(Requests\insertTableWithoutNodePathRequest $request) 
-    {
-        return $this->insertTableWithoutNodePathAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation insertTableWithoutNodePathAsyncWithHttpInfo
-     *
-     * Adds table to document, returns added table's data.
-     *
-     * @param Requests\insertTableWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function insertTableWithoutNodePathAsyncWithHttpInfo(Requests\insertTableWithoutNodePathRequest $request) 
-    {
-        $returnType = '\Aspose\Words\Model\TableResponse';
-        $request = $this->insertTableWithoutNodePathRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    if ($this->config->getDebug()) {
-                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'insertTableWithoutNodePath'
-     *
-     * @param Requests\insertTableWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function insertTableWithoutNodePathRequest(Requests\insertTableWithoutNodePathRequest $request)
-    {
-        if ($request->name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $name when calling insertTableWithoutNodePath');
-        }
-        if ($request->table === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $table when calling insertTableWithoutNodePath');
-        }
-
-        $resourcePath = '/words/{name}/tables';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-        // path params
-        if ($request->name !== null) {
-            $localName = lcfirst('Name');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
-        }
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->folder !== null) {
-            $localName = lcfirst('Folder');
-            $localValue = is_bool($request->folder) ? ($request->folder ? 'true' : 'false') : $request->folder;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->storage !== null) {
-            $localName = lcfirst('Storage');
-            $localValue = is_bool($request->storage) ? ($request->storage ? 'true' : 'false') : $request->storage;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->dest_file_name !== null) {
-            $localName = lcfirst('DestFileName');
-            $localValue = is_bool($request->dest_file_name) ? ($request->dest_file_name ? 'true' : 'false') : $request->dest_file_name;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->revision_author !== null) {
-            $localName = lcfirst('RevisionAuthor');
-            $localValue = is_bool($request->revision_author) ? ($request->revision_author ? 'true' : 'false') : $request->revision_author;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->revision_date_time !== null) {
-            $localName = lcfirst('RevisionDateTime');
-            $localValue = is_bool($request->revision_date_time) ? ($request->revision_date_time ? 'true' : 'false') : $request->revision_date_time;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-
-        // body params
-        $_tempBody = null;
-        if (isset($request->table)) {
-            if (is_string($request->table)) {
-                $_tempBody = "\"" . $request->table . "\"";
-            } else {
-                $_tempBody = $request->table;
             }
         }
 
@@ -52627,6 +38626,10 @@ class WordsApi
         if ($request->name !== null) {
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -52998,6 +39001,10 @@ class WordsApi
         if ($request->name !== null) {
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -53588,6 +39595,10 @@ class WordsApi
             $localName = lcfirst('SrcPath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->src_path), $resourcePath);
         }
+        else {
+            $localName = lcfirst('SrcPath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
 
         // remove empty path parameters
         $resourcePath = str_replace("//", "/", $resourcePath);
@@ -53857,6 +39868,10 @@ class WordsApi
             $localName = lcfirst('SrcPath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->src_path), $resourcePath);
         }
+        else {
+            $localName = lcfirst('SrcPath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
 
         // remove empty path parameters
         $resourcePath = str_replace("//", "/", $resourcePath);
@@ -53895,6 +39910,317 @@ class WordsApi
 
         // body params
         $_tempBody = null;
+        if ($multipart) {
+            $headers= $this->headerSelector->selectHeadersForMultipart(
+                ['application/xml', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/xml', 'application/json'],
+                ['application/xml', 'application/json']
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            // \stdClass has no __toString(), so we should encode it manually
+            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue,
+                        'filename' => isset($filename) ? basename($filename) : null
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = $formParams["data"];
+            }
+        }
+
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
+        }
+
+        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $req = new Request(
+            'PUT',
+            $resourcePath,
+            $headers,
+            $httpBody
+        );
+        if ($this->config->getDebug()) {
+            $this->_writeRequestLog('PUT', $resourcePath, $headers, $httpBody);
+        }
+
+        return $req;
+    }
+
+    /*
+     * Operation optimizeDocument
+     *
+     * Allows to optimize the document contents as well as default Aspose.Words behavior to a particular versions of MS Word.
+     *
+     * @param Requests\optimizeDocumentRequest $request is a request object for operation
+     *
+     * @throws \Aspose\Words\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function optimizeDocument(Requests\optimizeDocumentRequest $request)
+    {
+        try {
+    $this->optimizeDocumentWithHttpInfo($request);
+        }
+        catch(RepeatRequestException $e) {
+    $this->optimizeDocumentWithHttpInfo($request);
+        } 
+    }
+
+    /*
+     * Operation optimizeDocumentWithHttpInfo
+     *
+     * Allows to optimize the document contents as well as default Aspose.Words behavior to a particular versions of MS Word.
+     *
+     * @param Requests\optimizeDocumentRequest $request is a request object for operation
+     *
+     * @throws \Aspose\Words\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function optimizeDocumentWithHttpInfo(Requests\optimizeDocumentRequest $request)
+    {
+        $returnType = 'null';
+        $request = $this->optimizeDocumentRequest($request);
+
+        try {
+            $options = $this->_createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                if ($e->getCode() == 401) {
+                    $this->_requestToken();
+                    throw new RepeatRequestException("Request must be retried", 401, null, null);
+                }
+                else if ($e->getCode() < 200 || $e->getCode() > 299) {
+                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
+                }
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            throw $e;
+        }
+    }
+
+    /*
+     * Operation optimizeDocumentAsync
+     *
+     * Allows to optimize the document contents as well as default Aspose.Words behavior to a particular versions of MS Word.
+     *
+     * @param Requests\optimizeDocumentRequest $request is a request object for operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function optimizeDocumentAsync(Requests\optimizeDocumentRequest $request) 
+    {
+        return $this->optimizeDocumentAsyncWithHttpInfo($request)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /*
+     * Operation optimizeDocumentAsyncWithHttpInfo
+     *
+     * Allows to optimize the document contents as well as default Aspose.Words behavior to a particular versions of MS Word.
+     *
+     * @param Requests\optimizeDocumentRequest $request is a request object for operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function optimizeDocumentAsyncWithHttpInfo(Requests\optimizeDocumentRequest $request) 
+    {
+        $returnType = 'null';
+        $request = $this->optimizeDocumentRequest($request);
+
+        return $this->client
+            ->sendAsync($request, $this->_createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {        
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+
+                    if ($exception instanceof RepeatRequestException) {
+                        $this->_refreshToken();
+                        throw new RepeatRequestException("Request must be retried", 401, null, null);
+                    }
+
+                    throw new ApiException(
+                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /*
+     * Create request for operation 'optimizeDocument'
+     *
+     * @param Requests\optimizeDocumentRequest $request is a request object for operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function optimizeDocumentRequest(Requests\optimizeDocumentRequest $request)
+    {
+        if ($request->name === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $name when calling optimizeDocument');
+        }
+        if ($request->options === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $options when calling optimizeDocument');
+        }
+
+        $resourcePath = '/words/{name}/compatibility/optimize';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = "";
+        $multipart = false;
+        $filename = null;
+        // path params
+        if ($request->name !== null) {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
+
+        // remove empty path parameters
+        $resourcePath = str_replace("//", "/", $resourcePath);
+        // query params
+        if ($request->folder !== null) {
+            $localName = lcfirst('Folder');
+            $localValue = is_bool($request->folder) ? ($request->folder ? 'true' : 'false') : $request->folder;
+            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
+                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
+            } else {
+                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
+            }
+        }
+        // query params
+        if ($request->storage !== null) {
+            $localName = lcfirst('Storage');
+            $localValue = is_bool($request->storage) ? ($request->storage ? 'true' : 'false') : $request->storage;
+            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
+                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
+            } else {
+                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
+            }
+        }
+        // query params
+        if ($request->load_encoding !== null) {
+            $localName = lcfirst('LoadEncoding');
+            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
+            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
+                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
+            } else {
+                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
+            }
+        }
+        // query params
+        if ($request->password !== null) {
+            $localName = lcfirst('Password');
+            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
+            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
+                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
+            } else {
+                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
+            }
+        }
+        // query params
+        if ($request->dest_file_name !== null) {
+            $localName = lcfirst('DestFileName');
+            $localValue = is_bool($request->dest_file_name) ? ($request->dest_file_name ? 'true' : 'false') : $request->dest_file_name;
+            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
+                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
+            } else {
+                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
+            }
+        }
+        // query params
+        if ($request->revision_author !== null) {
+            $localName = lcfirst('RevisionAuthor');
+            $localValue = is_bool($request->revision_author) ? ($request->revision_author ? 'true' : 'false') : $request->revision_author;
+            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
+                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
+            } else {
+                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
+            }
+        }
+        // query params
+        if ($request->revision_date_time !== null) {
+            $localName = lcfirst('RevisionDateTime');
+            $localValue = is_bool($request->revision_date_time) ? ($request->revision_date_time ? 'true' : 'false') : $request->revision_date_time;
+            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
+                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
+            } else {
+                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
+            }
+        }
+
+        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
+
+        // body params
+        $_tempBody = null;
+        if (isset($request->options)) {
+            if (is_string($request->options)) {
+                $_tempBody = "\"" . $request->options . "\"";
+            } else {
+                $_tempBody = $request->options;
+            }
+        }
+
         if ($multipart) {
             $headers= $this->headerSelector->selectHeadersForMultipart(
                 ['application/xml', 'application/json']
@@ -54158,6 +40484,10 @@ class WordsApi
         if ($request->name !== null) {
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -54486,6 +40816,10 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
 
         // remove empty path parameters
         $resourcePath = str_replace("//", "/", $resourcePath);
@@ -54808,15 +41142,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->range_start_identifier !== null) {
             $localName = lcfirst('RangeStartIdentifier');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->range_start_identifier), $resourcePath);
         }
+        else {
+            $localName = lcfirst('RangeStartIdentifier');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->range_end_identifier !== null) {
             $localName = lcfirst('RangeEndIdentifier');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->range_end_identifier), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('RangeEndIdentifier');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -55127,9 +41473,6 @@ class WordsApi
         if ($request->format === null) {
             throw new \InvalidArgumentException('Missing the required parameter $format when calling renderDrawingObject');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling renderDrawingObject');
-        }
         if ($request->index === null) {
             throw new \InvalidArgumentException('Missing the required parameter $index when calling renderDrawingObject');
         }
@@ -55146,355 +41489,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
+        // path params
+        if ($request->index !== null) {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
         }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
-        }
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->format !== null) {
-            $localName = lcfirst('Format');
-            $localValue = is_bool($request->format) ? ($request->format ? 'true' : 'false') : $request->format;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->folder !== null) {
-            $localName = lcfirst('Folder');
-            $localValue = is_bool($request->folder) ? ($request->folder ? 'true' : 'false') : $request->folder;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->storage !== null) {
-            $localName = lcfirst('Storage');
-            $localValue = is_bool($request->storage) ? ($request->storage ? 'true' : 'false') : $request->storage;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->fonts_location !== null) {
-            $localName = lcfirst('FontsLocation');
-            $localValue = is_bool($request->fonts_location) ? ($request->fonts_location ? 'true' : 'false') : $request->fonts_location;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-
-        // body params
-        $_tempBody = null;
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['application/xml', 'application/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'GET',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('GET', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation renderDrawingObjectWithoutNodePath
-     *
-     * Renders drawing object to specified format.
-     *
-     * @param Requests\renderDrawingObjectWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \SplFileObject
-     */
-    public function renderDrawingObjectWithoutNodePath(Requests\renderDrawingObjectWithoutNodePathRequest $request)
-    {
-        try {
-            list($response) = $this->renderDrawingObjectWithoutNodePathWithHttpInfo($request);
-            return $response;
-        }
-        catch(RepeatRequestException $e) {
-            list($response) = $this->renderDrawingObjectWithoutNodePathWithHttpInfo($request);
-            return $response;
-        } 
-    }
-
-    /*
-     * Operation renderDrawingObjectWithoutNodePathWithHttpInfo
-     *
-     * Renders drawing object to specified format.
-     *
-     * @param Requests\renderDrawingObjectWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function renderDrawingObjectWithoutNodePathWithHttpInfo(Requests\renderDrawingObjectWithoutNodePathRequest $request)
-    {
-        $returnType = '\SplFileObject';
-        $request = $this->renderDrawingObjectWithoutNodePathRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            if ($this->config->getDebug()) {
-                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\SplFileObject', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                break;
-            }
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation renderDrawingObjectWithoutNodePathAsync
-     *
-     * Renders drawing object to specified format.
-     *
-     * @param Requests\renderDrawingObjectWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function renderDrawingObjectWithoutNodePathAsync(Requests\renderDrawingObjectWithoutNodePathRequest $request) 
-    {
-        return $this->renderDrawingObjectWithoutNodePathAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation renderDrawingObjectWithoutNodePathAsyncWithHttpInfo
-     *
-     * Renders drawing object to specified format.
-     *
-     * @param Requests\renderDrawingObjectWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function renderDrawingObjectWithoutNodePathAsyncWithHttpInfo(Requests\renderDrawingObjectWithoutNodePathRequest $request) 
-    {
-        $returnType = '\SplFileObject';
-        $request = $this->renderDrawingObjectWithoutNodePathRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    if ($this->config->getDebug()) {
-                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'renderDrawingObjectWithoutNodePath'
-     *
-     * @param Requests\renderDrawingObjectWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function renderDrawingObjectWithoutNodePathRequest(Requests\renderDrawingObjectWithoutNodePathRequest $request)
-    {
-        if ($request->name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $name when calling renderDrawingObjectWithoutNodePath');
-        }
-        if ($request->format === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $format when calling renderDrawingObjectWithoutNodePath');
-        }
-        if ($request->index === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $index when calling renderDrawingObjectWithoutNodePath');
-        }
-
-        $resourcePath = '/words/{name}/drawingObjects/{index}/render';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-        // path params
-        if ($request->name !== null) {
-            $localName = lcfirst('Name');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
-        }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -55815,9 +41830,6 @@ class WordsApi
         if ($request->format === null) {
             throw new \InvalidArgumentException('Missing the required parameter $format when calling renderMathObject');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling renderMathObject');
-        }
         if ($request->index === null) {
             throw new \InvalidArgumentException('Missing the required parameter $index when calling renderMathObject');
         }
@@ -55834,355 +41846,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
+        // path params
+        if ($request->index !== null) {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
         }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
-        }
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->format !== null) {
-            $localName = lcfirst('Format');
-            $localValue = is_bool($request->format) ? ($request->format ? 'true' : 'false') : $request->format;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->folder !== null) {
-            $localName = lcfirst('Folder');
-            $localValue = is_bool($request->folder) ? ($request->folder ? 'true' : 'false') : $request->folder;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->storage !== null) {
-            $localName = lcfirst('Storage');
-            $localValue = is_bool($request->storage) ? ($request->storage ? 'true' : 'false') : $request->storage;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->fonts_location !== null) {
-            $localName = lcfirst('FontsLocation');
-            $localValue = is_bool($request->fonts_location) ? ($request->fonts_location ? 'true' : 'false') : $request->fonts_location;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-
-        // body params
-        $_tempBody = null;
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['application/xml', 'application/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'GET',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('GET', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation renderMathObjectWithoutNodePath
-     *
-     * Renders math object to specified format.
-     *
-     * @param Requests\renderMathObjectWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \SplFileObject
-     */
-    public function renderMathObjectWithoutNodePath(Requests\renderMathObjectWithoutNodePathRequest $request)
-    {
-        try {
-            list($response) = $this->renderMathObjectWithoutNodePathWithHttpInfo($request);
-            return $response;
-        }
-        catch(RepeatRequestException $e) {
-            list($response) = $this->renderMathObjectWithoutNodePathWithHttpInfo($request);
-            return $response;
-        } 
-    }
-
-    /*
-     * Operation renderMathObjectWithoutNodePathWithHttpInfo
-     *
-     * Renders math object to specified format.
-     *
-     * @param Requests\renderMathObjectWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function renderMathObjectWithoutNodePathWithHttpInfo(Requests\renderMathObjectWithoutNodePathRequest $request)
-    {
-        $returnType = '\SplFileObject';
-        $request = $this->renderMathObjectWithoutNodePathRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            if ($this->config->getDebug()) {
-                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\SplFileObject', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                break;
-            }
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation renderMathObjectWithoutNodePathAsync
-     *
-     * Renders math object to specified format.
-     *
-     * @param Requests\renderMathObjectWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function renderMathObjectWithoutNodePathAsync(Requests\renderMathObjectWithoutNodePathRequest $request) 
-    {
-        return $this->renderMathObjectWithoutNodePathAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation renderMathObjectWithoutNodePathAsyncWithHttpInfo
-     *
-     * Renders math object to specified format.
-     *
-     * @param Requests\renderMathObjectWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function renderMathObjectWithoutNodePathAsyncWithHttpInfo(Requests\renderMathObjectWithoutNodePathRequest $request) 
-    {
-        $returnType = '\SplFileObject';
-        $request = $this->renderMathObjectWithoutNodePathRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    if ($this->config->getDebug()) {
-                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'renderMathObjectWithoutNodePath'
-     *
-     * @param Requests\renderMathObjectWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function renderMathObjectWithoutNodePathRequest(Requests\renderMathObjectWithoutNodePathRequest $request)
-    {
-        if ($request->name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $name when calling renderMathObjectWithoutNodePath');
-        }
-        if ($request->format === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $format when calling renderMathObjectWithoutNodePath');
-        }
-        if ($request->index === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $index when calling renderMathObjectWithoutNodePath');
-        }
-
-        $resourcePath = '/words/{name}/OfficeMathObjects/{index}/render';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-        // path params
-        if ($request->name !== null) {
-            $localName = lcfirst('Name');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
-        }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -56519,10 +42203,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->page_index !== null) {
             $localName = lcfirst('PageIndex');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->page_index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('PageIndex');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -56843,9 +42535,6 @@ class WordsApi
         if ($request->format === null) {
             throw new \InvalidArgumentException('Missing the required parameter $format when calling renderParagraph');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling renderParagraph');
-        }
         if ($request->index === null) {
             throw new \InvalidArgumentException('Missing the required parameter $index when calling renderParagraph');
         }
@@ -56862,355 +42551,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
+        // path params
+        if ($request->index !== null) {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
         }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
-        }
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->format !== null) {
-            $localName = lcfirst('Format');
-            $localValue = is_bool($request->format) ? ($request->format ? 'true' : 'false') : $request->format;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->folder !== null) {
-            $localName = lcfirst('Folder');
-            $localValue = is_bool($request->folder) ? ($request->folder ? 'true' : 'false') : $request->folder;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->storage !== null) {
-            $localName = lcfirst('Storage');
-            $localValue = is_bool($request->storage) ? ($request->storage ? 'true' : 'false') : $request->storage;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->fonts_location !== null) {
-            $localName = lcfirst('FontsLocation');
-            $localValue = is_bool($request->fonts_location) ? ($request->fonts_location ? 'true' : 'false') : $request->fonts_location;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-
-        // body params
-        $_tempBody = null;
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['application/xml', 'application/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'GET',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('GET', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation renderParagraphWithoutNodePath
-     *
-     * Renders paragraph to specified format.
-     *
-     * @param Requests\renderParagraphWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \SplFileObject
-     */
-    public function renderParagraphWithoutNodePath(Requests\renderParagraphWithoutNodePathRequest $request)
-    {
-        try {
-            list($response) = $this->renderParagraphWithoutNodePathWithHttpInfo($request);
-            return $response;
-        }
-        catch(RepeatRequestException $e) {
-            list($response) = $this->renderParagraphWithoutNodePathWithHttpInfo($request);
-            return $response;
-        } 
-    }
-
-    /*
-     * Operation renderParagraphWithoutNodePathWithHttpInfo
-     *
-     * Renders paragraph to specified format.
-     *
-     * @param Requests\renderParagraphWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function renderParagraphWithoutNodePathWithHttpInfo(Requests\renderParagraphWithoutNodePathRequest $request)
-    {
-        $returnType = '\SplFileObject';
-        $request = $this->renderParagraphWithoutNodePathRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            if ($this->config->getDebug()) {
-                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\SplFileObject', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                break;
-            }
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation renderParagraphWithoutNodePathAsync
-     *
-     * Renders paragraph to specified format.
-     *
-     * @param Requests\renderParagraphWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function renderParagraphWithoutNodePathAsync(Requests\renderParagraphWithoutNodePathRequest $request) 
-    {
-        return $this->renderParagraphWithoutNodePathAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation renderParagraphWithoutNodePathAsyncWithHttpInfo
-     *
-     * Renders paragraph to specified format.
-     *
-     * @param Requests\renderParagraphWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function renderParagraphWithoutNodePathAsyncWithHttpInfo(Requests\renderParagraphWithoutNodePathRequest $request) 
-    {
-        $returnType = '\SplFileObject';
-        $request = $this->renderParagraphWithoutNodePathRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    if ($this->config->getDebug()) {
-                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'renderParagraphWithoutNodePath'
-     *
-     * @param Requests\renderParagraphWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function renderParagraphWithoutNodePathRequest(Requests\renderParagraphWithoutNodePathRequest $request)
-    {
-        if ($request->name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $name when calling renderParagraphWithoutNodePath');
-        }
-        if ($request->format === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $format when calling renderParagraphWithoutNodePath');
-        }
-        if ($request->index === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $index when calling renderParagraphWithoutNodePath');
-        }
-
-        $resourcePath = '/words/{name}/paragraphs/{index}/render';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-        // path params
-        if ($request->name !== null) {
-            $localName = lcfirst('Name');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
-        }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -57531,9 +42892,6 @@ class WordsApi
         if ($request->format === null) {
             throw new \InvalidArgumentException('Missing the required parameter $format when calling renderTable');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling renderTable');
-        }
         if ($request->index === null) {
             throw new \InvalidArgumentException('Missing the required parameter $index when calling renderTable');
         }
@@ -57550,355 +42908,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
+        // path params
+        if ($request->index !== null) {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
         }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
-        }
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->format !== null) {
-            $localName = lcfirst('Format');
-            $localValue = is_bool($request->format) ? ($request->format ? 'true' : 'false') : $request->format;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->folder !== null) {
-            $localName = lcfirst('Folder');
-            $localValue = is_bool($request->folder) ? ($request->folder ? 'true' : 'false') : $request->folder;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->storage !== null) {
-            $localName = lcfirst('Storage');
-            $localValue = is_bool($request->storage) ? ($request->storage ? 'true' : 'false') : $request->storage;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->fonts_location !== null) {
-            $localName = lcfirst('FontsLocation');
-            $localValue = is_bool($request->fonts_location) ? ($request->fonts_location ? 'true' : 'false') : $request->fonts_location;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-
-        // body params
-        $_tempBody = null;
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['application/xml', 'application/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'GET',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('GET', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation renderTableWithoutNodePath
-     *
-     * Renders table to specified format.
-     *
-     * @param Requests\renderTableWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \SplFileObject
-     */
-    public function renderTableWithoutNodePath(Requests\renderTableWithoutNodePathRequest $request)
-    {
-        try {
-            list($response) = $this->renderTableWithoutNodePathWithHttpInfo($request);
-            return $response;
-        }
-        catch(RepeatRequestException $e) {
-            list($response) = $this->renderTableWithoutNodePathWithHttpInfo($request);
-            return $response;
-        } 
-    }
-
-    /*
-     * Operation renderTableWithoutNodePathWithHttpInfo
-     *
-     * Renders table to specified format.
-     *
-     * @param Requests\renderTableWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function renderTableWithoutNodePathWithHttpInfo(Requests\renderTableWithoutNodePathRequest $request)
-    {
-        $returnType = '\SplFileObject';
-        $request = $this->renderTableWithoutNodePathRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            if ($this->config->getDebug()) {
-                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\SplFileObject', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                break;
-            }
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation renderTableWithoutNodePathAsync
-     *
-     * Renders table to specified format.
-     *
-     * @param Requests\renderTableWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function renderTableWithoutNodePathAsync(Requests\renderTableWithoutNodePathRequest $request) 
-    {
-        return $this->renderTableWithoutNodePathAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation renderTableWithoutNodePathAsyncWithHttpInfo
-     *
-     * Renders table to specified format.
-     *
-     * @param Requests\renderTableWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function renderTableWithoutNodePathAsyncWithHttpInfo(Requests\renderTableWithoutNodePathRequest $request) 
-    {
-        $returnType = '\SplFileObject';
-        $request = $this->renderTableWithoutNodePathRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    if ($this->config->getDebug()) {
-                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'renderTableWithoutNodePath'
-     *
-     * @param Requests\renderTableWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function renderTableWithoutNodePathRequest(Requests\renderTableWithoutNodePathRequest $request)
-    {
-        if ($request->name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $name when calling renderTableWithoutNodePath');
-        }
-        if ($request->format === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $format when calling renderTableWithoutNodePath');
-        }
-        if ($request->index === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $index when calling renderTableWithoutNodePath');
-        }
-
-        $resourcePath = '/words/{name}/tables/{index}/render';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-        // path params
-        if ($request->name !== null) {
-            $localName = lcfirst('Name');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
-        }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -58231,6 +43261,10 @@ class WordsApi
         if ($request->name !== null) {
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -58585,15 +43619,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->range_start_identifier !== null) {
             $localName = lcfirst('RangeStartIdentifier');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->range_start_identifier), $resourcePath);
         }
+        else {
+            $localName = lcfirst('RangeStartIdentifier');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->range_end_identifier !== null) {
             $localName = lcfirst('RangeEndIdentifier');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->range_end_identifier), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('RangeEndIdentifier');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -59142,6 +44188,10 @@ class WordsApi
         if ($request->name !== null) {
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -59767,15 +44817,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->range_start_identifier !== null) {
             $localName = lcfirst('RangeStartIdentifier');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->range_start_identifier), $resourcePath);
         }
+        else {
+            $localName = lcfirst('RangeStartIdentifier');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->range_end_identifier !== null) {
             $localName = lcfirst('RangeEndIdentifier');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->range_end_identifier), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('RangeEndIdentifier');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -60096,6 +45158,10 @@ class WordsApi
         if ($request->name !== null) {
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -60597,6 +45663,10 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
 
         // remove empty path parameters
         $resourcePath = str_replace("//", "/", $resourcePath);
@@ -60918,6 +45988,10 @@ class WordsApi
         if ($request->name !== null) {
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -61291,6 +46365,10 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
 
         // remove empty path parameters
         $resourcePath = str_replace("//", "/", $resourcePath);
@@ -61624,10 +46702,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->bookmark_name !== null) {
             $localName = lcfirst('BookmarkName');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->bookmark_name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('BookmarkName');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -61966,9 +47052,6 @@ class WordsApi
         if ($request->border_properties === null) {
             throw new \InvalidArgumentException('Missing the required parameter $border_properties when calling updateBorder');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling updateBorder');
-        }
         if ($request->border_type === null) {
             throw new \InvalidArgumentException('Missing the required parameter $border_type when calling updateBorder');
         }
@@ -61985,15 +47068,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
-        // path params
-        if ($request->node_path !== null) {
-            $localName = lcfirst('NodePath');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
         // path params
         if ($request->border_type !== null) {
             $localName = lcfirst('BorderType');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->border_type), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('BorderType');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
+        // path params
+        if ($request->node_path !== null) {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -62348,10 +47443,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->comment_index !== null) {
             $localName = lcfirst('CommentIndex');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->comment_index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('CommentIndex');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -62693,9 +47796,6 @@ class WordsApi
         if ($request->image_file === null) {
             throw new \InvalidArgumentException('Missing the required parameter $image_file when calling updateDrawingObject');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling updateDrawingObject');
-        }
         if ($request->index === null) {
             throw new \InvalidArgumentException('Missing the required parameter $index when calling updateDrawingObject');
         }
@@ -62712,382 +47812,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
+        // path params
+        if ($request->index !== null) {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
         }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
-        }
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->folder !== null) {
-            $localName = lcfirst('Folder');
-            $localValue = is_bool($request->folder) ? ($request->folder ? 'true' : 'false') : $request->folder;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->storage !== null) {
-            $localName = lcfirst('Storage');
-            $localValue = is_bool($request->storage) ? ($request->storage ? 'true' : 'false') : $request->storage;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->dest_file_name !== null) {
-            $localName = lcfirst('DestFileName');
-            $localValue = is_bool($request->dest_file_name) ? ($request->dest_file_name ? 'true' : 'false') : $request->dest_file_name;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->revision_author !== null) {
-            $localName = lcfirst('RevisionAuthor');
-            $localValue = is_bool($request->revision_author) ? ($request->revision_author ? 'true' : 'false') : $request->revision_author;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->revision_date_time !== null) {
-            $localName = lcfirst('RevisionDateTime');
-            $localValue = is_bool($request->revision_date_time) ? ($request->revision_date_time ? 'true' : 'false') : $request->revision_date_time;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-        // form params
-        if ($request->drawing_object !== null) {
-            $multipart = true; 
-            $formParams['drawing_object'] = ObjectSerializer::toFormValue($request->drawing_object);
-        }
-        // form params
-        if ($request->image_file !== null) {
-            $multipart = true; 
-            $filename = ObjectSerializer::toFormValue($request->image_file);
-            $handle = fopen($filename, "rb");
-            $fsize = filesize($filename);
-            $contents = fread($handle, $fsize);
-            $formParams['image_file'] = $contents;
-        }
-
-        // body params
-        $_tempBody = null;
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['multipart/form-data']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'PUT',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('PUT', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation updateDrawingObjectWithoutNodePath
-     *
-     * Updates drawing object, returns updated  drawing object's data.
-     *
-     * @param Requests\updateDrawingObjectWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Aspose\Words\Model\DrawingObjectResponse
-     */
-    public function updateDrawingObjectWithoutNodePath(Requests\updateDrawingObjectWithoutNodePathRequest $request)
-    {
-        try {
-            list($response) = $this->updateDrawingObjectWithoutNodePathWithHttpInfo($request);
-            return $response;
-        }
-        catch(RepeatRequestException $e) {
-            list($response) = $this->updateDrawingObjectWithoutNodePathWithHttpInfo($request);
-            return $response;
-        } 
-    }
-
-    /*
-     * Operation updateDrawingObjectWithoutNodePathWithHttpInfo
-     *
-     * Updates drawing object, returns updated  drawing object's data.
-     *
-     * @param Requests\updateDrawingObjectWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \Aspose\Words\Model\DrawingObjectResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function updateDrawingObjectWithoutNodePathWithHttpInfo(Requests\updateDrawingObjectWithoutNodePathRequest $request)
-    {
-        $returnType = '\Aspose\Words\Model\DrawingObjectResponse';
-        $request = $this->updateDrawingObjectWithoutNodePathRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            if ($this->config->getDebug()) {
-                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\Aspose\Words\Model\DrawingObjectResponse', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                break;
-            }
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation updateDrawingObjectWithoutNodePathAsync
-     *
-     * Updates drawing object, returns updated  drawing object's data.
-     *
-     * @param Requests\updateDrawingObjectWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function updateDrawingObjectWithoutNodePathAsync(Requests\updateDrawingObjectWithoutNodePathRequest $request) 
-    {
-        return $this->updateDrawingObjectWithoutNodePathAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation updateDrawingObjectWithoutNodePathAsyncWithHttpInfo
-     *
-     * Updates drawing object, returns updated  drawing object's data.
-     *
-     * @param Requests\updateDrawingObjectWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function updateDrawingObjectWithoutNodePathAsyncWithHttpInfo(Requests\updateDrawingObjectWithoutNodePathRequest $request) 
-    {
-        $returnType = '\Aspose\Words\Model\DrawingObjectResponse';
-        $request = $this->updateDrawingObjectWithoutNodePathRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    if ($this->config->getDebug()) {
-                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'updateDrawingObjectWithoutNodePath'
-     *
-     * @param Requests\updateDrawingObjectWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function updateDrawingObjectWithoutNodePathRequest(Requests\updateDrawingObjectWithoutNodePathRequest $request)
-    {
-        if ($request->name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $name when calling updateDrawingObjectWithoutNodePath');
-        }
-        if ($request->drawing_object === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $drawing_object when calling updateDrawingObjectWithoutNodePath');
-        }
-        if ($request->image_file === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $image_file when calling updateDrawingObjectWithoutNodePath');
-        }
-        if ($request->index === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $index when calling updateDrawingObjectWithoutNodePath');
-        }
-
-        $resourcePath = '/words/{name}/drawingObjects/{index}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-        // path params
-        if ($request->name !== null) {
-            $localName = lcfirst('Name');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
-        }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -63432,9 +48177,6 @@ class WordsApi
         if ($request->field === null) {
             throw new \InvalidArgumentException('Missing the required parameter $field when calling updateField');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling updateField');
-        }
         if ($request->index === null) {
             throw new \InvalidArgumentException('Missing the required parameter $index when calling updateField');
         }
@@ -63451,15 +48193,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
-        // path params
-        if ($request->node_path !== null) {
-            $localName = lcfirst('NodePath');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
+        // path params
+        if ($request->node_path !== null) {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -63808,6 +48562,10 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
 
         // remove empty path parameters
         $resourcePath = str_replace("//", "/", $resourcePath);
@@ -64117,9 +48875,6 @@ class WordsApi
         if ($request->footnote_dto === null) {
             throw new \InvalidArgumentException('Missing the required parameter $footnote_dto when calling updateFootnote');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling updateFootnote');
-        }
         if ($request->index === null) {
             throw new \InvalidArgumentException('Missing the required parameter $index when calling updateFootnote');
         }
@@ -64136,373 +48891,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
+        // path params
+        if ($request->index !== null) {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
         }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
-        }
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->folder !== null) {
-            $localName = lcfirst('Folder');
-            $localValue = is_bool($request->folder) ? ($request->folder ? 'true' : 'false') : $request->folder;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->storage !== null) {
-            $localName = lcfirst('Storage');
-            $localValue = is_bool($request->storage) ? ($request->storage ? 'true' : 'false') : $request->storage;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->dest_file_name !== null) {
-            $localName = lcfirst('DestFileName');
-            $localValue = is_bool($request->dest_file_name) ? ($request->dest_file_name ? 'true' : 'false') : $request->dest_file_name;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->revision_author !== null) {
-            $localName = lcfirst('RevisionAuthor');
-            $localValue = is_bool($request->revision_author) ? ($request->revision_author ? 'true' : 'false') : $request->revision_author;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->revision_date_time !== null) {
-            $localName = lcfirst('RevisionDateTime');
-            $localValue = is_bool($request->revision_date_time) ? ($request->revision_date_time ? 'true' : 'false') : $request->revision_date_time;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-
-        // body params
-        $_tempBody = null;
-        if (isset($request->footnote_dto)) {
-            if (is_string($request->footnote_dto)) {
-                $_tempBody = "\"" . $request->footnote_dto . "\"";
-            } else {
-                $_tempBody = $request->footnote_dto;
-            }
-        }
-
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['application/xml', 'application/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'PUT',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('PUT', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation updateFootnoteWithoutNodePath
-     *
-     * Updates footnote's properties, returns updated run's data.
-     *
-     * @param Requests\updateFootnoteWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Aspose\Words\Model\FootnoteResponse
-     */
-    public function updateFootnoteWithoutNodePath(Requests\updateFootnoteWithoutNodePathRequest $request)
-    {
-        try {
-            list($response) = $this->updateFootnoteWithoutNodePathWithHttpInfo($request);
-            return $response;
-        }
-        catch(RepeatRequestException $e) {
-            list($response) = $this->updateFootnoteWithoutNodePathWithHttpInfo($request);
-            return $response;
-        } 
-    }
-
-    /*
-     * Operation updateFootnoteWithoutNodePathWithHttpInfo
-     *
-     * Updates footnote's properties, returns updated run's data.
-     *
-     * @param Requests\updateFootnoteWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \Aspose\Words\Model\FootnoteResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function updateFootnoteWithoutNodePathWithHttpInfo(Requests\updateFootnoteWithoutNodePathRequest $request)
-    {
-        $returnType = '\Aspose\Words\Model\FootnoteResponse';
-        $request = $this->updateFootnoteWithoutNodePathRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            if ($this->config->getDebug()) {
-                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\Aspose\Words\Model\FootnoteResponse', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                break;
-            }
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation updateFootnoteWithoutNodePathAsync
-     *
-     * Updates footnote's properties, returns updated run's data.
-     *
-     * @param Requests\updateFootnoteWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function updateFootnoteWithoutNodePathAsync(Requests\updateFootnoteWithoutNodePathRequest $request) 
-    {
-        return $this->updateFootnoteWithoutNodePathAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation updateFootnoteWithoutNodePathAsyncWithHttpInfo
-     *
-     * Updates footnote's properties, returns updated run's data.
-     *
-     * @param Requests\updateFootnoteWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function updateFootnoteWithoutNodePathAsyncWithHttpInfo(Requests\updateFootnoteWithoutNodePathRequest $request) 
-    {
-        $returnType = '\Aspose\Words\Model\FootnoteResponse';
-        $request = $this->updateFootnoteWithoutNodePathRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    if ($this->config->getDebug()) {
-                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'updateFootnoteWithoutNodePath'
-     *
-     * @param Requests\updateFootnoteWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function updateFootnoteWithoutNodePathRequest(Requests\updateFootnoteWithoutNodePathRequest $request)
-    {
-        if ($request->name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $name when calling updateFootnoteWithoutNodePath');
-        }
-        if ($request->footnote_dto === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $footnote_dto when calling updateFootnoteWithoutNodePath');
-        }
-        if ($request->index === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $index when calling updateFootnoteWithoutNodePath');
-        }
-
-        $resourcePath = '/words/{name}/footnotes/{index}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-        // path params
-        if ($request->name !== null) {
-            $localName = lcfirst('Name');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
-        }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -64841,9 +49250,6 @@ class WordsApi
         if ($request->form_field === null) {
             throw new \InvalidArgumentException('Missing the required parameter $form_field when calling updateFormField');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling updateFormField');
-        }
         if ($request->index === null) {
             throw new \InvalidArgumentException('Missing the required parameter $index when calling updateFormField');
         }
@@ -64860,373 +49266,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
+        // path params
+        if ($request->index !== null) {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
         }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
-        }
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->folder !== null) {
-            $localName = lcfirst('Folder');
-            $localValue = is_bool($request->folder) ? ($request->folder ? 'true' : 'false') : $request->folder;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->storage !== null) {
-            $localName = lcfirst('Storage');
-            $localValue = is_bool($request->storage) ? ($request->storage ? 'true' : 'false') : $request->storage;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->dest_file_name !== null) {
-            $localName = lcfirst('DestFileName');
-            $localValue = is_bool($request->dest_file_name) ? ($request->dest_file_name ? 'true' : 'false') : $request->dest_file_name;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->revision_author !== null) {
-            $localName = lcfirst('RevisionAuthor');
-            $localValue = is_bool($request->revision_author) ? ($request->revision_author ? 'true' : 'false') : $request->revision_author;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->revision_date_time !== null) {
-            $localName = lcfirst('RevisionDateTime');
-            $localValue = is_bool($request->revision_date_time) ? ($request->revision_date_time ? 'true' : 'false') : $request->revision_date_time;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-
-        // body params
-        $_tempBody = null;
-        if (isset($request->form_field)) {
-            if (is_string($request->form_field)) {
-                $_tempBody = "\"" . $request->form_field . "\"";
-            } else {
-                $_tempBody = $request->form_field;
-            }
-        }
-
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['application/xml', 'application/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'PUT',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('PUT', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation updateFormFieldWithoutNodePath
-     *
-     * Updates properties of form field, returns updated form field.
-     *
-     * @param Requests\updateFormFieldWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Aspose\Words\Model\FormFieldResponse
-     */
-    public function updateFormFieldWithoutNodePath(Requests\updateFormFieldWithoutNodePathRequest $request)
-    {
-        try {
-            list($response) = $this->updateFormFieldWithoutNodePathWithHttpInfo($request);
-            return $response;
-        }
-        catch(RepeatRequestException $e) {
-            list($response) = $this->updateFormFieldWithoutNodePathWithHttpInfo($request);
-            return $response;
-        } 
-    }
-
-    /*
-     * Operation updateFormFieldWithoutNodePathWithHttpInfo
-     *
-     * Updates properties of form field, returns updated form field.
-     *
-     * @param Requests\updateFormFieldWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \Aspose\Words\Model\FormFieldResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function updateFormFieldWithoutNodePathWithHttpInfo(Requests\updateFormFieldWithoutNodePathRequest $request)
-    {
-        $returnType = '\Aspose\Words\Model\FormFieldResponse';
-        $request = $this->updateFormFieldWithoutNodePathRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            if ($this->config->getDebug()) {
-                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\Aspose\Words\Model\FormFieldResponse', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                break;
-            }
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation updateFormFieldWithoutNodePathAsync
-     *
-     * Updates properties of form field, returns updated form field.
-     *
-     * @param Requests\updateFormFieldWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function updateFormFieldWithoutNodePathAsync(Requests\updateFormFieldWithoutNodePathRequest $request) 
-    {
-        return $this->updateFormFieldWithoutNodePathAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation updateFormFieldWithoutNodePathAsyncWithHttpInfo
-     *
-     * Updates properties of form field, returns updated form field.
-     *
-     * @param Requests\updateFormFieldWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function updateFormFieldWithoutNodePathAsyncWithHttpInfo(Requests\updateFormFieldWithoutNodePathRequest $request) 
-    {
-        $returnType = '\Aspose\Words\Model\FormFieldResponse';
-        $request = $this->updateFormFieldWithoutNodePathRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    if ($this->config->getDebug()) {
-                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'updateFormFieldWithoutNodePath'
-     *
-     * @param Requests\updateFormFieldWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function updateFormFieldWithoutNodePathRequest(Requests\updateFormFieldWithoutNodePathRequest $request)
-    {
-        if ($request->name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $name when calling updateFormFieldWithoutNodePath');
-        }
-        if ($request->form_field === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $form_field when calling updateFormFieldWithoutNodePath');
-        }
-        if ($request->index === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $index when calling updateFormFieldWithoutNodePath');
-        }
-
-        $resourcePath = '/words/{name}/formfields/{index}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-        // path params
-        if ($request->name !== null) {
-            $localName = lcfirst('Name');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
-        }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -65581,10 +49641,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->list_id !== null) {
             $localName = lcfirst('ListId');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->list_id), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('ListId');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -65942,15 +50010,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->list_id !== null) {
             $localName = lcfirst('ListId');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->list_id), $resourcePath);
         }
+        else {
+            $localName = lcfirst('ListId');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->list_level !== null) {
             $localName = lcfirst('ListLevel');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->list_level), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('ListLevel');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -66289,9 +50369,6 @@ class WordsApi
         if ($request->dto === null) {
             throw new \InvalidArgumentException('Missing the required parameter $dto when calling updateParagraphFormat');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling updateParagraphFormat');
-        }
         if ($request->index === null) {
             throw new \InvalidArgumentException('Missing the required parameter $index when calling updateParagraphFormat');
         }
@@ -66308,15 +50385,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
-        // path params
-        if ($request->node_path !== null) {
-            $localName = lcfirst('NodePath');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
+        // path params
+        if ($request->node_path !== null) {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -66655,9 +50744,6 @@ class WordsApi
         if ($request->dto === null) {
             throw new \InvalidArgumentException('Missing the required parameter $dto when calling updateParagraphListFormat');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling updateParagraphListFormat');
-        }
         if ($request->index === null) {
             throw new \InvalidArgumentException('Missing the required parameter $index when calling updateParagraphListFormat');
         }
@@ -66674,373 +50760,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
+        // path params
+        if ($request->index !== null) {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
         }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
-        }
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->folder !== null) {
-            $localName = lcfirst('Folder');
-            $localValue = is_bool($request->folder) ? ($request->folder ? 'true' : 'false') : $request->folder;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->storage !== null) {
-            $localName = lcfirst('Storage');
-            $localValue = is_bool($request->storage) ? ($request->storage ? 'true' : 'false') : $request->storage;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->dest_file_name !== null) {
-            $localName = lcfirst('DestFileName');
-            $localValue = is_bool($request->dest_file_name) ? ($request->dest_file_name ? 'true' : 'false') : $request->dest_file_name;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->revision_author !== null) {
-            $localName = lcfirst('RevisionAuthor');
-            $localValue = is_bool($request->revision_author) ? ($request->revision_author ? 'true' : 'false') : $request->revision_author;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->revision_date_time !== null) {
-            $localName = lcfirst('RevisionDateTime');
-            $localValue = is_bool($request->revision_date_time) ? ($request->revision_date_time ? 'true' : 'false') : $request->revision_date_time;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-
-        // body params
-        $_tempBody = null;
-        if (isset($request->dto)) {
-            if (is_string($request->dto)) {
-                $_tempBody = "\"" . $request->dto . "\"";
-            } else {
-                $_tempBody = $request->dto;
-            }
-        }
-
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['application/xml', 'application/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'PUT',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('PUT', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation updateParagraphListFormatWithoutNodePath
-     *
-     * Updates paragraph list format properties, returns updated list format properties.
-     *
-     * @param Requests\updateParagraphListFormatWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Aspose\Words\Model\ParagraphListFormatResponse
-     */
-    public function updateParagraphListFormatWithoutNodePath(Requests\updateParagraphListFormatWithoutNodePathRequest $request)
-    {
-        try {
-            list($response) = $this->updateParagraphListFormatWithoutNodePathWithHttpInfo($request);
-            return $response;
-        }
-        catch(RepeatRequestException $e) {
-            list($response) = $this->updateParagraphListFormatWithoutNodePathWithHttpInfo($request);
-            return $response;
-        } 
-    }
-
-    /*
-     * Operation updateParagraphListFormatWithoutNodePathWithHttpInfo
-     *
-     * Updates paragraph list format properties, returns updated list format properties.
-     *
-     * @param Requests\updateParagraphListFormatWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \Aspose\Words\Model\ParagraphListFormatResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function updateParagraphListFormatWithoutNodePathWithHttpInfo(Requests\updateParagraphListFormatWithoutNodePathRequest $request)
-    {
-        $returnType = '\Aspose\Words\Model\ParagraphListFormatResponse';
-        $request = $this->updateParagraphListFormatWithoutNodePathRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            if ($this->config->getDebug()) {
-                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\Aspose\Words\Model\ParagraphListFormatResponse', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                break;
-            }
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation updateParagraphListFormatWithoutNodePathAsync
-     *
-     * Updates paragraph list format properties, returns updated list format properties.
-     *
-     * @param Requests\updateParagraphListFormatWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function updateParagraphListFormatWithoutNodePathAsync(Requests\updateParagraphListFormatWithoutNodePathRequest $request) 
-    {
-        return $this->updateParagraphListFormatWithoutNodePathAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation updateParagraphListFormatWithoutNodePathAsyncWithHttpInfo
-     *
-     * Updates paragraph list format properties, returns updated list format properties.
-     *
-     * @param Requests\updateParagraphListFormatWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function updateParagraphListFormatWithoutNodePathAsyncWithHttpInfo(Requests\updateParagraphListFormatWithoutNodePathRequest $request) 
-    {
-        $returnType = '\Aspose\Words\Model\ParagraphListFormatResponse';
-        $request = $this->updateParagraphListFormatWithoutNodePathRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    if ($this->config->getDebug()) {
-                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'updateParagraphListFormatWithoutNodePath'
-     *
-     * @param Requests\updateParagraphListFormatWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function updateParagraphListFormatWithoutNodePathRequest(Requests\updateParagraphListFormatWithoutNodePathRequest $request)
-    {
-        if ($request->name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $name when calling updateParagraphListFormatWithoutNodePath');
-        }
-        if ($request->dto === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $dto when calling updateParagraphListFormatWithoutNodePath');
-        }
-        if ($request->index === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $index when calling updateParagraphListFormatWithoutNodePath');
-        }
-
-        $resourcePath = '/words/{name}/paragraphs/{index}/listFormat';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-        // path params
-        if ($request->name !== null) {
-            $localName = lcfirst('Name');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
-        }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -67398,15 +51138,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->paragraph_path !== null) {
             $localName = lcfirst('ParagraphPath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->paragraph_path), $resourcePath);
         }
+        else {
+            $localName = lcfirst('ParagraphPath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -67764,15 +51516,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->paragraph_path !== null) {
             $localName = lcfirst('ParagraphPath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->paragraph_path), $resourcePath);
         }
+        else {
+            $localName = lcfirst('ParagraphPath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -68127,10 +51891,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->section_index !== null) {
             $localName = lcfirst('SectionIndex');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->section_index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('SectionIndex');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -68485,10 +52257,18 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->style_name !== null) {
             $localName = lcfirst('StyleName');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->style_name), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('StyleName');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -68846,15 +52626,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->table_row_path !== null) {
             $localName = lcfirst('TableRowPath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->table_row_path), $resourcePath);
         }
+        else {
+            $localName = lcfirst('TableRowPath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -69193,9 +52985,6 @@ class WordsApi
         if ($request->properties === null) {
             throw new \InvalidArgumentException('Missing the required parameter $properties when calling updateTableProperties');
         }
-        if ($request->node_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $node_path when calling updateTableProperties');
-        }
         if ($request->index === null) {
             throw new \InvalidArgumentException('Missing the required parameter $index when calling updateTableProperties');
         }
@@ -69212,373 +53001,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
+        // path params
+        if ($request->index !== null) {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->node_path !== null) {
             $localName = lcfirst('NodePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->node_path), $resourcePath);
         }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
-        }
-
-        // remove empty path parameters
-        $resourcePath = str_replace("//", "/", $resourcePath);
-        // query params
-        if ($request->folder !== null) {
-            $localName = lcfirst('Folder');
-            $localValue = is_bool($request->folder) ? ($request->folder ? 'true' : 'false') : $request->folder;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->storage !== null) {
-            $localName = lcfirst('Storage');
-            $localValue = is_bool($request->storage) ? ($request->storage ? 'true' : 'false') : $request->storage;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->load_encoding !== null) {
-            $localName = lcfirst('LoadEncoding');
-            $localValue = is_bool($request->load_encoding) ? ($request->load_encoding ? 'true' : 'false') : $request->load_encoding;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->password !== null) {
-            $localName = lcfirst('Password');
-            $localValue = is_bool($request->password) ? ($request->password ? 'true' : 'false') : $request->password;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->dest_file_name !== null) {
-            $localName = lcfirst('DestFileName');
-            $localValue = is_bool($request->dest_file_name) ? ($request->dest_file_name ? 'true' : 'false') : $request->dest_file_name;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->revision_author !== null) {
-            $localName = lcfirst('RevisionAuthor');
-            $localValue = is_bool($request->revision_author) ? ($request->revision_author ? 'true' : 'false') : $request->revision_author;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-        // query params
-        if ($request->revision_date_time !== null) {
-            $localName = lcfirst('RevisionDateTime');
-            $localValue = is_bool($request->revision_date_time) ? ($request->revision_date_time ? 'true' : 'false') : $request->revision_date_time;
-            if (strpos($resourcePath, '{' . $localName . '}') !== false) {
-                $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toQueryValue($localValue), $resourcePath);
-            } else {
-                $queryParams[$localName] = ObjectSerializer::toQueryValue($localValue);
-            }
-        }
-
-        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
-
-        // body params
-        $_tempBody = null;
-        if (isset($request->properties)) {
-            if (is_string($request->properties)) {
-                $_tempBody = "\"" . $request->properties . "\"";
-            } else {
-                $_tempBody = $request->properties;
-            }
-        }
-
-        if ($multipart) {
-            $headers= $this->headerSelector->selectHeadersForMultipart(
-                ['application/xml', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/xml', 'application/json'],
-                ['application/xml', 'application/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue,
-                        'filename' => isset($filename) ? basename($filename) : null
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = $formParams["data"];
-            }
-        }
-
-        if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
-        }
-
-        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $req = new Request(
-            'PUT',
-            $resourcePath,
-            $headers,
-            $httpBody
-        );
-        if ($this->config->getDebug()) {
-            $this->_writeRequestLog('PUT', $resourcePath, $headers, $httpBody);
-        }
-
-        return $req;
-    }
-
-    /*
-     * Operation updateTablePropertiesWithoutNodePath
-     *
-     * Updates a table properties.
-     *
-     * @param Requests\updateTablePropertiesWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Aspose\Words\Model\TablePropertiesResponse
-     */
-    public function updateTablePropertiesWithoutNodePath(Requests\updateTablePropertiesWithoutNodePathRequest $request)
-    {
-        try {
-            list($response) = $this->updateTablePropertiesWithoutNodePathWithHttpInfo($request);
-            return $response;
-        }
-        catch(RepeatRequestException $e) {
-            list($response) = $this->updateTablePropertiesWithoutNodePathWithHttpInfo($request);
-            return $response;
-        } 
-    }
-
-    /*
-     * Operation updateTablePropertiesWithoutNodePathWithHttpInfo
-     *
-     * Updates a table properties.
-     *
-     * @param Requests\updateTablePropertiesWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \Aspose\Words\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \Aspose\Words\Model\TablePropertiesResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function updateTablePropertiesWithoutNodePathWithHttpInfo(Requests\updateTablePropertiesWithoutNodePathRequest $request)
-    {
-        $returnType = '\Aspose\Words\Model\TablePropertiesResponse';
-        $request = $this->updateTablePropertiesWithoutNodePathRequest($request);
-
-        try {
-            $options = $this->_createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                if ($e->getCode() == 401) {
-                    $this->_requestToken();
-                    throw new RepeatRequestException("Request must be retried", 401, null, null);
-                }
-                else if ($e->getCode() < 200 || $e->getCode() > 299) {
-                    throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $e->getCode(), $request->getUri()), $e->getCode(), null, null);
-                }
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            if ($this->config->getDebug()) {
-                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            case 200:
-                    $data = ObjectSerializer::deserialize($e->getResponseBody(), '\Aspose\Words\Model\TablePropertiesResponse', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                break;
-            }
-            throw $e;
-        }
-    }
-
-    /*
-     * Operation updateTablePropertiesWithoutNodePathAsync
-     *
-     * Updates a table properties.
-     *
-     * @param Requests\updateTablePropertiesWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function updateTablePropertiesWithoutNodePathAsync(Requests\updateTablePropertiesWithoutNodePathRequest $request) 
-    {
-        return $this->updateTablePropertiesWithoutNodePathAsyncWithHttpInfo($request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /*
-     * Operation updateTablePropertiesWithoutNodePathAsyncWithHttpInfo
-     *
-     * Updates a table properties.
-     *
-     * @param Requests\updateTablePropertiesWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function updateTablePropertiesWithoutNodePathAsyncWithHttpInfo(Requests\updateTablePropertiesWithoutNodePathRequest $request) 
-    {
-        $returnType = '\Aspose\Words\Model\TablePropertiesResponse';
-        $request = $this->updateTablePropertiesWithoutNodePathRequest($request);
-
-        return $this->client
-            ->sendAsync($request, $this->_createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    if ($this->config->getDebug()) {
-                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {        
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-
-                    if ($exception instanceof RepeatRequestException) {
-                        $this->_refreshToken();
-                        throw new RepeatRequestException("Request must be retried", 401, null, null);
-                    }
-
-                    throw new ApiException(
-                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()), $statusCode, $response->getHeaders(), $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /*
-     * Create request for operation 'updateTablePropertiesWithoutNodePath'
-     *
-     * @param Requests\updateTablePropertiesWithoutNodePathRequest $request is a request object for operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function updateTablePropertiesWithoutNodePathRequest(Requests\updateTablePropertiesWithoutNodePathRequest $request)
-    {
-        if ($request->name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $name when calling updateTablePropertiesWithoutNodePath');
-        }
-        if ($request->properties === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $properties when calling updateTablePropertiesWithoutNodePath');
-        }
-        if ($request->index === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $index when calling updateTablePropertiesWithoutNodePath');
-        }
-
-        $resourcePath = '/words/{name}/tables/{index}/properties';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = "";
-        $multipart = false;
-        $filename = null;
-        // path params
-        if ($request->name !== null) {
-            $localName = lcfirst('Name');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
-        }
-        // path params
-        if ($request->index !== null) {
-            $localName = lcfirst('Index');
-            $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        else {
+            $localName = lcfirst('NodePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -69936,15 +53379,27 @@ class WordsApi
             $localName = lcfirst('Name');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->name), $resourcePath);
         }
+        else {
+            $localName = lcfirst('Name');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->table_path !== null) {
             $localName = lcfirst('TablePath');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->table_path), $resourcePath);
         }
+        else {
+            $localName = lcfirst('TablePath');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
+        }
         // path params
         if ($request->index !== null) {
             $localName = lcfirst('Index');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->index), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Index');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters
@@ -70295,6 +53750,10 @@ class WordsApi
         if ($request->path !== null) {
             $localName = lcfirst('Path');
             $resourcePath = str_replace('{' . $localName . '}', ObjectSerializer::toPathValue($request->path), $resourcePath);
+        }
+        else {
+            $localName = lcfirst('Path');
+            $resourcePath = str_replace('{' . $localName . '}', '', $resourcePath);
         }
 
         // remove empty path parameters

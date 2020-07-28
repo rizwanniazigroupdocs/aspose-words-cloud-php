@@ -62,7 +62,7 @@ class ParagraphTests extends BaseTestContext
         );
 
         $result = $this->words->getParagraph($request);
-        Assert::isTrue(json_decode($result, true) !== NULL);
+        Assert::assertNotNull($result, "Error occurred");
     }
 
     /*
@@ -90,7 +90,7 @@ class ParagraphTests extends BaseTestContext
         );
 
         $result = $this->words->getParagraph($request);
-        Assert::isTrue(json_decode($result, true) !== NULL);
+        Assert::assertNotNull($result, "Error occurred");
     }
 
     /*
@@ -117,7 +117,7 @@ class ParagraphTests extends BaseTestContext
         );
 
         $result = $this->words->getParagraphs($request);
-        Assert::isTrue(json_decode($result, true) !== NULL);
+        Assert::assertNotNull($result, "Error occurred");
     }
 
     /*
@@ -144,7 +144,7 @@ class ParagraphTests extends BaseTestContext
         );
 
         $result = $this->words->getParagraphs($request);
-        Assert::isTrue(json_decode($result, true) !== NULL);
+        Assert::assertNotNull($result, "Error occurred");
     }
 
     /*
@@ -297,7 +297,7 @@ class ParagraphTests extends BaseTestContext
         );
 
         $result = $this->words->insertParagraph($request);
-        Assert::isTrue(json_decode($result, true) !== NULL);
+        Assert::assertNotNull($result, "Error occurred");
     }
 
     /*
@@ -332,7 +332,7 @@ class ParagraphTests extends BaseTestContext
         );
 
         $result = $this->words->insertParagraph($request);
-        Assert::isTrue(json_decode($result, true) !== NULL);
+        Assert::assertNotNull($result, "Error occurred");
     }
 
     /*

@@ -70,6 +70,27 @@ class ConvertDocumentTests extends BaseTestContext
     }
 
     /*
+     * Test for converting document online to one of the available formats.
+     */
+    public function testSaveAsOnline()
+    {
+        $localName = "test_multi_pages.docx";
+
+        $requestSaveOptionsData = new \Aspose\Words\Model\SaveOptionsData(array(
+            "save_format" => "pdf",
+            "file_name" => self::$baseTestOutPath . "/TestSaveAs.pdf",
+        ));
+        $request = new Requests\SaveAsOnlineRequest(
+            realpath(__DIR__ . '/../../../../..') . "/TestData/" . "Common/" . $localName,
+            $requestSaveOptionsData,
+            NULL
+        );
+
+        $result = $this->words->saveAsOnline($request);
+        Assert::assertNotNull($result, "Error occurred");
+    }
+
+    /*
      * Test for converting document to one of the available formats.
      */
     public function testSaveAsDocx()

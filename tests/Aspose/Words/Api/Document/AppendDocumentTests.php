@@ -76,4 +76,37 @@ class AppendDocumentTests extends BaseTestContext
         $result = $this->words->appendDocument($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
     }
+
+    /*
+     * Test for appending document online.
+     */
+    public function testAppendDocumentOnline()
+    {
+        $remoteDataFolder = self::$baseRemoteFolderPath . "/DocumentActions/AppendDocument";
+        $localFile = "Common/test_multi_pages.docx";
+        $remoteFileName = "TestAppendDocument.docx";
+
+        $this->uploadFile(
+            realpath(__DIR__ . '/../../../../..') . "/TestData/" . $localFile,
+            $remoteDataFolder . "/" . $remoteFileName
+        );
+
+        $requestDocumentListDocumentEntries0 = new \Aspose\Words\Model\DocumentEntry(array(
+            "href" => $remoteDataFolder . "/" . $remoteFileName,
+            "import_format_mode" => "KeepSourceFormatting",
+        ));
+        $requestDocumentListDocumentEntries = [
+            $requestDocumentListDocumentEntries0,
+        ];
+        $requestDocumentList = new \Aspose\Words\Model\DocumentEntryList(array(
+            "document_entries" => $requestDocumentListDocumentEntries,
+        ));
+        $request = new Requests\AppendDocumentOnlineRequest(
+            realpath(__DIR__ . '/../../../../..') . "/TestData/" . $localFile,
+            $requestDocumentList
+        );
+
+        $result = $this->words->appendDocumentOnline($request);
+        Assert::assertNotNull($result, "Error occurred");
+    }
 }

@@ -72,9 +72,9 @@ class DocumentTests extends BaseTestContext
         $remoteFileName = "TestCreateDocument.doc";
 
         $request = new Requests\CreateDocumentRequest(
-            NULL,
             $remoteFileName,
-            $remoteDataFolder
+            $remoteDataFolder,
+            NULL
         );
 
         $result = $this->words->createDocument($request);
