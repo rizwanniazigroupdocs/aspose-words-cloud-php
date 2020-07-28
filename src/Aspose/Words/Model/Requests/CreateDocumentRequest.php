@@ -34,11 +34,6 @@ namespace Aspose\Words\Model\Requests;
 class CreateDocumentRequest
 {
     /*
-     * Original document storage.
-     */
-    public $storage;
-
-    /*
      * The document name.
      */
     public $file_name;
@@ -49,34 +44,22 @@ class CreateDocumentRequest
     public $folder;
 
     /*
+     * Original document storage.
+     */
+    public $storage;
+
+    /*
      * Initializes a new instance of the CreateDocumentRequest class.
      *
-     * @param string $storage Original document storage.
      * @param string $file_name The document name.
      * @param string $folder The document folder.
+     * @param string $storage Original document storage.
      */
-    public function __construct($storage = null, $file_name = null, $folder = null)
+    public function __construct($file_name = null, $folder = null, $storage = null)
     {
-        $this->storage = $storage;
         $this->file_name = $file_name;
         $this->folder = $folder;
-    }
-
-    /*
-     * Original document storage.
-     */
-    public function get_storage()
-    {
-        return $this->storage;
-    }
-
-    /*
-     * Original document storage.
-     */
-    public function set_storage($value)
-    {
-        $this->storage = $value;
-        return $this;
+        $this->storage = $storage;
     }
 
     /*
@@ -110,6 +93,23 @@ class CreateDocumentRequest
     public function set_folder($value)
     {
         $this->folder = $value;
+        return $this;
+    }
+
+    /*
+     * Original document storage.
+     */
+    public function get_storage()
+    {
+        return $this->storage;
+    }
+
+    /*
+     * Original document storage.
+     */
+    public function set_storage($value)
+    {
+        $this->storage = $value;
         return $this;
     }
 }

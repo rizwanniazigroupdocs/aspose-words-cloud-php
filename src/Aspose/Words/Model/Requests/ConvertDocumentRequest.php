@@ -44,11 +44,6 @@ class ConvertDocumentRequest
     public $format;
 
     /*
-     * Original document storage.
-     */
-    public $storage;
-
-    /*
      * Path for saving operation result to the local storage.
      */
     public $out_path;
@@ -57,6 +52,11 @@ class ConvertDocumentRequest
      * This file name will be used when resulting document has dynamic field for document file name {filename}. If it is not set, "sourceFilename" will be used instead.
      */
     public $file_name_field_value;
+
+    /*
+     * Original document storage.
+     */
+    public $storage;
 
     /*
      * Folder in filestorage with custom fonts.
@@ -68,18 +68,18 @@ class ConvertDocumentRequest
      *
      * @param \SplFileObject $document Converting document.
      * @param string $format Format to convert.
-     * @param string $storage Original document storage.
      * @param string $out_path Path for saving operation result to the local storage.
      * @param string $file_name_field_value This file name will be used when resulting document has dynamic field for document file name {filename}. If it is not set, "sourceFilename" will be used instead.
+     * @param string $storage Original document storage.
      * @param string $fonts_location Folder in filestorage with custom fonts.
      */
-    public function __construct($document, $format, $storage = null, $out_path = null, $file_name_field_value = null, $fonts_location = null)
+    public function __construct($document, $format, $out_path = null, $file_name_field_value = null, $storage = null, $fonts_location = null)
     {
         $this->document = $document;
         $this->format = $format;
-        $this->storage = $storage;
         $this->out_path = $out_path;
         $this->file_name_field_value = $file_name_field_value;
+        $this->storage = $storage;
         $this->fonts_location = $fonts_location;
     }
 
@@ -118,23 +118,6 @@ class ConvertDocumentRequest
     }
 
     /*
-     * Original document storage.
-     */
-    public function get_storage()
-    {
-        return $this->storage;
-    }
-
-    /*
-     * Original document storage.
-     */
-    public function set_storage($value)
-    {
-        $this->storage = $value;
-        return $this;
-    }
-
-    /*
      * Path for saving operation result to the local storage.
      */
     public function get_out_path()
@@ -165,6 +148,23 @@ class ConvertDocumentRequest
     public function set_file_name_field_value($value)
     {
         $this->file_name_field_value = $value;
+        return $this;
+    }
+
+    /*
+     * Original document storage.
+     */
+    public function get_storage()
+    {
+        return $this->storage;
+    }
+
+    /*
+     * Original document storage.
+     */
+    public function set_storage($value)
+    {
+        $this->storage = $value;
         return $this;
     }
 

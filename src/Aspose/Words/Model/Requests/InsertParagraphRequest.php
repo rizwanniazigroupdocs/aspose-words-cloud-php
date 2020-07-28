@@ -39,14 +39,14 @@ class InsertParagraphRequest
     public $name;
 
     /*
-     * Paragraph data.
-     */
-    public $paragraph;
-
-    /*
      * Path to the node which contains paragraphs.
      */
     public $node_path;
+
+    /*
+     * Paragraph data.
+     */
+    public $paragraph;
 
     /*
      * Original document folder.
@@ -92,8 +92,8 @@ class InsertParagraphRequest
      * Initializes a new instance of the InsertParagraphRequest class.
      *
      * @param string $name The document name.
-     * @param \Aspose\Words\Model\ParagraphInsert $paragraph Paragraph data.
      * @param string $node_path Path to the node which contains paragraphs.
+     * @param \Aspose\Words\Model\ParagraphInsert $paragraph Paragraph data.
      * @param string $folder Original document folder.
      * @param string $storage Original document storage.
      * @param string $load_encoding Encoding that will be used to load an HTML (or TXT) document if the encoding is not specified in HTML.
@@ -103,11 +103,11 @@ class InsertParagraphRequest
      * @param string $revision_date_time The date and time to use for revisions.
      * @param string $insert_before_node Paragraph will be inserted before node with index.
      */
-    public function __construct($name, $paragraph, $node_path = null, $folder = null, $storage = null, $load_encoding = null, $password = null, $dest_file_name = null, $revision_author = null, $revision_date_time = null, $insert_before_node = null)
+    public function __construct($name, $node_path, $paragraph, $folder = null, $storage = null, $load_encoding = null, $password = null, $dest_file_name = null, $revision_author = null, $revision_date_time = null, $insert_before_node = null)
     {
         $this->name = $name;
-        $this->paragraph = $paragraph;
         $this->node_path = $node_path;
+        $this->paragraph = $paragraph;
         $this->folder = $folder;
         $this->storage = $storage;
         $this->load_encoding = $load_encoding;
@@ -136,23 +136,6 @@ class InsertParagraphRequest
     }
 
     /*
-     * Paragraph data.
-     */
-    public function get_paragraph()
-    {
-        return $this->paragraph;
-    }
-
-    /*
-     * Paragraph data.
-     */
-    public function set_paragraph($value)
-    {
-        $this->paragraph = $value;
-        return $this;
-    }
-
-    /*
      * Path to the node which contains paragraphs.
      */
     public function get_node_path()
@@ -166,6 +149,23 @@ class InsertParagraphRequest
     public function set_node_path($value)
     {
         $this->node_path = $value;
+        return $this;
+    }
+
+    /*
+     * Paragraph data.
+     */
+    public function get_paragraph()
+    {
+        return $this->paragraph;
+    }
+
+    /*
+     * Paragraph data.
+     */
+    public function set_paragraph($value)
+    {
+        $this->paragraph = $value;
         return $this;
     }
 
