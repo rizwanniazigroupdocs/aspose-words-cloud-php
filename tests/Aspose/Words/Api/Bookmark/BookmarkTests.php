@@ -61,6 +61,9 @@ class BookmarkTests extends BaseTestContext
 
         $result = $this->words->getBookmarks($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
+        Assert::assertNotNull($result->getBookmarks());
+        Assert::assertCount(3, $result->getBookmarks()->getBookmarkList());
+        Assert::assertEquals("aspose", $result->getBookmarks()->getBookmarkList()[1]->getName());
     }
 
     /*
