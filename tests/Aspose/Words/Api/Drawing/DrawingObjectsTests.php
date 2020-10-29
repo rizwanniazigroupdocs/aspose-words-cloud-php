@@ -61,6 +61,9 @@ class DrawingObjectsTests extends BaseTestContext
 
         $result = $this->words->getDocumentDrawingObjects($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
+        Assert::assertNotNull($result->getDrawingObjects());
+        Assert::assertNotNull($result->getDrawingObjects()->getList());
+        Assert::assertCount(1, $result->getDrawingObjects()->getList());
     }
 
     /*
@@ -88,6 +91,9 @@ class DrawingObjectsTests extends BaseTestContext
 
         $result = $this->words->getDocumentDrawingObjects($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
+        Assert::assertNotNull($result->getDrawingObjects());
+        Assert::assertNotNull($result->getDrawingObjects()->getList());
+        Assert::assertCount(1, $result->getDrawingObjects()->getList());
     }
 
     /*
@@ -116,6 +122,8 @@ class DrawingObjectsTests extends BaseTestContext
 
         $result = $this->words->getDocumentDrawingObjectByIndex($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
+        Assert::assertNotNull($result->getDrawingObject());
+        Assert::assertEquals(300, $result->getDrawingObject()->getHeight());
     }
 
     /*
@@ -144,6 +152,8 @@ class DrawingObjectsTests extends BaseTestContext
 
         $result = $this->words->getDocumentDrawingObjectByIndex($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
+        Assert::assertNotNull($result->getDrawingObject());
+        Assert::assertEquals(300, $result->getDrawingObject()->getHeight());
     }
 
     /*
@@ -357,6 +367,8 @@ class DrawingObjectsTests extends BaseTestContext
 
         $result = $this->words->insertDrawingObject($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
+        Assert::assertNotNull($result->getDrawingObject());
+        Assert::assertEquals("0.3.7.1", $result->getDrawingObject()->getNodeId());
     }
 
     /*
@@ -398,6 +410,8 @@ class DrawingObjectsTests extends BaseTestContext
 
         $result = $this->words->insertDrawingObject($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
+        Assert::assertNotNull($result->getDrawingObject());
+        Assert::assertEquals("0.3.7.1", $result->getDrawingObject()->getNodeId());
     }
 
     /*
@@ -475,7 +489,7 @@ class DrawingObjectsTests extends BaseTestContext
         );
 
         $requestDrawingObject = new \Aspose\Words\Model\DrawingObjectUpdate(array(
-            "left" => 0,
+            "left" => 1,
         ));
         $request = new Requests\UpdateDrawingObjectRequest(
             $remoteFileName,
@@ -494,6 +508,8 @@ class DrawingObjectsTests extends BaseTestContext
 
         $result = $this->words->updateDrawingObject($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
+        Assert::assertNotNull($result->getDrawingObject());
+        Assert::assertEquals(1, $result->getDrawingObject()->getLeft());
     }
 
     /*
@@ -511,7 +527,7 @@ class DrawingObjectsTests extends BaseTestContext
         );
 
         $requestDrawingObject = new \Aspose\Words\Model\DrawingObjectUpdate(array(
-            "left" => 0,
+            "left" => 1,
         ));
         $request = new Requests\UpdateDrawingObjectRequest(
             $remoteFileName,
@@ -530,5 +546,7 @@ class DrawingObjectsTests extends BaseTestContext
 
         $result = $this->words->updateDrawingObject($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
+        Assert::assertNotNull($result->getDrawingObject());
+        Assert::assertEquals(1, $result->getDrawingObject()->getLeft());
     }
 }

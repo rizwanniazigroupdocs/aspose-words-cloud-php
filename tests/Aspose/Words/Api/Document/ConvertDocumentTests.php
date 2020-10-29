@@ -66,6 +66,9 @@ class ConvertDocumentTests extends BaseTestContext
 
         $result = $this->words->saveAs($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
+        Assert::assertNotNull($result->getSaveResult());
+        Assert::assertNotNull($result->getSaveResult()->getDestDocument());
+        Assert::assertEquals("Temp/SdkTests/NET/TestData/DocumentActions/ConvertDocument/TestOut/NET/TestSaveAs.pdf", $result->getSaveResult()->getDestDocument()->getHref());
     }
 
     /*
@@ -99,6 +102,9 @@ class ConvertDocumentTests extends BaseTestContext
 
         $result = $this->words->saveAs($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
+        Assert::assertNotNull($result->getSaveResult());
+        Assert::assertNotNull($result->getSaveResult()->getDestDocument());
+        Assert::assertEquals("Temp/SdkTests/NET/TestData/DocumentActions/ConvertDocument/TestOut/NET/TestSaveAsFromPdfToDoc.docx", $result->getSaveResult()->getDestDocument()->getHref());
     }
 
     /*
@@ -148,6 +154,9 @@ class ConvertDocumentTests extends BaseTestContext
 
         $result = $this->words->saveAsTiff($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
+        Assert::assertNotNull($result->getSaveResult());
+        Assert::assertNotNull($result->getSaveResult()->getDestDocument());
+        Assert::assertEquals("Temp/SdkTests/NET/TestData/DocumentActions/ConvertDocument/TestOut/NET/abc.tiff", $result->getSaveResult()->getDestDocument()->getHref());
     }
 
     /*
