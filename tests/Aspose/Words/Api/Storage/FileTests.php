@@ -55,7 +55,7 @@ class FileTests extends BaseTestContext
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getUploaded());
         Assert::assertCount(1, $result->getUploaded());
-        Assert::assertEquals("TestUploadFile.docx", $result->getUploaded()[0]);
+        Assert::assertEquals("TestUploadFile.docx", substr($result->getUploaded()[0], 0, strlen("TestUploadFile.docx")));
     }
 
     /*

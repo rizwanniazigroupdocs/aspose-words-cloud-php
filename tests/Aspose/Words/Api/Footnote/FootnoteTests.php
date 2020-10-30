@@ -70,8 +70,8 @@ class FootnoteTests extends BaseTestContext
         $result = $this->words->insertFootnote($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getFootnote());
-        Assert::assertEquals("0.1.7.1", $result->getFootnote()->getNodeId());
-        Assert::assertEquals(" test endnote\r\n", $result->getFootnote()->getText());
+        Assert::assertEquals("0.1.7.1", substr($result->getFootnote()->getNodeId(), 0, strlen("0.1.7.1")));
+        Assert::assertEquals(" test endnote", substr($result->getFootnote()->getText(), 0, strlen(" test endnote")));
     }
 
     /*
@@ -108,8 +108,8 @@ class FootnoteTests extends BaseTestContext
         $result = $this->words->insertFootnote($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getFootnote());
-        Assert::assertEquals("0.1.7.1", $result->getFootnote()->getNodeId());
-        Assert::assertEquals(" test endnote\r\n", $result->getFootnote()->getText());
+        Assert::assertEquals("0.1.7.1", substr($result->getFootnote()->getNodeId(), 0, strlen("0.1.7.1")));
+        Assert::assertEquals(" test endnote", substr($result->getFootnote()->getText(), 0, strlen(" test endnote")));
     }
 
     /*
@@ -200,7 +200,7 @@ class FootnoteTests extends BaseTestContext
         Assert::assertNotNull($result->getFootnotes());
         Assert::assertNotNull($result->getFootnotes()->getList());
         Assert::assertCount(6, $result->getFootnotes()->getList());
-        Assert::assertEquals(" Footnote 1.\r\n", $result->getFootnotes()->getList()[0]->getText());
+        Assert::assertEquals(" Footnote 1.", substr($result->getFootnotes()->getList()[0]->getText(), 0, strlen(" Footnote 1.")));
     }
 
     /*
@@ -231,7 +231,7 @@ class FootnoteTests extends BaseTestContext
         Assert::assertNotNull($result->getFootnotes());
         Assert::assertNotNull($result->getFootnotes()->getList());
         Assert::assertCount(6, $result->getFootnotes()->getList());
-        Assert::assertEquals(" Footnote 1.\r\n", $result->getFootnotes()->getList()[0]->getText());
+        Assert::assertEquals(" Footnote 1.", substr($result->getFootnotes()->getList()[0]->getText(), 0, strlen(" Footnote 1.")));
     }
 
     /*
@@ -261,7 +261,7 @@ class FootnoteTests extends BaseTestContext
         $result = $this->words->getFootnote($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getFootnote());
-        Assert::assertEquals(" Footnote 1.\r\n", $result->getFootnote()->getText());
+        Assert::assertEquals(" Footnote 1.", substr($result->getFootnote()->getText(), 0, strlen(" Footnote 1.")));
     }
 
     /*
@@ -291,7 +291,7 @@ class FootnoteTests extends BaseTestContext
         $result = $this->words->getFootnote($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getFootnote());
-        Assert::assertEquals(" Footnote 1.\r\n", $result->getFootnote()->getText());
+        Assert::assertEquals(" Footnote 1.", substr($result->getFootnote()->getText(), 0, strlen(" Footnote 1.")));
     }
 
     /*
@@ -328,7 +328,7 @@ class FootnoteTests extends BaseTestContext
         $result = $this->words->updateFootnote($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getFootnote());
-        Assert::assertEquals(" new text is here\r\n", $result->getFootnote()->getText());
+        Assert::assertEquals(" new text is here", substr($result->getFootnote()->getText(), 0, strlen(" new text is here")));
     }
 
     /*
@@ -365,6 +365,6 @@ class FootnoteTests extends BaseTestContext
         $result = $this->words->updateFootnote($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getFootnote());
-        Assert::assertEquals(" new text is here\r\n", $result->getFootnote()->getText());
+        Assert::assertEquals(" new text is here", substr($result->getFootnote()->getText(), 0, strlen(" new text is here")));
     }
 }

@@ -63,7 +63,7 @@ class ParagraphTests extends BaseTestContext
         $result = $this->words->getParagraph($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getParagraph());
-        Assert::assertEquals("0.0.0", $result->getParagraph()->getNodeId());
+        Assert::assertEquals("0.0.0", substr($result->getParagraph()->getNodeId(), 0, strlen("0.0.0")));
     }
 
     /*
@@ -93,7 +93,7 @@ class ParagraphTests extends BaseTestContext
         $result = $this->words->getParagraph($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getParagraph());
-        Assert::assertEquals("0.0.0", $result->getParagraph()->getNodeId());
+        Assert::assertEquals("0.0.0", substr($result->getParagraph()->getNodeId(), 0, strlen("0.0.0")));
     }
 
     /*
@@ -124,7 +124,7 @@ class ParagraphTests extends BaseTestContext
         Assert::assertNotNull($result->getParagraphs());
         Assert::assertNotNull($result->getParagraphs()->getParagraphLinkList());
         Assert::assertCount(15, $result->getParagraphs()->getParagraphLinkList());
-        Assert::assertEquals("Page 1 of 3", $result->getParagraphs()->getParagraphLinkList()[0]->getText());
+        Assert::assertEquals("Page 1 of 3", substr($result->getParagraphs()->getParagraphLinkList()[0]->getText(), 0, strlen("Page 1 of 3")));
     }
 
     /*
@@ -155,7 +155,7 @@ class ParagraphTests extends BaseTestContext
         Assert::assertNotNull($result->getParagraphs());
         Assert::assertNotNull($result->getParagraphs()->getParagraphLinkList());
         Assert::assertCount(15, $result->getParagraphs()->getParagraphLinkList());
-        Assert::assertEquals("Page 1 of 3", $result->getParagraphs()->getParagraphLinkList()[0]->getText());
+        Assert::assertEquals("Page 1 of 3", substr($result->getParagraphs()->getParagraphLinkList()[0]->getText(), 0, strlen("Page 1 of 3")));
     }
 
     /*
@@ -185,7 +185,7 @@ class ParagraphTests extends BaseTestContext
         $result = $this->words->getRun($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getRun());
-        Assert::assertEquals("Page ", $result->getRun()->getText());
+        Assert::assertEquals("Page ", substr($result->getRun()->getText(), 0, strlen("Page ")));
     }
 
     /*
@@ -215,7 +215,7 @@ class ParagraphTests extends BaseTestContext
         $result = $this->words->getRunFont($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getFont());
-        Assert::assertEquals("Times New Roman", $result->getFont()->getName());
+        Assert::assertEquals("Times New Roman", substr($result->getFont()->getName(), 0, strlen("Times New Roman")));
     }
 
     /*
@@ -246,7 +246,7 @@ class ParagraphTests extends BaseTestContext
         Assert::assertNotNull($result->getRuns());
         Assert::assertNotNull($result->getRuns()->getList());
         Assert::assertCount(6, $result->getRuns()->getList());
-        Assert::assertEquals("Page ", $result->getRuns()->getList()[0]->getText());
+        Assert::assertEquals("Page ", substr($result->getRuns()->getList()[0]->getText(), 0, strlen("Page ")));
     }
 
     /*
@@ -320,7 +320,7 @@ class ParagraphTests extends BaseTestContext
         $result = $this->words->insertParagraph($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getParagraph());
-        Assert::assertEquals("0.3.8", $result->getParagraph()->getNodeId());
+        Assert::assertEquals("0.3.8", substr($result->getParagraph()->getNodeId(), 0, strlen("0.3.8")));
     }
 
     /*
@@ -357,7 +357,7 @@ class ParagraphTests extends BaseTestContext
         $result = $this->words->insertParagraph($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getParagraph());
-        Assert::assertEquals("0.3.8", $result->getParagraph()->getNodeId());
+        Assert::assertEquals("0.3.8", substr($result->getParagraph()->getNodeId(), 0, strlen("0.3.8")));
     }
 
     /*
@@ -447,7 +447,7 @@ class ParagraphTests extends BaseTestContext
         $result = $this->words->getParagraphFormat($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getParagraphFormat());
-        Assert::assertEquals("Normal", $result->getParagraphFormat()->getStyleName());
+        Assert::assertEquals("Normal", substr($result->getParagraphFormat()->getStyleName(), 0, strlen("Normal")));
     }
 
     /*
@@ -477,7 +477,7 @@ class ParagraphTests extends BaseTestContext
         $result = $this->words->getParagraphFormat($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getParagraphFormat());
-        Assert::assertEquals("Normal", $result->getParagraphFormat()->getStyleName());
+        Assert::assertEquals("Normal", substr($result->getParagraphFormat()->getStyleName(), 0, strlen("Normal")));
     }
 
     /*

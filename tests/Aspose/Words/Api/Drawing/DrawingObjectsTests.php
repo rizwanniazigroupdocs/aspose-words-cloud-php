@@ -368,7 +368,7 @@ class DrawingObjectsTests extends BaseTestContext
         $result = $this->words->insertDrawingObject($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getDrawingObject());
-        Assert::assertEquals("0.3.7.1", $result->getDrawingObject()->getNodeId());
+        Assert::assertEquals("0.3.7.1", substr($result->getDrawingObject()->getNodeId(), 0, strlen("0.3.7.1")));
     }
 
     /*
@@ -411,7 +411,7 @@ class DrawingObjectsTests extends BaseTestContext
         $result = $this->words->insertDrawingObject($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getDrawingObject());
-        Assert::assertEquals("0.3.7.1", $result->getDrawingObject()->getNodeId());
+        Assert::assertEquals("0.3.7.1", substr($result->getDrawingObject()->getNodeId(), 0, strlen("0.3.7.1")));
     }
 
     /*

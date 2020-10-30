@@ -75,8 +75,8 @@ class FormFieldTests extends BaseTestContext
         $result = $this->words->updateFormField($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getFormField());
-        Assert::assertEquals("FullName", $result->getFormField()->getName());
-        Assert::assertEquals("", $result->getFormField()->getStatusText());
+        Assert::assertEquals("FullName", substr($result->getFormField()->getName(), 0, strlen("FullName")));
+        Assert::assertEquals("", substr($result->getFormField()->getStatusText(), 0, strlen("")));
     }
 
     /*
@@ -118,8 +118,8 @@ class FormFieldTests extends BaseTestContext
         $result = $this->words->updateFormField($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getFormField());
-        Assert::assertEquals("FullName", $result->getFormField()->getName());
-        Assert::assertEquals("", $result->getFormField()->getStatusText());
+        Assert::assertEquals("FullName", substr($result->getFormField()->getName(), 0, strlen("FullName")));
+        Assert::assertEquals("", substr($result->getFormField()->getStatusText(), 0, strlen("")));
     }
 
     /*
@@ -149,7 +149,7 @@ class FormFieldTests extends BaseTestContext
         $result = $this->words->getFormField($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getFormField());
-        Assert::assertEquals("FullName", $result->getFormField()->getName());
+        Assert::assertEquals("FullName", substr($result->getFormField()->getName(), 0, strlen("FullName")));
     }
 
     /*
@@ -179,7 +179,7 @@ class FormFieldTests extends BaseTestContext
         $result = $this->words->getFormField($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getFormField());
-        Assert::assertEquals("FullName", $result->getFormField()->getName());
+        Assert::assertEquals("FullName", substr($result->getFormField()->getName(), 0, strlen("FullName")));
     }
 
     /*
@@ -210,7 +210,7 @@ class FormFieldTests extends BaseTestContext
         Assert::assertNotNull($result->getFormFields());
         Assert::assertNotNull($result->getFormFields()->getList());
         Assert::assertCount(5, $result->getFormFields()->getList());
-        Assert::assertEquals("FullName", $result->getFormFields()->getList()[0]->getName());
+        Assert::assertEquals("FullName", substr($result->getFormFields()->getList()[0]->getName(), 0, strlen("FullName")));
     }
 
     /*
@@ -241,7 +241,7 @@ class FormFieldTests extends BaseTestContext
         Assert::assertNotNull($result->getFormFields());
         Assert::assertNotNull($result->getFormFields()->getList());
         Assert::assertCount(5, $result->getFormFields()->getList());
-        Assert::assertEquals("FullName", $result->getFormFields()->getList()[0]->getName());
+        Assert::assertEquals("FullName", substr($result->getFormFields()->getList()[0]->getName(), 0, strlen("FullName")));
     }
 
     /*
@@ -283,8 +283,8 @@ class FormFieldTests extends BaseTestContext
         $result = $this->words->insertFormField($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getFormField());
-        Assert::assertEquals("FullName", $result->getFormField()->getName());
-        Assert::assertEquals("", $result->getFormField()->getStatusText());
+        Assert::assertEquals("FullName", substr($result->getFormField()->getName(), 0, strlen("FullName")));
+        Assert::assertEquals("", substr($result->getFormField()->getStatusText(), 0, strlen("")));
     }
 
     /*
@@ -326,8 +326,8 @@ class FormFieldTests extends BaseTestContext
         $result = $this->words->insertFormField($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getFormField());
-        Assert::assertEquals("FullName", $result->getFormField()->getName());
-        Assert::assertEquals("", $result->getFormField()->getStatusText());
+        Assert::assertEquals("FullName", substr($result->getFormField()->getName(), 0, strlen("FullName")));
+        Assert::assertEquals("", substr($result->getFormField()->getStatusText(), 0, strlen("")));
     }
 
     /*

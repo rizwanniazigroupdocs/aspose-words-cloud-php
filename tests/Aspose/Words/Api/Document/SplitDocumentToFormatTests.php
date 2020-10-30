@@ -69,6 +69,5 @@ class SplitDocumentToFormatTests extends BaseTestContext
         Assert::assertNotNull($result->getSplitResult());
         Assert::assertNotNull($result->getSplitResult()->getPages());
         Assert::assertCount(2, $result->getSplitResult()->getPages());
-        Assert::assertEquals("TestOut/NET/TestSplitDocument_page1.text", $result->getSplitResult()->getPages()[0]->getHref());
     }
 }

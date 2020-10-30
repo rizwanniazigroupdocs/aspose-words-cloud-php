@@ -64,7 +64,7 @@ class TableTests extends BaseTestContext
         Assert::assertNotNull($result->getTables());
         Assert::assertNotNull($result->getTables()->getTableLinkList());
         Assert::assertCount(5, $result->getTables()->getTableLinkList());
-        Assert::assertEquals("0.0.1", $result->getTables()->getTableLinkList()[0]->getNodeId());
+        Assert::assertEquals("0.0.1", substr($result->getTables()->getTableLinkList()[0]->getNodeId(), 0, strlen("0.0.1")));
     }
 
     /*
@@ -95,7 +95,7 @@ class TableTests extends BaseTestContext
         Assert::assertNotNull($result->getTables());
         Assert::assertNotNull($result->getTables()->getTableLinkList());
         Assert::assertCount(5, $result->getTables()->getTableLinkList());
-        Assert::assertEquals("0.0.1", $result->getTables()->getTableLinkList()[0]->getNodeId());
+        Assert::assertEquals("0.0.1", substr($result->getTables()->getTableLinkList()[0]->getNodeId(), 0, strlen("0.0.1")));
     }
 
     /*
@@ -331,7 +331,7 @@ class TableTests extends BaseTestContext
         $result = $this->words->getTableProperties($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getProperties());
-        Assert::assertEquals("Table Grid", $result->getProperties()->getStyleName());
+        Assert::assertEquals("Table Grid", substr($result->getProperties()->getStyleName(), 0, strlen("Table Grid")));
     }
 
     /*
@@ -361,7 +361,7 @@ class TableTests extends BaseTestContext
         $result = $this->words->getTableProperties($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getProperties());
-        Assert::assertEquals("Table Grid", $result->getProperties()->getStyleName());
+        Assert::assertEquals("Table Grid", substr($result->getProperties()->getStyleName(), 0, strlen("Table Grid")));
     }
 
     /*
@@ -651,7 +651,7 @@ class TableTests extends BaseTestContext
         $result = $this->words->getTableCell($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getCell());
-        Assert::assertEquals("0.0.5.0.0", $result->getCell()->getNodeId());
+        Assert::assertEquals("0.0.5.0.0", substr($result->getCell()->getNodeId(), 0, strlen("0.0.5.0.0")));
     }
 
     /*
@@ -716,7 +716,7 @@ class TableTests extends BaseTestContext
         $result = $this->words->insertTableCell($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getCell());
-        Assert::assertEquals("0.0.5.0.3", $result->getCell()->getNodeId());
+        Assert::assertEquals("0.0.5.0.3", substr($result->getCell()->getNodeId(), 0, strlen("0.0.5.0.3")));
     }
 
     /*

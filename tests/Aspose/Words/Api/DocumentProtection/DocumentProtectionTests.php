@@ -67,7 +67,7 @@ class DocumentProtectionTests extends BaseTestContext
         $result = $this->words->protectDocument($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getProtectionData());
-        Assert::assertEquals("ReadOnly", $result->getProtectionData()->getProtectionType());
+        Assert::assertEquals("ReadOnly", substr($result->getProtectionData()->getProtectionType(), 0, strlen("ReadOnly")));
     }
 
     /*
@@ -95,7 +95,7 @@ class DocumentProtectionTests extends BaseTestContext
         $result = $this->words->getDocumentProtection($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getProtectionData());
-        Assert::assertEquals("ReadOnly", $result->getProtectionData()->getProtectionType());
+        Assert::assertEquals("ReadOnly", substr($result->getProtectionData()->getProtectionType(), 0, strlen("ReadOnly")));
     }
 
     /*
@@ -128,6 +128,6 @@ class DocumentProtectionTests extends BaseTestContext
         $result = $this->words->unprotectDocument($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getProtectionData());
-        Assert::assertEquals("NoProtection", $result->getProtectionData()->getProtectionType());
+        Assert::assertEquals("NoProtection", substr($result->getProtectionData()->getProtectionType(), 0, strlen("NoProtection")));
     }
 }

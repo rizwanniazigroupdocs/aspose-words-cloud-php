@@ -75,6 +75,6 @@ class CompareDocumentTests extends BaseTestContext
         $result = $this->words->compareDocument($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getDocument());
-        Assert::assertEquals("TestCompareDocumentOut.doc", $result->getDocument()->getFileName());
+        Assert::assertEquals("TestCompareDocumentOut.doc", substr($result->getDocument()->getFileName(), 0, strlen("TestCompareDocumentOut.doc")));
     }
 }

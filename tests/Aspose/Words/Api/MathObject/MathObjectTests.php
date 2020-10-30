@@ -64,7 +64,7 @@ class MathObjectTests extends BaseTestContext
         Assert::assertNotNull($result->getOfficeMathObjects());
         Assert::assertNotNull($result->getOfficeMathObjects()->getList());
         Assert::assertCount(16, $result->getOfficeMathObjects()->getList());
-        Assert::assertEquals("0.0.0.0", $result->getOfficeMathObjects()->getList()[0]->getNodeId());
+        Assert::assertEquals("0.0.0.0", substr($result->getOfficeMathObjects()->getList()[0]->getNodeId(), 0, strlen("0.0.0.0")));
     }
 
     /*
@@ -95,7 +95,7 @@ class MathObjectTests extends BaseTestContext
         Assert::assertNotNull($result->getOfficeMathObjects());
         Assert::assertNotNull($result->getOfficeMathObjects()->getList());
         Assert::assertCount(16, $result->getOfficeMathObjects()->getList());
-        Assert::assertEquals("0.0.0.0", $result->getOfficeMathObjects()->getList()[0]->getNodeId());
+        Assert::assertEquals("0.0.0.0", substr($result->getOfficeMathObjects()->getList()[0]->getNodeId(), 0, strlen("0.0.0.0")));
     }
 
     /*
@@ -125,7 +125,7 @@ class MathObjectTests extends BaseTestContext
         $result = $this->words->getOfficeMathObject($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getOfficeMathObject());
-        Assert::assertEquals("0.0.0.0", $result->getOfficeMathObject()->getNodeId());
+        Assert::assertEquals("0.0.0.0", substr($result->getOfficeMathObject()->getNodeId(), 0, strlen("0.0.0.0")));
     }
 
     /*
@@ -155,7 +155,7 @@ class MathObjectTests extends BaseTestContext
         $result = $this->words->getOfficeMathObject($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getOfficeMathObject());
-        Assert::assertEquals("0.0.0.0", $result->getOfficeMathObject()->getNodeId());
+        Assert::assertEquals("0.0.0.0", substr($result->getOfficeMathObject()->getNodeId(), 0, strlen("0.0.0.0")));
     }
 
     /*
