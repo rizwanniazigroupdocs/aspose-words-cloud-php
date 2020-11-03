@@ -65,7 +65,7 @@ class TableBorderTests extends BaseTestContext
         Assert::assertNotNull($result->getBorders()->getList());
         Assert::assertCount(6, $result->getBorders()->getList());
         Assert::assertNotNull($result->getBorders()->getList()[0]->getColor());
-        Assert::assertEquals("#000000", substr($result->getBorders()->getList()[0]->getColor()->getWeb(), 0, strlen("#000000")));
+        Assert::assertEquals("#000000", $result->getBorders()->getList()[0]->getColor()->getWeb());
     }
 
     /*
@@ -96,7 +96,7 @@ class TableBorderTests extends BaseTestContext
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getBorder());
         Assert::assertNotNull($result->getBorder()->getColor());
-        Assert::assertEquals("#000000", substr($result->getBorder()->getColor()->getWeb(), 0, strlen("#000000")));
+        Assert::assertEquals("#000000", $result->getBorder()->getColor()->getWeb());
     }
 
     /*
@@ -131,7 +131,7 @@ class TableBorderTests extends BaseTestContext
         Assert::assertNotNull($result->getBorders()->getList());
         Assert::assertCount(6, $result->getBorders()->getList());
         Assert::assertNotNull($result->getBorders()->getList()[0]->getColor());
-        Assert::assertEquals("", substr($result->getBorders()->getList()[0]->getColor()->getWeb(), 0, strlen("")));
+        Assert::assertEquals("", $result->getBorders()->getList()[0]->getColor()->getWeb());
     }
 
     /*
@@ -165,7 +165,7 @@ class TableBorderTests extends BaseTestContext
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getBorder());
         Assert::assertNotNull($result->getBorder()->getColor());
-        Assert::assertEquals("", substr($result->getBorder()->getColor()->getWeb(), 0, strlen("")));
+        Assert::assertEquals("", $result->getBorder()->getColor()->getWeb());
     }
 
     /*
@@ -188,9 +188,9 @@ class TableBorderTests extends BaseTestContext
         $requestBorderProperties = new \Aspose\Words\Model\Border(array(
             "border_type" => "Left",
             "color" => $requestBorderPropertiesColor,
-            "distance_from_text" => 6,
+            "distance_from_text" => 6.0,
             "line_style" => "DashDotStroker",
-            "line_width" => 2,
+            "line_width" => 2.0,
             "shadow" => true,
         ));
         $request = new Requests\UpdateBorderRequest(
@@ -211,9 +211,9 @@ class TableBorderTests extends BaseTestContext
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getBorder());
         Assert::assertNotNull($result->getBorder()->getColor());
-        Assert::assertEquals("#000002", substr($result->getBorder()->getColor()->getWeb(), 0, strlen("#000002")));
-        Assert::assertEquals(6, $result->getBorder()->getDistanceFromText());
-        Assert::assertEquals(2, $result->getBorder()->getLineWidth());
+        Assert::assertEquals("#000002", $result->getBorder()->getColor()->getWeb());
+        Assert::assertEquals(6.0, $result->getBorder()->getDistanceFromText());
+        Assert::assertEquals(2.0, $result->getBorder()->getLineWidth());
         Assert::assertTrue($result->getBorder()->getShadow());
     }
 }

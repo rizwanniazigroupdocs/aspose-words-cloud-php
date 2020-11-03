@@ -72,7 +72,7 @@ class WatermarkTests extends BaseTestContext
         $result = $this->words->insertWatermarkImage($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getDocument());
-        Assert::assertEquals("TestInsertWatermarkImage.docx", substr($result->getDocument()->getFileName(), 0, strlen("TestInsertWatermarkImage.docx")));
+        Assert::assertEquals("TestInsertWatermarkImage.docx", $result->getDocument()->getFileName());
     }
 
     /*
@@ -91,7 +91,7 @@ class WatermarkTests extends BaseTestContext
 
         $requestWatermarkText = new \Aspose\Words\Model\WatermarkText(array(
             "text" => "This is the text",
-            "rotation_angle" => 90,
+            "rotation_angle" => 90.0,
         ));
         $request = new Requests\InsertWatermarkTextRequest(
             $remoteFileName,
@@ -108,7 +108,7 @@ class WatermarkTests extends BaseTestContext
         $result = $this->words->insertWatermarkText($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getDocument());
-        Assert::assertEquals("TestInsertWatermarkText.docx", substr($result->getDocument()->getFileName(), 0, strlen("TestInsertWatermarkText.docx")));
+        Assert::assertEquals("TestInsertWatermarkText.docx", $result->getDocument()->getFileName());
     }
 
     /*
@@ -139,6 +139,6 @@ class WatermarkTests extends BaseTestContext
         $result = $this->words->deleteWatermark($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getDocument());
-        Assert::assertEquals("TestDeleteWatermark.docx", substr($result->getDocument()->getFileName(), 0, strlen("TestDeleteWatermark.docx")));
+        Assert::assertEquals("TestDeleteWatermark.docx", $result->getDocument()->getFileName());
     }
 }

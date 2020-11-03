@@ -81,7 +81,7 @@ class PageSetupTests extends BaseTestContext
 
         $requestPageSetup = new \Aspose\Words\Model\PageSetup(array(
             "rtl_gutter" => true,
-            "left_margin" => 10,
+            "left_margin" => 10.0,
             "orientation" => "Landscape",
             "paper_size" => "A5",
         ));

@@ -123,7 +123,7 @@ class DrawingObjectsTests extends BaseTestContext
         $result = $this->words->getDocumentDrawingObjectByIndex($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getDrawingObject());
-        Assert::assertEquals(300, $result->getDrawingObject()->getHeight());
+        Assert::assertEquals(300.0, $result->getDrawingObject()->getHeight());
     }
 
     /*
@@ -153,7 +153,7 @@ class DrawingObjectsTests extends BaseTestContext
         $result = $this->words->getDocumentDrawingObjectByIndex($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getDrawingObject());
-        Assert::assertEquals(300, $result->getDrawingObject()->getHeight());
+        Assert::assertEquals(300.0, $result->getDrawingObject()->getHeight());
     }
 
     /*
@@ -343,10 +343,10 @@ class DrawingObjectsTests extends BaseTestContext
         );
 
         $requestDrawingObject = new \Aspose\Words\Model\DrawingObjectInsert(array(
-            "height" => 0,
-            "left" => 0,
-            "top" => 0,
-            "width" => 0,
+            "height" => 0.0,
+            "left" => 0.0,
+            "top" => 0.0,
+            "width" => 0.0,
             "relative_horizontal_position" => "Margin",
             "relative_vertical_position" => "Margin",
             "wrap_type" => "Inline",
@@ -368,7 +368,7 @@ class DrawingObjectsTests extends BaseTestContext
         $result = $this->words->insertDrawingObject($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getDrawingObject());
-        Assert::assertEquals("0.3.7.1", substr($result->getDrawingObject()->getNodeId(), 0, strlen("0.3.7.1")));
+        Assert::assertEquals("0.3.7.1", $result->getDrawingObject()->getNodeId());
     }
 
     /*
@@ -386,10 +386,10 @@ class DrawingObjectsTests extends BaseTestContext
         );
 
         $requestDrawingObject = new \Aspose\Words\Model\DrawingObjectInsert(array(
-            "height" => 0,
-            "left" => 0,
-            "top" => 0,
-            "width" => 0,
+            "height" => 0.0,
+            "left" => 0.0,
+            "top" => 0.0,
+            "width" => 0.0,
             "relative_horizontal_position" => "Margin",
             "relative_vertical_position" => "Margin",
             "wrap_type" => "Inline",
@@ -411,7 +411,7 @@ class DrawingObjectsTests extends BaseTestContext
         $result = $this->words->insertDrawingObject($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getDrawingObject());
-        Assert::assertEquals("0.3.7.1", substr($result->getDrawingObject()->getNodeId(), 0, strlen("0.3.7.1")));
+        Assert::assertEquals("0.3.7.1", $result->getDrawingObject()->getNodeId());
     }
 
     /*
@@ -489,7 +489,7 @@ class DrawingObjectsTests extends BaseTestContext
         );
 
         $requestDrawingObject = new \Aspose\Words\Model\DrawingObjectUpdate(array(
-            "left" => 1,
+            "left" => 1.0,
         ));
         $request = new Requests\UpdateDrawingObjectRequest(
             $remoteFileName,
@@ -509,7 +509,7 @@ class DrawingObjectsTests extends BaseTestContext
         $result = $this->words->updateDrawingObject($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getDrawingObject());
-        Assert::assertEquals(1, $result->getDrawingObject()->getLeft());
+        Assert::assertEquals(1.0, $result->getDrawingObject()->getLeft());
     }
 
     /*
@@ -527,7 +527,7 @@ class DrawingObjectsTests extends BaseTestContext
         );
 
         $requestDrawingObject = new \Aspose\Words\Model\DrawingObjectUpdate(array(
-            "left" => 1,
+            "left" => 1.0,
         ));
         $request = new Requests\UpdateDrawingObjectRequest(
             $remoteFileName,
@@ -547,6 +547,6 @@ class DrawingObjectsTests extends BaseTestContext
         $result = $this->words->updateDrawingObject($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getDrawingObject());
-        Assert::assertEquals(1, $result->getDrawingObject()->getLeft());
+        Assert::assertEquals(1.0, $result->getDrawingObject()->getLeft());
     }
 }

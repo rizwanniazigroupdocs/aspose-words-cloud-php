@@ -90,6 +90,6 @@ class ExecuteMailMergeTests extends BaseTestContext
         $result = $this->words->executeMailMerge($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getDocument());
-        Assert::assertEquals("TestExecuteMailMerge.docx", substr($result->getDocument()->getFileName(), 0, strlen("TestExecuteMailMerge.docx")));
+        Assert::assertEquals("TestExecuteMailMerge.docx", $result->getDocument()->getFileName());
     }
 }

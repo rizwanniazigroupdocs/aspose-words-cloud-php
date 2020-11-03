@@ -98,6 +98,6 @@ class BuildReportTests extends BaseTestContext
         $result = $this->words->buildReport($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getDocument());
-        Assert::assertEquals("TestBuildReport.docx", substr($result->getDocument()->getFileName(), 0, strlen("TestBuildReport.docx")));
+        Assert::assertEquals("TestBuildReport.docx", $result->getDocument()->getFileName());
     }
 }

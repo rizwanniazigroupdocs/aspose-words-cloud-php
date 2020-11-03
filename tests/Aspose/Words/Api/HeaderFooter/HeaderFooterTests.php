@@ -96,7 +96,7 @@ class HeaderFooterTests extends BaseTestContext
         Assert::assertNotNull($result->getHeaderFooter());
         Assert::assertNotNull($result->getHeaderFooter()->getChildNodes());
         Assert::assertCount(1, $result->getHeaderFooter()->getChildNodes());
-        Assert::assertEquals("0.0.0", substr($result->getHeaderFooter()->getChildNodes()[0]->getNodeId(), 0, strlen("0.0.0")));
+        Assert::assertEquals("0.0.0", $result->getHeaderFooter()->getChildNodes()[0]->getNodeId());
     }
 
     /*
@@ -129,7 +129,7 @@ class HeaderFooterTests extends BaseTestContext
         Assert::assertNotNull($result->getHeaderFooter());
         Assert::assertNotNull($result->getHeaderFooter()->getChildNodes());
         Assert::assertCount(1, $result->getHeaderFooter()->getChildNodes());
-        Assert::assertEquals("0.0.0", substr($result->getHeaderFooter()->getChildNodes()[0]->getNodeId(), 0, strlen("0.0.0")));
+        Assert::assertEquals("0.0.0", $result->getHeaderFooter()->getChildNodes()[0]->getNodeId());
     }
 
     /*
@@ -224,6 +224,6 @@ class HeaderFooterTests extends BaseTestContext
         Assert::assertNotNull($result->getHeaderFooter());
         Assert::assertNotNull($result->getHeaderFooter()->getChildNodes());
         Assert::assertCount(1, $result->getHeaderFooter()->getChildNodes());
-        Assert::assertEquals("0.2.0", substr($result->getHeaderFooter()->getChildNodes()[0]->getNodeId(), 0, strlen("0.2.0")));
+        Assert::assertEquals("0.2.0", $result->getHeaderFooter()->getChildNodes()[0]->getNodeId());
     }
 }

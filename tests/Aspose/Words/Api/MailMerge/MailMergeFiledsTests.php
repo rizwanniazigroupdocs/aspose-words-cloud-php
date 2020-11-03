@@ -54,7 +54,7 @@ class MailMergeFiledsTests extends BaseTestContext
         Assert::assertNotNull($result->getFieldNames());
         Assert::assertNotNull($result->getFieldNames()->getNames());
         Assert::assertCount(15, $result->getFieldNames()->getNames());
-        Assert::assertEquals("TableStart:Order", substr($result->getFieldNames()->getNames()[0], 0, strlen("TableStart:Order")));
+        Assert::assertEquals("TableStart:Order", $result->getFieldNames()->getNames()[0]);
     }
 
     /*

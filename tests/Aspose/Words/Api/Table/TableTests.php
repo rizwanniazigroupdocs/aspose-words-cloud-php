@@ -64,7 +64,7 @@ class TableTests extends BaseTestContext
         Assert::assertNotNull($result->getTables());
         Assert::assertNotNull($result->getTables()->getTableLinkList());
         Assert::assertCount(5, $result->getTables()->getTableLinkList());
-        Assert::assertEquals("0.0.1", substr($result->getTables()->getTableLinkList()[0]->getNodeId(), 0, strlen("0.0.1")));
+        Assert::assertEquals("0.0.1", $result->getTables()->getTableLinkList()[0]->getNodeId());
     }
 
     /*
@@ -95,7 +95,7 @@ class TableTests extends BaseTestContext
         Assert::assertNotNull($result->getTables());
         Assert::assertNotNull($result->getTables()->getTableLinkList());
         Assert::assertCount(5, $result->getTables()->getTableLinkList());
-        Assert::assertEquals("0.0.1", substr($result->getTables()->getTableLinkList()[0]->getNodeId(), 0, strlen("0.0.1")));
+        Assert::assertEquals("0.0.1", $result->getTables()->getTableLinkList()[0]->getNodeId());
     }
 
     /*
@@ -331,7 +331,7 @@ class TableTests extends BaseTestContext
         $result = $this->words->getTableProperties($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getProperties());
-        Assert::assertEquals("Table Grid", substr($result->getProperties()->getStyleName(), 0, strlen("Table Grid")));
+        Assert::assertEquals("Table Grid", $result->getProperties()->getStyleName());
     }
 
     /*
@@ -361,7 +361,7 @@ class TableTests extends BaseTestContext
         $result = $this->words->getTableProperties($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getProperties());
-        Assert::assertEquals("Table Grid", substr($result->getProperties()->getStyleName(), 0, strlen("Table Grid")));
+        Assert::assertEquals("Table Grid", $result->getProperties()->getStyleName());
     }
 
     /*
@@ -383,7 +383,7 @@ class TableTests extends BaseTestContext
             "allow_auto_fit" => false,
             "bidi" => true,
             "bottom_padding" => 1,
-            "cell_spacing" => 2,
+            "cell_spacing" => 2.0,
             "style_options" => "ColumnBands",
         ));
         $request = new Requests\UpdateTablePropertiesRequest(
@@ -405,8 +405,8 @@ class TableTests extends BaseTestContext
         Assert::assertNotNull($result->getProperties());
         Assert::assertFalse($result->getProperties()->getAllowAutoFit());
         Assert::assertTrue($result->getProperties()->getBidi());
-        Assert::assertEquals(1, $result->getProperties()->getBottomPadding());
-        Assert::assertEquals(2, $result->getProperties()->getCellSpacing());
+        Assert::assertEquals(1.0, $result->getProperties()->getBottomPadding());
+        Assert::assertEquals(2.0, $result->getProperties()->getCellSpacing());
     }
 
     /*
@@ -427,8 +427,8 @@ class TableTests extends BaseTestContext
             "alignment" => "Right",
             "allow_auto_fit" => false,
             "bidi" => true,
-            "bottom_padding" => 1,
-            "cell_spacing" => 2,
+            "bottom_padding" => 1.0,
+            "cell_spacing" => 2.0,
             "style_options" => "ColumnBands",
         ));
         $request = new Requests\UpdateTablePropertiesRequest(
@@ -450,8 +450,8 @@ class TableTests extends BaseTestContext
         Assert::assertNotNull($result->getProperties());
         Assert::assertFalse($result->getProperties()->getAllowAutoFit());
         Assert::assertTrue($result->getProperties()->getBidi());
-        Assert::assertEquals(1, $result->getProperties()->getBottomPadding());
-        Assert::assertEquals(2, $result->getProperties()->getCellSpacing());
+        Assert::assertEquals(1.0, $result->getProperties()->getBottomPadding());
+        Assert::assertEquals(2.0, $result->getProperties()->getCellSpacing());
     }
 
     /*
@@ -599,7 +599,7 @@ class TableTests extends BaseTestContext
         $requestFormat = new \Aspose\Words\Model\TableRowFormat(array(
             "allow_break_across_pages" => true,
             "heading_format" => true,
-            "height" => 10,
+            "height" => 10.0,
             "height_rule" => "Exactly",
         ));
         $request = new Requests\UpdateTableRowFormatRequest(
@@ -621,7 +621,7 @@ class TableTests extends BaseTestContext
         Assert::assertNotNull($result->getRowFormat());
         Assert::assertTrue($result->getRowFormat()->getAllowBreakAcrossPages());
         Assert::assertTrue($result->getRowFormat()->getHeadingFormat());
-        Assert::assertEquals(10, $result->getRowFormat()->getHeight());
+        Assert::assertEquals(10.0, $result->getRowFormat()->getHeight());
     }
 
     /*
@@ -651,7 +651,7 @@ class TableTests extends BaseTestContext
         $result = $this->words->getTableCell($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getCell());
-        Assert::assertEquals("0.0.5.0.0", substr($result->getCell()->getNodeId(), 0, strlen("0.0.5.0.0")));
+        Assert::assertEquals("0.0.5.0.0", $result->getCell()->getNodeId());
     }
 
     /*
@@ -716,7 +716,7 @@ class TableTests extends BaseTestContext
         $result = $this->words->insertTableCell($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getCell());
-        Assert::assertEquals("0.0.5.0.3", substr($result->getCell()->getNodeId(), 0, strlen("0.0.5.0.3")));
+        Assert::assertEquals("0.0.5.0.3", $result->getCell()->getNodeId());
     }
 
     /*
@@ -764,7 +764,7 @@ class TableTests extends BaseTestContext
         );
 
         $requestFormat = new \Aspose\Words\Model\TableCellFormat(array(
-            "bottom_padding" => 5,
+            "bottom_padding" => 5.0,
             "fit_text" => true,
             "horizontal_merge" => "First",
             "wrap_text" => true,
@@ -786,7 +786,7 @@ class TableTests extends BaseTestContext
         $result = $this->words->updateTableCellFormat($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getCellFormat());
-        Assert::assertEquals(5, $result->getCellFormat()->getBottomPadding());
+        Assert::assertEquals(5.0, $result->getCellFormat()->getBottomPadding());
         Assert::assertTrue($result->getCellFormat()->getFitText());
         Assert::assertTrue($result->getCellFormat()->getWrapText());
     }

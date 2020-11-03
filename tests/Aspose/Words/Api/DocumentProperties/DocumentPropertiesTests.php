@@ -64,8 +64,8 @@ class DocumentPropertiesTests extends BaseTestContext
         Assert::assertNotNull($result->getDocumentProperties()->getList());
         Assert::assertCount(24, $result->getDocumentProperties()->getList());
         Assert::assertNotNull($result->getDocumentProperties()->getList()[0]);
-        Assert::assertEquals("Author", substr($result->getDocumentProperties()->getList()[0]->getName(), 0, strlen("Author")));
-        Assert::assertEquals("", substr($result->getDocumentProperties()->getList()[0]->getValue(), 0, strlen("")));
+        Assert::assertEquals("Author", $result->getDocumentProperties()->getList()[0]->getName());
+        Assert::assertEquals("", $result->getDocumentProperties()->getList()[0]->getValue());
     }
 
     /*
@@ -94,8 +94,8 @@ class DocumentPropertiesTests extends BaseTestContext
         $result = $this->words->getDocumentProperty($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getDocumentProperty());
-        Assert::assertEquals("Author", substr($result->getDocumentProperty()->getName(), 0, strlen("Author")));
-        Assert::assertEquals("", substr($result->getDocumentProperty()->getValue(), 0, strlen("")));
+        Assert::assertEquals("Author", $result->getDocumentProperty()->getName());
+        Assert::assertEquals("", $result->getDocumentProperty()->getValue());
     }
 
     /*
@@ -160,7 +160,7 @@ class DocumentPropertiesTests extends BaseTestContext
         $result = $this->words->createOrUpdateDocumentProperty($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getDocumentProperty());
-        Assert::assertEquals("AsposeAuthor", substr($result->getDocumentProperty()->getName(), 0, strlen("AsposeAuthor")));
-        Assert::assertEquals("Imran Anwar", substr($result->getDocumentProperty()->getValue(), 0, strlen("Imran Anwar")));
+        Assert::assertEquals("AsposeAuthor", $result->getDocumentProperty()->getName());
+        Assert::assertEquals("Imran Anwar", $result->getDocumentProperty()->getValue());
     }
 }

@@ -62,6 +62,6 @@ class LoadWebDocumentTests extends BaseTestContext
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getSaveResult());
         Assert::assertNotNull($result->getSaveResult()->getDestDocument());
-        Assert::assertEquals("google.doc", substr($result->getSaveResult()->getDestDocument()->getHref(), 0, strlen("google.doc")));
+        Assert::assertEquals("google.doc", $result->getSaveResult()->getDestDocument()->getHref());
     }
 }

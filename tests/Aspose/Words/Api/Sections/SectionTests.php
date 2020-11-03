@@ -64,7 +64,7 @@ class SectionTests extends BaseTestContext
         Assert::assertNotNull($result->getSection());
         Assert::assertNotNull($result->getSection()->getChildNodes());
         Assert::assertCount(13, $result->getSection()->getChildNodes());
-        Assert::assertEquals("0.3.0", substr($result->getSection()->getChildNodes()[0]->getNodeId(), 0, strlen("0.3.0")));
+        Assert::assertEquals("0.3.0", $result->getSection()->getChildNodes()[0]->getNodeId());
     }
 
     /*
@@ -94,7 +94,7 @@ class SectionTests extends BaseTestContext
         Assert::assertNotNull($result->getSections());
         Assert::assertNotNull($result->getSections()->getSectionLinkList());
         Assert::assertCount(1, $result->getSections()->getSectionLinkList());
-        Assert::assertEquals("0", substr($result->getSections()->getSectionLinkList()[0]->getNodeId(), 0, strlen("0")));
+        Assert::assertEquals("0", $result->getSections()->getSectionLinkList()[0]->getNodeId());
     }
 
     /*

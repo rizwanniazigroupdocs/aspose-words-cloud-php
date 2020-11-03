@@ -61,7 +61,7 @@ class DocumentTests extends BaseTestContext
         $result = $this->words->getDocument($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getDocument());
-        Assert::assertEquals("TestGetDocument.docx", substr($result->getDocument()->getFileName(), 0, strlen("TestGetDocument.docx")));
+        Assert::assertEquals("TestGetDocument.docx", $result->getDocument()->getFileName());
     }
 
     /*
@@ -81,6 +81,6 @@ class DocumentTests extends BaseTestContext
         $result = $this->words->createDocument($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getDocument());
-        Assert::assertEquals("TestCreateDocument.doc", substr($result->getDocument()->getFileName(), 0, strlen("TestCreateDocument.doc")));
+        Assert::assertEquals("TestCreateDocument.doc", $result->getDocument()->getFileName());
     }
 }

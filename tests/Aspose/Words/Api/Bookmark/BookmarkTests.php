@@ -62,7 +62,7 @@ class BookmarkTests extends BaseTestContext
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getBookmarks());
         Assert::assertCount(3, $result->getBookmarks()->getBookmarkList());
-        Assert::assertEquals("aspose", substr($result->getBookmarks()->getBookmarkList()[1]->getName(), 0, strlen("aspose")));
+        Assert::assertEquals("aspose", $result->getBookmarks()->getBookmarkList()[1]->getName());
     }
 
     /*
@@ -92,7 +92,7 @@ class BookmarkTests extends BaseTestContext
         $result = $this->words->getBookmarkByName($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getBookmark());
-        Assert::assertEquals($bookmarkName, substr($result->getBookmark()->getName(), 0, strlen($bookmarkName)));
+        Assert::assertEquals($bookmarkName, $result->getBookmark()->getName());
     }
 
     /*
@@ -131,7 +131,7 @@ class BookmarkTests extends BaseTestContext
         $result = $this->words->updateBookmark($request);
         Assert::isTrue(json_decode($result, true) !== NULL);
         Assert::assertNotNull($result->getBookmark());
-        Assert::assertEquals($bookmarkName, substr($result->getBookmark()->getName(), 0, strlen($bookmarkName)));
-        Assert::assertEquals($bookmarkText, substr($result->getBookmark()->getText(), 0, strlen($bookmarkText)));
+        Assert::assertEquals($bookmarkName, $result->getBookmark()->getName());
+        Assert::assertEquals($bookmarkText, $result->getBookmark()->getText());
     }
 }
