@@ -43,7 +43,7 @@ use Aspose\Words\HeaderSelector;
 class GetFilesListRequest
 {
     /*
-     * Folder path e.g. /Folder1.
+     * Folder path e.g. '/folder'.
      */
     public $path;
 
@@ -55,7 +55,7 @@ class GetFilesListRequest
     /*
      * Initializes a new instance of the GetFilesListRequest class.
      *
-     * @param string $path Folder path e.g. /Folder1.
+     * @param string $path Folder path e.g. '/folder'.
      * @param string $storage_name Storage name.
      */
     public function __construct($path, $storage_name = null)
@@ -65,7 +65,7 @@ class GetFilesListRequest
     }
 
     /*
-     * Folder path e.g. /Folder1.
+     * Folder path e.g. '/folder'.
      */
     public function get_path()
     {
@@ -73,7 +73,7 @@ class GetFilesListRequest
     }
 
     /*
-     * Folder path e.g. /Folder1.
+     * Folder path e.g. '/folder'.
      */
     public function set_path($value)
     {

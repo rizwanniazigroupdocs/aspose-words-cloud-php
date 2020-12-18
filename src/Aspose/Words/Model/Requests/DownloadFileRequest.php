@@ -43,7 +43,7 @@ use Aspose\Words\HeaderSelector;
 class DownloadFileRequest
 {
     /*
-     * Path of the file including the file name and extension e.g. /folder1/file.ext.
+     * File path e.g. '/folder/file.ext'.
      */
     public $path;
 
@@ -60,7 +60,7 @@ class DownloadFileRequest
     /*
      * Initializes a new instance of the DownloadFileRequest class.
      *
-     * @param string $path Path of the file including the file name and extension e.g. /folder1/file.ext.
+     * @param string $path File path e.g. '/folder/file.ext'.
      * @param string $storage_name Storage name.
      * @param string $version_id File version ID to download.
      */
@@ -72,7 +72,7 @@ class DownloadFileRequest
     }
 
     /*
-     * Path of the file including the file name and extension e.g. /folder1/file.ext.
+     * File path e.g. '/folder/file.ext'.
      */
     public function get_path()
     {
@@ -80,7 +80,7 @@ class DownloadFileRequest
     }
 
     /*
-     * Path of the file including the file name and extension e.g. /folder1/file.ext.
+     * File path e.g. '/folder/file.ext'.
      */
     public function set_path($value)
     {

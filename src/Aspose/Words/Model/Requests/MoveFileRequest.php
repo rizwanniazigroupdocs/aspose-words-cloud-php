@@ -43,14 +43,14 @@ use Aspose\Words\HeaderSelector;
 class MoveFileRequest
 {
     /*
+     * Source file path e.g. '/src.ext'.
+     */
+    public $src_path;
+
+    /*
      * Destination file path e.g. '/dest.ext'.
      */
     public $dest_path;
-
-    /*
-     * Source file's path e.g. '/Folder 1/file.ext' or '/Bucket/Folder 1/file.ext'.
-     */
-    public $src_path;
 
     /*
      * Source storage name.
@@ -70,19 +70,36 @@ class MoveFileRequest
     /*
      * Initializes a new instance of the MoveFileRequest class.
      *
+     * @param string $src_path Source file path e.g. '/src.ext'.
      * @param string $dest_path Destination file path e.g. '/dest.ext'.
-     * @param string $src_path Source file's path e.g. '/Folder 1/file.ext' or '/Bucket/Folder 1/file.ext'.
      * @param string $src_storage_name Source storage name.
      * @param string $dest_storage_name Destination storage name.
      * @param string $version_id File version ID to move.
      */
-    public function __construct($dest_path, $src_path, $src_storage_name = null, $dest_storage_name = null, $version_id = null)
+    public function __construct($src_path, $dest_path, $src_storage_name = null, $dest_storage_name = null, $version_id = null)
     {
-        $this->dest_path = $dest_path;
         $this->src_path = $src_path;
+        $this->dest_path = $dest_path;
         $this->src_storage_name = $src_storage_name;
         $this->dest_storage_name = $dest_storage_name;
         $this->version_id = $version_id;
+    }
+
+    /*
+     * Source file path e.g. '/src.ext'.
+     */
+    public function get_src_path()
+    {
+        return $this->src_path;
+    }
+
+    /*
+     * Source file path e.g. '/src.ext'.
+     */
+    public function set_src_path($value)
+    {
+        $this->src_path = $value;
+        return $this;
     }
 
     /*
@@ -99,23 +116,6 @@ class MoveFileRequest
     public function set_dest_path($value)
     {
         $this->dest_path = $value;
-        return $this;
-    }
-
-    /*
-     * Source file's path e.g. '/Folder 1/file.ext' or '/Bucket/Folder 1/file.ext'.
-     */
-    public function get_src_path()
-    {
-        return $this->src_path;
-    }
-
-    /*
-     * Source file's path e.g. '/Folder 1/file.ext' or '/Bucket/Folder 1/file.ext'.
-     */
-    public function set_src_path($value)
-    {
-        $this->src_path = $value;
         return $this;
     }
 
@@ -178,11 +178,11 @@ class MoveFileRequest
      */
     public function createRequestData($config)
     {
-        if ($this->dest_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $dest_path when calling moveFile');
-        }
         if ($this->src_path === null) {
             throw new \InvalidArgumentException('Missing the required parameter $src_path when calling moveFile');
+        }
+        if ($this->dest_path === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $dest_path when calling moveFile');
         }
 
         $resourcePath = '/words/storage/file/move/{srcPath}';

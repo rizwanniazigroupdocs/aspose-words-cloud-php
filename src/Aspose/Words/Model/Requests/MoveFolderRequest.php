@@ -43,14 +43,14 @@ use Aspose\Words\HeaderSelector;
 class MoveFolderRequest
 {
     /*
+     * Folder path to move e.g. '/folder'.
+     */
+    public $src_path;
+
+    /*
      * Destination folder path to move to e.g '/dst'.
      */
     public $dest_path;
-
-    /*
-     * Source folder path e.g. /Folder1.
-     */
-    public $src_path;
 
     /*
      * Source storage name.
@@ -65,17 +65,34 @@ class MoveFolderRequest
     /*
      * Initializes a new instance of the MoveFolderRequest class.
      *
+     * @param string $src_path Folder path to move e.g. '/folder'.
      * @param string $dest_path Destination folder path to move to e.g '/dst'.
-     * @param string $src_path Source folder path e.g. /Folder1.
      * @param string $src_storage_name Source storage name.
      * @param string $dest_storage_name Destination storage name.
      */
-    public function __construct($dest_path, $src_path, $src_storage_name = null, $dest_storage_name = null)
+    public function __construct($src_path, $dest_path, $src_storage_name = null, $dest_storage_name = null)
     {
-        $this->dest_path = $dest_path;
         $this->src_path = $src_path;
+        $this->dest_path = $dest_path;
         $this->src_storage_name = $src_storage_name;
         $this->dest_storage_name = $dest_storage_name;
+    }
+
+    /*
+     * Folder path to move e.g. '/folder'.
+     */
+    public function get_src_path()
+    {
+        return $this->src_path;
+    }
+
+    /*
+     * Folder path to move e.g. '/folder'.
+     */
+    public function set_src_path($value)
+    {
+        $this->src_path = $value;
+        return $this;
     }
 
     /*
@@ -92,23 +109,6 @@ class MoveFolderRequest
     public function set_dest_path($value)
     {
         $this->dest_path = $value;
-        return $this;
-    }
-
-    /*
-     * Source folder path e.g. /Folder1.
-     */
-    public function get_src_path()
-    {
-        return $this->src_path;
-    }
-
-    /*
-     * Source folder path e.g. /Folder1.
-     */
-    public function set_src_path($value)
-    {
-        $this->src_path = $value;
         return $this;
     }
 
@@ -154,11 +154,11 @@ class MoveFolderRequest
      */
     public function createRequestData($config)
     {
-        if ($this->dest_path === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $dest_path when calling moveFolder');
-        }
         if ($this->src_path === null) {
             throw new \InvalidArgumentException('Missing the required parameter $src_path when calling moveFolder');
+        }
+        if ($this->dest_path === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $dest_path when calling moveFolder');
         }
 
         $resourcePath = '/words/storage/folder/move/{srcPath}';
