@@ -1,5 +1,5 @@
 ![](https://img.shields.io/badge/api-v2.0-lightgrey) ![Packagist Version](https://img.shields.io/packagist/v/asposecloud/aspose-words-cloud) ![Packagist PHP Version Support](https://img.shields.io/packagist/php-v/asposecloud/asposedocs-words-cloud) [![GitHub license](https://img.shields.io/github/license/asposedocs-words-cloud/aspose-words-cloud-php)](https://github.com/aspose-words-cloud/aspose-words-cloud-php/blob/master/LICENSE)
-
+![](https://img.shields.io/badge/api-v2.0-lightgrey) ![Packagist Version](https://img.shields.io/packagist/v/groupdocscloud/groupdocs-viewer-cloud) ![Packagist PHP Version Support](https://img.shields.io/packagist/php-v/groupdocscloud/groupdocs-viewer-cloud) [![GitHub license](https://img.shields.io/github/license/-words-cloud/aspose-words-cloud-php)](https://github.com/aspose-words-cloud/asposedocs-words-cloud-php/blob/master/LICENSE)
 
 # Aspose.Words Cloud SDK for PHP
 This repository contains Aspose.Words Cloud SDK for PHP source code. This SDK allows you to work with Aspose.Words Cloud REST APIs in your PHP applications quickly and easily, with zero initial cost.
