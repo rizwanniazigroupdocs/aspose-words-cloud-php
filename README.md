@@ -1,12 +1,15 @@
 ![](https://img.shields.io/badge/api-v2.0-lightgrey) ![Packagist Version](https://img.shields.io/packagist/v/aspose-cloud/aspose-words-cloud) ![Packagist PHP Version Support](https://img.shields.io/packagist/php-v/groupdocscloud/groupdocs-viewer-cloud) [![GitHub license](https://img.shields.io/github/license/aspose-words-cloud/aspose-words-cloud-php)](https://github.com/aspose-words-cloud/aspose-words-cloud-php/blob/master/LICENSE)
 
+#  Word Document Processing in the Cloud 
+[Aspose.Words Cloud SDK for PHP](https://products.aspose.cloud/words/php) allows to work with document headers, footers, page numbering, tables, sections, document comments, drawing objects, FormFields, fonts, hyperlinks, ranges, paragraphs, math objects, watermarks, track changes and document protection. 
+It also assists in appending documents, splitting documents as well as converting document to other supported file formats.
 # Aspose.Words Cloud SDK for PHP
 This repository contains Aspose.Words Cloud SDK for PHP source code. This SDK allows you to work with Aspose.Words Cloud REST APIs in your PHP applications quickly and easily, with zero initial cost.
 
 [Aspose.Words Cloud](https://products.aspose.cloud/words/family "Aspose.Words Cloud")  
 [API Reference](https://apireference.aspose.cloud/words/)  
 
-## Key Features
+## Document Processing API Key Features
 * Conversion between various document-related formats (20+ formats supported), including PDF<->Word conversion
 * Mail merge and reports generation 
 * Splitting Word documents
