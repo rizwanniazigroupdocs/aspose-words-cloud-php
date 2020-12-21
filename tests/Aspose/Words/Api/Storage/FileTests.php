@@ -73,8 +73,8 @@ class FileTests extends BaseTestContext
         );
 
         $request = new Requests\CopyFileRequest(
-            $remoteDataFolder . "/" . $remoteFileName,
             $remoteDataFolder . "/TestCopyFileDest.docx",
+            $remoteDataFolder . "/" . $remoteFileName,
             NULL,
             NULL,
             NULL
@@ -98,8 +98,8 @@ class FileTests extends BaseTestContext
         );
 
         $request = new Requests\MoveFileRequest(
-            $remoteDataFolder . "/" . $remoteFileName,
             self::$baseTestOutPath . "/TestMoveFileDest_" . $this->getGUID() . ".docx",
+            $remoteDataFolder . "/" . $remoteFileName,
             NULL,
             NULL,
             NULL

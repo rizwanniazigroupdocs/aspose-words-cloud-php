@@ -43,7 +43,7 @@ use Aspose\Words\HeaderSelector;
 class DeleteFileRequest
 {
     /*
-     * File path e.g. '/folder/file.ext'.
+     * Path of the file including the file name and extension e.g. /folder1/file.ext.
      */
     public $path;
 
@@ -60,7 +60,7 @@ class DeleteFileRequest
     /*
      * Initializes a new instance of the DeleteFileRequest class.
      *
-     * @param string $path File path e.g. '/folder/file.ext'.
+     * @param string $path Path of the file including the file name and extension e.g. /folder1/file.ext.
      * @param string $storage_name Storage name.
      * @param string $version_id File version ID to delete.
      */
@@ -72,7 +72,7 @@ class DeleteFileRequest
     }
 
     /*
-     * File path e.g. '/folder/file.ext'.
+     * Path of the file including the file name and extension e.g. /folder1/file.ext.
      */
     public function get_path()
     {
@@ -80,7 +80,7 @@ class DeleteFileRequest
     }
 
     /*
-     * File path e.g. '/folder/file.ext'.
+     * Path of the file including the file name and extension e.g. /folder1/file.ext.
      */
     public function set_path($value)
     {

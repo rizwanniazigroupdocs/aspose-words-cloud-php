@@ -43,7 +43,7 @@ use Aspose\Words\HeaderSelector;
 class CreateFolderRequest
 {
     /*
-     * Folder path to create e.g. 'folder_1/folder_2/'.
+     * Target folder's path e.g. Folder1/Folder2/. The folders will be created recursively.
      */
     public $path;
 
@@ -55,7 +55,7 @@ class CreateFolderRequest
     /*
      * Initializes a new instance of the CreateFolderRequest class.
      *
-     * @param string $path Folder path to create e.g. 'folder_1/folder_2/'.
+     * @param string $path Target folder's path e.g. Folder1/Folder2/. The folders will be created recursively.
      * @param string $storage_name Storage name.
      */
     public function __construct($path, $storage_name = null)
@@ -65,7 +65,7 @@ class CreateFolderRequest
     }
 
     /*
-     * Folder path to create e.g. 'folder_1/folder_2/'.
+     * Target folder's path e.g. Folder1/Folder2/. The folders will be created recursively.
      */
     public function get_path()
     {
@@ -73,7 +73,7 @@ class CreateFolderRequest
     }
 
     /*
-     * Folder path to create e.g. 'folder_1/folder_2/'.
+     * Target folder's path e.g. Folder1/Folder2/. The folders will be created recursively.
      */
     public function set_path($value)
     {
